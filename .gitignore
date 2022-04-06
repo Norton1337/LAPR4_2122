@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-
 # Created by https://www.gitignore.io/api/java,macos,windows,eclipse,netbeans,intellij
 
 ### Eclipse ###
@@ -594,5 +592,4 @@ classes
 # Markdown Navigator plugin
 
 # End of https://www.gitignore.io/api/intellij,jetbrains
->>>>>>> Stashed changes
 /target/
