@@ -32,12 +32,5 @@
             <artifactId>base.core</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-        <dependency>
-        	<groupId>eapli</groupId>
-        	<artifactId>
-        		eapli.framework.infrastructure.pubsub
-        	</artifactId>
-        	<version>16.3.1</version>
-        </dependency>
     </dependencies>
 </project>
