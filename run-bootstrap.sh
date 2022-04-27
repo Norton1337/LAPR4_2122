@@ -1,4 +1,7 @@
-#!/usr/bin/env bash
+
+
++
++/usr/bin/env bash
 
 #REM set the class path,
 #REM assumes the build was executed with maven copy-dependencies
