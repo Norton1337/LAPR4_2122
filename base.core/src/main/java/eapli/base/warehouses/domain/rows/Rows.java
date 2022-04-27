@@ -1,6 +1,7 @@
 package eapli.base.warehouses.domain.rows;
 
 import eapli.base.warehouses.domain.square.Square;
+import eapli.framework.domain.model.DomainEntity;
 import eapli.framework.validations.Preconditions;
 
 import javax.persistence.*;
@@ -8,13 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Rows {
+public class Rows implements DomainEntity<Rows> {
     @Id
     @GeneratedValue
     private int id;
 
     @Version
     private Long version;
+
+    private int rowID;
 
     @Embedded
     private Square begin;
@@ -28,9 +31,11 @@ public class Rows {
     public Rows() {
     }
 
-    public Rows(Square begin, Square end, int shelvesAmount){
+    public Rows(int rowID, Square begin, Square end, int shelvesAmount){
         Preconditions.nonNull(begin);
         Preconditions.nonNull(end);
+        Preconditions.nonNegative(shelvesAmount);
+        this.rowID=rowID;
         shelves = new ArrayList<>();
         for (int i = 1; i <= shelvesAmount; i++) {
             shelves.add(new Shelves(i));
@@ -51,7 +56,17 @@ public class Rows {
                 '}';
     }
 
-    public static Rows valueOf(Square begin, Square end, int shelvesAmount){
-        return new Rows(begin,end,shelvesAmount);
+    public static Rows valueOf(int rowID ,Square begin, Square end, int shelvesAmount){
+        return new Rows(rowID, begin,end,shelvesAmount);
+    }
+
+    @Override
+    public boolean sameAs(Object other) {
+        return false;
+    }
+
+    @Override
+    public Rows identity() {
+        return null;
     }
 }

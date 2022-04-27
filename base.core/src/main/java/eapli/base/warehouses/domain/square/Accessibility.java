@@ -1,13 +1,14 @@
 package eapli.base.warehouses.domain.square;
 
-import eapli.base.warehouses.domain.warehouse.WarehouseWidth;
+
+import eapli.framework.domain.model.DomainEntity;
 import eapli.framework.domain.model.ValueObject;
 
 import javax.persistence.Embeddable;
-import java.util.Arrays;
+
 
 @Embeddable
-public class Accessibility implements ValueObject {
+public class Accessibility implements ValueObject, DomainEntity<Accessibility> {
     private String accessibility;
 
     public Accessibility(String accessibility){
@@ -16,14 +17,11 @@ public class Accessibility implements ValueObject {
 
     @Deprecated
     public Accessibility(){
-
     }
 
     @Override
     public String toString() {
-        return "Accessibility{" +
-                "accessibility=" + accessibility +
-                '}';
+        return accessibility;
     }
 
     public static Accessibility valueOf(String accessibility){
@@ -31,4 +29,13 @@ public class Accessibility implements ValueObject {
     }
 
 
+    @Override
+    public boolean sameAs(Object other) {
+        return false;
+    }
+
+    @Override
+    public Accessibility identity() {
+        return null;
+    }
 }

@@ -1,8 +1,8 @@
 package eapli.base.warehouses.domain.rows;
 
-import eapli.base.warehouses.domain.square.Accessibility;
+
 import eapli.framework.domain.model.ValueObject;
-import eapli.framework.validations.Preconditions;
+
 
 import javax.persistence.*;
 

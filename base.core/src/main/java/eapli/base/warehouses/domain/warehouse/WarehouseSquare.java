@@ -20,6 +20,10 @@ public class WarehouseSquare implements ValueObject {
                 '}';
     }
 
+    public Double value(){
+        return this.square;
+    }
+
     public static WarehouseSquare valueOf(Double square){
         return new WarehouseSquare(square);
     }

@@ -21,6 +21,10 @@ public class WarehouseLength implements ValueObject {
                 '}';
     }
 
+    public Double value(){
+        return this.length;
+    }
+
     public static WarehouseLength valueOf(Double length){
         return new WarehouseLength(length);
     }

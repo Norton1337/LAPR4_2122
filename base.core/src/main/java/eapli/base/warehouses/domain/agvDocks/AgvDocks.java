@@ -1,10 +1,10 @@
 package eapli.base.warehouses.domain.agvDocks;
 
-import eapli.base.warehouses.domain.agvs.*;
+
 import eapli.base.warehouses.domain.square.Accessibility;
 import eapli.base.warehouses.domain.square.Square;
 import eapli.framework.domain.model.DomainEntity;
-import org.jetbrains.annotations.NotNull;
+
 
 import javax.persistence.*;
 
@@ -12,13 +12,13 @@ import javax.persistence.*;
 public class AgvDocks implements DomainEntity<AgvDocks> {
     @Id
     @GeneratedValue
-    private int id;
+    private String id;
 
     @Version
     private Long version;
 
     @Embedded
-    private Square being;
+    private Square begin;
 
     @Embedded
     private Square end;
@@ -30,8 +30,9 @@ public class AgvDocks implements DomainEntity<AgvDocks> {
     private Accessibility accessibility;
 
 
-    public AgvDocks(Square begin,Square end,Square depth,Accessibility accessibility){
-        this.being=begin;
+    public AgvDocks(String id, Square begin,Square end,Square depth,Accessibility accessibility){
+        this.id = id;
+        this.begin=begin;
         this.end=end;
         this.depth=depth;
         this.accessibility=accessibility;
@@ -44,15 +45,15 @@ public class AgvDocks implements DomainEntity<AgvDocks> {
         return "AgvDocks{" +
                 "id=" + id +
                 ", version=" + version +
-                ", being=" + being +
+                ", being=" + begin +
                 ", end=" + end +
                 ", depth=" + depth +
                 ", accessibility=" + accessibility +
                 '}';
     }
 
-    public static AgvDocks valueOf(Square begin, Square end, Square depth, Accessibility accessibility){
-        return new AgvDocks(begin,end,depth,accessibility);
+    public static AgvDocks valueOf(String id,Square begin, Square end, Square depth, Accessibility accessibility){
+        return new AgvDocks(id, begin,end,depth,accessibility);
     }
 
 
@@ -64,5 +65,20 @@ public class AgvDocks implements DomainEntity<AgvDocks> {
     @Override
     public AgvDocks identity() {
         return null;
+    }
+
+
+    public Square getBegin(){
+        return this.begin;
+    }
+    public Square getEnd(){
+        return this.end;
+    }
+    public Square getDepth(){
+        return this.depth;
+    }
+
+    public Accessibility getAccessibility(){
+        return this.accessibility;
     }
 }

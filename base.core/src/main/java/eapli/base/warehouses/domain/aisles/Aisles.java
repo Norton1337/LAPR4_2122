@@ -1,23 +1,26 @@
 package eapli.base.warehouses.domain.aisles;
 
-import eapli.base.warehouses.domain.rows.Shelves;
+
 import eapli.base.warehouses.domain.square.Accessibility;
 import eapli.base.warehouses.domain.square.Square;
 
 import java.util.List;
 
 import eapli.base.warehouses.domain.rows.Rows;
+import eapli.framework.domain.model.DomainEntity;
 
 import javax.persistence.*;
 
 @Entity
-public class Aisles {
+public class Aisles implements DomainEntity<Aisles> {
     @Id
     @GeneratedValue
     private int id;
 
     @Version
     private Long version;
+
+    private int aisleID;
 
     @Embedded
     private Square begin;
@@ -37,7 +40,9 @@ public class Aisles {
     protected Aisles() {
     }
 
-    public Aisles (Square begin, Square end, Square depth, Accessibility accessibility, List<Rows> rows){
+    public Aisles (int aisleID,Square begin, Square end, Square depth, Accessibility accessibility, List<Rows> rows){
+
+        this.aisleID=aisleID;
         this.begin=begin;
         this.end=end;
         this.depth=depth;
@@ -58,7 +63,31 @@ public class Aisles {
                 '}';
     }
 
-    public static Aisles valueOf(Square begin, Square end, Square depth, Accessibility accessibility, List<Rows> rows){
-        return new Aisles(begin,end,depth,accessibility,rows);
+    public static Aisles valueOf(int aisleID, Square begin, Square end, Square depth, Accessibility accessibility, List<Rows> rows){
+        return new Aisles(aisleID,begin,end,depth,accessibility,rows);
+    }
+
+    public Square getBegin(){
+        return this.begin;
+    }
+    public Square getEnd(){
+        return this.end;
+    }
+    public Square getDepth(){
+        return this.depth;
+    }
+
+    public Accessibility getAccessibility(){
+        return this.accessibility;
+    }
+
+    @Override
+    public boolean sameAs(Object other) {
+        return false;
+    }
+
+    @Override
+    public Aisles identity() {
+        return null;
     }
 }

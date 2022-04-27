@@ -20,6 +20,10 @@ public class WarehouseWidth implements ValueObject{
                 '}';
     }
 
+    public Double value(){
+        return this.width;
+    }
+
     public static WarehouseWidth valueOf(Double width){
         return new WarehouseWidth(width);
     }
