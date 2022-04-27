@@ -24,6 +24,8 @@ import eapli.base.clientusermanagement.repositories.ClientUserRepository;
 import eapli.base.clientusermanagement.repositories.SignupRequestRepository;
 import eapli.base.infrastructure.bootstrapers.BaseBootstrapper;
 import eapli.base.infrastructure.persistence.RepositoryFactory;
+import eapli.base.warehouses.repositories.AgvRepository;
+import eapli.base.warehouses.repositories.WarehouseRepository;
 import eapli.framework.domain.repositories.TransactionalContext;
 import eapli.framework.infrastructure.authz.domain.repositories.UserRepository;
 import eapli.framework.infrastructure.authz.repositories.impl.InMemoryUserRepository;
@@ -68,6 +70,15 @@ public class InMemoryRepositoryFactory implements RepositoryFactory {
     @Override
     public SignupRequestRepository signupRequests(final TransactionalContext tx) {
         return new InMemorySignupRequestRepository();
+    }
+    @Override
+    public WarehouseRepository warehouse() {
+        return new InMemoryWarehouseRepository();
+    }
+
+    @Override
+    public AgvRepository agv() {
+        return null;
     }
 
     @Override
