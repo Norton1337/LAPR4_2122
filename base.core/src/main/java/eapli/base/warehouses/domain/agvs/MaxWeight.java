@@ -1,6 +1,7 @@
 package eapli.base.warehouses.domain.agvs;
 
 import eapli.framework.domain.model.ValueObject;
+import eapli.framework.validations.Preconditions;
 
 import javax.persistence.Embeddable;
 
@@ -10,6 +11,7 @@ public class MaxWeight implements ValueObject {
     private Double weight;
 
     public MaxWeight(double weight){
+        Preconditions.ensure(weight>0);
         this.weight=weight;
     }
 

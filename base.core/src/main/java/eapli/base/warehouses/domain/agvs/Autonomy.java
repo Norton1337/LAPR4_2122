@@ -1,6 +1,7 @@
 package eapli.base.warehouses.domain.agvs;
 
 import eapli.framework.domain.model.ValueObject;
+import eapli.framework.validations.Preconditions;
 
 import javax.persistence.Embeddable;
 
@@ -9,6 +10,7 @@ public class Autonomy implements ValueObject {
     private Double autonomy;
 
     public Autonomy(Double autonomy){
+        Preconditions.ensure(autonomy>0);
         this.autonomy = autonomy;
     }
 

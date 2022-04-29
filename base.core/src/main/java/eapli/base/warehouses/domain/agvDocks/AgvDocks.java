@@ -4,6 +4,7 @@ package eapli.base.warehouses.domain.agvDocks;
 import eapli.base.warehouses.domain.square.Accessibility;
 import eapli.base.warehouses.domain.square.Square;
 import eapli.framework.domain.model.DomainEntity;
+import eapli.framework.validations.Preconditions;
 
 
 import javax.persistence.*;
@@ -31,6 +32,7 @@ public class AgvDocks implements DomainEntity<AgvDocks> {
 
 
     public AgvDocks(String id, Square begin,Square end,Square depth,Accessibility accessibility){
+        Preconditions.noneNull(begin,end,depth,accessibility);
         this.id = id;
         this.begin=begin;
         this.end=end;
