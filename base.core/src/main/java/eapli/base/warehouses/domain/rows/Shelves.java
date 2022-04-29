@@ -2,6 +2,7 @@ package eapli.base.warehouses.domain.rows;
 
 
 import eapli.framework.domain.model.ValueObject;
+import eapli.framework.validations.Preconditions;
 
 
 import javax.persistence.*;
@@ -18,6 +19,7 @@ public class Shelves implements ValueObject {
     private StorageArea storageArea;
 
     public Shelves(int shelfId){
+        Preconditions.ensure(shelfId>0);
         this.storageArea=new StorageArea();
         this.shelfId=shelfId;
     }

@@ -1,6 +1,7 @@
 package eapli.base.warehouses.domain.warehouse;
 
 import eapli.framework.domain.model.ValueObject;
+import eapli.framework.validations.Preconditions;
 
 import javax.persistence.Embeddable;
 
@@ -9,6 +10,7 @@ public class WarehouseWidth implements ValueObject{
     private Double width;
 
     public WarehouseWidth(Double width){
+        Preconditions.ensure(width>0);
         this.width=width;
     }
     public WarehouseWidth(){}

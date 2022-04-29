@@ -1,7 +1,7 @@
 package eapli.base.persistence.impl.inmemory;
 
 import eapli.base.warehouses.domain.warehouse.Warehouse;
-import eapli.base.warehouses.domain.warehouse.WarehouseAddress;
+import eapli.base.warehouses.domain.warehouse.WarehouseIdentification;
 import eapli.base.warehouses.repositories.WarehouseRepository;
 
 import java.util.Optional;
@@ -18,7 +18,7 @@ public class InMemoryWarehouseRepository implements WarehouseRepository {
     }
 
     @Override
-    public Optional<Warehouse> ofIdentity(WarehouseAddress id) {
+    public Optional<Warehouse> ofIdentity(WarehouseIdentification id) {
         return Optional.empty();
     }
 
@@ -28,7 +28,7 @@ public class InMemoryWarehouseRepository implements WarehouseRepository {
     }
 
     @Override
-    public void deleteOfIdentity(WarehouseAddress entityId) {
+    public void deleteOfIdentity(WarehouseIdentification entityId) {
 
     }
 

@@ -1,6 +1,7 @@
 package eapli.base.warehouses.domain.square;
 
 import eapli.framework.domain.model.ValueObject;
+import eapli.framework.validations.Preconditions;
 
 import javax.persistence.Embeddable;
 
@@ -9,6 +10,7 @@ public class Width implements Comparable<Width>, ValueObject {
     private int widthNum;
 
     public Width(int widthNum){
+        Preconditions.ensure(widthNum>0);
         this.widthNum = widthNum;
     }
 

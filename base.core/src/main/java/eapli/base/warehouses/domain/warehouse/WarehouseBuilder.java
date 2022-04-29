@@ -13,7 +13,7 @@ public class WarehouseBuilder implements DomainFactory<Warehouse> {
 
     private Warehouse theWarehouse;
 
-    private WarehouseAddress warehouseAddress;
+    private WarehouseIdentification warehouseIdentification;
 
     private WarehouseLength warehouseLength;
 
@@ -28,8 +28,8 @@ public class WarehouseBuilder implements DomainFactory<Warehouse> {
     private List<AgvDocks> agvDocks;
 
 
-    public WarehouseBuilder ofAddress(final WarehouseAddress warehouseAddress){
-        this.warehouseAddress=warehouseAddress;
+    public WarehouseBuilder ofAddress(final WarehouseIdentification warehouseIdentification){
+        this.warehouseIdentification = warehouseIdentification;
         return this;
     }
     public WarehouseBuilder ofLength(final WarehouseLength warehouseLength){
@@ -64,9 +64,9 @@ public class WarehouseBuilder implements DomainFactory<Warehouse> {
     private Warehouse buildOrThrow() throws IOException {
         if (theWarehouse != null) {
             return theWarehouse;
-        } else if (warehouseAddress != null && warehouseLength != null && warehouseSquare != null && warehouseUnit != null
+        } else if (warehouseIdentification != null && warehouseLength != null && warehouseSquare != null && warehouseUnit != null
                 && warehouseWidth != null && !aisles.isEmpty() && !agvDocks.isEmpty()) {
-            theWarehouse = new Warehouse(warehouseAddress,warehouseLength,warehouseWidth,warehouseSquare,warehouseUnit,aisles,agvDocks);
+            theWarehouse = new Warehouse(warehouseIdentification,warehouseLength,warehouseWidth,warehouseSquare,warehouseUnit,aisles,agvDocks);
             return theWarehouse;
         } else {
             throw new IllegalStateException();

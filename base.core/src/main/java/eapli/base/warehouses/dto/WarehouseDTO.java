@@ -7,7 +7,7 @@ import java.util.List;
 
 public class WarehouseDTO {
 
-    public String warehouseAddress;
+    public String warehouse;
     public Double warehouseLength;
     public Double warehouseWidth;
     public Double warehouseSquare;
@@ -15,9 +15,9 @@ public class WarehouseDTO {
     public List<Aisles> aisles;
     public List<AgvDocks> agvDocks;
 
-    public WarehouseDTO(String warehouseAddress, Double warehouseLength, Double warehouseWidth, Double warehouseSquare,
+    public WarehouseDTO(String warehouse, Double warehouseLength, Double warehouseWidth, Double warehouseSquare,
                         String warehouseUnit, List<Aisles> aisles, List<AgvDocks> agvDocks){
-        this.warehouseAddress = warehouseAddress;
+        this.warehouse = warehouse;
         this.warehouseLength = warehouseLength;
         this.warehouseWidth = warehouseWidth;
         this.warehouseSquare = warehouseSquare;

@@ -32,9 +32,8 @@ public class Rows implements DomainEntity<Rows> {
     }
 
     public Rows(int rowID, Square begin, Square end, int shelvesAmount){
-        Preconditions.nonNull(begin);
-        Preconditions.nonNull(end);
-        Preconditions.nonNegative(shelvesAmount);
+        Preconditions.noneNull(begin,end);
+        Preconditions.ensure(shelvesAmount>0);
         this.rowID=rowID;
         shelves = new ArrayList<>();
         for (int i = 1; i <= shelvesAmount; i++) {

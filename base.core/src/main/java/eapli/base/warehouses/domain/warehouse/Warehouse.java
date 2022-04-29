@@ -12,18 +12,19 @@ import eapli.base.warehouses.domain.square.Length;
 import eapli.base.warehouses.domain.square.Square;
 import eapli.base.warehouses.domain.square.Width;
 import eapli.framework.domain.model.AggregateRoot;
+import eapli.framework.validations.Preconditions;
 
 import javax.persistence.*;
 
 @Entity
-public class Warehouse implements AggregateRoot<WarehouseAddress> {
+public class Warehouse implements AggregateRoot<WarehouseIdentification> {
     @Id
     @GeneratedValue
     private int id;
     @Version
     private long version;
     @Embedded
-    private WarehouseAddress warehouseAddress;
+    private WarehouseIdentification warehouse;
     @Embedded
     private WarehouseLength warehouseLength;
     @Embedded
@@ -41,10 +42,11 @@ public class Warehouse implements AggregateRoot<WarehouseAddress> {
 
 
 
-    public Warehouse(WarehouseAddress warehouseAddress, WarehouseLength warehouseLength, WarehouseWidth warehouseWidth,
+    public Warehouse(WarehouseIdentification warehouse, WarehouseLength warehouseLength, WarehouseWidth warehouseWidth,
                      WarehouseSquare warehouseSquare, WarehouseUnit warehouseUnit, List<Aisles> aisles, List<AgvDocks> agvDocks) throws IOException {
-
-        this.warehouseAddress = warehouseAddress;
+        Preconditions.nonEmpty(aisles);
+        Preconditions.nonEmpty(agvDocks);
+        this.warehouse = warehouse;
         this.warehouseLength = warehouseLength;
         this.warehouseWidth = warehouseWidth;
         this.warehouseSquare = warehouseSquare;
@@ -63,7 +65,7 @@ public class Warehouse implements AggregateRoot<WarehouseAddress> {
 
     public Warehouse(WarehouseDTO dto) throws IOException {
         this(
-            new WarehouseAddress(dto.warehouseAddress),
+            new WarehouseIdentification(dto.warehouse),
                 new WarehouseLength(dto.warehouseLength),
                 new WarehouseWidth(dto.warehouseWidth),
                 new WarehouseSquare(dto.warehouseSquare),
@@ -82,7 +84,7 @@ public class Warehouse implements AggregateRoot<WarehouseAddress> {
     public String toString() {
         return "Warehouse{" +
                 "id=" + id +
-                ", warehouseAddress=" + warehouseAddress +
+                ", warehouseAddress=" + warehouse +
                 ", warehouseLength=" + warehouseLength +
                 ", warehouseWidth=" + warehouseWidth +
                 ", warehouseSquare=" + warehouseSquare +
@@ -92,11 +94,14 @@ public class Warehouse implements AggregateRoot<WarehouseAddress> {
                 '}';
     }
 
-    public static Warehouse valueOf(WarehouseAddress warehouseAddress, WarehouseLength warehouseLength, WarehouseWidth warehouseWidth,
+    public static Warehouse valueOf(WarehouseIdentification warehouseIdentification, WarehouseLength warehouseLength, WarehouseWidth warehouseWidth,
                                     WarehouseSquare warehouseSquare, WarehouseUnit warehouseUnit, List<Aisles> aisles, List<AgvDocks> agvDocks) throws IOException {
-        return new Warehouse(warehouseAddress,warehouseLength,warehouseWidth,warehouseSquare,warehouseUnit,aisles,agvDocks);
+        return new Warehouse(warehouseIdentification,warehouseLength,warehouseWidth,warehouseSquare,warehouseUnit,aisles,agvDocks);
     }
 
+    public List<AgvDocks> allAGVDocks(){
+        return this.agvDocks;
+    }
 
     private Boolean checkAccessibility(Aisles aisle){
         Square begin = aisle.getBegin();
@@ -258,7 +263,7 @@ public class Warehouse implements AggregateRoot<WarehouseAddress> {
 
 
     @Override
-    public WarehouseAddress identity() {
-        return this.warehouseAddress;
+    public WarehouseIdentification identity() {
+        return this.warehouse;
     }
 }

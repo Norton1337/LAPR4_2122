@@ -1,6 +1,7 @@
 package eapli.base.warehouses.domain.warehouse;
 
 import eapli.framework.domain.model.ValueObject;
+import eapli.framework.validations.Preconditions;
 
 import javax.persistence.Embeddable;
 
@@ -9,6 +10,7 @@ public class WarehouseSquare implements ValueObject {
     private Double square;
 
     public WarehouseSquare(Double square){
+        Preconditions.ensure(square>0);
         this.square=square;
     }
     public WarehouseSquare(){}

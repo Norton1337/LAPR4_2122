@@ -23,6 +23,7 @@
  */
 package eapli.base.infrastructure.bootstrapers;
 
+import eapli.base.infrastructure.bootstrapers.demo.WarehouseSetupBootstrapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -61,7 +62,9 @@ public class BaseBootstrapper implements Action {
     @Override
     public boolean execute() {
         // declare bootstrap actions
-        final Action[] actions = { new MasterUsersBootstrapper(), };
+        final Action[] actions = {
+                new MasterUsersBootstrapper(),
+                new WarehouseSetupBootstrapper()};
 
         registerPowerUser();
         authenticateForBootstrapping();

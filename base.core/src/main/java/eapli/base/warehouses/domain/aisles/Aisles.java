@@ -8,6 +8,7 @@ import java.util.List;
 
 import eapli.base.warehouses.domain.rows.Rows;
 import eapli.framework.domain.model.DomainEntity;
+import eapli.framework.validations.Preconditions;
 
 import javax.persistence.*;
 
@@ -41,7 +42,8 @@ public class Aisles implements DomainEntity<Aisles> {
     }
 
     public Aisles (int aisleID,Square begin, Square end, Square depth, Accessibility accessibility, List<Rows> rows){
-
+        Preconditions.ensure(aisleID>=0);
+        Preconditions.noneNull(begin,end,depth,accessibility);
         this.aisleID=aisleID;
         this.begin=begin;
         this.end=end;

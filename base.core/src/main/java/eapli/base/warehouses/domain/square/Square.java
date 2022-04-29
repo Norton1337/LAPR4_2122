@@ -15,8 +15,8 @@ public class Square implements ValueObject, DomainEntity<Square>, Comparable<Squ
     private Width width;
 
     public Square(Length length, Width width){
-        Preconditions.nonNull(width);
-        Preconditions.nonNull(length);
+        Preconditions.noneNull(length,width);
+
         this.length=length;
         this.width=width;
     }

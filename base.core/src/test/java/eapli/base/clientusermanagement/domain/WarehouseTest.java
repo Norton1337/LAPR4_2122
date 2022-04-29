@@ -10,11 +10,9 @@ import eapli.base.warehouses.domain.aisles.Aisles;
 import eapli.base.warehouses.domain.aisles.AislesBuilder;
 import eapli.base.warehouses.domain.rows.Rows;
 import eapli.base.warehouses.domain.rows.RowsBuilder;
-import eapli.base.warehouses.domain.rows.Shelves;
 import eapli.base.warehouses.domain.square.*;
 import eapli.base.warehouses.domain.warehouse.*;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeAll;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -113,7 +111,7 @@ public class WarehouseTest {
 
             }
             Warehouse warehouse = new WarehouseBuilder()
-                    .ofAddress( new WarehouseAddress(node.get("Warehouse").asText()))
+                    .ofAddress( new WarehouseIdentification(node.get("Warehouse").asText()))
                     .ofLength( new WarehouseLength(node.get("Length").asDouble()))
                     .ofWidth( new WarehouseWidth(node.get("Width").asDouble()))
                     .withSquare( new WarehouseSquare(node.get("Square").asDouble()))

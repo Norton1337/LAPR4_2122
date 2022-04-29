@@ -1,6 +1,7 @@
 package eapli.base.warehouses.domain.square;
 
 import eapli.framework.domain.model.ValueObject;
+import eapli.framework.validations.Preconditions;
 
 import javax.persistence.Embeddable;
 
@@ -9,6 +10,7 @@ public class Length implements Comparable<Length>, ValueObject {
     private int lengthNum;
 
     public Length(int lengthNum){
+        Preconditions.ensure(lengthNum>0);
         this.lengthNum = lengthNum;
     }
 

@@ -6,13 +6,13 @@ import org.jetbrains.annotations.NotNull;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class WarehouseAddress implements ValueObject, Comparable<WarehouseAddress> {
+public class WarehouseIdentification implements ValueObject, Comparable<WarehouseIdentification> {
     private String address;
 
-    public WarehouseAddress(String address){
+    public WarehouseIdentification(String address){
         this.address=address;
     }
-    public WarehouseAddress(){}
+    public WarehouseIdentification(){}
 
     @Override
     public String toString() {
@@ -21,12 +21,12 @@ public class WarehouseAddress implements ValueObject, Comparable<WarehouseAddres
                 '}';
     }
 
-    public static WarehouseAddress valueOf(String address){
-        return new WarehouseAddress(address);
+    public static WarehouseIdentification valueOf(String address){
+        return new WarehouseIdentification(address);
     }
 
     @Override
-    public int compareTo(@NotNull WarehouseAddress o) {
+    public int compareTo(@NotNull WarehouseIdentification o) {
         return 0;
     }
 }
