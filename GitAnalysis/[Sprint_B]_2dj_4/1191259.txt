@@ -1,0 +1,68 @@
+commit e1a26ce61fb2cf2e436cfd2a6691ad818141368c
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Wed Apr 27 15:15:45 2022 +0100
+
+    US1003 - Controller and UI initiation
+
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/RegisterCustomerUI.java
+A	base.core/src/main/java/eapli/base/customermanagement/application/RegisterCustomerController.java
+M	docs/US1002.md
+
+commit 0e2f0327b81c52b110ece5fc979fc6b9bb4065ce
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Wed Apr 27 14:57:31 2022 +0100
+
+    US1003 - First Implementation
+
+M	.idea/misc.xml
+A	base.core/src/main/java/eapli/base/customermanagement/domain/Customer.java
+A	base.core/src/main/java/eapli/base/customermanagement/domain/CustomerAddress.java
+A	base.core/src/main/java/eapli/base/customermanagement/domain/CustomerBirth.java
+A	base.core/src/main/java/eapli/base/customermanagement/domain/CustomerName.java
+A	base.core/src/main/java/eapli/base/customermanagement/domain/CustomerPhone.java
+A	base.core/src/main/java/eapli/base/customermanagement/domain/CustomerVAT.java
+A	base.core/src/main/java/eapli/base/customermanagement/repositories/CustomerRepository.java
+
+commit 94cfe75c5cf81a9fb4ad1c4f87a3bd6541f581df
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Wed Apr 27 14:09:55 2022 +0100
+
+    US1002 - Requirements, Analyze and Design
+
+A	docs/US1002.md
+M	docs/US1003.md
+M	run-bootstrap.sh
+
+commit b519511d2922930127a2a60196f5d4791a81817b
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Mon Apr 25 15:13:40 2022 +0100
+
+    Domain Model updated duo to US1003 implementation and documentation
+
+M	DM.svg
+M	DM.vpp
+
+commit 1a7b1a88a0abd0eea80c0ec0ba21073ba69934da
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Mon Apr 25 15:08:25 2022 +0100
+
+    US1003 - Tests and Preparing Implementation
+
+M	docs/US1003.md
+
+commit 32f542d5614e44647cbd0399cf1be940d12dea72
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Mon Apr 25 15:07:36 2022 +0100
+
+    US1003 - Analysis and Design
+
+M	docs/US1003.md
+
+commit e74a2728a5dc13a308891e7d3cdf659273e38efa
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Mon Apr 25 15:06:06 2022 +0100
+
+    US1003 - Interpretation and Requirements
+
+M	.idea/compiler.xml
+A	docs/US1003.md

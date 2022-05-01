@@ -1,0 +1,34 @@
+180a5d8,2022-05-01 20:39:26 +0100,N0R70N,1210824@isep.ipp.pt,US2002 Fixed some persistence Errors
+cf54f72,2022-05-01 20:38:38 +0100,N0R70N,1210824@isep.ipp.pt,US2002 uploaded US2002_SD.puml
+36d28be,2022-05-01 20:38:00 +0100,N0R70N,1210824@isep.ipp.pt,updated persistence.xml
+b4fa94b,2022-05-01 20:35:06 +0100,N0R70N,1210824@isep.ipp.pt,US2001 uploading US2001_SD.puml
+b31cef9,2022-05-01 20:32:47 +0100,N0R70N,1210824@isep.ipp.pt,Updated DM
+71e8e37,2022-05-01 13:27:33 +0100,Ana  Soares,1210802@isep.ipp.pt,Implementation of US1005 classes and some code for US1001
+70fbb46,2022-04-30 17:29:30 +0100,Ana  Soares,1210802@isep.ipp.pt,US1001 - Implementation of US1001 classes;
+2f77986,2022-04-29 19:09:37 +0100,N0R70N,1210824@isep.ipp.pt,US2001 - Adding JsonFile to warehouse setup
+943acf2,2022-04-29 19:08:16 +0100,N0R70N,1210824@isep.ipp.pt,US2002 - Updated AGV implementation
+09e412b,2022-04-29 19:07:53 +0100,N0R70N,1210824@isep.ipp.pt,US2001 - Updated Warehouse implementation
+86dfcf2,2022-04-29 19:05:37 +0100,N0R70N,1210824@isep.ipp.pt,US2001 - Completed US2001.md file
+035582b,2022-04-29 19:04:57 +0100,N0R70N,1210824@isep.ipp.pt,US2002 - Completed US2002.md file
+1924073,2022-04-29 18:36:35 +0100,Ana  Soares,1210802@isep.ipp.pt,US1005 - Interpretation, Requirements, Analysis and Tests
+7f96ca0,2022-04-29 18:14:19 +0100,Ana  Soares,1210802@isep.ipp.pt,US1001 - Interpretation, Requirements, Analysis and Tests
+97b27f2,2022-04-27 21:49:32 +0100,N0R70N,1210824@isep.ipp.pt,US2001 - Added Controller, UI, DTO, Builders, Persistence, Test files
+f169dc4,2022-04-27 21:46:58 +0100,N0R70N,1210824@isep.ipp.pt,US2002 - Started Implementation
+3041412,2022-04-27 21:44:23 +0100,N0R70N,1210824@isep.ipp.pt,US2002 - Interpretation, Requirements, Analysis, and Design
+4cdfec5,2022-04-27 21:43:24 +0100,N0R70N,1210824@isep.ipp.pt,US2001 - Requirements, Analyze and Design update
+e1a26ce,2022-04-27 15:15:45 +0100,André Maia,1191259@isep.ipp.pt,US1003 - Controller and UI initiation
+0e2f032,2022-04-27 14:57:31 +0100,André Maia,1191259@isep.ipp.pt,US1003 - First Implementation
+94cfe75,2022-04-27 14:09:55 +0100,André Maia,1191259@isep.ipp.pt,US1002 - Requirements, Analyze and Design
+23300c6,2022-04-27 14:01:08 +0100,N0R70N,1210824@isep.ipp.pt,US2001 - Started implementation
+2b2f194,2022-04-26 22:54:36 +0100,N0R70N,1210824@isep.ipp.pt,US2001 - Interpretation, Requirements and Analysis
+b519511,2022-04-25 15:13:40 +0100,André Maia,1191259@isep.ipp.pt,Domain Model updated duo to US1003 implementation and documentation
+1a7b1a8,2022-04-25 15:08:25 +0100,André Maia,1191259@isep.ipp.pt,US1003 - Tests and Preparing Implementation
+32f542d,2022-04-25 15:07:36 +0100,André Maia,1191259@isep.ipp.pt,US1003 - Analysis and Design
+e74a272,2022-04-25 15:06:06 +0100,André Maia,1191259@isep.ipp.pt,US1003 - Interpretation and Requirements
+9ce6a39,2022-04-13 13:27:29 +0100,Paulo Norton,1210824@isep.ipp.pt,Correcao ao pom de app.common.console
+54083c2,2022-04-10 18:05:44 +0100,N0R70N,1210824@isep.ipp.pt,Uploading Domain Model
+8f2ef40,2022-04-06 15:53:02 +0100,Paulo Norton,1210824@isep.ipp.pt,Fixed .gitignore
+3c5f87d,2022-04-06 15:46:55 +0100,Paulo Norton,1210824@isep.ipp.pt,initial commit
+239cbea,2022-04-06 14:45:06 +0000,Paulo César Miranda Antunes dos Santos Norton,1210824@isep.ipp.pt,README.md edited online with Bitbucket
+5416dd1,2022-04-06 14:44:59 +0000,Paulo César Miranda Antunes dos Santos Norton,1210824@isep.ipp.pt,.gitignore edited online with Bitbucket
+9b43e9b,2022-04-06 14:26:32 +0000,Paulo César Miranda Antunes dos Santos Norton,1210824@isep.ipp.pt,Initial commit

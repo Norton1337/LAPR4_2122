@@ -1,0 +1,424 @@
+commit 180a5d8bb22b9cd944f211c0e0dda332b4168550
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun May 1 20:39:26 2022 +0100
+
+    US2002 Fixed some persistence Errors
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/MainMenu.java
+R089	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/ConfigureAGVUI.java	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/ConfigureAGVUI.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/WarehouseMenu.java
+R070	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/WarehouseSetupUI.java	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/WarehouseSetupUI.java
+M	base.app.bootstrap/src/main/java/eapli/base/app/bootstrap/BaseBootstrap.java
+M	base.app.common.console/src/main/java/eapli/base/app/common/console/BaseApplication.java
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/WarehouseSetupBootstrapper.java
+M	base.core/src/main/java/eapli/base/usermanagement/domain/BaseRoles.java
+M	base.core/src/main/java/eapli/base/warehouses/application/ConfigureAGVController.java
+M	base.core/src/main/java/eapli/base/warehouses/application/WarehouseService.java
+M	base.core/src/main/java/eapli/base/warehouses/application/WarehouseSetupController.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/square/Length.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/square/Square.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/square/Width.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/Warehouse.java
+
+commit cf54f7250daf6ad22477836621af1e9751b3306b
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun May 1 20:38:38 2022 +0100
+
+    US2002 uploaded US2002_SD.puml
+
+A	docs/US2002/US2002_SD.puml
+
+commit 36d28be54619d3a1f389658ef30739bc94c9dc63
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun May 1 20:38:00 2022 +0100
+
+    updated persistence.xml
+
+M	base.persistence.impl/src/main/resources/META-INF/persistence.xml
+
+commit b4fa94bb5c5fce5ffd53cf4575cd837ce2aaa170
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun May 1 20:35:06 2022 +0100
+
+    US2001 uploading US2001_SD.puml
+
+A	docs/US2001/US2001_SD.puml
+
+commit b31cef9466e12bfeda9f9f0d01a94b322d8f3e35
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun May 1 20:32:47 2022 +0100
+
+    Updated DM
+
+M	DM.svg
+M	DM.vpp
+
+commit 2f77986c7769e79b29a321f44a468ef82b4e6ff4
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Apr 29 19:09:37 2022 +0100
+
+    US2001 - Adding JsonFile to warehouse setup
+
+A	base.app.bootstrap/src/main/resources/jsonFile.json
+
+commit 943acf2722984de659fa5d86ec4aded86270bc11
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Apr 29 19:08:16 2022 +0100
+
+    US2002 - Updated AGV implementation
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/ConfigureAGVUI.java
+M	base.core/src/main/java/eapli/base/warehouses/application/ConfigureAGVController.java
+A	base.core/src/main/java/eapli/base/warehouses/application/ListAGVDockController.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvDocks/AgvDocks.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/Autonomy.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/MaxWeight.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/Model.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/ShortDescription.java
+R100	docs/US1002.md	docs/US1002/US1002.md
+R100	docs/US1003.md	docs/US1003/US1003.md
+
+commit 09e412b8f7172ef565c50bea4bedbc86e0e44bd5
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Apr 29 19:07:53 2022 +0100
+
+    US2001 - Updated Warehouse implementation
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/WarehouseSetupUI.java
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/BaseBootstrapper.java
+A	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/WarehouseSetupBootstrapper.java
+A	base.core/src/main/java/eapli/base/warehouses/application/WarehouseService.java
+M	base.core/src/main/java/eapli/base/warehouses/application/WarehouseSetupController.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/aisles/Aisles.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/Rows.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/Shelves.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/square/Accessibility.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/square/Length.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/square/Square.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/square/Width.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/Warehouse.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseBuilder.java
+R055	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseAddress.java	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseIdentification.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseLength.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseSquare.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseWidth.java
+M	base.core/src/main/java/eapli/base/warehouses/dto/WarehouseDTO.java
+M	base.core/src/main/java/eapli/base/warehouses/repositories/WarehouseRepository.java
+M	base.core/src/test/java/eapli/base/clientusermanagement/domain/WarehouseTest.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryWarehouseRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaWarehouseRepository.java
+
+commit 86dfcf2b8394fa4bf87e430f5553af19e5a49632
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Apr 29 19:05:37 2022 +0100
+
+    US2001 - Completed US2001.md file
+
+R072	docs/US2001.md	docs/US2001/US2001.md
+
+commit 035582b926a715a853769f95c0928729375346ce
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Apr 29 19:04:41 2022 +0100
+
+    US2002 - Completed US2002.md file
+
+R098	docs/US2002.md	docs/US2002/US2002.md
+
+commit 97b27f2877651cae0b1faf9f62b46b7ff9fabc6c
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed Apr 27 21:49:32 2022 +0100
+
+    US2001 - Added Controller, UI, DTO, Builders, Persistence, Test files
+
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/WarehouseSetupUI.java
+M	base.core/pom.xml
+A	base.core/src/main/java/eapli/base/warehouses/application/WarehouseSetupController.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvDocks/AgvDocks.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/agvDocks/AgvDocksBuilder.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/aisles/Aisles.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/aisles/AislesBuilder.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/Rows.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/rows/RowsBuilder.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/Shelves.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/square/Accessibility.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/square/SquareBuilder.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/Warehouse.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseAddress.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseBuilder.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseLength.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseSquare.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseWidth.java
+A	base.core/src/main/java/eapli/base/warehouses/dto/WarehouseDTO.java
+A	base.core/src/main/java/eapli/base/warehouses/repositories/WarehouseRepository.java
+A	base.core/src/test/java/eapli/base/clientusermanagement/domain/AGVTest.java
+A	base.core/src/test/java/eapli/base/clientusermanagement/domain/WarehouseTest.java
+A	base.core/src/test/java/eapli/base/clientusermanagement/domain/agvDocks/agvDocksTest.java
+A	base.core/src/test/java/eapli/base/clientusermanagement/domain/square/SquareTest.java
+
+commit f169dc4bf7361af931cf8e1450101e88b4da81a6
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed Apr 27 21:46:58 2022 +0100
+
+    US2002 - Started Implementation
+
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/ConfigureAGVUI.java
+M	base.core/src/main/java/eapli/base/infrastructure/persistence/RepositoryFactory.java
+A	base.core/src/main/java/eapli/base/warehouses/application/ConfigureAGVController.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/agvs/AGV.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/agvs/AGVAddress.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/agvs/AGVBuilder.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/agvs/AGVIdentification.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/agvs/Autonomy.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/agvs/MaxWeight.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/agvs/Model.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/agvs/ShortDescription.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/agvs/Status.java
+A	base.core/src/main/java/eapli/base/warehouses/dto/AgvDTO.java
+A	base.core/src/main/java/eapli/base/warehouses/repositories/AgvRepository.java
+M	base.core/src/main/resources/jsonFile.json
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryAgvRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryRepositoryFactory.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryWarehouseRepository.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaAgvRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaRepositoryFactory.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaWarehouseRepository.java
+
+commit 3041412376fb6e44da016918f77466e7192a4db1
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed Apr 27 21:44:23 2022 +0100
+
+    US2002 - Interpretation, Requirements, Analysis, and Design
+
+A	docs/US2002.md
+
+commit 4cdfec553de441d39ae4c82caf80330e26c7c104
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed Apr 27 21:43:24 2022 +0100
+
+    US2001 - Requirements, Analyze and Design update
+
+M	docs/US2001.md
+
+commit 23300c6cc66191e52937da1fe13a9cdfeacfba1e
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed Apr 27 14:01:08 2022 +0100
+
+    US2001 - Started implementation
+
+A	base.core/src/main/java/eapli/base/warehouses/domain/agvDocks/AgvDocks.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/aisles/Aisles.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/rows/Bin.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/rows/Rows.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/rows/Shelves.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/rows/StorageArea.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/square/Accessibility.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/square/Length.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/square/Square.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/square/Width.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/Warehouse.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseAddress.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseLength.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseSquare.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseUnit.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseWidth.java
+A	base.core/src/main/resources/jsonFile.json
+
+commit 2b2f194c8739d22eea243e29fc061a08372050c9
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Tue Apr 26 22:54:36 2022 +0100
+
+    US2001 - Interpretation, Requirements and Analysis
+
+A	docs/US2001.md
+
+commit 9ce6a39880be899a43bd5ba964895bdbadd06ad4
+Author: Paulo Norton <1210824@isep.ipp.pt>
+Date:   Wed Apr 13 13:27:29 2022 +0100
+
+    Correcao ao pom de app.common.console
+
+A	.idea/.gitignore
+A	.idea/compiler.xml
+A	.idea/encodings.xml
+A	.idea/jarRepositories.xml
+A	.idea/jpa-buddy.xml
+A	.idea/misc.xml
+A	.idea/vcs.xml
+M	base.app.common.console/pom.xml
+
+commit 54083c243a49f66f05a0991b88e369e83deb41b3
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun Apr 10 18:05:44 2022 +0100
+
+    Uploading Domain Model
+
+A	DM.svg
+A	DM.vpp
+
+commit 8f2ef40438bbadbd81282bc3ca5bc2e6bfd3f4e9
+Author: Paulo Norton <1210824@isep.ipp.pt>
+Date:   Wed Apr 6 15:53:02 2022 +0100
+
+    Fixed .gitignore
+
+M	.gitignore
+
+commit 3c5f87dd700d63bcfbb71252ab01319ede5a204c
+Author: Paulo Norton <1210824@isep.ipp.pt>
+Date:   Wed Apr 6 15:46:55 2022 +0100
+
+    initial commit
+
+A	.gitignore
+A	README.md
+A	base.app.backoffice.console/.gitignore
+A	base.app.backoffice.console/pom.xml
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/BaseBackoffice.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/MainMenu.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/authz/AddUserAction.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/authz/AddUserUI.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/authz/DeactivateUserAction.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/authz/DeactivateUserUI.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/authz/ListUsersAction.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/authz/ListUsersUI.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/authz/SystemUserPrinter.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/clientuser/AcceptRefuseSignupRequestAction.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/clientuser/AcceptRefuseSignupRequestUI.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/clientuser/SignupRequestPrinter.java
+A	base.app.backoffice.console/src/main/resources/application.properties
+A	base.app.backoffice.console/src/main/resources/logback.xml
+A	base.app.backoffice.console/src/test/java/eapli/base/app/other/console/BaseBackofficeTest.java
+A	base.app.bootstrap/.gitignore
+A	base.app.bootstrap/pom.xml
+A	base.app.bootstrap/src/main/java/eapli/base/app/bootstrap/BaseBootstrap.java
+A	base.app.bootstrap/src/main/resources/application.properties
+A	base.app.bootstrap/src/main/resources/logback.xml
+A	base.app.common.console/.gitignore
+A	base.app.common.console/pom.xml
+A	base.app.common.console/src/main/java/eapli/base/app/common/console/BaseApplication.java
+A	base.app.common.console/src/main/java/eapli/base/app/common/console/presentation/authz/ChangePasswordUI.java
+A	base.app.common.console/src/main/java/eapli/base/app/common/console/presentation/authz/LoginAction.java
+A	base.app.common.console/src/main/java/eapli/base/app/common/console/presentation/authz/LoginUI.java
+A	base.app.common.console/src/main/java/eapli/base/app/common/console/presentation/authz/LogoutAction.java
+A	base.app.common.console/src/main/java/eapli/base/app/common/console/presentation/authz/LogoutUI.java
+A	base.app.common.console/src/main/java/eapli/base/app/common/console/presentation/authz/MyUserMenu.java
+A	base.app.common.console/src/test/java/eapli/base/consoleapp/common/AppTest.java
+A	base.app.other.console/.gitignore
+A	base.app.other.console/pom.xml
+A	base.app.other.console/src/main/java/eapli/base/app/other/console/OtherApp.java
+A	base.app.other.console/src/main/java/eapli/base/app/other/console/presentation/MainMenu.java
+A	base.app.other.console/src/main/resources/application.properties
+A	base.app.other.console/src/main/resources/logback.xml
+A	base.app.other.console/src/test/java/eapli/base/app/other/console/OtherAppTest.java
+A	base.app.user.console/.gitignore
+A	base.app.user.console/pom.xml
+A	base.app.user.console/src/main/java/eapli/base/app/user/console/BaseUserApp.java
+A	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/ClientUserBaseUI.java
+A	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/FrontMenu.java
+A	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/MainMenu.java
+A	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/myuser/SignupRequestAction.java
+A	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/myuser/SignupRequestUI.java
+A	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/myuser/UserDataWidget.java
+A	base.app.user.console/src/main/resources/application.properties
+A	base.app.user.console/src/main/resources/logback.xml
+A	base.app.user.console/src/test/java/eapli/base/utente/consoleapp/AppTest.java
+A	base.bootstrappers/.gitignore
+A	base.bootstrappers/pom.xml
+A	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/BaseBootstrapper.java
+A	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/MasterUsersBootstrapper.java
+A	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/TestDataConstants.java
+A	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/UsersBootstrapperBase.java
+A	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/BackofficeUsersBootstrapper.java
+A	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/BaseDemoBootstrapper.java
+A	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/ClientUserBootstrapper.java
+A	base.bootstrappers/src/main/java/eapli/base/infrastructure/smoketests/BaseDemoSmokeTester.java
+A	base.bootstrappers/src/main/resources/application.properties
+A	base.bootstrappers/src/test/java/eapli/base/bootstrapapp/AppTest.java
+A	base.core/pom.xml
+A	base.core/src/main/java/eapli/base/AppSettings.java
+A	base.core/src/main/java/eapli/base/Application.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/application/AcceptRefuseSignupFactory.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/application/AcceptRefuseSignupRequestController.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/application/AcceptRefuseSignupRequestControllerEventfullImpl.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/application/AcceptRefuseSignupRequestControllerTxImpl.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/application/ClientUserService.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/application/ListClientUsersController.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/application/eventhandlers/AddClientUserOnSignupAcceptedController.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/application/eventhandlers/NewUserRegisteredFromSignupWatchDog.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/domain/ApprovalStatus.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/domain/ClientUser.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/domain/ClientUserBuilder.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/domain/MecanographicNumber.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/domain/SignupRequest.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/domain/SignupRequestBuilder.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/domain/events/NewUserRegisteredFromSignupEvent.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/domain/events/SignupAcceptedEvent.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/repositories/ClientUserRepository.java
+A	base.core/src/main/java/eapli/base/clientusermanagement/repositories/SignupRequestRepository.java
+A	base.core/src/main/java/eapli/base/infrastructure/persistence/PersistenceContext.java
+A	base.core/src/main/java/eapli/base/infrastructure/persistence/RepositoryFactory.java
+A	base.core/src/main/java/eapli/base/myclientuser/application/MyClientUserService.java
+A	base.core/src/main/java/eapli/base/myclientuser/application/SignupController.java
+A	base.core/src/main/java/eapli/base/usermanagement/application/AddUserController.java
+A	base.core/src/main/java/eapli/base/usermanagement/application/DeactivateUserController.java
+A	base.core/src/main/java/eapli/base/usermanagement/application/ListUsersController.java
+A	base.core/src/main/java/eapli/base/usermanagement/application/eventhandlers/AddUserOnSignupAcceptedController.java
+A	base.core/src/main/java/eapli/base/usermanagement/application/eventhandlers/SignupAcceptedWatchDog.java
+A	base.core/src/main/java/eapli/base/usermanagement/domain/BasePasswordPolicy.java
+A	base.core/src/main/java/eapli/base/usermanagement/domain/BaseRoles.java
+A	base.core/src/main/java/eapli/base/usermanagement/domain/UserBuilderHelper.java
+A	base.core/src/main/resources/ecafeteria.sample.properties
+A	base.core/src/test/java/eapli/base/clientusermanagement/domain/ClientUserTest.java
+A	base.persistence.impl/pom.xml
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryClientUserRepository.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryInitializer.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryRepositoryFactory.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemorySignupRequestRepository.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/BaseJpaReportingRepositoryBase.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/BasepaRepositoryBase.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaClientUserRepository.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaRepositoryFactory.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaSignupRequestRepository.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/PersistenceSettings.java
+A	base.persistence.impl/src/main/resources/META-INF/persistence.xml
+A	build-all.bat
+A	build-all.sh
+A	license.txt
+A	pipeline.bat
+A	pom.xml
+A	quickbuild.bat
+A	rebuild-all.bat
+A	rebuild-all.sh
+A	run-backoffice.bat
+A	run-backoffice.sh
+A	run-bootstrap.bat
+A	run-bootstrap.sh
+A	run-other.bat
+A	run-other.sh
+A	run-user.bat
+A	run-user.sh
+
+commit 239cbea80fe33ed09dbd966ee52821e59c6a1465
+Author: Paulo César Miranda Antunes dos Santos Norton <1210824@isep.ipp.pt>
+Date:   Wed Apr 6 14:45:06 2022 +0000
+
+    README.md edited online with Bitbucket
+
+D	README.md
+
+commit 5416dd1115cb13551a05bb6a3b1976c9b4b61123
+Author: Paulo César Miranda Antunes dos Santos Norton <1210824@isep.ipp.pt>
+Date:   Wed Apr 6 14:44:59 2022 +0000
+
+    .gitignore edited online with Bitbucket
+
+D	.gitignore
+
+commit 9b43e9ba2bbf0481d65574e1330e268a16ea5dd5
+Author: Paulo César Miranda Antunes dos Santos Norton <1210824@isep.ipp.pt>
+Date:   Wed Apr 6 14:26:32 2022 +0000
+
+    Initial commit
+
+A	.gitignore
+A	README.md
