@@ -1,0 +1,55 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Warehouse Employee" as Employee
+
+participant ":ConfigureAGVUI" as UI
+participant ":ConfigureAGVController" as CTRL
+participant ":WarehouseService" as WHService
+participant ":WarehouseRepository" as WHRepo
+participant ":AGVDTO" as DTO
+participant ":AGV" as AGV
+participant ":AGVRepository" as AGVRepo
+
+
+
+activate Employee
+
+
+Employee -> UI : Insert data
+activate UI
+
+UI -> CTRL : getAGVDocks()
+
+activate CTRL
+CTRL -> WHService : getAllAgvDocks()
+activate WHService
+WHService -> WHRepo : findAll()
+activate WHRepo
+WHRepo --> WHService : warehouse
+deactivate WHRepo
+
+WHService --> CTRL : all AGV Docks
+deactivate WHService
+CTRL --> UI: all AGV Docks
+UI -> DTO: create AGVDTO
+activate DTO
+DTO --> UI: AGVDTO
+deactivate DTO
+UI -> CTRL : configureAGV(dto)
+CTRL -> AGV : new AGV(dto)
+activate AGV
+AGV --> CTRL : new AGV
+deactivate AGV
+CTRL -> AGVRepo : save(agv)
+activate AGVRepo
+AGVRepo -> AGVRepo : validate()
+AGVRepo -> AGVRepo : add()
+
+deactivate Employee
+
+
+
+@enduml
