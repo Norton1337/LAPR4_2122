@@ -14,6 +14,7 @@ import eapli.framework.infrastructure.authz.application.AuthzRegistry;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 
 public class ConfigureAGVController {
 
@@ -34,7 +35,7 @@ public class ConfigureAGVController {
         return agv.identity();
     }
 
-    public List<AgvDocks> getAGVDocks(){
+    public Set<AgvDocks> getAGVDocks(){
         return warehouseService.getAllAgvDocks();
     }
 

@@ -22,6 +22,7 @@ import eapli.base.warehouses.repositories.WarehouseRepository;
 import eapli.framework.infrastructure.authz.application.AuthorizationService;
 import eapli.framework.infrastructure.authz.application.AuthzRegistry;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -35,11 +36,6 @@ public class WarehouseSetupController {
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
-    private static ObjectMapper getDefaultObjectMapper() {
-
-        ObjectMapper defaultObjectMapper = new ObjectMapper();
-        return defaultObjectMapper;
-    }
 
     public static JsonNode parse(String src) throws JsonMappingException, JsonProcessingException {
 
@@ -49,12 +45,6 @@ public class WarehouseSetupController {
 
     public WarehouseSetupController(){}
 
-    public void setupWarehouse(WarehouseDTO dto) throws IOException {
-        authz.ensureAuthenticatedUserHasAnyOf(BaseRoles.ADMIN);
-        warehouse = new Warehouse(dto);
-        warehouseRepository.save(warehouse);
-    }
-
     public WarehouseIdentification getWarehouseAddress(WarehouseDTO dto) throws IOException {
         warehouse= new Warehouse(dto);
         return warehouse.identity();
@@ -62,10 +52,12 @@ public class WarehouseSetupController {
 
     public void setupWarehouse(String jsonFile) throws IOException {
         String file;
+        String userDirectory = new File("").getAbsolutePath();
         if(jsonFile.isBlank())
-            file = "src/main/resources/jsonFile.json";
+            file = userDirectory+"/base.core/src/main/resources/jsonFile.json";
         else
             file=jsonFile;
+
         String jsonSource = new String(Files.readAllBytes(Paths.get(file)));
 
         try {

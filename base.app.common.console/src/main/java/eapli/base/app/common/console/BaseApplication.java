@@ -20,6 +20,7 @@
  */
 package eapli.base.app.common.console;
 
+import eapli.base.warehouses.domain.warehouse.Warehouse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

@@ -3,8 +3,10 @@ import eapli.framework.domain.model.DomainEntity;
 import eapli.framework.domain.model.ValueObject;
 import eapli.framework.validations.Preconditions;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
+import javax.persistence.JoinColumn;
 
 @Embeddable
 public class Square implements ValueObject, DomainEntity<Square>, Comparable<Square> {

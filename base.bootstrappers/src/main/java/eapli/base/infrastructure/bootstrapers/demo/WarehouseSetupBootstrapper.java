@@ -3,6 +3,7 @@ package eapli.base.infrastructure.bootstrapers.demo;
 import eapli.base.warehouses.application.WarehouseSetupController;
 import eapli.framework.actions.Action;
 
+import java.io.File;
 import java.io.IOException;
 
 public class WarehouseSetupBootstrapper implements Action{
@@ -12,7 +13,8 @@ public class WarehouseSetupBootstrapper implements Action{
     @Override
     public boolean execute() {
         try {
-            warehouseSetupController.setupWarehouse("src/main/resources/jsonFile.json");
+            String userDirectory = new File("").getAbsolutePath();
+            warehouseSetupController.setupWarehouse(userDirectory+"/base.core/src/main/resources/jsonFile.json");
         } catch (IOException e) {
             e.printStackTrace();
         }

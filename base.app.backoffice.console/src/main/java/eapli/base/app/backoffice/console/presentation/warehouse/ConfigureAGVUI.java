@@ -1,4 +1,4 @@
-package eapli.base.app.backoffice.console.presentation;
+package eapli.base.app.backoffice.console.presentation.warehouse;
 
 import eapli.base.warehouses.application.ConfigureAGVController;
 import eapli.base.warehouses.domain.agvDocks.AgvDocks;
@@ -8,6 +8,7 @@ import eapli.framework.io.util.Console;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 
 public class ConfigureAGVUI {
     private ConfigureAGVController agvController = new ConfigureAGVController();
@@ -23,7 +24,7 @@ public class ConfigureAGVUI {
         agvDTO.model = Console.readNonEmptyLine("Modelo do AGV", "Não pode ser nulo");
         agvDTO.shortDescription = Console.readNonEmptyLine("Descrição curta do AGV", "Não pode ser nulo");
         agvDTO.status = Console.readNonEmptyLine("Estado do AGV", "Não pode ser nulo");
-        List<AgvDocks> agvDocksList = agvController.getAGVDocks();
+        Set<AgvDocks> agvDocksList = agvController.getAGVDocks();
         int i=0;
         System.out.println("\nAGVDocks: ");
         for (AgvDocks agvDock: agvDocksList) {
@@ -34,7 +35,8 @@ public class ConfigureAGVUI {
             System.out.println("AGVDock não existe");
             return false;
         }
-        agvDTO.agvDock=agvDocksList.get(option2);
+
+        agvDTO.agvDock=(AgvDocks) agvDocksList.toArray()[option2];
 
         option = Console.readNonEmptyLine("Confirma os dados intrudozidos (Y/N):","Pode ser em minusculas");
         try {

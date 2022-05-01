@@ -3,10 +3,14 @@ package eapli.base.warehouses.domain.square;
 import eapli.framework.domain.model.ValueObject;
 import eapli.framework.validations.Preconditions;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Embeddable
 public class Length implements Comparable<Length>, ValueObject {
+    @Column(name="length", insertable = false, updatable = false)
     private int lengthNum;
 
     public Length(int lengthNum){

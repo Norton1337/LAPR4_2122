@@ -9,12 +9,13 @@ import eapli.framework.infrastructure.authz.application.AuthzRegistry;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class WarehouseService {
 
     private final WarehouseRepository warehouseRepository = PersistenceContext.repositories().warehouse();
 
-    public List<AgvDocks> getAllAgvDocks(){
+    public Set<AgvDocks> getAllAgvDocks(){
         final Iterable<Warehouse> warehouse = warehouseRepository.findAll();
         return warehouse.iterator().next().allAGVDocks();
     }

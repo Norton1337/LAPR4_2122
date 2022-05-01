@@ -35,6 +35,8 @@ import eapli.framework.infrastructure.authz.domain.model.PlainTextEncoder;
 import eapli.framework.infrastructure.eventpubsub.EventDispatcher;
 import eapli.framework.util.ArrayPredicates;
 
+
+
 /**
  * Base Bootstrapping data app
  *
@@ -44,6 +46,7 @@ public final class BaseBootstrap extends BaseApplication {
     /**
      * avoid instantiation of this class.
      */
+
     private BaseBootstrap() {
     }
 

@@ -4,7 +4,9 @@ import eapli.base.warehouses.domain.aisles.Aisles;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import eapli.base.warehouses.domain.agvDocks.AgvDocks;
 import eapli.base.warehouses.domain.square.Accessibility;
@@ -35,9 +37,9 @@ public class Warehouse implements AggregateRoot<WarehouseIdentification> {
     private WarehouseUnit warehouseUnit;
 
     @OneToMany
-    private List<Aisles> aisles;
+    private Set<Aisles> aisles;
     @OneToMany
-    private List<AgvDocks> agvDocks;
+    private Set<AgvDocks> agvDocks;
 
 
 
@@ -51,8 +53,8 @@ public class Warehouse implements AggregateRoot<WarehouseIdentification> {
         this.warehouseWidth = warehouseWidth;
         this.warehouseSquare = warehouseSquare;
         this.warehouseUnit = warehouseUnit;
-        this.aisles = new ArrayList<>();
-        this.agvDocks = new ArrayList<>();
+        this.aisles = new HashSet<Aisles>();
+        this.agvDocks = new HashSet<AgvDocks>();
         for (Aisles aisle: aisles) {
             addAisles(aisle);
         }
@@ -84,7 +86,7 @@ public class Warehouse implements AggregateRoot<WarehouseIdentification> {
     public String toString() {
         return "Warehouse{" +
                 "id=" + id +
-                ", warehouseAddress=" + warehouse +
+                ", warehouseIdentification=" + warehouse +
                 ", warehouseLength=" + warehouseLength +
                 ", warehouseWidth=" + warehouseWidth +
                 ", warehouseSquare=" + warehouseSquare +
@@ -99,7 +101,7 @@ public class Warehouse implements AggregateRoot<WarehouseIdentification> {
         return new Warehouse(warehouseIdentification,warehouseLength,warehouseWidth,warehouseSquare,warehouseUnit,aisles,agvDocks);
     }
 
-    public List<AgvDocks> allAGVDocks(){
+    public Set<AgvDocks> allAGVDocks(){
         return this.agvDocks;
     }
 

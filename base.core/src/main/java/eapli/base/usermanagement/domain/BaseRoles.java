@@ -55,6 +55,7 @@ public final class BaseRoles {
      */
     public static final Role CASHIER = Role.valueOf("CASHIER");
 
+    public static final Role WAREHOUSE_EMPLOYEE = Role.valueOf("WAREHOUSE_EMPLOYEE");
     /**
      * get available role types for adding new users
      *
