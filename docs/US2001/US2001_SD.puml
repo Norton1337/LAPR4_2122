@@ -1,0 +1,37 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Warehouse Employee" as Employee
+
+participant ":WarehouseSetupUI" as UI
+participant ":WarehouseSetupController" as CTRL
+participant ":WarehouseRepository" as WHRepo
+participant ":Warehouse" as Warehouse
+
+
+
+activate Employee
+
+
+Employee -> UI : Insert JsonFile Path
+activate UI
+
+UI -> CTRL : setupWarehouse(path)
+activate CTRL
+CTRL -> CTRL: convert Json to Warehouse
+CTRL -> Warehouse : Create Warehouse
+activate Warehouse
+Warehouse --> CTRL : Warehouse
+deactivate Warehouse
+CTRL -> WHRepo : save(warehouse)
+activate WHRepo
+WHRepo -> WHRepo : validate()
+WHRepo -> WHRepo : add()
+
+
+deactivate Employee
+
+
+@enduml
