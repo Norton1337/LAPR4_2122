@@ -7,20 +7,20 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class ProductCode implements ValueObject {
 
-    private int productCode;
+    private String productCode;
 
     public ProductCode() {
     }
 
-    public ProductCode(int productCode) {
+    public ProductCode(String productCode) {
         this.productCode = productCode;
     }
 
-    public int getProductCode() {
+    public String getProductCode() {
         return productCode;
     }
 
-    public void setProductCode(int productCode) {
+    public void setProductCode(String productCode) {
         this.productCode = productCode;
     }
 

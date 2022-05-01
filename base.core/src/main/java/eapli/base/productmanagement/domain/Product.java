@@ -1,5 +1,7 @@
 package eapli.base.productmanagement.domain;
 
+import eapli.base.categorymanagment.domain.Category;
+
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -36,12 +38,17 @@ import javax.persistence.Id;
         @Embedded
         private ProductExtendedDescription extendedDescription;
 
+        @Embedded
+        private Category productCategory;
+
         protected Product(){}
 
 
-    public Product(ProductCode productCode, ProductBarCode barCode, ProductReference reference,
+    public Product(int internalCode, ProductCode productCode, ProductBarCode barCode, ProductReference reference,
                    ProductBrandName brandName, ProductPhotos photos, ProductShortDescription shortDescription,
-                   ProductTechnicalDescription technicalDescription, ProductExtendedDescription extendedDescription) {
+                   ProductTechnicalDescription technicalDescription, ProductExtendedDescription extendedDescription,
+                   Category productCategory) {
+        this.internalCode = internalCode;
         this.productCode = productCode;
         this.barCode = barCode;
         this.reference = reference;
@@ -50,6 +57,7 @@ import javax.persistence.Id;
         this.shortDescription = shortDescription;
         this.technicalDescription = technicalDescription;
         this.extendedDescription = extendedDescription;
+        this.productCategory = productCategory;
     }
 
     @Override
@@ -64,6 +72,7 @@ import javax.persistence.Id;
                 ", shortDescription=" + shortDescription +
                 ", technicalDescription=" + technicalDescription +
                 ", extendedDescription=" + extendedDescription +
+                ", productCategory=" + productCategory +
                 '}';
     }
 }
