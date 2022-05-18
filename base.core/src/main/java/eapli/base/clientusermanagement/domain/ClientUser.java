@@ -58,7 +58,7 @@ public class ClientUser implements AggregateRoot<MecanographicNumber> {
     /**
      * cascade = CascadeType.NONE as the systemUser is part of another aggregate
      */
-    @OneToOne()
+    @OneToOne
     private SystemUser systemUser;
 
     public ClientUser(final SystemUser user, final MecanographicNumber mecanographicNumber) {

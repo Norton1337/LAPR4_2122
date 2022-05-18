@@ -63,8 +63,9 @@ public class BaseBootstrapper implements Action {
     public boolean execute() {
         // declare bootstrap actions
         final Action[] actions = {
-                new MasterUsersBootstrapper(),
-                new WarehouseSetupBootstrapper()};
+                new MasterUsersBootstrapper()
+                //,new WarehouseSetupBootstrapper()
+                };
 
         registerPowerUser();
         authenticateForBootstrapping();

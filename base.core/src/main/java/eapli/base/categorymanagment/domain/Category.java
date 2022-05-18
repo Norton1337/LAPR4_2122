@@ -3,7 +3,6 @@ package eapli.base.categorymanagment.domain;
 import javax.persistence.*;
 
 @Entity
-@Embeddable
 public class Category {
 
     @Id

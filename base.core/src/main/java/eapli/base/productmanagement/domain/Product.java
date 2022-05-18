@@ -2,10 +2,7 @@ package eapli.base.productmanagement.domain;
 
 import eapli.base.categorymanagment.domain.Category;
 
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
     public class Product {
@@ -38,7 +35,7 @@ import javax.persistence.Id;
         @Embedded
         private ProductExtendedDescription extendedDescription;
 
-        @Embedded
+        @OneToOne
         private Category productCategory;
 
         protected Product(){}

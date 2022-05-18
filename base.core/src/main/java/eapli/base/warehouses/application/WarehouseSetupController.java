@@ -141,7 +141,6 @@ public class WarehouseSetupController {
                     .withAgvDocks(agvDocks)
                     .build();
 
-
             warehouseRepository.save(warehouse);
         } catch (JsonProcessingException e) {
             e.printStackTrace();

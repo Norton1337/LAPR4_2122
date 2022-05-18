@@ -10,7 +10,8 @@ import javax.persistence.*;
 @Entity
 public class AGV implements AggregateRoot<AGVIdentification> {
     @Id
-    private int id;
+    @Column(insertable = false, updatable = false)
+    private int agvId;
 
     @Version
     private Long version;
