@@ -1,0 +1,12 @@
+commit 8ec7352ceaac76bcf50de90fb8a2887ea8cb7444
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed May 18 18:50:11 2022 +0100
+
+    Fixing Bootstrap errors
+
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/BaseBootstrapper.java
+M	base.core/src/main/java/eapli/base/categorymanagment/domain/Category.java
+M	base.core/src/main/java/eapli/base/clientusermanagement/domain/ClientUser.java
+M	base.core/src/main/java/eapli/base/productmanagement/domain/Product.java
+M	base.core/src/main/java/eapli/base/warehouses/application/WarehouseSetupController.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/AGV.java
