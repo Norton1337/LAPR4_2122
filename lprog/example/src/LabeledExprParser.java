@@ -1,4 +1,4 @@
-package lprog;// Generated from D:/OneDrive - Instituto Superior de Engenharia do Porto/2� Semestre/EAPLI/lei21_22_s4_2dj_4\LabeledExpr.g4 by ANTLR 4.10.1
+package src;// Generated from D:/OneDrive - Instituto Superior de Engenharia do Porto/2� Semestre/EAPLI/lei21_22_s4_2dj_4\LabeledExpr.g4 by ANTLR 4.10.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -70,7 +70,7 @@ public class LabeledExprParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "LabeledExpr.g4"; }
+	public String getGrammarFileName() { return "lprog/example/LabeledExpr.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }

@@ -1,24 +1,21 @@
-----------------------------------
-| Sneaker Products questionnaire |  
-----------------------------------
+Sneaker Products questionnaire
 
-	Hello,
+	Hello,	Please take a few seconds to fill in the required questions.
 
-	Please take a few seconds to fill in the required questions.
+Q1. What is your gender? (optional) Male - Female
 
-1. What is your gender? (optional)
+
 Multiple Choice
+A1.
 
-	Male - 
-	Female - 
-	Other: (fill in the text) 
-	
-2. How old are you? (optional)
-Single choice
 
-	[##-##]
 	
-3. How much do you wear in sneakers? (obligatory)
+Q2. How old are you? (optional)
+Numeric
+
+	##
+	
+Q3. How much do you wear in sneakers? (obligatory)
 Numeric
 
 	###

@@ -1,7 +1,4 @@
-package lprog;
-
-import lprog.LabeledExprBaseVisitor;
-import lprog.LabeledExprParser;
+package src;
 
 import java.util.HashMap;
 import java.util.Map;

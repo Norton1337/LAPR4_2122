@@ -2,9 +2,7 @@
 | Office Products questionnaire |  
 ---------------------------------
 
-	Hello,
-
-	Please take a few seconds to fill in the required questions.
+	Hello,	Please take a few seconds to fill in the required questions.
 
 1. What is your gender? (optional)
 Multiple Choice
