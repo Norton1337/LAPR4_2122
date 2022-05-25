@@ -1,4 +1,4 @@
-package eapli.base.customermanagement.repositories;
+package eapli.base.persistence.impl.inmemory.repositories;
 
 import eapli.base.customermanagement.domain.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
