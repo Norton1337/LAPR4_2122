@@ -1,0 +1,71 @@
+---------------------------------
+| Office Products questionnaire |  
+---------------------------------
+
+	Hello,
+
+	Please take a few seconds to fill in the required questions.
+
+1. What is your gender? (optional)
+Multiple Choice
+
+	Male - 
+	Female - 
+	Other: (fill in the text)
+	
+2. How old are you? (optional)
+Single choice
+
+	[##-##]
+	
+3. Where do you work from? (obligatory)
+Multiple Choice
+
+	Home - 
+	Office - 
+	Other: (fill in text)
+	
+4. What are the materials that you use at work? (obligatory)
+Multiple Choice
+
+	Notebook - 
+	Computer - 
+	Other: (fill in the text)
+	
+5. In a scale from 1 to 5 how do evaluate our product? (obligatory)
+Multiple Choice
+	
+	1 - 
+	2 - 
+	3 - 
+	4 - 
+	5 -
+	
+6. What are the product's most appealing features? (obligatory)
+Free text
+
+	******
+	
+7. What are the product's most problematic features? (obligatory)
+Free Text
+
+	******
+
+8. Do you have any suggestions for improving production efficiency? (optional)
+Free Text
+
+	******
+	
+9. Would you suggest our product to others if it were available on the market? (obligatory)
+Free Text
+
+	******
+	
+10. If not why? (Dependency - Responding no to question nr 8)
+Free Text
+
+	******
+
+-----------------------------------------------	
+| Thank you for completing the questionnaire. |
+-----------------------------------------------

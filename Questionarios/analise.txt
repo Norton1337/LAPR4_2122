@@ -1,0 +1,50 @@
+-----------------------------------------------
+| User Story 3001: Create a new questionnaire |
+-----------------------------------------------
+
+	1. User Story description
+
+- As Sales Manager, I would like to develop a new questionnaire that will be completed clients who satisfy the required requirements
+
+	2. Actor
+
+- Sales Manager
+
+	3. Acceptance Criteria
+
+- The questionnaire's collection of questions/answers should be presented and verified  using the syntax being built for this purpose.
+
+	4. Client clarifications
+
+	Question: 
+
+Dear client, 
+
+The User Story 3001 points to the US 3.3.1 -> "Create a new survey. A survey is characterized by an alphanumeric code, a description, the period( in days) it will be performed, the intended questionnaire, and a set of rules that allows the system to determine the survey target audience."
+
+However, what are the limitations of the survey's alphanumeric characters and explanation?
+
+	Answer:
+
+So because of the fundamental limitations the code has to contain an alphanumeric value with 15 characters max and the description has to be non-empty short sentence.
+
+	Question:
+	
+Dear client,
+
+According to my understanding, the questionnaire must be constructed using our application's command-line interface and then transferred so the grammar will be evaluated.
+
+Is my understanding correct?
+
+Could we convert it to XML, for example, and then check its grammar?
+
+Thanks.
+
+	Answer:
+
+Data import/export is not required.
+All elements should be blended.
+I recommend that you consult with technical professionals 
+
+	5. Relevant business aspects 
+

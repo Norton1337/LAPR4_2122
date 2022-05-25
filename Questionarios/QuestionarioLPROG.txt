@@ -1,0 +1,43 @@
+Encomendou um produto ?
+s
+
+Pertence a que faixa etária ? 1 - <18	2 - 18-25       3- 25-50	4- >50
+50
+
+Qual o seu tipo de produto ? C - Cosmética	D - Desporto	V - Vestuário	T - Calçado
+C
+
+Tem interesse em comprar mais produtos ?
+S
+
+Ficou satisfeito com o produto que comprou ?
+S
+
+O valor pelo produto está de acordo com a sua ideia ?
+N
+
+Recebeu o produto em bom estado ?
+N
+
+O tempo de entrega foi cumprido ?
+S
+
+Classifique de a - e de acordo com a sua satisfação geral sendo a - muito bom e - muito fraco
+
+Identifique o quanto a nossa aplicação é rápida e intuitiva
+a
+
+Classifique a variadade de produtos existentes
+b
+
+A aplicação apresentou-lhe produtos de qualidade
+e
+
+
+
+
+
+
+
+
+
