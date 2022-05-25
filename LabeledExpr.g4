@@ -1,6 +1,6 @@
 grammar LabeledExpr;
 
-prog: stat ;
+prog: stat+;
 
 stat: expr NEWLINE # printExpr
 | ID '=' expr NEWLINE # assign
