@@ -1,0 +1,52 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Sales Clerk" as SalesClerk
+
+participant ":RegisterCustomerUI" as UI
+participant ":RegisterCustomerController" as CTRL
+participant ":CustomerBuilder" as Build
+participant ":CustomerRepository" as Repo
+participant ":Customer" as Customer
+
+
+
+activate SalesClerk
+
+
+SalesClerk -> UI : Initiate Register Customer
+activate UI
+UI --> SalesClerk : Ask necessary information
+SalesClerk -> UI : Insert data
+UI -> CTRL : registerCustomer()
+activate CTRL
+
+CTRL -> Build : create()
+activate Build
+CTRL -> Build : setData()
+Build -> Customer : create Customer
+activate Customer
+Customer -> Customer : validate()
+Customer --> Build : customer
+deactivate Build
+deactivate Customer
+
+CTRL -> Repo : save(customer)
+
+activate Repo
+Repo -> Repo : validate()
+Repo -> Repo : add()
+deactivate Repo
+
+CTRL --> UI : Operation (in)sucess
+deactivate CTRL
+
+UI --> SalesClerk
+deactivate UI
+
+deactivate SalesClerk
+
+
+@enduml
