@@ -9,6 +9,7 @@ public class CreateQuestionnaireUI {
     private static final String UI_SINGLE_LINE = "|---------------------|-------------------------------------------------------------------|";
     Scanner sc = new Scanner(System.in);
 
+    final QuestionnaireController questionnaireController = new QuestionnaireController();
 
     public void menu() {
 
@@ -29,6 +30,7 @@ public class CreateQuestionnaireUI {
                     System.out.println("Insert WelcomeMessage: ");
                     String wmsg = sc.nextLine();
 
+                    questionnaireController.createFile(fileName,title, wmsg);
                     boolean flag2 = true;
                     while (flag2) {
                         System.out.println(UI_DOUBLE_LINE);
@@ -48,6 +50,7 @@ public class CreateQuestionnaireUI {
                                 System.out.println("Insert Answer Type ( 1 - MultipleChoice     2 - Numeric     3 - FreeText ");
                                 Integer atype = sc.nextInt();
 
+                                questionnaireController.addQuestion(text,type, atype, fileName);
                                 if (atype == 1) {
                                     boolean flag3 = true;
                                     while (flag3) {
@@ -62,7 +65,7 @@ public class CreateQuestionnaireUI {
                                             case 1:
                                                 System.out.println("Type Answer ");
                                                 String answer = sc.next();
-
+                                                questionnaireController.addPossibleAnswer(answer, fileName);
                                                 break;
                                             case 2:
                                                 flag3 = false;
@@ -78,8 +81,7 @@ public class CreateQuestionnaireUI {
                     }
 
 
-                    final QuestionnaireController questionnaireController = new QuestionnaireController();
-                    questionnaireController.createFile(fileName,title, wmsg);
+
 
 
 
