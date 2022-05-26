@@ -28,16 +28,27 @@ public class QuestionnaireController {
         }
 
 
-
-
         public void createFile(String fileName, String title, String wmsg)
         {
+                // enviar para makefile estes dados,criar ficheiro e abrir
+        }
+
+    public void addQuestion(String text, Integer type, Integer atype, String fileName) {
+
+        // enviar para makefile os dados da questao, utilizar ficheiro ja criado com nome fileName
+    }
+
+
+    public void addPossibleAnswer(String answer, String fileName) {
+
+        // enviar para makefile os dados das respostas, utilizar ficheiro ja criado com nome fileName
+        // vai ser adicionado em frente á addQuestion() , ver formataçao de txt com o paulo por causa da grammar
 
         }
 
 
 
-    }
+}
 
 
 
