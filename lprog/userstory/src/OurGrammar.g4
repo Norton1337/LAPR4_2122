@@ -20,7 +20,7 @@ questionnaire: (questionnaire_section)+ final_message
 questionnaire_section: SECTION title description NEWLINE content
 ;
 
-content: (questions NEWLINE)+
+content: (questions)+
 ;
 
 description: LPARENTH STRING RPARENTH
@@ -29,17 +29,21 @@ description: LPARENTH STRING RPARENTH
 final_message: STRING
 ;
 
-questions: OPTIONAL STRING QMARK type
-| OBLIGATORY STRING QMARK type
+questions:  STRING QMARK type
+| STRING QMARK type
 ;
 
-type: '[Multiple Choice]' possible_answers NEWLINE STRING
-| '[Numeric]' NEWLINE INT
-| '[Free Text]' NEWLINE STRING
+type: OPTIONAL '[Multiple Choice]' possible_answers (NEWLINE (STRING|INT) NEWLINE|NEWLINE)
+| OPTIONAL '[Numeric]' (NEWLINE INT NEWLINE|NEWLINE)
+| OPTIONAL '[Free Text]' (NEWLINE STRING NEWLINE|NEWLINE)
+| OBLIGATORY '[Multiple Choice]' possible_answers NEWLINE (STRING|INT) NEWLINE
+| OBLIGATORY '[Numeric]' NEWLINE INT NEWLINE
+| OBLIGATORY '[Free Text]' NEWLINE STRING NEWLINE
 ;
 
 possible_answers: (STRING '|')+
 ;
+
 SECTION: 'Section' INT ':';
 TYPES: LSQRPARENTH ('Multiple Choice'|'Numeric'|'Free Text') RSQRPARENTH;
 NEWLINE : [\r\n]+ ;
