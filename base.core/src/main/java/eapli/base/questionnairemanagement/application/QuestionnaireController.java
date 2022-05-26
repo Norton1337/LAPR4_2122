@@ -5,9 +5,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.Buffer;
 
-    public class QuestionnaireController {
+public class QuestionnaireController {
 
         public void openFile(String file) throws FileNotFoundException {
 
@@ -27,6 +26,20 @@ import java.nio.Buffer;
             }
 
         }
+
+
+
+
+        public void createFile(String fileName, String title, String wmsg)
+        {
+
+        }
+
+
+
     }
+
+
+
 
 
