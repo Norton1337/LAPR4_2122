@@ -2,45 +2,44 @@ Sneaker Products questionnaire
 
 Hello, Please take a few seconds to fill in the required questions.
 
-Q1. What is your gender?(optional) Male | Female |
-[Multiple Choice]
+Section1: Personal Info (this section is about you)
+(optional)Q1. What is your gender? [Multiple Choice] Male | Female |
 insert answer1 here
 
 
-Q2. How old are you?(optional)
-[Numeric]
-insert answer2 here
+(optional)Q2. How old are you? [Numeric]
+46
 
-Q3. How much do you wear in sneakers?(obligatory)
-[Numeric]
-insert answer3 here
+Section2: Other (this section is about other stuff)
+(obligatory)Q3. How much do you wear in sneakers? [Numeric]
+56
 
-Q4. What are the materials that you prefer in a sneaker?(obligatory) Leathers | Textiles | Synthetics | Rubber | Foam | Plastic |
-[Multiple Choice]
+
+(obligatory)Q4. What are the materials that you prefer in a sneaker? [Multiple Choice]  Leathers | Textiles | Synthetics | Rubber | Foam | Plastic |
 insert answer4 here
 
 
-Q5. Do you have a problem of any nature with your feet?(obligatory)
-[Free Text]
+(obligatory)Q5. Do you have a problem of any nature with your feet? [Free Text]
 insert answer5 here
 
-Q6. In a scale from 1 to 5 how do evaluate our product?(obligatory) 1 | 2 | 3 | 4 | 5 |
-[Multiple Choice]
+
+(obligatory)Q6. In a scale from 1 to 5 how do evaluate our product? [Multiple Choice]  1 | 2 | 3 | 4 | 5 |
 insert answer6 here
 
-Q7. What are the most appealing features of this product?(obligatory)
-[Free Text]
+
+(obligatory)Q7. What are the most appealing features of this product? [Free Text]
 insert answer7 here
 
-Q8. What are the most problematic features of this product?(obligatory)
-[Free Text]
+
+(obligatory)Q8. What are the most problematic features of this product? [Free Text]
 insert answer8 here
 
-Q9. Do you have any suggestions for improving production efficiency?(optional)
-[Free Text]
+
+(optional)Q9. Do you have any suggestions for improving production efficiency? [Free Text]
 insert answer9 here
 
-Q10. Would you suggest our product to others if it were available on the market?(obligatory)
-[Free Text]
+
+(obligatory)Q10. Would you suggest our product to others if it were available on the market? [Free Text]
 insert answer10 here
 
+Thank you for taking our survey! Have a nice day.
