@@ -1,4 +1,32 @@
 package eapli.base.questionnairemanagement.application;
 
-public class QuestionnaireController {
-}
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.Buffer;
+
+    public class QuestionnaireController {
+
+        public void openFile(String file) throws FileNotFoundException {
+
+            try {
+                String line;
+                if (file.equals("questionarioTeste.txt")){
+                    BufferedReader br = new BufferedReader(new FileReader("lprog/userstory/src/Questionarios/questionarioTeste.txt"));
+                    while ((line = br.readLine()) != null) {
+                        System.out.println(line);
+                    }
+                    br.close();
+                }
+
+
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+
+        }
+    }
+
+
