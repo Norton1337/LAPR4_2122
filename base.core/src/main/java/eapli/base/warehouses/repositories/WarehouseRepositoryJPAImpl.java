@@ -1,14 +1,12 @@
-package eapli.base.persistence.impl.inmemory;
+package eapli.base.warehouses.repositories;
 
 import eapli.base.warehouses.domain.warehouse.Warehouse;
-import eapli.base.warehouses.domain.warehouse.WarehouseIdentification;
-import eapli.base.warehouses.repositories.WarehouseRepository;
 
 import javax.persistence.*;
 import java.util.List;
 import java.util.Optional;
 
-public class InMemoryWarehouseRepository implements WarehouseRepository {
+public class WarehouseRepositoryJPAImpl implements WarehouseRepository{
 
     private EntityManager getEntityManager() {
         EntityManagerFactory factory = Persistence.
@@ -28,7 +26,6 @@ public class InMemoryWarehouseRepository implements WarehouseRepository {
         em.persist(warehouse);
         tx.commit();
         em.close();
-
         return warehouse;
     }
 

@@ -53,16 +53,19 @@ public class Warehouse implements AggregateRoot<WarehouseIdentification> {
         this.warehouseWidth = warehouseWidth;
         this.warehouseSquare = warehouseSquare;
         this.warehouseUnit = warehouseUnit;
+        /*
         this.aisles = new HashSet<Aisles>();
         this.agvDocks = new HashSet<AgvDocks>();
+
         for (Aisles aisle: aisles) {
             addAisles(aisle);
         }
+
         for (AgvDocks agvDock: agvDocks) {
             addAgvDock(agvDock);
 
         }
-
+*/
     }
 
     public Warehouse(WarehouseDTO dto) throws IOException {

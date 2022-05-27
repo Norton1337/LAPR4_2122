@@ -1,13 +1,10 @@
-// Generated from D:/OneDrive - Instituto Superior de Engenharia do Porto/2º Semestre/EAPLI/lei21_22_s4_2dj_4/lprog/userstory/src\OurGrammar.g4 by ANTLR 4.10.1
+// Generated from D:/OneDrive - Instituto Superior de Engenharia do Porto/2ï¿½ Semestre/EAPLI/lei21_22_s4_2dj_4/lprog/userstory/src\OurGrammar.g4 by ANTLR 4.10.1
 package src;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.misc.*;
 import org.antlr.v4.runtime.tree.*;
 import java.util.List;
-import java.util.Iterator;
-import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class OurGrammarParser extends Parser {
