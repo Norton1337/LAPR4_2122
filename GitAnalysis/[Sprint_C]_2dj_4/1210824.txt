@@ -1,3 +1,109 @@
+commit a336fe6531dea26817d60b5e71c87e9ae362495b
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri May 27 23:04:13 2022 +0100
+
+    Fixing Bootstrapper and Database
+
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/BaseBootstrapper.java
+M	base.core/src/main/java/eapli/base/warehouses/application/WarehouseSetupController.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/Warehouse.java
+M	base.core/src/main/java/eapli/base/warehouses/repositories/WarehouseRepository.java
+A	base.core/src/main/java/eapli/base/warehouses/repositories/WarehouseRepositoryJPAImpl.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryWarehouseRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaWarehouseRepository.java
+M	base.persistence.impl/src/main/resources/META-INF/persistence.xml
+M	lprog/userstory/src/EvalVisitorOurGrammar.java
+M	lprog/userstory/src/OurGrammarParser.java
+A	lprog/userstory/src/questionarioTeste.txt
+M	pom.xml
+
+commit e7d15d2e4dec5bbbe9aedac40ce79c025fa51d7e
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Thu May 26 13:53:21 2022 +0100
+
+    US3000 & US3001 possible final version
+
+A	lprog/userstory/src/EvalVisitorOurGrammar.java
+M	lprog/userstory/src/Main.java
+M	lprog/userstory/src/OurGrammar.g4
+A	lprog/userstory/src/OurGrammar.interp
+A	lprog/userstory/src/OurGrammar.tokens
+A	lprog/userstory/src/OurGrammarBaseListener.java
+A	lprog/userstory/src/OurGrammarBaseVisitor.java
+A	lprog/userstory/src/OurGrammarLexer.interp
+A	lprog/userstory/src/OurGrammarLexer.java
+A	lprog/userstory/src/OurGrammarLexer.tokens
+A	lprog/userstory/src/OurGrammarListener.java
+A	lprog/userstory/src/OurGrammarParser.java
+A	lprog/userstory/src/OurGrammarVisitor.java
+M	lprog/userstory/src/questionarioTeste.txt
+
+commit f2a364ef9093f4ea57a9b04cd07c0c5674dae8f0
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Thu May 26 11:52:51 2022 +0100
+
+    US3000 & US3001 improved grammar, added questionnaire sections
+
+M	lprog/userstory/src/OurGrammar.g4
+M	lprog/userstory/src/questionarioTeste.txt
+
+commit 212dc947a4663ec129e4ad784a2f5dcb60164acc
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed May 25 23:39:50 2022 +0100
+
+    US3000 & US3001 finished a basic grammar
+
+M	lprog/userstory/src/OurGrammar.g4
+M	lprog/userstory/src/questionarioTeste.txt
+
+commit 6f0be73e2c26c7bc96d16ff85fde5dd0f3ea7f26
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed May 25 23:10:01 2022 +0100
+
+    US3000 & US3001 started creating our grammar
+
+M	Questionarios/questionario_samples.txt
+M	Questionarios/questionario_sapatilhas.txt
+R083	lprog/Calc.java	lprog/example/src/Calc.java
+R096	lprog/EvalVisitor.java	lprog/example/src/EvalVisitor.java
+R100	LabeledExpr.g4	lprog/example/src/LabeledExpr.g4
+R100	lprog/LabeledExpr.interp	lprog/example/src/LabeledExpr.interp
+R100	lprog/LabeledExpr.tokens	lprog/example/src/LabeledExpr.tokens
+R096	lprog/LabeledExprBaseListener.java	lprog/example/src/LabeledExprBaseListener.java
+R094	lprog/LabeledExprBaseVisitor.java	lprog/example/src/LabeledExprBaseVisitor.java
+R100	lprog/LabeledExprLexer.interp	lprog/example/src/LabeledExprLexer.interp
+R094	lprog/LabeledExprLexer.java	lprog/example/src/LabeledExprLexer.java
+R100	lprog/LabeledExprLexer.tokens	lprog/example/src/LabeledExprLexer.tokens
+R096	lprog/LabeledExprListener.java	lprog/example/src/LabeledExprListener.java
+R098	lprog/LabeledExprParser.java	lprog/example/src/LabeledExprParser.java
+R093	lprog/LabeledExprVisitor.java	lprog/example/src/LabeledExprVisitor.java
+R100	teste.txt	lprog/example/src/teste.txt
+A	lprog/userstory/src/EvalVisitor2.java
+A	lprog/userstory/src/Main.java
+A	lprog/userstory/src/OurGrammar.g4
+A	lprog/userstory/src/questionarioTeste.txt
+
+commit 4d6ad75e425b5b5a0c4ccb1a7745dc136943bfec
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed May 25 20:27:25 2022 +0100
+
+    US3000 & US3001 added necessary files
+
+M	LabeledExpr.g4
+R097	Calc.java	lprog/Calc.java
+R096	EvalVisitor.java	lprog/EvalVisitor.java
+A	lprog/LabeledExpr.interp
+R100	LabeledExpr.tokens	lprog/LabeledExpr.tokens
+R096	LabeledExprBaseListener.java	lprog/LabeledExprBaseListener.java
+R094	LabeledExprBaseVisitor.java	lprog/LabeledExprBaseVisitor.java
+R100	LabeledExprLexer.interp	lprog/LabeledExprLexer.interp
+R097	LabeledExprLexer.java	lprog/LabeledExprLexer.java
+R100	LabeledExprLexer.tokens	lprog/LabeledExprLexer.tokens
+R096	LabeledExprListener.java	lprog/LabeledExprListener.java
+R082	LabeledExprParser.java	lprog/LabeledExprParser.java
+R093	LabeledExprVisitor.java	lprog/LabeledExprVisitor.java
+M	teste.txt
+
 commit 8ec7352ceaac76bcf50de90fb8a2887ea8cb7444
 Author: N0R70N <1210824@isep.ipp.pt>
 Date:   Wed May 18 18:50:11 2022 +0100
