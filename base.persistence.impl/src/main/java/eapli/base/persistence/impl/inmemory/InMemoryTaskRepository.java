@@ -1,8 +1,5 @@
 package eapli.base.persistence.impl.inmemory;
 
-import eapli.base.ordermanagement.domain.Order;
-import eapli.base.ordermanagement.domain.OrderID;
-import eapli.base.ordermanagement.repositories.OrderRepository;
 import eapli.base.taskmanagement.domain.Task;
 import eapli.base.taskmanagement.domain.TaskID;
 import eapli.base.taskmanagement.repositories.TaskRepository;

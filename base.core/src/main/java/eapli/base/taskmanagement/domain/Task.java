@@ -1,7 +1,6 @@
 package eapli.base.taskmanagement.domain;
 
 import eapli.base.ordermanagement.domain.*;
-import eapli.base.ordermanagement.dto.OrderDTO;
 import eapli.base.taskmanagement.dto.TaskDTO;
 import eapli.framework.domain.model.AggregateRoot;
 
@@ -11,15 +10,16 @@ import java.io.IOException;
 @Entity
 public class Task implements AggregateRoot<TaskID> {
     @Id
-    private Long id;
+    @GeneratedValue
+    private Long idOfTask;
     @Embedded
     private TaskID taskID;
     @Embedded
     private TaskDateTime taskDateTime;
     @OneToOne
-    private Order order;
+    private OrderType order;
 
-    public Task(TaskID taskID, TaskDateTime taskDateTime, Order order){
+    public Task(TaskID taskID, TaskDateTime taskDateTime, OrderType order){
 
         this.taskID = taskID;
         this.taskDateTime = taskDateTime;
@@ -47,7 +47,7 @@ public class Task implements AggregateRoot<TaskID> {
                 '}';
     }
 
-    public static Task valueOf(TaskID taskID, TaskDateTime taskDateTime, Order order){
+    public static Task valueOf(TaskID taskID, TaskDateTime taskDateTime, OrderType order){
         return new Task(taskID, taskDateTime, order);
     }
 
