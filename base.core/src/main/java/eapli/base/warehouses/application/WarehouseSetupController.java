@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import eapli.base.warehouses.domain.agvDocks.AgvDockIdentification;
 import eapli.base.warehouses.domain.agvDocks.AgvDocks;
 import eapli.base.warehouses.domain.agvDocks.AgvDocksBuilder;
 import eapli.base.warehouses.domain.aisles.Aisles;
@@ -111,7 +112,7 @@ public class WarehouseSetupController {
             ArrayList<AgvDocks> agvDocks = new ArrayList<>();
             for (JsonNode agvDocksJson : node.get("AGVDocks")) {
                 AgvDocks agvDock = new AgvDocksBuilder()
-                        .ofId(agvDocksJson.get("Id").asText())
+                        .ofId(new AgvDockIdentification(agvDocksJson.get("Id").asText()))
                         .ofBegin( new SquareBuilder()
                                 .ofLength(new Length(agvDocksJson.get("begin").get("lsquare").asInt()))
                                 .ofWidth(new Width(agvDocksJson.get("begin").get("wsquare").asInt()))

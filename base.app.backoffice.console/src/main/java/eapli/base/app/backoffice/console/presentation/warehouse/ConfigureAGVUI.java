@@ -1,17 +1,15 @@
 package eapli.base.app.backoffice.console.presentation.warehouse;
 
-import eapli.base.warehouses.application.ConfigureAGVController;
+import eapli.base.warehouses.application.AGVController;
 import eapli.base.warehouses.domain.agvDocks.AgvDocks;
 import eapli.base.warehouses.dto.AgvDTO;
-import eapli.base.warehouses.repositories.WarehouseRepository;
 import eapli.framework.io.util.Console;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Set;
 
 public class ConfigureAGVUI {
-    private ConfigureAGVController agvController = new ConfigureAGVController();
+    private AGVController agvController = new AGVController();
     private AgvDTO agvDTO = new AgvDTO();
 
     public boolean show(){
@@ -44,7 +42,7 @@ public class ConfigureAGVUI {
                 agvController.configureAGV(agvDTO);
                 System.out.println("Sucesso!");
             }
-        }catch (IllegalArgumentException | IOException ex){
+        }catch (IllegalArgumentException ex){
             System.out.println(ex);
         }
         return false;
