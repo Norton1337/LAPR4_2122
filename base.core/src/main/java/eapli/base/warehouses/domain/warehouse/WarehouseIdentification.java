@@ -1,7 +1,6 @@
 package eapli.base.warehouses.domain.warehouse;
 
 import eapli.framework.domain.model.ValueObject;
-import org.jetbrains.annotations.NotNull;
 
 import javax.persistence.Embeddable;
 
@@ -26,7 +25,7 @@ public class WarehouseIdentification implements ValueObject, Comparable<Warehous
     }
 
     @Override
-    public int compareTo(@NotNull WarehouseIdentification o) {
+    public int compareTo(WarehouseIdentification o) {
         return 0;
     }
 }

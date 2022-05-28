@@ -2,7 +2,6 @@ package eapli.base.warehouses.domain.agvs;
 
 import eapli.framework.domain.model.ValueObject;
 import eapli.framework.validations.Preconditions;
-import org.jetbrains.annotations.NotNull;
 
 import javax.persistence.Embeddable;
 
@@ -30,7 +29,7 @@ public class AGVIdentification implements ValueObject, Comparable<AGVIdentificat
     }
 
     @Override
-    public int compareTo(@NotNull AGVIdentification o) {
+    public int compareTo(AGVIdentification o) {
         return 0;
     }
 }

@@ -1,5 +1,6 @@
 package eapli.base.warehouses.domain.rows;
 
+import eapli.base.warehouses.domain.aisles.Aisles;
 import eapli.base.warehouses.domain.square.Square;
 import eapli.framework.domain.model.DomainEntity;
 import eapli.framework.validations.Preconditions;
@@ -27,6 +28,9 @@ public class Rows implements DomainEntity<Rows> {
 
     @OneToMany
     private List<Shelves> shelves;
+
+    @ManyToOne
+    private Aisles aisle;
 
     public Rows() {
     }

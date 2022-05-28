@@ -1,28 +1,26 @@
 package eapli.base.warehouses.domain.warehouse;
-import eapli.base.warehouses.dto.WarehouseDTO;
-import eapli.base.warehouses.domain.aisles.Aisles;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 import eapli.base.warehouses.domain.agvDocks.AgvDocks;
+import eapli.base.warehouses.domain.aisles.Aisles;
 import eapli.base.warehouses.domain.square.Accessibility;
 import eapli.base.warehouses.domain.square.Length;
 import eapli.base.warehouses.domain.square.Square;
 import eapli.base.warehouses.domain.square.Width;
+import eapli.base.warehouses.dto.WarehouseDTO;
 import eapli.framework.domain.model.AggregateRoot;
 import eapli.framework.validations.Preconditions;
 
 import javax.persistence.*;
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Warehouse implements AggregateRoot<WarehouseIdentification> {
     @Id
     @GeneratedValue
-    private int id;
+    private Long id;
     @Version
     private long version;
     @Embedded
@@ -36,7 +34,11 @@ public class Warehouse implements AggregateRoot<WarehouseIdentification> {
     @Embedded
     private WarehouseUnit warehouseUnit;
 
-    @OneToMany
+
+    @OneToMany(
+            mappedBy = "warehouse",
+            cascade = CascadeType.ALL
+    )
     private Set<Aisles> aisles;
     @OneToMany
     private Set<AgvDocks> agvDocks;
@@ -53,10 +55,11 @@ public class Warehouse implements AggregateRoot<WarehouseIdentification> {
         this.warehouseWidth = warehouseWidth;
         this.warehouseSquare = warehouseSquare;
         this.warehouseUnit = warehouseUnit;
-        /*
+
         this.aisles = new HashSet<Aisles>();
         this.agvDocks = new HashSet<AgvDocks>();
 
+/*
         for (Aisles aisle: aisles) {
             addAisles(aisle);
         }

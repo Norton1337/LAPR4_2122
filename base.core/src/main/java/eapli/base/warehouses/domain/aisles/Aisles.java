@@ -1,19 +1,20 @@
 package eapli.base.warehouses.domain.aisles;
 
 
+import eapli.base.warehouses.domain.rows.Rows;
 import eapli.base.warehouses.domain.square.Accessibility;
 import eapli.base.warehouses.domain.square.Square;
-
-import java.util.List;
-
-import eapli.base.warehouses.domain.rows.Rows;
+import eapli.base.warehouses.domain.warehouse.Warehouse;
+import eapli.base.warehouses.domain.warehouse.WarehouseIdentification;
+import eapli.framework.domain.model.AggregateRoot;
 import eapli.framework.domain.model.DomainEntity;
 import eapli.framework.validations.Preconditions;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-public class Aisles implements DomainEntity<Aisles> {
+public class Aisles implements AggregateRoot<AisleID> {
     @Id
     @GeneratedValue
     private int id;
@@ -21,7 +22,8 @@ public class Aisles implements DomainEntity<Aisles> {
     @Version
     private Long version;
 
-    private int aisleID;
+    @Embedded
+    private AisleID aisleID;
 
     @Embedded
     private Square begin;
@@ -38,13 +40,23 @@ public class Aisles implements DomainEntity<Aisles> {
     @OneToMany
     private List<Rows> rows;
 
-    protected Aisles() {
+    @ManyToOne
+    private Warehouse warehouse;
+
+    public Warehouse getWarehouse() {
+        return warehouse;
     }
+
+    public void setWarehouse(Warehouse warehouse) {
+        this.warehouse = warehouse;
+    }
+
+    protected Aisles() {}
 
     public Aisles (int aisleID,Square begin, Square end, Square depth, Accessibility accessibility, List<Rows> rows){
         Preconditions.ensure(aisleID>=0);
         Preconditions.noneNull(begin,end,depth,accessibility);
-        this.aisleID=aisleID;
+        this.aisleID=new AisleID(aisleID);
         this.begin=begin;
         this.end=end;
         this.depth=depth;
@@ -89,7 +101,7 @@ public class Aisles implements DomainEntity<Aisles> {
     }
 
     @Override
-    public Aisles identity() {
+    public AisleID identity() {
         return null;
     }
 }
