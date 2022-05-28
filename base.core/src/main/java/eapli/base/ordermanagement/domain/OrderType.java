@@ -1,19 +1,18 @@
 package eapli.base.ordermanagement.domain;
 
 import eapli.base.ordermanagement.dto.OrderDTO;
+import eapli.base.taskmanagement.domain.Task;
 import eapli.framework.domain.model.AggregateRoot;
 
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.IOException;
 
 
 @Entity
 public class OrderType implements AggregateRoot<OrderID> {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "ORDERID")
     private Long idOfOrder;
     @Embedded
     private OrderID orderID;
@@ -29,6 +28,9 @@ public class OrderType implements AggregateRoot<OrderID> {
     private OrderDateTime orderDateTime;
     @Embedded
     private OrderState orderState;
+
+    @OneToOne(mappedBy = "order")
+    private Task task;
 
     public OrderType(OrderID orderID, OrderBillingAddress orderBillingAddress, OrderLocation orderLocation, OrderTotalAmount orderTotalAmount,
                      OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime, OrderState orderState){
@@ -74,6 +76,14 @@ public class OrderType implements AggregateRoot<OrderID> {
     public static OrderType valueOf(OrderID orderID, OrderBillingAddress orderBillingAddress, OrderLocation orderLocation,
                                     OrderTotalAmount orderTotalAmount, OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime, OrderState orderState){
         return new OrderType(orderID, orderBillingAddress, orderLocation, orderTotalAmount, orderPostalAddress, orderDateTime, orderState);
+    }
+
+    public OrderState getOrderState() {
+        return orderState;
+    }
+
+    public void setTask(Task task){
+        this.task=task;
     }
 
     @Override

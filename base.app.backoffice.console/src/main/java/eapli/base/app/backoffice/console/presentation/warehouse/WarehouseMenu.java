@@ -14,6 +14,7 @@ public class WarehouseMenu extends Menu {
 
     private static final int SETUP_WAREHOUSE_OPTION = 1;
     private static final int CONFIGURE_AGV_OPTION = 2;
+    private static final int WAITING_ORDERS_OPTION = 3;
     public WarehouseMenu(){
         super(MENU_TITLE);
         buildMenu();
@@ -22,6 +23,7 @@ public class WarehouseMenu extends Menu {
     private void buildMenu(){
         addItem(SETUP_WAREHOUSE_OPTION, "Setup WarehousePlant", new WarehouseSetupUI()::show);
         addItem(CONFIGURE_AGV_OPTION, "Configure AGV", new ConfigureAGVUI()::show);
-        addItem(EXIT_OPTION, "rETURN", Actions.SUCCESS);
+        addItem(WAITING_ORDERS_OPTION, "Waiting Orders", new OrdersUI()::show);
+        addItem(EXIT_OPTION, "Return", Actions.SUCCESS);
     }
 }

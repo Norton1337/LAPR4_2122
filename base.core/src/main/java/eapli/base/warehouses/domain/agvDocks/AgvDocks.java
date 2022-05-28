@@ -1,22 +1,25 @@
 package eapli.base.warehouses.domain.agvDocks;
 
 
+import eapli.base.warehouses.domain.agvs.AGV;
 import eapli.base.warehouses.domain.square.Accessibility;
 import eapli.base.warehouses.domain.square.Square;
 import eapli.framework.domain.model.AggregateRoot;
-import eapli.framework.domain.model.DomainEntity;
 import eapli.framework.validations.Preconditions;
 
 
 import javax.persistence.*;
 
 @Entity
+@Table(name = "agvDocks")
 public class AgvDocks implements AggregateRoot<AgvDockIdentification> {
     @Id
-    @GeneratedValue
-    private Long AgvDockid;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "AGVDOCKID")
+    private Long agvDockID;
 
     @Embedded
+    @Column(name = "agvDockIden")
     private AgvDockIdentification agvDockIdentification;
 
     @Version
@@ -34,9 +37,15 @@ public class AgvDocks implements AggregateRoot<AgvDockIdentification> {
     @Embedded
     private Accessibility accessibility;
 
+    @OneToOne(mappedBy = "agvDock")
+    private AGV agv;
+
+    public void setAgv(AGV agv){
+        this.agv=agv;
+    }
 
     public AgvDocks(AgvDockIdentification agvDockIdentification, Square begin,Square end,Square depth,Accessibility accessibility){
-        Preconditions.noneNull(begin,end,depth,accessibility);
+        //Preconditions.noneNull(begin,end,depth,accessibility);
         this.agvDockIdentification = agvDockIdentification;
         this.begin=begin;
         this.end=end;

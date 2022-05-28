@@ -2,6 +2,7 @@ package eapli.base.taskmanagement.domain;
 
 import eapli.base.ordermanagement.domain.*;
 import eapli.base.taskmanagement.dto.TaskDTO;
+import eapli.base.warehouses.domain.agvs.AGV;
 import eapli.framework.domain.model.AggregateRoot;
 
 import javax.persistence.*;
@@ -10,14 +11,22 @@ import java.io.IOException;
 @Entity
 public class Task implements AggregateRoot<TaskID> {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "TASKID")
     private Long idOfTask;
     @Embedded
     private TaskID taskID;
     @Embedded
     private TaskDateTime taskDateTime;
-    @OneToOne
+
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_order_id", referencedColumnName = "ORDERID")
     private OrderType order;
+
+    @OneToOne(mappedBy = "task")
+    private AGV agv;
+
+
 
     public Task(TaskID taskID, TaskDateTime taskDateTime, OrderType order){
 

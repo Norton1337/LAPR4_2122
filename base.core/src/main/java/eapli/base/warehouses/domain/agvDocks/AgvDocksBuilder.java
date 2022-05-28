@@ -1,5 +1,6 @@
 package eapli.base.warehouses.domain.agvDocks;
 
+import eapli.base.warehouses.domain.agvs.AGV;
 import eapli.base.warehouses.domain.square.Accessibility;
 import eapli.base.warehouses.domain.square.Square;
 import eapli.framework.domain.model.DomainFactory;
@@ -18,6 +19,8 @@ public class AgvDocksBuilder implements DomainFactory<AgvDocks> {
     private Square depth;
 
     private Accessibility accessibility;
+
+    private AGV agv;
 
     public AgvDocksBuilder ofId(final AgvDockIdentification agvDockIdentification){
         this.agvDockIdentification=agvDockIdentification;
@@ -39,6 +42,10 @@ public class AgvDocksBuilder implements DomainFactory<AgvDocks> {
 
     public AgvDocksBuilder accessibleBy(final Accessibility accessibility){
         this.accessibility=accessibility;
+        return this;
+    }
+    public AgvDocksBuilder withAGV(final AGV agv){
+        this.agv=agv;
         return this;
     }
 

@@ -1,5 +1,6 @@
 package eapli.base.warehouses.domain.agvs;
 
+import eapli.base.taskmanagement.domain.Task;
 import eapli.base.warehouses.domain.agvDocks.AgvDocks;
 import eapli.base.warehouses.dto.AgvDTO;
 import eapli.framework.domain.model.AggregateRoot;
@@ -8,9 +9,10 @@ import eapli.framework.validations.Preconditions;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "agvs")
 public class AGV implements AggregateRoot<AGVIdentification> {
     @Id
-    @Column(insertable = false, updatable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int agvId;
 
     @Version
@@ -34,14 +36,22 @@ public class AGV implements AggregateRoot<AGVIdentification> {
     @Embedded
     private Status status;
 
-    @OneToOne
+    //agvDock_agvDock_id
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_agvDock_id", referencedColumnName = "AGVDOCKID")
     private AgvDocks agvDock;
 
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_task_id", referencedColumnName = "TASKID")
+    private Task task;
 
+    public void setAgvDock(AgvDocks agvDock){
+        this.agvDock=agvDock;
+    }
 
     public AGV(AGVIdentification identification, Autonomy autonomy, MaxWeight maxWeight, Model model,
                ShortDescription shortDescription, Status status, AgvDocks agvDock){
-        Preconditions.noneNull(identification,autonomy,maxWeight,model,shortDescription,status,agvDock);
+        //Preconditions.noneNull(identification,autonomy,maxWeight,model,shortDescription,status,agvDock);
 
         this.identification = identification;
         this.autonomy = autonomy;
@@ -51,6 +61,7 @@ public class AGV implements AggregateRoot<AGVIdentification> {
         this.status = status;
         this.agvDock = agvDock;
     }
+
 
     public AGV(AgvDTO dto) {
         this(
@@ -92,5 +103,14 @@ public class AGV implements AggregateRoot<AGVIdentification> {
     @Override
     public AGVIdentification identity() {
         return this.identification;
+    }
+
+    public Task getTask(){
+        return this.task;
+    }
+
+
+    public void setTask(Task task){
+        this.task=task;
     }
 }

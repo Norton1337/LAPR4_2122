@@ -22,15 +22,14 @@ public class AGVController {
     private final WarehouseService warehouseService = new WarehouseService();
     public AGVController(){}
 
-    public void configureAGV(List<AgvDTO> agvDTOList) {
-        for (AgvDTO agvDto: agvDTOList) {
-            configureAGV(agvDto);
+    public void configureAGV(List<AGV> agvList) {
+        for (AGV agv: agvList) {
+            configureAGV(agv);
         }
 
     }
-    public void configureAGV(AgvDTO agvDTO) {
-            agv = new AGV(agvDTO);
-            agvRepository.save(agv);
+    public void configureAGV(AGV agv) {
+        agvRepository.save(agv);
     }
 
     public AGVIdentification getAGVIdentification(AgvDTO dto) throws IOException {
@@ -38,8 +37,27 @@ public class AGVController {
         return agv.identity();
     }
 
-    public Set<AgvDocks> getAGVDocks(){
-        return warehouseService.getAllAgvDocks();
+    public List<AGV> getAGVList(){
+        return agvRepository.findAll();
     }
 
+    public List<AGV> getAvailableAGVList(){
+        List<AGV> agvList = agvRepository.findAll();
+        List<AGV> availableAgvList = agvRepository.findAll();
+
+        for (AGV agv: agvList) {
+            if(agv.getTask()==null)
+                availableAgvList.add(agv);
+        }
+
+        return availableAgvList;
+    }
+
+    public AGV updateAGV(AGV agv){
+        agvRepository.save(agv);
+        return agv;
+    }
+
+    public void configureAGVDTO(AgvDTO agvDTO) {
+    }
 }
