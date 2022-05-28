@@ -69,7 +69,8 @@ public class BaseBootstrapper implements Action {
                 new MasterUsersBootstrapper()
                 ,new WarehouseSetupBootstrapper()
                 ,new OrderBootstrapper()
-                ,new AgvDockBootstrapper()
+                //,new AgvDockBootstrapper()
+                ,new AgvBootstrapper()
                 };
 
         registerPowerUser();
