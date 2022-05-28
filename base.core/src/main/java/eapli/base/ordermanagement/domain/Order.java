@@ -1,18 +1,13 @@
 package eapli.base.ordermanagement.domain;
 
 import eapli.base.ordermanagement.dto.OrderDTO;
-import eapli.base.warehouses.domain.agvDocks.AgvDocks;
-import eapli.base.warehouses.domain.aisles.Aisles;
-import eapli.base.warehouses.domain.warehouse.*;
-import eapli.base.warehouses.dto.WarehouseDTO;
 import eapli.framework.domain.model.AggregateRoot;
 
-import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.io.IOException;
-import java.util.List;
+
 
 @Entity
 public class Order implements AggregateRoot<OrderID> {
@@ -30,9 +25,11 @@ public class Order implements AggregateRoot<OrderID> {
     private OrderPostalAddress orderPostalAddress;
     @Embedded
     private OrderDateTime orderDateTime;
+    @Embedded
+    private OrderState orderState;
 
-    public Order(OrderID orderID, OrderBillingAddress orderBillingAddress, OrderLocation orderLocation,
-                 OrderTotalAmount orderTotalAmount, OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime){
+    public Order(OrderID orderID, OrderBillingAddress orderBillingAddress, OrderLocation orderLocation,OrderTotalAmount orderTotalAmount,
+                 OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime, OrderState orderState){
 
         this.orderID = orderID;
         this.orderBillingAddress = orderBillingAddress;
@@ -40,6 +37,7 @@ public class Order implements AggregateRoot<OrderID> {
         this.orderTotalAmount = orderTotalAmount;
         this.orderPostalAddress = orderPostalAddress;
         this.orderDateTime = orderDateTime;
+        this.orderState = orderState;
     }
 
     protected Order() {
@@ -53,7 +51,8 @@ public class Order implements AggregateRoot<OrderID> {
                 new OrderLocation(dto.orderLocation),
                 new OrderTotalAmount(dto.orderTotalAmount),
                 new OrderPostalAddress(dto.orderPostalAddress),
-                new OrderDateTime(dto.orderDateTime)
+                new OrderDateTime(dto.orderDateTime),
+                new OrderState(dto.orderState)
         );
     }
 
@@ -70,8 +69,8 @@ public class Order implements AggregateRoot<OrderID> {
     }
 
     public static Order valueOf(OrderID orderID, OrderBillingAddress orderBillingAddress, OrderLocation orderLocation,
-                                OrderTotalAmount orderTotalAmount, OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime){
-        return new Order(orderID, orderBillingAddress, orderLocation, orderTotalAmount, orderPostalAddress, orderDateTime);
+                                OrderTotalAmount orderTotalAmount, OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime, OrderState orderState){
+        return new Order(orderID, orderBillingAddress, orderLocation, orderTotalAmount, orderPostalAddress, orderDateTime, orderState);
     }
 
     @Override

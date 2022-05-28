@@ -17,15 +17,18 @@ public class OrderDTO {
     public String orderPostalAddress;
     public LocalDateTime orderDateTime;
 
+    public PossibleStates orderState;
+
 
     public OrderDTO(Long orderID, String orderBillingAddress, String orderLocation, Double orderTotalAmount,
-                         String orderPostalAddress, LocalDateTime orderDateTime){
+                         String orderPostalAddress, LocalDateTime orderDateTime, PossibleStates orderState){
         this.orderID = orderID;
         this.orderBillingAddress = orderBillingAddress;
         this.orderLocation = orderLocation;
         this.orderTotalAmount = orderTotalAmount;
         this.orderPostalAddress = orderPostalAddress;
         this.orderDateTime = orderDateTime;
+        this.orderState = orderState;
     }
 
 
