@@ -3,6 +3,7 @@ package eapli.base.warehouses.domain.agvDocks;
 
 import eapli.base.warehouses.domain.square.Accessibility;
 import eapli.base.warehouses.domain.square.Square;
+import eapli.framework.domain.model.AggregateRoot;
 import eapli.framework.domain.model.DomainEntity;
 import eapli.framework.validations.Preconditions;
 
@@ -10,10 +11,13 @@ import eapli.framework.validations.Preconditions;
 import javax.persistence.*;
 
 @Entity
-public class AgvDocks implements DomainEntity<AgvDocks> {
+public class AgvDocks implements AggregateRoot<AgvDockIdentification> {
     @Id
     @GeneratedValue
-    private String id;
+    private Long AgvDockid;
+
+    @Embedded
+    private AgvDockIdentification agvDockIdentification;
 
     @Version
     private Long version;
@@ -31,9 +35,9 @@ public class AgvDocks implements DomainEntity<AgvDocks> {
     private Accessibility accessibility;
 
 
-    public AgvDocks(String id, Square begin,Square end,Square depth,Accessibility accessibility){
+    public AgvDocks(AgvDockIdentification agvDockIdentification, Square begin,Square end,Square depth,Accessibility accessibility){
         Preconditions.noneNull(begin,end,depth,accessibility);
-        this.id = id;
+        this.agvDockIdentification = agvDockIdentification;
         this.begin=begin;
         this.end=end;
         this.depth=depth;
@@ -45,7 +49,7 @@ public class AgvDocks implements DomainEntity<AgvDocks> {
     @Override
     public String toString() {
         return "AgvDocks{" +
-                "id=" + id +
+                "agvDockIdentification=" + agvDockIdentification +
                 ", version=" + version +
                 ", being=" + begin +
                 ", end=" + end +
@@ -54,8 +58,8 @@ public class AgvDocks implements DomainEntity<AgvDocks> {
                 '}';
     }
 
-    public static AgvDocks valueOf(String id,Square begin, Square end, Square depth, Accessibility accessibility){
-        return new AgvDocks(id, begin,end,depth,accessibility);
+    public static AgvDocks valueOf(AgvDockIdentification agvDockIdentification,Square begin, Square end, Square depth, Accessibility accessibility){
+        return new AgvDocks(agvDockIdentification, begin,end,depth,accessibility);
     }
 
 
@@ -65,7 +69,7 @@ public class AgvDocks implements DomainEntity<AgvDocks> {
     }
 
     @Override
-    public AgvDocks identity() {
+    public AgvDockIdentification identity() {
         return null;
     }
 

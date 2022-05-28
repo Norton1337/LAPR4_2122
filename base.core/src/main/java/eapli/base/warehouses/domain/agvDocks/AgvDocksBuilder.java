@@ -9,7 +9,7 @@ public class AgvDocksBuilder implements DomainFactory<AgvDocks> {
 
     private AgvDocks theDock;
 
-    private String id;
+    private AgvDockIdentification agvDockIdentification;
 
     private Square begin;
 
@@ -19,8 +19,8 @@ public class AgvDocksBuilder implements DomainFactory<AgvDocks> {
 
     private Accessibility accessibility;
 
-    public AgvDocksBuilder ofId(final String id){
-        this.id=id;
+    public AgvDocksBuilder ofId(final AgvDockIdentification agvDockIdentification){
+        this.agvDockIdentification=agvDockIdentification;
         return this;
     }
 
@@ -45,8 +45,8 @@ public class AgvDocksBuilder implements DomainFactory<AgvDocks> {
     private AgvDocks buildOrThrow(){
         if (theDock != null) {
             return theDock;
-        } else if (begin != null && end != null && depth != null && accessibility != null) {
-            theDock = new AgvDocks(id, begin, end, depth, accessibility);
+        } else if (agvDockIdentification != null && begin != null && end != null && depth != null && accessibility != null) {
+            theDock = new AgvDocks(agvDockIdentification, begin, end, depth, accessibility);
             return theDock;
         } else {
             throw new IllegalStateException();
