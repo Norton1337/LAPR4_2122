@@ -10,7 +10,7 @@ public class ShortDescription implements ValueObject {
     private String description;
 
     public ShortDescription(String description){
-        Preconditions.ensure(description.length()>0 && description.length()<30);
+        //Preconditions.ensure(description.length()>0 && description.length()<30);
         this.description=description;
     }
     public ShortDescription(){}

@@ -10,8 +10,8 @@ public class AGVIdentification implements ValueObject, Comparable<AGVIdentificat
     private String id;
 
     public AGVIdentification(String id){
-        Preconditions.nonNull(id);
-        Preconditions.ensure(id.length()<=8);
+        //Preconditions.nonNull(id);
+        //Preconditions.ensure(id.length()<=8);
         this.id=id;
     }
 

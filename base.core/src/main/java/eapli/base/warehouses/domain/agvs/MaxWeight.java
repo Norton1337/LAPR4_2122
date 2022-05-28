@@ -11,7 +11,7 @@ public class MaxWeight implements ValueObject {
     private Double weight;
 
     public MaxWeight(double weight){
-        Preconditions.ensure(weight>0);
+        //Preconditions.ensure(weight>0);
         this.weight=weight;
     }
 

@@ -13,9 +13,9 @@ public class Accessibility implements ValueObject, DomainEntity<Accessibility> {
     private String accessibility;
 
     public Accessibility(String accessibility){
-        Preconditions.ensure(accessibility.length()==2);
-        Preconditions.ensure(accessibility.charAt(0)=='w'||accessibility.charAt(0)=='l');
-        Preconditions.ensure(accessibility.charAt(1)=='-'||accessibility.charAt(1)=='+');
+        //Preconditions.ensure(accessibility.length()==2);
+        //Preconditions.ensure(accessibility.charAt(0)=='w'||accessibility.charAt(0)=='l');
+        //Preconditions.ensure(accessibility.charAt(1)=='-'||accessibility.charAt(1)=='+');
         this.accessibility = accessibility;
     }
 

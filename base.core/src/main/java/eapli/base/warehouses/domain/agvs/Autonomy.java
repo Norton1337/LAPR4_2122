@@ -10,7 +10,7 @@ public class Autonomy implements ValueObject {
     private Double autonomy;
 
     public Autonomy(Double autonomy){
-        Preconditions.ensure(autonomy>0);
+        //Preconditions.ensure(autonomy>0);
         this.autonomy = autonomy;
     }
 

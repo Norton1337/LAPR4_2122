@@ -12,8 +12,8 @@ public class AgvDockIdentification implements ValueObject, Comparable<AgvDockIde
     private String id;
 
     public AgvDockIdentification(String id){
-        Preconditions.nonNull(id);
-        Preconditions.ensure(id.length()<=8);
+        //Preconditions.nonNull(id);
+        //Preconditions.ensure(id.length()<=8);
         this.id=id;
     }
 

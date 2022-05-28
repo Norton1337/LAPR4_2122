@@ -10,7 +10,7 @@ public class Model implements ValueObject {
     private String model;
 
     public Model (String model){
-        Preconditions.ensure(model.length()>0 && model.length()<50);
+        //Preconditions.ensure(model.length()>0 && model.length()<50);
         this.model=model;
     }
 
