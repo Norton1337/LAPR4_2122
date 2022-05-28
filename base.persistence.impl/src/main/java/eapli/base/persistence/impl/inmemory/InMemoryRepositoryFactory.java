@@ -25,6 +25,7 @@ import eapli.base.clientusermanagement.repositories.SignupRequestRepository;
 import eapli.base.infrastructure.bootstrapers.BaseBootstrapper;
 import eapli.base.infrastructure.persistence.RepositoryFactory;
 import eapli.base.ordermanagement.repositories.OrderRepository;
+import eapli.base.taskmanagement.repositories.TaskRepository;
 import eapli.base.warehouses.repositories.AgvRepository;
 import eapli.base.warehouses.repositories.WarehouseRepository;
 import eapli.framework.domain.repositories.TransactionalContext;
@@ -90,6 +91,15 @@ public class InMemoryRepositoryFactory implements RepositoryFactory {
     @Override
     public OrderRepository order() {
         return order(null);
+    }
+
+    @Override
+    public TaskRepository task(TransactionalContext autoTx) {
+        return new InMemoryTaskRepository();
+    }
+    @Override
+    public TaskRepository task() {
+        return task(null);
     }
 
     @Override

@@ -23,6 +23,7 @@ package eapli.base.infrastructure.persistence;
 import eapli.base.clientusermanagement.repositories.ClientUserRepository;
 import eapli.base.clientusermanagement.repositories.SignupRequestRepository;
 import eapli.base.ordermanagement.repositories.OrderRepository;
+import eapli.base.taskmanagement.repositories.TaskRepository;
 import eapli.base.warehouses.repositories.AgvRepository;
 import eapli.base.warehouses.repositories.WarehouseRepository;
 import eapli.framework.domain.repositories.TransactionalContext;
@@ -93,6 +94,10 @@ public interface RepositoryFactory {
     OrderRepository order(TransactionalContext autoTx);
 
     OrderRepository order();
+
+    TaskRepository task(TransactionalContext autoTx);
+
+    TaskRepository task();
 
     AgvRepository agv();
 
