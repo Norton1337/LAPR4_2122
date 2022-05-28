@@ -36,6 +36,8 @@ public class MasterUsersBootstrapper extends UsersBootstrapperBase implements Ac
     public boolean execute() {
         registerAdmin("admin", TestDataConstants.PASSWORD1, "Jane", "Doe Admin",
                 "jane.doe@email.local");
+        registerWarehouseEmployee("we1", TestDataConstants.PASSWORD1, "John", "Wick Warehouse Emplloyee",
+                "john.wick@email.local");
         return true;
     }
 
@@ -46,6 +48,13 @@ public class MasterUsersBootstrapper extends UsersBootstrapperBase implements Ac
             final String lastName, final String email) {
         final Set<Role> roles = new HashSet<>();
         roles.add(BaseRoles.ADMIN);
+
+        registerUser(username, password, firstName, lastName, email, roles);
+    }
+    private void registerWarehouseEmployee(final String username, final String password, final String firstName,
+            final String lastName, final String email) {
+        final Set<Role> roles = new HashSet<>();
+        roles.add(BaseRoles.WAREHOUSE_EMPLOYEE);
 
         registerUser(username, password, firstName, lastName, email, roles);
     }
