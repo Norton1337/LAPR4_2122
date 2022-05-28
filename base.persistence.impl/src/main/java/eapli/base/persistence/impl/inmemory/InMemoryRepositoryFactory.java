@@ -26,6 +26,7 @@ import eapli.base.infrastructure.bootstrapers.BaseBootstrapper;
 import eapli.base.infrastructure.persistence.RepositoryFactory;
 import eapli.base.ordermanagement.repositories.OrderRepository;
 import eapli.base.taskmanagement.repositories.TaskRepository;
+import eapli.base.warehouses.repositories.AgvDockRepository;
 import eapli.base.warehouses.repositories.AgvRepository;
 import eapli.base.warehouses.repositories.WarehouseRepository;
 import eapli.framework.domain.repositories.TransactionalContext;
@@ -103,8 +104,22 @@ public class InMemoryRepositoryFactory implements RepositoryFactory {
     }
 
     @Override
+    public AgvRepository agv(TransactionalContext autoTx) {
+        return new InMemoryAgvRepository();
+    }
+    @Override
     public AgvRepository agv() {
-        return null;
+        return agv(null);
+    }
+
+    @Override
+    public AgvDockRepository agvDock(TransactionalContext autoTx) {
+        return new InMemoryAgvDockRepository();
+    }
+
+    @Override
+    public AgvDockRepository agvDock() {
+        return agvDock(null);
     }
 
     @Override

@@ -1,40 +1,25 @@
 package eapli.base.persistence.impl.inmemory;
 
+import eapli.base.ordermanagement.domain.OrderID;
+import eapli.base.ordermanagement.domain.OrderType;
+import eapli.base.ordermanagement.repositories.OrderRepository;
 import eapli.base.warehouses.domain.agvs.AGV;
 import eapli.base.warehouses.domain.agvs.AGVIdentification;
 import eapli.base.warehouses.repositories.AgvRepository;
+import eapli.framework.infrastructure.repositories.impl.inmemory.InMemoryDomainRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 
-public class InMemoryAgvRepository implements AgvRepository {
+public class InMemoryAgvRepository extends InMemoryDomainRepository<AGV, AGVIdentification>
+        implements AgvRepository {
+    static {
+        InMemoryInitializer.init();
+    }
     @Override
-    public <S extends AGV> S save(S entity) {
+    public List<AGV> findAll(){
+
         return null;
-    }
-
-    @Override
-    public Iterable<AGV> findAll() {
-        return null;
-    }
-
-    @Override
-    public Optional<AGV> ofIdentity(AGVIdentification id) {
-        return Optional.empty();
-    }
-
-    @Override
-    public void delete(AGV entity) {
-
-    }
-
-    @Override
-    public void deleteOfIdentity(AGVIdentification entityId) {
-
-    }
-
-    @Override
-    public long count() {
-        return 0;
     }
 }
