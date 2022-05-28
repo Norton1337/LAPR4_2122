@@ -22,6 +22,7 @@
     <class>eapli.base.warehouses.domain.agvs.AGV</class>
     <class>eapli.base.productmanagement.domain.Product</class>
     <class>eapli.base.categorymanagment.domain.Category</class>
+    <class>eapli.base.ordermanagement.domain.OrderType</class>
     <properties>
       <!--<property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/base"/>-->
       <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://vsgate-s2.dei.isep.ipp.pt:10825/2DJ_G4"/>

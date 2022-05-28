@@ -25,6 +25,7 @@ import eapli.base.clientusermanagement.repositories.SignupRequestRepository;
 import eapli.base.infrastructure.persistence.RepositoryFactory;
 import eapli.base.ordermanagement.repositories.OrderRepository;
 import eapli.base.taskmanagement.repositories.TaskRepository;
+import eapli.base.warehouses.repositories.AgvDockRepository;
 import eapli.base.warehouses.repositories.AgvRepository;
 import eapli.base.warehouses.repositories.WarehouseRepository;
 import eapli.framework.domain.repositories.TransactionalContext;
@@ -106,8 +107,24 @@ public class JpaRepositoryFactory implements RepositoryFactory {
     }
 
     @Override
-    public AgvRepository agv(){
-        return new JpaAgvRepository();
+    public AgvRepository agv(TransactionalContext autoTx) {
+        return new JpaAgvRepository(autoTx);
     }
+
+    @Override
+    public AgvRepository agv() {
+        return new JpaAgvRepository(Application.settings().getPersistenceUnitName());
+    }
+
+    @Override
+    public AgvDockRepository agvDock(TransactionalContext autoTx) {
+        return new JpaAgvDockRepository(autoTx);
+    }
+
+    @Override
+    public AgvDockRepository agvDock() {
+        return new JpaAgvDockRepository(Application.settings().getPersistenceUnitName());
+    }
+
 
 }

@@ -5,14 +5,16 @@ import eapli.framework.domain.model.AggregateRoot;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.IOException;
 
 
 @Entity
-public class Order implements AggregateRoot<OrderID> {
+public class OrderType implements AggregateRoot<OrderID> {
     @Id
-    private Long id;
+    @GeneratedValue
+    private Long idOfOrder;
     @Embedded
     private OrderID orderID;
     @Embedded
@@ -28,8 +30,8 @@ public class Order implements AggregateRoot<OrderID> {
     @Embedded
     private OrderState orderState;
 
-    public Order(OrderID orderID, OrderBillingAddress orderBillingAddress, OrderLocation orderLocation,OrderTotalAmount orderTotalAmount,
-                 OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime, OrderState orderState){
+    public OrderType(OrderID orderID, OrderBillingAddress orderBillingAddress, OrderLocation orderLocation, OrderTotalAmount orderTotalAmount,
+                     OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime, OrderState orderState){
 
         this.orderID = orderID;
         this.orderBillingAddress = orderBillingAddress;
@@ -40,11 +42,11 @@ public class Order implements AggregateRoot<OrderID> {
         this.orderState = orderState;
     }
 
-    protected Order() {
+    protected OrderType() {
 
     }
 
-    public Order(OrderDTO dto) throws IOException {
+    public OrderType(OrderDTO dto) throws IOException {
         this(
                 new OrderID(dto.orderID),
                 new OrderBillingAddress(dto.orderBillingAddress),
@@ -65,12 +67,13 @@ public class Order implements AggregateRoot<OrderID> {
                 ", orderTotalAmount=" + orderTotalAmount +
                 ", orderPostalAddress=" + orderPostalAddress +
                 ", orderDateTime=" + orderDateTime +
+                ", orderState=" + orderState +
                 '}';
     }
 
-    public static Order valueOf(OrderID orderID, OrderBillingAddress orderBillingAddress, OrderLocation orderLocation,
-                                OrderTotalAmount orderTotalAmount, OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime, OrderState orderState){
-        return new Order(orderID, orderBillingAddress, orderLocation, orderTotalAmount, orderPostalAddress, orderDateTime, orderState);
+    public static OrderType valueOf(OrderID orderID, OrderBillingAddress orderBillingAddress, OrderLocation orderLocation,
+                                    OrderTotalAmount orderTotalAmount, OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime, OrderState orderState){
+        return new OrderType(orderID, orderBillingAddress, orderLocation, orderTotalAmount, orderPostalAddress, orderDateTime, orderState);
     }
 
     @Override
