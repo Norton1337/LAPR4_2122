@@ -4,8 +4,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import eapli.base.infrastructure.persistence.PersistenceContext;
-import eapli.base.usermanagement.domain.BaseRoles;
 import eapli.base.warehouses.domain.agvDocks.AgvDocks;
 import eapli.base.warehouses.domain.agvDocks.AgvDocksBuilder;
 import eapli.base.warehouses.domain.aisles.Aisles;
@@ -19,7 +17,6 @@ import eapli.base.warehouses.domain.square.Width;
 import eapli.base.warehouses.domain.warehouse.*;
 import eapli.base.warehouses.dto.WarehouseDTO;
 import eapli.base.warehouses.repositories.WarehouseRepository;
-import eapli.base.warehouses.repositories.WarehouseRepositoryJPAImpl;
 import eapli.framework.infrastructure.authz.application.AuthorizationService;
 import eapli.framework.infrastructure.authz.application.AuthzRegistry;
 
@@ -35,6 +32,7 @@ public class WarehouseSetupController {
     private Warehouse warehouse;
     private final AuthorizationService authz = AuthzRegistry.authorizationService();
 
+    private final WarehouseRepository warehouseRepository = eapli.base.infrastructure.persistence.PersistenceContext.repositories().warehouse();
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
@@ -133,16 +131,7 @@ public class WarehouseSetupController {
                 agvDocks.add(agvDock);
 
             }
-/*
-            Warehouse warehouse = new Warehouse(
-                    new WarehouseIdentification(node.get("Warehouse").asText()),
-                    new WarehouseLength(node.get("Length").asDouble()),
-                    new WarehouseWidth(node.get("Width").asDouble()),
-                    new WarehouseSquare(node.get("Square").asDouble()),
-                    new WarehouseUnit(node.get("Unit").asText()),
-                    aisles,
-                    agvDocks);
-*/
+
             Warehouse warehouse = new WarehouseBuilder()
                     .ofAddress( new WarehouseIdentification(node.get("Warehouse").asText()))
                     .ofLength( new WarehouseLength(node.get("Length").asDouble()))
@@ -152,8 +141,8 @@ public class WarehouseSetupController {
                     .withAisles(aisles)
                     .withAgvDocks(agvDocks)
                     .build();
-            WarehouseRepository warehouseRepository = new WarehouseRepositoryJPAImpl();
-            warehouseRepository.add(warehouse);
+
+            warehouseRepository.save(warehouse);
 
             List<Warehouse> warehouses = warehouseRepository.findAll();
             if(!warehouses.isEmpty())

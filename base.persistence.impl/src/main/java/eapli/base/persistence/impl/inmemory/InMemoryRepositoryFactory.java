@@ -67,13 +67,19 @@ public class InMemoryRepositoryFactory implements RepositoryFactory {
         return signupRequests(null);
     }
 
+
     @Override
     public SignupRequestRepository signupRequests(final TransactionalContext tx) {
         return new InMemorySignupRequestRepository();
     }
+
+    @Override
+    public WarehouseRepository warehouse(TransactionalContext autoTx) {
+        return new InMemoryWarehouseRepository();
+    }
     @Override
     public WarehouseRepository warehouse() {
-        return new InMemoryWarehouseRepository();
+        return warehouse(null);
     }
 
     @Override

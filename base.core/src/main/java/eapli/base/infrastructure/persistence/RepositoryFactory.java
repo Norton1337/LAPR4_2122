@@ -85,6 +85,8 @@ public interface RepositoryFactory {
      */
     SignupRequestRepository signupRequests();
 
+    WarehouseRepository warehouse(TransactionalContext autoTx);
+
     WarehouseRepository warehouse();
 
     AgvRepository agv();

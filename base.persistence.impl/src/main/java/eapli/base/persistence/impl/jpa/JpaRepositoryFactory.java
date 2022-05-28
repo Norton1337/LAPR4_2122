@@ -67,6 +67,7 @@ public class JpaRepositoryFactory implements RepositoryFactory {
         return new JpaSignupRequestRepository(Application.settings().getPersistenceUnitName());
     }
 
+
     @Override
     public TransactionalContext newTransactionalContext() {
         return JpaAutoTxRepository.buildTransactionalContext(Application.settings().getPersistenceUnitName(),
@@ -74,8 +75,12 @@ public class JpaRepositoryFactory implements RepositoryFactory {
     }
 
     @Override
+    public WarehouseRepository warehouse(TransactionalContext autoTx) {
+        return new JpaWarehouseRepository(autoTx);
+    }
+    @Override
     public WarehouseRepository warehouse(){
-        return new JpaWarehouseRepository();
+        return new JpaWarehouseRepository(Application.settings().getPersistenceUnitName());
     }
     @Override
     public AgvRepository agv(){

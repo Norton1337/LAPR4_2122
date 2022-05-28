@@ -3,47 +3,25 @@ package eapli.base.persistence.impl.inmemory;
 import eapli.base.warehouses.domain.warehouse.Warehouse;
 import eapli.base.warehouses.domain.warehouse.WarehouseIdentification;
 import eapli.base.warehouses.repositories.WarehouseRepository;
+import eapli.framework.infrastructure.repositories.impl.inmemory.InMemoryDomainRepository;
 
 import javax.persistence.*;
 import java.util.List;
 import java.util.Optional;
 
-public class InMemoryWarehouseRepository implements WarehouseRepository {
+public class InMemoryWarehouseRepository extends InMemoryDomainRepository<Warehouse, WarehouseIdentification>
+        implements WarehouseRepository {
 
-    private EntityManager getEntityManager() {
-        EntityManagerFactory factory = Persistence.
-                createEntityManagerFactory("eapli.base");
-        EntityManager manager = factory.createEntityManager();
-        return manager;
+    static {
+        InMemoryInitializer.init();
     }
-
     @Override
-    public Warehouse add(Warehouse warehouse) {
-        if (warehouse == null) {
-            throw new IllegalArgumentException();
-        }
-        EntityManager em = getEntityManager();
-        EntityTransaction tx = em.getTransaction();
-        tx.begin();
-        em.persist(warehouse);
-        tx.commit();
-        em.close();
+    public List<Warehouse> findAll(){
 
-        return warehouse;
+        return null;
     }
-
     @Override
-    public Warehouse findById(Long id) {
-
-        return getEntityManager().find(Warehouse.class, id);
-    }
-
-    //@SuppressWarnings("unchecked")
-    @Override
-    public List<Warehouse> findAll() {
-        Query query = getEntityManager().createQuery(
-                "SELECT e FROM Warehouse e");
-        List<Warehouse> list = query.getResultList();
-        return list;
+    public boolean containsOfIdentity(WarehouseIdentification id) {
+        return super.containsOfIdentity(id);
     }
 }
