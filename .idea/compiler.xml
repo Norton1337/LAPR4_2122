@@ -18,6 +18,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="a" target="11" />
+      <module name="base" target="11" />
       <module name="base.app.backoffice.console" target="11" />
       <module name="base.app.bootstrap" target="11" />
       <module name="base.app.common.console" target="11" />
