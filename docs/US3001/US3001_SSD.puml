@@ -1,0 +1,41 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Sales Manager" as SM
+participant "CreateQuestionnaireUI" as UI
+
+
+activate SM
+
+SM->UI : Request to Create New Questionaire
+activate UI
+SM<--UI : Ask about fileName, title, wmsg
+deactivate UI
+SM->UI : Write data needed
+activate UI
+
+loop for each question addition
+
+SM<--UI : Ask Question text, type(option or \n obligatory) and answer type \n(multiple choice,  numeric or text)
+deactivate UI
+
+SM->UI : Insert necessary information
+
+loop opt = multiple_choice
+
+activate UI
+SM<--UI : Ask for possible answer to Question
+deactivate UI
+SM->UI : Write the requested data
+activate UI
+deactivate UI
+
+end
+
+end
+SM<--UI : Informs questionnaire creation (sucess)
+deactivate UI
+
+@enduml

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="443.2px" preserveAspectRatio="none" style="width:361px;height:443px;background:#FFFFFF;" version="1.1" viewBox="0 0 361 443" width="361.6px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="296.975" style="stroke:#181818;stroke-width:0.8000000000000002;" width="8" x="60.4" y="74.0875"/><rect fill="#FFFFFF" height="24.2813" style="stroke:#181818;stroke-width:0.8000000000000002;" width="8" x="274" y="91.9688"/><rect fill="#FFFFFF" height="70.725" style="stroke:#181818;stroke-width:0.8000000000000002;" width="8" x="274" y="140.5313"/><rect fill="#FFFFFF" height="44.5625" style="stroke:#181818;stroke-width:0.8000000000000002;" width="8" x="274" y="235.5375"/><rect fill="#FFFFFF" height="24" style="stroke:#181818;stroke-width:0.8000000000000002;" width="8" x="274" y="304.3813"/><rect height="187.85" style="stroke:#000000;stroke-width:1.2000000000000002;fill:none;" width="349.2" x="8" y="152.5313"/><rect height="87.2438" style="stroke:#000000;stroke-width:1.2000000000000002;fill:none;" width="333.2" x="16" y="247.5375"/><line style="stroke:#181818;stroke-width:0.4000000000000001;fill:none;stroke-dasharray:5.0,5.0;" x1="64" x2="64" y1="66.0875" y2="378.2625"/><line style="stroke:#181818;stroke-width:0.4000000000000001;fill:none;stroke-dasharray:5.0,5.0;" x1="278" x2="278" y1="66.0875" y2="378.2625"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="76" x="24" y="63.6266">Sales Manager</text><ellipse cx="64.4" cy="10.8" fill="#E2E2F0" rx="6.4" ry="6.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M64.4,17.2 L64.4,38.8 M54,23.6 L74.8,23.6 M64.4,38.8 L54,50.8 M64.4,38.8 L74.8,50.8 " fill="none" style="stroke:#181818;stroke-width:0.4000000000000001;"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="76" x="24" y="389.0891">Sales Manager</text><ellipse cx="64.4" cy="398.35" fill="#E2E2F0" rx="6.4" ry="6.4" style="stroke:#181818;stroke-width:0.4000000000000001;"/><path d="M64.4,404.75 L64.4,426.35 M54,411.15 L74.8,411.15 M64.4,426.35 L54,438.35 M64.4,426.35 L74.8,438.35 " fill="none" style="stroke:#181818;stroke-width:0.4000000000000001;"/><rect fill="#E2E2F0" height="25.2875" rx="2" ry="2" style="stroke:#181818;stroke-width:0.4000000000000001;" width="126.4" x="214.8" y="40"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="115.2" x="220.4" y="57.2266">CreateQuestionnaireUI</text><rect fill="#E2E2F0" height="25.2875" rx="2" ry="2" style="stroke:#181818;stroke-width:0.4000000000000001;" width="126.4" x="214.8" y="377.4625"/><text fill="#000000" font-family="sans-serif" font-size="11.2" lengthAdjust="spacing" textLength="115.2" x="220.4" y="394.6891">CreateQuestionnaireUI</text><rect fill="#FFFFFF" height="296.975" style="stroke:#181818;stroke-width:0.8000000000000002;" width="8" x="60.4" y="74.0875"/><rect fill="#FFFFFF" height="24.2813" style="stroke:#181818;stroke-width:0.8000000000000002;" width="8" x="274" y="91.9688"/><rect fill="#FFFFFF" height="70.725" style="stroke:#181818;stroke-width:0.8000000000000002;" width="8" x="274" y="140.5313"/><rect fill="#FFFFFF" height="44.5625" style="stroke:#181818;stroke-width:0.8000000000000002;" width="8" x="274" y="235.5375"/><rect fill="#FFFFFF" height="24" style="stroke:#181818;stroke-width:0.8000000000000002;" width="8" x="274" y="304.3813"/><polygon fill="#181818" points="264.4,88.7688,272.4,91.9688,264.4,95.1688,267.6,91.9688" style="stroke:#181818;stroke-width:0.8000000000000002;"/><line style="stroke:#181818;stroke-width:0.8000000000000002;" x1="68.4" x2="269.2" y1="91.9688" y2="91.9688"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="74" y="88.0836">1</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="168.8" x="82.8" y="88.0836">Request to Create New Questionaire</text><polygon fill="#181818" points="77.2,113.05,69.2,116.25,77.2,119.45,74,116.25" style="stroke:#181818;stroke-width:0.8000000000000002;"/><line style="stroke:#181818;stroke-width:0.8000000000000002;stroke-dasharray:2.0,2.0;" x1="72.4" x2="277.2" y1="116.25" y2="116.25"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="82" y="112.3648">2</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="147.2" x="90.8" y="112.3648">Ask about fileName, title, wmsg</text><polygon fill="#181818" points="264.4,137.3313,272.4,140.5313,264.4,143.7313,267.6,140.5313" style="stroke:#181818;stroke-width:0.8000000000000002;"/><line style="stroke:#181818;stroke-width:0.8000000000000002;" x1="68.4" x2="269.2" y1="140.5313" y2="140.5313"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="74" y="136.6461">3</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="84.8" x="82.8" y="136.6461">Write data needed</text><path d="M8,152.5313 L66.4,152.5313 L66.4,159.2125 L58.4,167.2125 L8,167.2125 L8,152.5313 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.2000000000000002;"/><rect fill="none" height="187.85" style="stroke:#000000;stroke-width:1.2000000000000002;" width="349.2" x="8" y="152.5313"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="22.4" x="20" y="164.1273">loop</text><text fill="#000000" font-family="sans-serif" font-size="8.8" font-weight="bold" lengthAdjust="spacing" textLength="121.6" x="78.4" y="163.2664">[for each question addition]</text><polygon fill="#181818" points="77.2,208.0563,69.2,211.2563,77.2,214.4563,74,211.2563" style="stroke:#181818;stroke-width:0.8000000000000002;"/><line style="stroke:#181818;stroke-width:0.8000000000000002;stroke-dasharray:2.0,2.0;" x1="72.4" x2="277.2" y1="211.2563" y2="211.2563"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="82" y="194.2898">4</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="153.6" x="90.8" y="181.2086">Ask Question text, type(option or</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="127.2" x="94" y="194.2898">obligatory) and answer type</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="155.2" x="90.8" y="207.3711">(multiple choice,  numeric or text)</text><polygon fill="#181818" points="264.4,232.3375,272.4,235.5375,264.4,238.7375,267.6,235.5375" style="stroke:#181818;stroke-width:0.8000000000000002;"/><line style="stroke:#181818;stroke-width:0.8000000000000002;" x1="68.4" x2="269.2" y1="235.5375" y2="235.5375"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="74" y="231.6523">5</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="130.4" x="82.8" y="231.6523">Insert necessary information</text><path d="M16,247.5375 L74.4,247.5375 L74.4,254.2188 L66.4,262.2188 L16,262.2188 L16,247.5375 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.2000000000000002;"/><rect fill="none" height="87.2438" style="stroke:#000000;stroke-width:1.2000000000000002;" width="333.2" x="16" y="247.5375"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="22.4" x="28" y="259.1336">loop</text><text fill="#000000" font-family="sans-serif" font-size="8.8" font-weight="bold" lengthAdjust="spacing" textLength="100" x="86.4" y="258.2727">[opt = multiple_choice]</text><polygon fill="#181818" points="77.2,276.9,69.2,280.1,77.2,283.3,74,280.1" style="stroke:#181818;stroke-width:0.8000000000000002;"/><line style="stroke:#181818;stroke-width:0.8000000000000002;stroke-dasharray:2.0,2.0;" x1="72.4" x2="277.2" y1="280.1" y2="280.1"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="82" y="276.2148">6</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="167.2" x="90.8" y="276.2148">Ask for possible answer to Question</text><polygon fill="#181818" points="264.4,301.1813,272.4,304.3813,264.4,307.5813,267.6,304.3813" style="stroke:#181818;stroke-width:0.8000000000000002;"/><line style="stroke:#181818;stroke-width:0.8000000000000002;" x1="68.4" x2="269.2" y1="304.3813" y2="304.3813"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="74" y="300.4961">7</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="114.4" x="82.8" y="300.4961">Write the requested data</text><polygon fill="#181818" points="77.2,360.6625,69.2,363.8625,77.2,367.0625,74,363.8625" style="stroke:#181818;stroke-width:0.8000000000000002;"/><line style="stroke:#181818;stroke-width:0.8000000000000002;stroke-dasharray:2.0,2.0;" x1="72.4" x2="277.2" y1="363.8625" y2="363.8625"/><text fill="#000000" font-family="sans-serif" font-size="10.4" font-weight="bold" lengthAdjust="spacing" textLength="5.6" x="82" y="359.9773">8</text><text fill="#000000" font-family="sans-serif" font-size="10.4" lengthAdjust="spacing" textLength="181.6" x="90.8" y="359.9773">Informs questionnaire creation (sucess)</text><!--MD5=[aa3c01db39f6134258c5d0dcc48241e3]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Sales Manager" as SM
+participant "CreateQuestionnaireUI" as UI
+
+
+activate SM
+
+SM->UI : Request to Create New Questionaire
+activate UI
+SM<- -UI : Ask about fileName, title, wmsg
+deactivate UI
+SM->UI : Write data needed
+activate UI
+
+loop for each question addition
+
+SM<- -UI : Ask Question text, type(option or \n obligatory) and answer type \n(multiple choice,  numeric or text)
+deactivate UI
+
+SM->UI : Insert necessary information
+
+loop opt = multiple_choice
+
+activate UI
+SM<- -UI : Ask for possible answer to Question
+deactivate UI
+SM->UI : Write the requested data
+activate UI
+deactivate UI
+
+end
+
+end
+SM<- -UI : Informs questionnaire creation (sucess)
+deactivate UI
+
+@enduml
+
+@startuml
+
+autonumber
+
+actor "Sales Manager" as SM
+participant "CreateQuestionnaireUI" as UI
+
+
+activate SM
+
+SM->UI : Request to Create New Questionaire
+activate UI
+SM<- -UI : Ask about fileName, title, wmsg
+deactivate UI
+SM->UI : Write data needed
+activate UI
+
+loop for each question addition
+
+SM<- -UI : Ask Question text, type(option or \n obligatory) and answer type \n(multiple choice,  numeric or text)
+deactivate UI
+
+SM->UI : Insert necessary information
+
+loop opt = multiple_choice
+
+activate UI
+SM<- -UI : Ask for possible answer to Question
+deactivate UI
+SM->UI : Write the requested data
+activate UI
+deactivate UI
+
+end
+
+end
+SM<- -UI : Informs questionnaire creation (sucess)
+deactivate UI
+
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 11:55:52 BST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>
