@@ -8,6 +8,7 @@ import eapli.framework.infrastructure.authz.application.AuthorizationService;
 import eapli.framework.infrastructure.authz.application.AuthzRegistry;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class OrderController {
@@ -45,5 +46,15 @@ public class OrderController {
         return waitingOrderTypeList;
 
 
+    }
+
+    public List<OrderType> orderByTime(List<OrderType> list){
+
+        list.sort(new Comparator<OrderType>() {
+            public int compare(OrderType o1, OrderType o2) {
+                return o1.getOrderDateTime().value().compareTo(o2.getOrderDateTime().value());
+            }
+        });
+        return list;
     }
 }

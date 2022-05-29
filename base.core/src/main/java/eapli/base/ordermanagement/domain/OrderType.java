@@ -98,4 +98,6 @@ public class OrderType implements AggregateRoot<OrderID> {
     public OrderID identity() {
         return orderID;
     }
+
+    public OrderDateTime getOrderDateTime(){ return orderDateTime; }
 }

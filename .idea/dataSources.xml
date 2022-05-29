@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="jdbc:h2:~\base" uuid="6fde1c94-21af-44e9-8cc2-a67b015b952d">
+    <data-source source="LOCAL" name="H2 - 2DJ_G4@vsgate-s2.dei.isep.ipp.pt" uuid="f3e8bbe8-3a15-45dd-a935-6e311401c4f0">
       <driver-ref>h2.unified</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.h2.Driver</jdbc-driver>
-      <jdbc-url>jdbc:h2:~\base</jdbc-url>
+      <jdbc-url>jdbc:h2:tcp://vsgate-s2.dei.isep.ipp.pt:10825/2DJ_G4</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
