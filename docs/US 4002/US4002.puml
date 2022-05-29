@@ -1,0 +1,67 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Project Manager" as PM
+
+participant ":OrdersUI" as UI
+participant ":OrderController" as OrderCTRL
+participant ":OrderRepository" as ORDERREPO
+participant ":AGVController" as AGVCTRL
+participant ":TaskController" as TASKCTRL
+participant ":AGVRepository" as AGVREPO
+participant ":Task" as TASK
+participant ":OrderType" as OrderTYPE
+
+
+
+activate PM
+
+
+PM -> UI : Ask to assign tasks automatically
+activate UI
+UI -> OrderCTRL : getWaitingOrders()
+activate OrderCTRL
+OrderCTRL -> ORDERREPO: findAll()
+activate ORDERREPO
+ORDERREPO --> OrderCTRL: order list
+deactivate ORDERREPO
+activate OrderTYPE
+OrderCTRL --> UI: order list
+UI -> OrderCTRL: orderByTime()
+OrderCTRL -> OrderTYPE : getOrderDateTme()
+OrderCTRL --> UI: ordersByTimeList
+
+deactivate OrderCTRL
+
+
+UI -> AGVCTRL: getAvailableAGVList()
+activate AGVCTRL
+AGVCTRL -> AGVREPO: findAll()
+activate AGVREPO
+AGVREPO -> AGVREPO: findAll()
+
+deactivate AGVREPO
+AGVCTRL -> UI: availableAGVList
+
+loop ordersByTimeList not empty
+    UI -> TASKCTRL: createTask()
+    activate TASKCTRL
+    TASKCTRL -> TASK **: create
+    TASKCTRL -->UI : new task
+    deactivate TASKCTRL
+    UI -> OrderCTRL: assignTask()
+    UI -> AGVCTRL: updateAGV()
+    AGVCTRL -> AGVREPO: save()
+    activate AGVREPO
+    AGVREPO -> AGVREPO: save()
+    deactivate AGVREPO
+    deactivate AGVCTRL
+    end
+UI --> PM:informs operation (in)success
+deactivate TASKCTRL
+deactivate PM
+deactivate UI
+
+@enduml

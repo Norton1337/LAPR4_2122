@@ -55,15 +55,16 @@ public class AGVManagementUI {
 
 
         for (int j = 0; j < ordersByTimeList.size()-1; j++){
-            System.out.println(ordersByTimeList.get(j));
+            //System.out.println(ordersByTimeList.get(j));
             if (!agvList.isEmpty()){
 
                 AGV agv = agvList.get(j);
                 OrderType order = ordersByTimeList.get(j);
+
                 Task task = taskController.createTask(order);
                 orderController.assignTask(order, task);
                 agvController.updateAGV(agv,task);
-                agvController.updateAGV(agv,task);
+
 
             }
             else {
