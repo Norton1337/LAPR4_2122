@@ -85,7 +85,7 @@ public class OrdersUI {
         orderController.assignTask(order,task);
 
 
-        agvController.updateAGV(agv);
+        agvController.updateAGV(agv,task);
 
         return false;
 

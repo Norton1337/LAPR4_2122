@@ -59,7 +59,8 @@ public class AGVController {
         return availableAgvList;
     }
 
-    public AGV updateAGV(AGV agv){
+    public AGV updateAGV(AGV agv, Task task){
+        agv.setTask(task);
         agvRepository.save(agv);
         return agv;
     }

@@ -35,15 +35,6 @@ public class AgvBootstrapper implements Action {
         AGVDockController agvDockController = new AGVDockController();
         List<AgvDocks> agvDocksList = createAgvDocks();
 
-        AGV agv = new AGV(
-                new AGVIdentification("identification1"),
-                new Autonomy(45.67),
-                new MaxWeight(300.0),
-                new Model("model1"),
-                new ShortDescription("shortDesc1"),
-                new Status("status1"),
-                agvDocksList.get(0));
-
 
         AGV agv1 = new AGVBuilder()
                 .ofId(new AGVIdentification("identification1"))
