@@ -1,3 +1,283 @@
+commit 90d43ba1e969b2527f9f36a3bb9af10320fabcb9
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun May 29 21:51:54 2022 +0100
+
+    US3001 - Added a questionnaire
+
+A	lprog/userstory/src/questionarioTeste2.txt
+
+commit 4f50dd087dd67947d61f06444f9b4c79386e6d52
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun May 29 17:41:21 2022 +0100
+
+    US2003 - Fixed error where Task wasn't saved in database
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/OrdersUI.java
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/AgvBootstrapper.java
+M	base.core/src/main/java/eapli/base/warehouses/application/AGVController.java
+
+commit aeb7246c9b60cc4259fe687203cf2839cda7ce9a
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun May 29 15:34:05 2022 +0100
+
+    US2003 - Fixed Task creation
+
+M	base.core/src/main/java/eapli/base/warehouses/application/AGVController.java
+
+commit 6fa5c53568ef8d16d0d41cb5c653cc8fcafb3465
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun May 29 15:33:45 2022 +0100
+
+    US2003 - Improving Task creation
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/OrdersUI.java
+M	base.core/src/main/java/eapli/base/ordermanagement/application/OrderController.java
+M	base.core/src/main/java/eapli/base/taskmanagement/application/TaskController.java
+
+commit ee57d074760ae5b775ba30dd4a35db6e77518830
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun May 29 15:33:16 2022 +0100
+
+    US2003 - Uploading US2003.md and diagrams
+
+A	docs/US2003/US2003.md
+A	docs/US2003/US2003_DM.svg
+A	docs/US2003/US2003_DM.vpp
+A	docs/US2003/US2003_SD.puml
+A	docs/US2003/US2003_SD.svg
+
+commit 6a054d42ad0bf5f9161ee18575eba6dbffd69e1a
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun May 29 13:09:17 2022 +0100
+
+    US2003 - Order now changes state when assigned to an AGV
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/OrdersUI.java
+M	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderType.java
+
+commit a1465e2cc6346c2913ce4f76bdf0300428266a03
+Author: Paulo Norton <1210824@isep.ipp.pt>
+Date:   Sat May 28 23:58:39 2022 +0100
+
+    US2003 - Fixed Bootstrapper
+
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/BaseBootstrapper.java
+
+commit c43e2a1e26f51d86b8c0732fe5c54b59f52d8907
+Author: Paulo Norton <1210824@isep.ipp.pt>
+Date:   Sat May 28 23:58:00 2022 +0100
+
+    US2003 - Implemented US2003, warehouse employee can now force an order to be prepared by an AGV
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/ConfigureAGVUI.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/OrdersUI.java
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/WarehouseMenu.java
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/AgvBootstrapper.java
+M	base.core/src/main/java/eapli/base/ordermanagement/application/OrderController.java
+M	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderType.java
+A	base.core/src/main/java/eapli/base/taskmanagement/application/TaskController.java
+M	base.core/src/main/java/eapli/base/taskmanagement/domain/Task.java
+M	base.core/src/main/java/eapli/base/warehouses/application/AGVController.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvDocks/AgvDocks.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvDocks/AgvDocksBuilder.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/AGV.java
+M	base.persistence.impl/src/main/resources/META-INF/persistence.xml
+
+commit e0a28af65875163dcd864b17aac2295540530fc0
+Author: Paulo Norton <1210824@isep.ipp.pt>
+Date:   Sat May 28 23:53:35 2022 +0100
+
+    2003 - Fixed Persistence Unkown error
+
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvDocks/AgvDockIdentification.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/AGVIdentification.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/Autonomy.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/MaxWeight.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/Model.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/ShortDescription.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/square/Accessibility.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/square/Square.java
+
+commit a75dc84750ab6a3b9d30465408c0afa3cddf3fc6
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat May 28 19:29:15 2022 +0100
+
+    US2003 - Fixed Task causing errors because of "Order" name change
+
+M	base.core/src/main/java/eapli/base/taskmanagement/domain/Task.java
+M	base.core/src/main/java/eapli/base/taskmanagement/dto/TaskDTO.java
+M	base.core/src/main/java/eapli/base/taskmanagement/repositories/TaskRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryTaskRepository.java
+
+commit f4e9a0c8996bf931113d44e121fd379503ce83cd
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat May 28 19:28:35 2022 +0100
+
+    US2003 - Fixed Warehouse Controller
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/ConfigureAGVUI.java
+M	base.core/src/main/java/eapli/base/warehouses/application/WarehouseSetupController.java
+M	base.core/src/test/java/eapli/base/clientusermanagement/domain/WarehouseTest.java
+
+commit 6218edbfac23b6bf856aff48f78401bc7ebe4446
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat May 28 19:27:47 2022 +0100
+
+    US2003 - Added AgvDock bootstrapper and agvDock Repository
+
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/BaseBootstrapper.java
+A	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/AgvDockBootstrapper.java
+A	base.core/src/main/java/eapli/base/warehouses/application/AGVDockController.java
+D	base.core/src/main/java/eapli/base/warehouses/application/ListAGVDockController.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/agvDocks/AgvDockIdentification.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvDocks/AgvDocks.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvDocks/AgvDocksBuilder.java
+A	base.core/src/main/java/eapli/base/warehouses/repositories/AgvDockRepository.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryAgvDockRepository.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaAgvDockRepository.java
+
+commit 97b374148dd664f00257de77f69b6edb75615b22
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat May 28 19:26:32 2022 +0100
+
+    US2003 - Renamed Order to OrderType to avoid persistence errors
+
+A	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/OrderBootstrapper.java
+M	base.core/src/main/java/eapli/base/infrastructure/persistence/RepositoryFactory.java
+A	base.core/src/main/java/eapli/base/ordermanagement/application/OrderController.java
+A	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderBuilder.java
+M	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderDateTime.java
+R067	base.core/src/main/java/eapli/base/ordermanagement/domain/Order.java	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderType.java
+M	base.core/src/main/java/eapli/base/ordermanagement/repositories/OrderRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaOrderRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaRepositoryFactory.java
+M	base.persistence.impl/src/main/resources/META-INF/persistence.xml
+
+commit 12629eb0a090b1c161b72ecaa2d4ff95fae6a802
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat May 28 19:25:34 2022 +0100
+
+    US2003 - Fixed AGV repository and added agv bootstrap
+
+A	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/AgvBootstrapper.java
+R075	base.core/src/main/java/eapli/base/warehouses/application/ConfigureAGVController.java	base.core/src/main/java/eapli/base/warehouses/application/AGVController.java
+M	base.core/src/main/java/eapli/base/warehouses/repositories/AgvRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryAgvRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryOrderRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryRepositoryFactory.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaAgvRepository.java
+
+commit d60a4b84a7d608274a253801e8f19e4d87aa78de
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat May 28 17:47:26 2022 +0100
+
+    US2003 - Creating warehouse employee
+
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/MasterUsersBootstrapper.java
+
+commit 9239b5b699db853d79d734c09d0f804cfea70eb8
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat May 28 17:47:02 2022 +0100
+
+    US2003 - Implementing order and task in JpaRepositoryFactory
+
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaRepositoryFactory.java
+
+commit 0dc67a0ef5842a520f6a12566fb606bf32390b6c
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat May 28 17:42:22 2022 +0100
+
+    US2003 - Created InMemory and Jpa TaskRepository
+
+M	base.core/src/main/java/eapli/base/infrastructure/persistence/RepositoryFactory.java
+A	base.core/src/main/java/eapli/base/taskmanagement/repositories/TaskRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryRepositoryFactory.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryTaskRepository.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaTaskRepository.java
+
+commit d5fc64ab23cad099727cf9ed8484be730b4b9de9
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat May 28 17:41:32 2022 +0100
+
+    US2003 - Created Task Entity and its value objects
+
+A	base.core/src/main/java/eapli/base/taskmanagement/domain/Task.java
+A	base.core/src/main/java/eapli/base/taskmanagement/domain/TaskDateTime.java
+A	base.core/src/main/java/eapli/base/taskmanagement/domain/TaskID.java
+A	base.core/src/main/java/eapli/base/taskmanagement/dto/TaskDTO.java
+
+commit 95b36839c133f4391709ae70b2dba496aec66629
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat May 28 17:27:41 2022 +0100
+
+    US2003 - Setup Order Repository
+
+M	base.core/src/main/java/eapli/base/infrastructure/persistence/RepositoryFactory.java
+A	base.core/src/main/java/eapli/base/ordermanagement/repositories/OrderRepository.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryOrderRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryRepositoryFactory.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaOrderRepository.java
+
+commit 7679c5f3c629864a28066400abf8a4234579c7a6
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat May 28 17:21:38 2022 +0100
+
+    US2003 - Added order states to Order
+
+M	base.core/src/main/java/eapli/base/ordermanagement/domain/Order.java
+A	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderState.java
+A	base.core/src/main/java/eapli/base/ordermanagement/domain/PossibleStates.java
+M	base.core/src/main/java/eapli/base/ordermanagement/dto/OrderDTO.java
+
+commit 66d8e50b78ee87c8f79e670fa8653ced222940d0
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat May 28 17:11:42 2022 +0100
+
+    US2003 - Created Order Entity and it's value objects
+
+A	base.core/src/main/java/eapli/base/ordermanagement/domain/Order.java
+A	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderBillingAddress.java
+A	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderDateTime.java
+A	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderID.java
+A	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderLocation.java
+A	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderPostalAddress.java
+A	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderTotalAmount.java
+A	base.core/src/main/java/eapli/base/ordermanagement/dto/OrderDTO.java
+
+commit bdea9ceb1dee04417701e6f6ef191d2dee30f622
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat May 28 16:56:18 2022 +0100
+
+    Added missing persistence tags
+
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/AGVIdentification.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/aisles/AisleID.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/aisles/Aisles.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/Rows.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/Shelves.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/Warehouse.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/WarehouseIdentification.java
+
+commit 7600db6aae1b44428e7f47d775f84ea384c2d6d0
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat May 28 16:54:38 2022 +0100
+
+    Fixed InMemory, JPA repository and Persistence
+
+A	.idea/jpa-buddy-datasource.xml
+M	base.app.common.console/pom.xml
+M	base.bootstrappers/pom.xml
+M	base.core/src/main/java/eapli/base/infrastructure/persistence/RepositoryFactory.java
+M	base.core/src/main/java/eapli/base/warehouses/application/WarehouseSetupController.java
+A	base.core/src/main/java/eapli/base/warehouses/repositories/AisleRepository.java
+M	base.core/src/main/java/eapli/base/warehouses/repositories/WarehouseRepository.java
+D	base.core/src/main/java/eapli/base/warehouses/repositories/WarehouseRepositoryJPAImpl.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryRepositoryFactory.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryWarehouseRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaRepositoryFactory.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaWarehouseRepository.java
+M	base.persistence.impl/src/main/resources/META-INF/persistence.xml
+
 commit a336fe6531dea26817d60b5e71c87e9ae362495b
 Author: N0R70N <1210824@isep.ipp.pt>
 Date:   Fri May 27 23:04:13 2022 +0100

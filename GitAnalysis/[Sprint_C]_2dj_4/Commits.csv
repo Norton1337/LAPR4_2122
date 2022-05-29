@@ -1,3 +1,40 @@
+7f42baf,2022-05-30 00:01:52 +0100,goncrib,1210792@isep.ipp.pt,comit final
+9731482,2022-05-29 23:12:47 +0100,Ana  Soares,1210802@isep.ipp.pt,US4002 last commit correction
+7068f51,2022-05-29 23:11:55 +0100,Ana  Soares,1210802@isep.ipp.pt,US4002 SD and DM
+5827e3c,2022-05-29 23:04:22 +0100,André Maia,1191259@isep.ipp.pt,US3000 - Correction to submit.
+c07359a,2022-05-29 23:00:44 +0100,Ana  Soares,1210802@isep.ipp.pt,US4002 SD
+bf7e846,2022-05-29 22:56:48 +0100,André Maia,1191259@isep.ipp.pt,US3001 - Markdown (Documentation updated, almost finished)
+0d06087,2022-05-29 22:53:46 +0100,André Maia,1191259@isep.ipp.pt,US3001 - SD Base updated
+297163a,2022-05-29 22:39:35 +0100,André Maia,1191259@isep.ipp.pt,US3001 - Applied Patterns update.
+4ec910f,2022-05-29 22:31:33 +0100,André Maia,1191259@isep.ipp.pt,US3001 - Simple Design to US understanding
+240b9d4,2022-05-29 22:14:22 +0100,Ana  Soares,1210802@isep.ipp.pt,US4002 - Creating Project Manager and tasks management menu; Fixing US detail
+90d43ba,2022-05-29 21:51:54 +0100,N0R70N,1210824@isep.ipp.pt,US3001 - Added a questionnaire
+6d6a7b9,2022-05-29 20:25:20 +0100,André Maia,1191259@isep.ipp.pt,US3001 - # 2. Analysis ## 2.1 Modeling in the Domain Model
+9d1d333,2022-05-29 18:54:26 +0100,Ana  Soares,1210802@isep.ipp.pt,US4002 - AGVManagementUI and OrderController method
+4f50dd0,2022-05-29 17:41:21 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Fixed error where Task wasn't saved in database
+aeb7246,2022-05-29 15:34:05 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Fixed Task creation
+6fa5c53,2022-05-29 15:33:45 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Improving Task creation
+ee57d07,2022-05-29 15:33:16 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Uploading US2003.md and diagrams
+6a054d4,2022-05-29 13:09:17 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Order now changes state when assigned to an AGV
+a1465e2,2022-05-28 23:58:39 +0100,Paulo Norton,1210824@isep.ipp.pt,US2003 - Fixed Bootstrapper
+c43e2a1,2022-05-28 23:58:00 +0100,Paulo Norton,1210824@isep.ipp.pt,US2003 - Implemented US2003, warehouse employee can now force an order to be prepared by an AGV
+e0a28af,2022-05-28 23:53:35 +0100,Paulo Norton,1210824@isep.ipp.pt,2003 - Fixed Persistence Unkown error
+371c97d,2022-05-28 23:22:05 +0100,goncrib,1210792@isep.ipp.pt,4001 redes-server code on "AGV Manager",clint code on "AGV Digital Twin" and "backOffice"
+a75dc84,2022-05-28 19:29:15 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Fixed Task causing errors because of "Order" name change
+f4e9a0c,2022-05-28 19:28:35 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Fixed Warehouse Controller
+6218edb,2022-05-28 19:27:47 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Added AgvDock bootstrapper and agvDock Repository
+97b3741,2022-05-28 19:26:32 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Renamed Order to OrderType to avoid persistence errors
+12629eb,2022-05-28 19:25:34 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Fixed AGV repository and added agv bootstrap
+d60a4b8,2022-05-28 17:47:26 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Creating warehouse employee
+9239b5b,2022-05-28 17:47:02 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Implementing order and task in JpaRepositoryFactory
+0dc67a0,2022-05-28 17:42:22 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Created InMemory and Jpa TaskRepository
+d5fc64a,2022-05-28 17:41:32 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Created Task Entity and its value objects
+95b3683,2022-05-28 17:27:41 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Setup Order Repository
+7679c5f,2022-05-28 17:21:38 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Added order states to Order
+66d8e50,2022-05-28 17:11:42 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Created Order Entity and it's value objects
+bdea9ce,2022-05-28 16:56:18 +0100,N0R70N,1210824@isep.ipp.pt,Added missing persistence tags
+7600db6,2022-05-28 16:54:38 +0100,N0R70N,1210824@isep.ipp.pt,Fixed InMemory, JPA repository and Persistence
+968bab4,2022-05-27 23:39:41 +0100,Paulo Proença,prp@isep.ipp.pt,Repository Analysis
 a336fe6,2022-05-27 23:04:13 +0100,N0R70N,1210824@isep.ipp.pt,Fixing Bootstrapper and Database
 e88bb50,2022-05-27 16:22:56 +0100,André Maia,1191259@isep.ipp.pt,US3000 - Analysis
 07673ac,2022-05-26 18:23:12 +0100,André Maia,1191259@isep.ipp.pt,US3000 e US3001 - Controller and FileWriter first implementation
@@ -27,3 +64,4 @@ b7ef914,2022-05-23 23:55:40 +0100,Paulo Proença,prp@isep.ipp.pt,Repository Analy
 bc116f2,2022-05-13 00:01:38 +0100,Paulo Proença,prp@isep.ipp.pt,Repository Analysis
 633980c,2022-05-10 23:08:56 +0100,Paulo Proença,prp@isep.ipp.pt,Repository Analysis
 2147c64,2022-05-10 22:51:54 +0100,Paulo Proença,prp@isep.ipp.pt,Repository Analysis
+a7ba868,2022-05-02 07:33:25 +0100,Paulo Proença,prp@isep.ipp.pt,Repository Analysis

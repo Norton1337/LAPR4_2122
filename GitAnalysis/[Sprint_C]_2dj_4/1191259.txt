@@ -1,3 +1,57 @@
+commit 5827e3c6fca3dea701a216f24f9e7b7d036f3212
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Sun May 29 23:04:22 2022 +0100
+
+    US3000 - Correction to submit.
+
+M	docs/US3000/US3000.md
+
+commit bf7e8468ba53fee6e3729fa3bdb70de907096bb1
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Sun May 29 22:56:48 2022 +0100
+
+    US3001 - Markdown (Documentation updated, almost finished)
+
+M	docs/US3001/US3001.md
+
+commit 0d06087c78a2f2502030f11e15eb24d3a68bade7
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Sun May 29 22:53:46 2022 +0100
+
+    US3001 - SD Base updated
+
+A	docs/US3001/US3001_SD.puml
+A	docs/US3001/US3001_SD.svg
+
+commit 297163a747c76d15d13e902da145416e52b5c0e9
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Sun May 29 22:39:35 2022 +0100
+
+    US3001 - Applied Patterns update.
+
+M	docs/US3001/US3001.md
+
+commit 4ec910f096db810a360ed14e039c88a2a613cd95
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Sun May 29 22:31:33 2022 +0100
+
+    US3001 - Simple Design to US understanding
+
+A	docs/US3001/US3001_SSD.puml
+A	docs/US3001/US3001_SSD.svg
+
+commit 6d6a7b93a1bda935c352fc15bafb0c87a40b4478
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Sun May 29 20:25:20 2022 +0100
+
+    US3001 - # 2. Analysis
+    ## 2.1 Modeling in the Domain Model
+
+M	.idea/compiler.xml
+M	docs/US3000/US3000.md
+A	docs/US3001/US3001.JPG
+M	docs/US3001/US3001.md
+
 commit e88bb501b280345fd88263e818fc63d84c5ca8eb
 Author: André Maia <1191259@isep.ipp.pt>
 Date:   Fri May 27 16:22:56 2022 +0100
