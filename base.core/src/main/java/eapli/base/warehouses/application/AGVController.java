@@ -1,6 +1,7 @@
 package eapli.base.warehouses.application;
 
 import eapli.base.infrastructure.persistence.PersistenceContext;
+import eapli.base.taskmanagement.domain.Task;
 import eapli.base.warehouses.domain.agvDocks.AgvDocks;
 import eapli.base.warehouses.domain.agvs.AGV;
 import eapli.base.warehouses.domain.agvs.AGVIdentification;
@@ -11,6 +12,7 @@ import eapli.framework.infrastructure.authz.application.AuthorizationService;
 import eapli.framework.infrastructure.authz.application.AuthzRegistry;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -32,6 +34,10 @@ public class AGVController {
         agvRepository.save(agv);
     }
 
+    public void assignTask(AGV agv, Task task){
+        agv.setTask(task);
+    }
+
     public AGVIdentification getAGVIdentification(AgvDTO dto) throws IOException {
         agv= new AGV(dto);
         return agv.identity();
@@ -42,8 +48,8 @@ public class AGVController {
     }
 
     public List<AGV> getAvailableAGVList(){
-        List<AGV> agvList = agvRepository.findAll();
-        List<AGV> availableAgvList = agvRepository.findAll();
+        List<AGV> agvList = getAGVList();
+        List<AGV> availableAgvList = new ArrayList<>();
 
         for (AGV agv: agvList) {
             if(agv.getTask()==null)
