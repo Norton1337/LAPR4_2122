@@ -3,6 +3,7 @@ package eapli.base.app.backoffice.console.presentation.warehouse;
 import eapli.base.ordermanagement.application.OrderController;
 import eapli.base.ordermanagement.domain.OrderType;
 import eapli.base.ordermanagement.domain.PossibleStates;
+import eapli.base.taskmanagement.application.TaskController;
 import eapli.base.taskmanagement.domain.Task;
 import eapli.base.taskmanagement.domain.TaskDateTime;
 import eapli.base.taskmanagement.domain.TaskID;
@@ -20,6 +21,8 @@ public class OrdersUI {
 
     private OrderController orderController = new OrderController();
     private AGVController agvController = new AGVController();
+    private TaskController taskController = new TaskController();
+
 
     public boolean show(){
         System.out.println("");
@@ -36,7 +39,7 @@ public class OrdersUI {
             i++;
         }
 
-        System.out.println("DO you wish to force an order?");
+        System.out.println("Do you wish to force an order?");
         int option3 = Console.readInteger("0-No\n1-Yes\n>");
         if(option3<0 || option3 >= ordersList.size()){
             System.out.println("Invalid option");
@@ -76,14 +79,12 @@ public class OrdersUI {
 
         AGV agv = agvList.get(option2);
 
-        Task task = new Task(
-                new TaskID(order.identity().value()),
-                new TaskDateTime(LocalDateTime.now()),
-                order);
+        Task task = taskController.createTask(order);
 
-        order.setTask(task);
-        order.changeOrderState(PossibleStates.IN_PROGRESS);
-        agv.setTask(task);
+
+        orderController.assignTask(order,task);
+
+
         agvController.updateAGV(agv);
 
         return false;

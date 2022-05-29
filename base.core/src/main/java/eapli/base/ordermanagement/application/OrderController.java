@@ -3,6 +3,7 @@ package eapli.base.ordermanagement.application;
 import eapli.base.ordermanagement.domain.OrderType;
 import eapli.base.ordermanagement.domain.PossibleStates;
 import eapli.base.ordermanagement.repositories.OrderRepository;
+import eapli.base.taskmanagement.domain.Task;
 import eapli.framework.infrastructure.authz.application.AuthorizationService;
 import eapli.framework.infrastructure.authz.application.AuthzRegistry;
 
@@ -19,7 +20,10 @@ public class OrderController {
     public OrderController() {
     }
 
-
+    public void assignTask(OrderType order, Task task){
+        order.setTask(task);
+        order.changeOrderState(PossibleStates.IN_PROGRESS);
+    }
     public void saveOrder(OrderType order) {
         orderRepository.save(order);
 
