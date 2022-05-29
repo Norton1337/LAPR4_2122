@@ -1,0 +1,64 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Warehouse Employee" as Employee
+
+participant ":OrdersUI" as UI
+participant ":OrderController" as OrderCTRL
+participant ":OrderRepository" as ORDERREPO
+participant ":AGVController" as AGVCTRL
+participant ":TaskController" as TASKCTRL
+participant ":AGVRepository" as AGVREPO
+participant ":Task" as TASK
+
+
+
+activate Employee
+
+
+Employee -> UI : Ask to see waiting orders
+activate UI
+UI -> OrderCTRL : getWaitingOrders()
+activate OrderCTRL
+OrderCTRL -> ORDERREPO: findAll()
+activate ORDERREPO
+ORDERREPO --> OrderCTRL: order list
+deactivate ORDERREPO
+
+OrderCTRL --> UI: order list
+deactivate OrderCTRL
+UI --> Employee: ask if user wants to force an order
+Employee -> UI: Inserts positive answer and chosen order
+UI -> AGVCTRL: getAvailableAGVList()
+activate AGVCTRL
+AGVCTRL -> AGVREPO: findAll()
+activate AGVREPO
+AGVREPO -> AGVREPO: findAll()
+
+deactivate AGVREPO
+AGVCTRL -> UI: agv list
+
+UI --> Employee: requests which agv
+Employee -> UI : chooses agv
+UI -> TASKCTRL: createTask()
+activate TASKCTRL
+TASKCTRL -> TASK **: create
+TASKCTRL -->UI : new task
+deactivate TASKCTRL
+UI -> OrderCTRL: assignTask()
+UI -> AGVCTRL: updateAGV()
+AGVCTRL -> AGVREPO: save()
+activate AGVREPO
+AGVREPO -> AGVREPO: save()
+deactivate AGVREPO
+AGVCTRL --> UI:informs operation (in)success
+deactivate AGVCTRL
+
+UI --> Employee:informs operation (in)success
+deactivate TASKCTRL
+deactivate Employee
+deactivate UI
+
+@enduml
