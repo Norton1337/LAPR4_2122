@@ -81,6 +81,9 @@ public class OrderType implements AggregateRoot<OrderID> {
     public OrderState getOrderState() {
         return orderState;
     }
+    public void changeOrderState(PossibleStates state) {
+        this.orderState=new OrderState(state);
+    }
 
     public void setTask(Task task){
         this.task=task;

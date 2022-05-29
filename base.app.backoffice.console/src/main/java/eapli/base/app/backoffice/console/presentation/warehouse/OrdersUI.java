@@ -2,6 +2,7 @@ package eapli.base.app.backoffice.console.presentation.warehouse;
 
 import eapli.base.ordermanagement.application.OrderController;
 import eapli.base.ordermanagement.domain.OrderType;
+import eapli.base.ordermanagement.domain.PossibleStates;
 import eapli.base.taskmanagement.domain.Task;
 import eapli.base.taskmanagement.domain.TaskDateTime;
 import eapli.base.taskmanagement.domain.TaskID;
@@ -81,7 +82,7 @@ public class OrdersUI {
                 order);
 
         order.setTask(task);
-
+        order.changeOrderState(PossibleStates.IN_PROGRESS);
         agv.setTask(task);
         agvController.updateAGV(agv);
 
