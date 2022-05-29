@@ -1,5 +1,6 @@
 package eapli.base.clientusermanagement.domain;
 
+import eapli.base.warehouses.domain.agvDocks.AgvDockIdentification;
 import eapli.base.warehouses.domain.agvDocks.AgvDocks;
 import eapli.base.warehouses.domain.agvs.*;
 import eapli.base.warehouses.domain.square.Accessibility;
@@ -21,7 +22,7 @@ public class AGVTest {
                 new ShortDescription("shortDescription"),
                 new Status("status"),
                 new AgvDocks(
-                        "D2",
+                        new AgvDockIdentification("D2"),
                         new Square(
                                 new Length(5),
                                 new Width(5)
