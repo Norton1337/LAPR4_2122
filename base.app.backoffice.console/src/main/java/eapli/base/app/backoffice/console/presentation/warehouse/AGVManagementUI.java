@@ -24,22 +24,22 @@ public class AGVManagementUI {
     public boolean show(){
         System.out.println("");
 
-        List<OrderType> ordersByTime = orderController.getWaitingOrders();
-        List<OrderType> ordersList = orderController.orderByTime(ordersByTime);
+        List<OrderType> ordersList = orderController.getWaitingOrders();
+        List<OrderType> ordersByTimeList = orderController.orderByTime(ordersList);
 
-        if(ordersList.isEmpty()){
+        if(ordersByTimeList.isEmpty()){
             System.out.println("There are no waiting orders");
             return false;
         }
         int i = 0;
-        for (OrderType order: ordersList) {
+        for (OrderType order: ordersByTimeList) {
             System.out.println("["+i+"] "+order.toString());
             i++;
         }
 
-        System.out.println("Would you like to assign tasks automatically?");
+        System.out.println("Would you like to assign tasks to available AGVs?");
         int option3 = Console.readInteger("0-No\n1-Yes\n>");
-        if(option3<0 || option3 >= ordersList.size()){
+        if(option3<0 || option3 >= ordersByTimeList.size()){
             System.out.println("Invalid option");
             return false;
         }
@@ -53,16 +53,17 @@ public class AGVManagementUI {
             return false;
         }
 
-        int j = 0;
-        while (!ordersList.isEmpty()){
 
+        for (int j = 0; j < ordersByTimeList.size()-1; j++){
+            System.out.println(ordersByTimeList.get(j));
             if (!agvList.isEmpty()){
 
                 AGV agv = agvList.get(j);
-                OrderType order = ordersList.get(j);
+                OrderType order = ordersByTimeList.get(j);
                 Task task = taskController.createTask(order);
                 orderController.assignTask(order, task);
-                j++;
+                agvController.updateAGV(agv,task);
+                agvController.updateAGV(agv,task);
 
             }
             else {

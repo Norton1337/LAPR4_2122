@@ -1,0 +1,48 @@
+Sneaker Products Questionnaire
+
+Hello, Please take a few seconds to fill in the required questions.
+
+Section1: Personal Info (this section is about you)
+
+Q6. How satisfied are you with our product? (obligatory)[Multiple Choice]  Very Unsatisfied | Unsatisfied | Fine | Satisfied | Very Satisfied |
+Unsatisfied
+
+
+Q7. What are the most appealing features of this product? (obligatory)[Free Text]
+insert answer7 here
+
+
+Q8. What are the most problematic features of this product? (obligatory)[Free Text]
+insert answer8 here
+
+
+Q9. Do you have any suggestions for improving production efficiency? (optional)[Free Text]
+insert answer9 here
+
+
+Q10. Would you suggest our product to others if it were available on the market? (obligatory)[Free Text]
+insert answer10 here
+
+
+Q1. What is your gender? (optional)[Multiple Choice]  Male | Female |
+Male
+
+
+Q2. How old are you? (optional)[Numeric]
+
+
+Section2: Other (this section is about other stuff)
+Q3. How much do you wear in sneakers? (obligatory)[Numeric]
+56
+
+
+Q4. What are the materials that you prefer in a sneaker? (obligatory)[Multiple Choice]  Leathers | Textiles | Synthetics | Rubber | Foam | Plastic |
+Leathers
+
+
+Q5. Do you have a problem of any nature with your feet? (obligatory)[Free Text]
+insert answer5 here
+
+
+
+Thank you for taking our survey! Have a nice day.
