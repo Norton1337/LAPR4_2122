@@ -2,6 +2,7 @@ package eapli.base.app.backoffice.console.questionnaire;
 import eapli.base.questionnairemanagement.application.QuestionnaireController;
 import eapli.base.warehouses.application.WarehouseSetupController;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class CreateQuestionnaireUI {
@@ -9,9 +10,9 @@ public class CreateQuestionnaireUI {
     private static final String UI_SINGLE_LINE = "|---------------------|-------------------------------------------------------------------|";
     Scanner sc = new Scanner(System.in);
 
-    final QuestionnaireController questionnaireController = new QuestionnaireController();
+     QuestionnaireController questionnaireController = new QuestionnaireController();
 
-    public void menu() {
+    public void menu() throws IOException {
 
         int choice, choice1, choice2;
         boolean flag = true;

@@ -27,15 +27,16 @@ public class QuestionnaireController {
 
         }
 
+    FileWrite filew = new FileWrite();
 
-        public void createFile(String fileName, String title, String wmsg)
-        {
-                // enviar para makefile estes dados,criar ficheiro e abrir
+        public void createFile(String fileName, String title, String wmsg) throws IOException {
+        // enviar para makefile estes dados,criar ficheiro e abrir
+            filew.createFile(fileName, title, wmsg);
         }
 
     public void addQuestion(String text, Integer type, Integer atype, String fileName) {
-
         // enviar para makefile os dados da questao, utilizar ficheiro ja criado com nome fileName
+        filew.addQuestion(text,type,atype,fileName);
     }
 
 
@@ -43,6 +44,7 @@ public class QuestionnaireController {
 
         // enviar para makefile os dados das respostas, utilizar ficheiro ja criado com nome fileName
         // vai ser adicionado em frente á addQuestion() , ver formataçao de txt com o paulo por causa da grammar
+        filew.addPossibleAnswer(answer,fileName);
 
         }
 

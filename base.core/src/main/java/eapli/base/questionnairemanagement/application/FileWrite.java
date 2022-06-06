@@ -7,7 +7,7 @@ import java.io.IOException;
 public class FileWrite {
 
 
-    public void createFile(String fileName, String title, String wmsg) throws IOException {
+    public static void createFile(String fileName, String title, String wmsg) throws IOException {
         FileWriter f = new FileWriter(fileName);
         try {
             f.write(title);
@@ -18,6 +18,12 @@ public class FileWrite {
     }
 
 
+    public void addQuestion(String text, Integer type, Integer atype, String fileName) {
+        // Abrir ficheiro ja criado e adiciona texto
+    }
 
 
+    public void addPossibleAnswer(String answer, String fileName) {
+
+    }
 }
