@@ -1,0 +1,61 @@
+commit 5fe5f95769cf4092b9dc9e96894bfa14e9b64958
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Tue Jun 7 15:52:02 2022 +0100
+
+    Fixed .bat files
+
+D	base.core/src/main/java/eapli/base/productmanagement/application/SpecifyProductController.java
+M	run-backoffice.bat
+M	run-bootstrap.bat
+
+commit 04fbf19776b6c919d2ea1fb213e8197231c5003a
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Tue Jun 7 15:51:43 2022 +0100
+
+    US1900 - Bootstrap now creates products and categories
+
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/BaseBootstrapper.java
+M	base.core/src/main/java/eapli/base/infrastructure/persistence/RepositoryFactory.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryCategoryRepository.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryProductRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryRepositoryFactory.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaCategoryRepository.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaProductRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaRepositoryFactory.java
+
+commit 8251237242782ea2cf8f1037653a9a784d731293
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Tue Jun 7 15:50:24 2022 +0100
+
+    US1004 - Implemented Improved Products
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/SpecifyProductUI.java
+A	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/ProductBootstrapper.java
+A	base.core/src/main/java/eapli/base/productmanagement/application/ProductController.java
+M	base.core/src/main/java/eapli/base/productmanagement/domain/Product.java
+M	base.core/src/main/java/eapli/base/productmanagement/domain/ProductBarCode.java
+M	base.core/src/main/java/eapli/base/productmanagement/domain/ProductCode.java
+A	base.core/src/main/java/eapli/base/productmanagement/domain/ProductPrice.java
+M	base.core/src/main/java/eapli/base/productmanagement/domain/ProductReference.java
+A	base.core/src/main/java/eapli/base/productmanagement/domain/ProductWeight.java
+M	base.core/src/main/java/eapli/base/productmanagement/repositories/ProductRepository.java
+
+commit 1ec3684322cd5b11581c0ce128209ace17b2839c
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Tue Jun 7 15:49:36 2022 +0100
+
+    US1005 - Implemented Improved Categories
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/DefineCategoryUI.java
+A	base.core/src/main/java/eapli/base/categorymanagment/application/CategoryController.java
+D	base.core/src/main/java/eapli/base/categorymanagment/application/DefineCategoryController.java
+M	base.core/src/main/java/eapli/base/categorymanagment/domain/Category.java
+M	base.core/src/main/java/eapli/base/categorymanagment/repositories/CategoryRepository.java
+
+commit 09f72f449840155782c94383a1081c56f6461faa
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Tue May 31 10:40:20 2022 +0100
+
+    US3000 - Deleted unnecessary file
+
+D	lprog/userstory/src/EvalVisitor2.java

@@ -1,0 +1,12 @@
+commit 9cf545e9761089de2c7e81347cd77ddb4e4c505c
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Mon Jun 6 22:17:37 2022 +0100
+
+    US3001 - FULL UPDATE to improve functionality
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/questionnaire/CreateQuestionnaireUI.java
+M	base.core/src/main/java/eapli/base/questionnairemanagement/application/FileWrite.java
+M	base.core/src/main/java/eapli/base/questionnairemanagement/application/QuestionnaireController.java
+M	docs/US3001/US3001.md
+M	docs/US3001/US3001_SD.puml
+M	docs/US3001/US3001_SD.svg
