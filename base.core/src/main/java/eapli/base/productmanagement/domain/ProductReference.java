@@ -2,20 +2,20 @@ package eapli.base.productmanagement.domain;
 
 public class ProductReference {
 
-    private String reference;
+    private Long reference;
 
     public ProductReference() {
     }
 
-    public ProductReference(String reference) {
+    public ProductReference(Long reference) {
         this.reference = reference;
     }
 
-    public String getReference() {
+    public Long getReference() {
         return reference;
     }
 
-    public void setReference(String reference) {
+    public void setReference(Long reference) {
         this.reference = reference;
     }
 

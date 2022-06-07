@@ -2,12 +2,12 @@ package eapli.base.app.backoffice.console.presentation;
 
 import eapli.framework.domain.repositories.IntegrityViolationException;
 import eapli.framework.io.util.Console;
-import eapli.base.productmanagement.application.SpecifyProductController;
+import eapli.base.productmanagement.application.ProductController;
 
 
 public class SpecifyProductUI {
 
-    private final SpecifyProductController specifyProduct = new SpecifyProductController();
+    private final ProductController specifyProduct = new ProductController();
 
     protected boolean doShow(){
 

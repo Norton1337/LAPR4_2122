@@ -30,4 +30,5 @@ public class ProductCode implements ValueObject {
                 "productCode=" + productCode +
                 '}';
     }
+
 }

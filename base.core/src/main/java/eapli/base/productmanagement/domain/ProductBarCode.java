@@ -1,11 +1,12 @@
 package eapli.base.productmanagement.domain;
 
 import eapli.framework.domain.model.ValueObject;
+import org.jetbrains.annotations.NotNull;
 
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class ProductBarCode implements ValueObject {
+public class ProductBarCode implements ValueObject, Comparable<ProductBarCode> {
 
     private String barCode;
 
@@ -29,5 +30,10 @@ public class ProductBarCode implements ValueObject {
         return "ProductBarCode{" +
                 "barCode='" + barCode + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(ProductBarCode o) {
+        return 0;
     }
 }
