@@ -20,9 +20,11 @@
  */
 package eapli.base.infrastructure.persistence;
 
+import eapli.base.categorymanagment.repositories.CategoryRepository;
 import eapli.base.clientusermanagement.repositories.ClientUserRepository;
 import eapli.base.clientusermanagement.repositories.SignupRequestRepository;
 import eapli.base.ordermanagement.repositories.OrderRepository;
+import eapli.base.productmanagement.repositories.ProductRepository;
 import eapli.base.taskmanagement.repositories.TaskRepository;
 import eapli.base.warehouses.domain.agvDocks.AgvDocks;
 import eapli.base.warehouses.repositories.AgvDockRepository;
@@ -108,5 +110,13 @@ public interface RepositoryFactory {
     AgvDockRepository agvDock(TransactionalContext autoTx);
 
     AgvDockRepository agvDock();
+
+    ProductRepository product(TransactionalContext autoTx);
+
+    ProductRepository product();
+
+    CategoryRepository category(TransactionalContext autoTx);
+
+    CategoryRepository category();
 
 }

@@ -21,9 +21,11 @@
 package eapli.base.persistence.impl.jpa;
 
 import eapli.base.Application;
+import eapli.base.categorymanagment.repositories.CategoryRepository;
 import eapli.base.clientusermanagement.repositories.SignupRequestRepository;
 import eapli.base.infrastructure.persistence.RepositoryFactory;
 import eapli.base.ordermanagement.repositories.OrderRepository;
+import eapli.base.productmanagement.repositories.ProductRepository;
 import eapli.base.taskmanagement.repositories.TaskRepository;
 import eapli.base.warehouses.repositories.AgvDockRepository;
 import eapli.base.warehouses.repositories.AgvRepository;
@@ -124,6 +126,25 @@ public class JpaRepositoryFactory implements RepositoryFactory {
     @Override
     public AgvDockRepository agvDock() {
         return new JpaAgvDockRepository(Application.settings().getPersistenceUnitName());
+    }
+
+    @Override
+    public ProductRepository product(TransactionalContext autoTx) {
+        return new JpaProductRepository(autoTx);
+    }
+
+    @Override
+    public ProductRepository product() {
+        return new JpaProductRepository(Application.settings().getPersistenceUnitName());
+    }
+    @Override
+    public CategoryRepository category(TransactionalContext autoTx) {
+        return new JpaCategoryRepository(autoTx);
+    }
+
+    @Override
+    public CategoryRepository category() {
+        return new JpaCategoryRepository(Application.settings().getPersistenceUnitName());
     }
 
 

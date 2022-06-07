@@ -23,10 +23,7 @@
  */
 package eapli.base.infrastructure.bootstrapers;
 
-import eapli.base.infrastructure.bootstrapers.demo.AgvBootstrapper;
-import eapli.base.infrastructure.bootstrapers.demo.AgvDockBootstrapper;
-import eapli.base.infrastructure.bootstrapers.demo.OrderBootstrapper;
-import eapli.base.infrastructure.bootstrapers.demo.WarehouseSetupBootstrapper;
+import eapli.base.infrastructure.bootstrapers.demo.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -71,6 +68,7 @@ public class BaseBootstrapper implements Action {
                 ,new OrderBootstrapper()
                 //,new AgvDockBootstrapper()
                 ,new AgvBootstrapper()
+                ,new ProductBootstrapper()
                 };
 
         registerPowerUser();
