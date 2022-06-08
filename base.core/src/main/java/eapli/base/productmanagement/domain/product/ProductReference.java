@@ -1,4 +1,4 @@
-package eapli.base.productmanagement.domain;
+package eapli.base.productmanagement.domain.product;
 
 public class ProductReference {
 

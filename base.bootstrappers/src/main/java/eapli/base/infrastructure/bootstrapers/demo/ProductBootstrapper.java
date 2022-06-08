@@ -4,7 +4,7 @@ import eapli.base.categorymanagment.application.CategoryController;
 import eapli.base.categorymanagment.domain.Category;
 import eapli.base.categorymanagment.domain.CategoryDescription;
 import eapli.base.productmanagement.application.ProductController;
-import eapli.base.productmanagement.domain.*;
+import eapli.base.productmanagement.domain.product.*;
 import eapli.framework.actions.Action;
 
 import java.util.ArrayList;

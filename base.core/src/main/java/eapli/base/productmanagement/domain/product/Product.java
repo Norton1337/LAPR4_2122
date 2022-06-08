@@ -1,7 +1,6 @@
-package eapli.base.productmanagement.domain;
+package eapli.base.productmanagement.domain.product;
 
 import eapli.base.categorymanagment.domain.Category;
-import eapli.base.warehouses.domain.agvDocks.AgvDocks;
 import eapli.framework.domain.model.AggregateRoot;
 
 import javax.persistence.*;
@@ -39,7 +38,6 @@ public class Product implements AggregateRoot<ProductBarCode> {
 
     @Embedded
     private ProductExtendedDescription extendedDescription;
-
 
     @Embedded
     private ProductPrice price;
@@ -87,6 +85,9 @@ public class Product implements AggregateRoot<ProductBarCode> {
     }
 
     public ProductCode productCode(){return this.productCode;}
+
+    public Category productCategory(){return this.productCategory;}
+    public ProductPrice productPrice(){return this.price;}
 
     @Override
     public boolean equals(Object other) {

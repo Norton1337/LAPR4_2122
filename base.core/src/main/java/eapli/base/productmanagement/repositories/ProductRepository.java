@@ -1,11 +1,8 @@
 package eapli.base.productmanagement.repositories;
 
-import eapli.base.productmanagement.domain.Product;
-import eapli.base.productmanagement.domain.ProductBarCode;
-import eapli.base.productmanagement.domain.ProductCode;
-import eapli.base.warehouses.domain.agvDocks.AgvDocks;
+import eapli.base.productmanagement.domain.product.Product;
+import eapli.base.productmanagement.domain.product.ProductBarCode;
 import eapli.framework.domain.repositories.DomainRepository;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 

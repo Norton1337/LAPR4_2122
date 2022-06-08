@@ -1,7 +1,6 @@
-package eapli.base.productmanagement.domain;
+package eapli.base.productmanagement.domain.product;
 
 import eapli.framework.domain.model.ValueObject;
-import org.jetbrains.annotations.NotNull;
 
 import javax.persistence.Embeddable;
 
