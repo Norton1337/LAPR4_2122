@@ -144,10 +144,6 @@ public class WarehouseSetupController {
                     .build();
 
             warehouseRepository.save(warehouse);
-
-            List<Warehouse> warehouses = warehouseRepository.findAll();
-            if(!warehouses.isEmpty())
-                System.out.println(warehouses.get(0).identity());
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }

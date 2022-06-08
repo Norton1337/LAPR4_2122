@@ -19,6 +19,7 @@ import java.util.List;
 public class AgvBootstrapper implements Action {
 
     private final AGVController agvController = new AGVController();
+    private final AGVDockController agvDockController = new AGVDockController();
 
     @Override
     public boolean execute() {
@@ -32,8 +33,7 @@ public class AgvBootstrapper implements Action {
     private List<AGV> createAGV() {
         List<AGV> agvList = new ArrayList<>();
 
-        AGVDockController agvDockController = new AGVDockController();
-        List<AgvDocks> agvDocksList = createAgvDocks();
+        List<AgvDocks> agvDocksList = agvDockController.getAGVDocks();
 
 
         AGV agv1 = new AGVBuilder()

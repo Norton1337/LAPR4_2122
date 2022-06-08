@@ -38,7 +38,7 @@ public class Warehouse implements AggregateRoot<WarehouseIdentification> {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "warehouse")
     private Set<Aisles> aisles;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "warehouse")
     private Set<AgvDocks> agvDocks;
 
 
@@ -63,12 +63,13 @@ public class Warehouse implements AggregateRoot<WarehouseIdentification> {
             addAisles(aisle);
 
         }
-/*
+
         for (AgvDocks agvDock: agvDocks) {
+            agvDock.setWarehouse(this);
             addAgvDock(agvDock);
 
         }
- */
+
 
     }
 

@@ -4,6 +4,7 @@ package eapli.base.warehouses.domain.agvDocks;
 import eapli.base.warehouses.domain.agvs.AGV;
 import eapli.base.warehouses.domain.square.Accessibility;
 import eapli.base.warehouses.domain.square.Square;
+import eapli.base.warehouses.domain.warehouse.Warehouse;
 import eapli.framework.domain.model.AggregateRoot;
 import eapli.framework.validations.Preconditions;
 
@@ -39,6 +40,10 @@ public class AgvDocks implements AggregateRoot<AgvDockIdentification> {
 
     @OneToOne(mappedBy = "agvDock")
     private AGV agv;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "WAREHOUSEID")
+    private Warehouse warehouse;
 
     public void setAgv(AGV agv){
         this.agv=agv;
@@ -82,6 +87,9 @@ public class AgvDocks implements AggregateRoot<AgvDockIdentification> {
         return null;
     }
 
+    public void setWarehouse(Warehouse warehouse){
+        this.warehouse=warehouse;
+    }
 
     public Square getBegin(){
         return this.begin;
