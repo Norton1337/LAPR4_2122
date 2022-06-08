@@ -3,9 +3,6 @@ package eapli.base.persistence.impl.jpa;
 import eapli.base.Application;
 import eapli.base.categorymanagment.domain.Category;
 import eapli.base.categorymanagment.repositories.CategoryRepository;
-import eapli.base.productmanagement.domain.Product;
-import eapli.base.productmanagement.domain.ProductBarCode;
-import eapli.base.productmanagement.repositories.ProductRepository;
 import eapli.framework.domain.repositories.TransactionalContext;
 import eapli.framework.infrastructure.repositories.impl.jpa.JpaAutoTxRepository;
 

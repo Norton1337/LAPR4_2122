@@ -23,6 +23,7 @@
  */
 package eapli.base.app.backoffice.console.presentation;
 
+import eapli.base.app.backoffice.console.presentation.clientuser.CLUMenu;
 import eapli.base.app.backoffice.console.presentation.warehouse.AGVManagementMenu;
 import eapli.base.app.backoffice.console.presentation.warehouse.WarehouseMenu;
 import eapli.base.app.common.console.presentation.authz.MyUserMenu;
@@ -103,6 +104,7 @@ public class MainMenu extends AbstractUI {
     private static final int WAREHOUSE_OPTION = 5;
     private static final int AGV_MANAGEMENT_OPTION = 6;
 
+    private static final int CLIENT_USER_OPTION = 7;
 
 
     private static final String SEPARATOR_LABEL = "--------------";
@@ -150,6 +152,11 @@ public class MainMenu extends AbstractUI {
         if(authz.isAuthenticatedUserAuthorizedTo(BaseRoles.WAREHOUSE_EMPLOYEE)){
             final Menu WHEmployeeMenu = new WarehouseMenu();
             mainMenu.addSubMenu(WAREHOUSE_OPTION, WHEmployeeMenu);
+
+        }
+        if(authz.isAuthenticatedUserAuthorizedTo(BaseRoles.CLIENT_USER)){
+            final Menu CLUMenu = new CLUMenu();
+            mainMenu.addSubMenu(CLIENT_USER_OPTION, CLUMenu);
 
         }
 
