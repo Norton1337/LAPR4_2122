@@ -11,6 +11,7 @@ public class CLUMenu extends Menu {
     private static final int EXIT_OPTION = 0;
 
     private static final int BUY_PRODUCTS = 1;
+    private static final int CHECK_ORDERS = 2;
 
     public CLUMenu(SystemUser systemUser){
         super(MENU_TITLE);
@@ -18,7 +19,8 @@ public class CLUMenu extends Menu {
     }
 
     private void buildMenu(SystemUser systemUser){
-        addItem(BUY_PRODUCTS, "Buy some Products", new ClientUI(systemUser)::show);
+        addItem(BUY_PRODUCTS, "Buy some Products", new ClientBuyItemsUI(systemUser)::show);
+        addItem(CHECK_ORDERS, "Check my open orders", new ClientCheckOrdersUI(systemUser)::show);
         addItem(EXIT_OPTION, "Return", Actions.SUCCESS);
 
     }

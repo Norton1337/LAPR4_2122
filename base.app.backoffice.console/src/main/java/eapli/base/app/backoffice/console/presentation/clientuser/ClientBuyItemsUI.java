@@ -4,19 +4,18 @@ import eapli.base.ordermanagement.application.OrderController;
 import eapli.base.productmanagement.application.ProductController;
 import eapli.base.productmanagement.application.ShoppingCartController;
 import eapli.base.productmanagement.domain.product.Product;
-import eapli.base.productmanagement.domain.shoppingcart.ShoppingCart;
 import eapli.framework.infrastructure.authz.domain.model.SystemUser;
 import eapli.framework.io.util.Console;
 
 import java.util.List;
 
-public class ClientUI {
+public class ClientBuyItemsUI {
 
     ProductController productController = new ProductController();
     ShoppingCartController shoppingCartController = new ShoppingCartController();
     OrderController orderController = new OrderController();
     SystemUser systemUser;
-    public ClientUI(SystemUser systemUser){
+    public ClientBuyItemsUI(SystemUser systemUser){
         this.systemUser=systemUser;
     }
 
