@@ -1,7 +1,6 @@
 package eapli.base.categorymanagment.domain;
 
-import eapli.base.productmanagement.domain.Product;
-import eapli.base.warehouses.domain.agvs.AGV;
+import eapli.base.productmanagement.domain.product.Product;
 import eapli.framework.domain.model.AggregateRoot;
 
 import javax.persistence.*;
@@ -25,6 +24,7 @@ public class Category implements AggregateRoot<String> {
     protected Category(){}
 
     public Category(String alphanumericCode, CategoryDescription description) {
+        this.alphanumericCode=alphanumericCode;
         this.description = description;
     }
 
@@ -34,6 +34,13 @@ public class Category implements AggregateRoot<String> {
                 "alphanumericCode='" + alphanumericCode + '\'' +
                 ", description=" + description +
                 '}';
+    }
+
+    public String alphanumericCode(){
+        return this.alphanumericCode;
+    }
+    public CategoryDescription categoryDescription(){
+        return this.categoryDescription();
     }
 
     @Override

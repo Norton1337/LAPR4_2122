@@ -17,7 +17,7 @@ public class CategoryDescription implements ValueObject {
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public void setDescription(String description) {
