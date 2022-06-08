@@ -46,6 +46,8 @@ import eapli.framework.presentation.console.menu.MenuItemRenderer;
 import eapli.framework.presentation.console.menu.MenuRenderer;
 import eapli.framework.presentation.console.menu.VerticalMenuRenderer;
 
+import static eapli.base.usermanagement.domain.BaseRoles.SALES_CLERK;
+
 /**
  * TODO split this class in more specialized classes for each menu
  *
@@ -106,6 +108,7 @@ public class MainMenu extends AbstractUI {
 
     private static final int CLIENT_USER_OPTION = 7;
 
+    private static final int SALES_CLERK_OPTION = 8;
 
     private static final String SEPARATOR_LABEL = "--------------";
 
@@ -163,6 +166,12 @@ public class MainMenu extends AbstractUI {
         if (authz.isAuthenticatedUserAuthorizedTo(BaseRoles.PROJECT_MANAGER)){
             final Menu PMMenu = new AGVManagementMenu();
             mainMenu.addSubMenu(AGV_MANAGEMENT_OPTION, PMMenu);
+
+        }
+
+        if(authz.isAuthenticatedUserAuthorizedTo(BaseRoles.SALES_CLERK)){
+            final Menu SLMENU = new SLMENU();
+            mainMenu.addSubMenu(SALES_CLERK_OPTION, SLMENU);
 
         }
 

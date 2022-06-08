@@ -1,19 +1,20 @@
 package eapli.base.app.backoffice.console.questionnaire;
 import eapli.base.questionnairemanagement.application.QuestionnaireController;
-import eapli.base.warehouses.application.WarehouseSetupController;
+import eapli.framework.actions.Action;
+import eapli.framework.io.util.Console;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-public class CreateQuestionnaireUI {
+public class CreateQuestionnaireUI implements Action {
     private static final String UI_DOUBLE_LINE = "|=====================|===================================================================|";
     private static final String UI_SINGLE_LINE = "|---------------------|-------------------------------------------------------------------|";
     Scanner sc = new Scanner(System.in);
 
      QuestionnaireController questionnaireController = new QuestionnaireController();
 
-    public void menu() throws IOException {
-
+    @Override
+    public boolean execute()  {
         int choice, choice1, choice2;
         boolean flag = true;
         while (flag) {
@@ -22,16 +23,18 @@ public class CreateQuestionnaireUI {
 
             switch (choice) {
                 case 1:
-                    System.out.println("Insert QuestionnaireFileName: ");
-                    String fileName = sc.nextLine();
 
-                    System.out.println("Insert Title: ");
-                    String title = sc.nextLine();
+                    String fileName = Console.readNonEmptyLine("Insert QuestionnaireFileName: ","Can't be empty");
 
-                    System.out.println("Insert WelcomeMessage: ");
-                    String wmsg = sc.nextLine();
+                    String title = Console.readNonEmptyLine("Insert Title: ","Can't be empty");
 
-                    questionnaireController.createFile(fileName,title, wmsg);
+                    String wmsg = Console.readNonEmptyLine("Insert WelcomeMessage: ","Can't be empty");
+
+                    try {
+                        questionnaireController.createFile(fileName,title, wmsg);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                     boolean flag2 = true;
                     while (flag2) {
                         System.out.println(UI_DOUBLE_LINE);
@@ -42,8 +45,7 @@ public class CreateQuestionnaireUI {
 
                         switch (choice1) {
                             case 1:
-                                System.out.println("Question Text");
-                                String text = sc.next();
+                                String text = Console.readNonEmptyLine("Question Text: ","Can't be empty");
 
                                 System.out.println("Insert Question Type ( 1 - Optional     2 - Obligatory ");
                                 Integer type = sc.nextInt();
@@ -104,7 +106,9 @@ public class CreateQuestionnaireUI {
             }
 
         }
+        return true;
     }
+
 
     public void menuPrint() {
         System.out.println(UI_SINGLE_LINE);
@@ -115,7 +119,5 @@ public class CreateQuestionnaireUI {
         System.out.println("|          3          | Exit                   |");
         System.out.println(UI_SINGLE_LINE);
     }
-
-
 
 }
