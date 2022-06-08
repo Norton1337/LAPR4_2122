@@ -7,6 +7,8 @@ import eapli.base.taskmanagement.domain.Task;
 import eapli.framework.infrastructure.authz.application.AuthorizationService;
 import eapli.framework.infrastructure.authz.application.AuthzRegistry;
 import eapli.framework.infrastructure.authz.domain.model.SystemUser;
+import eapli.framework.infrastructure.authz.domain.model.Username;
+import org.hibernate.criterion.Order;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -47,6 +49,17 @@ public class OrderController {
                 waitingOrderTypeList.add(order);
         }
         return waitingOrderTypeList;
+
+    }
+
+    public List<OrderType> getClientOpenOrders(Username username) {
+        List<OrderType> orders = orderRepository.findOpenOrders(username);
+        List<OrderType> orders2 = new ArrayList<>();
+        for (OrderType order:orders) {
+            if(!order.getOrderState().equals(PossibleStates.COMPLETED))
+                orders2.add(order);
+        }
+        return orders2;
 
     }
 

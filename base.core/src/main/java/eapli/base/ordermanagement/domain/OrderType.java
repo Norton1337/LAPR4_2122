@@ -26,6 +26,8 @@ public class OrderType implements AggregateRoot<OrderID> {
     @Embedded
     private OrderTotalAmount orderTotalAmount;
     @Embedded
+    private OrderWeight orderWeight;
+    @Embedded
     private OrderPostalAddress orderPostalAddress;
     @Embedded
     private OrderDateTime orderDateTime;
@@ -52,6 +54,8 @@ public class OrderType implements AggregateRoot<OrderID> {
         this.orderPostalAddress = orderPostalAddress;
         this.orderDateTime = orderDateTime;
         this.orderState = orderState;
+        this.orderWeight=new OrderWeight(30.0);
+
     }
     public OrderType(OrderID orderID, OrderBillingAddress orderBillingAddress, OrderLocation orderLocation, OrderTotalAmount orderTotalAmount,
                      OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime, OrderState orderState, List<OrderItem> orderItems){
@@ -64,6 +68,11 @@ public class OrderType implements AggregateRoot<OrderID> {
         this.orderDateTime = orderDateTime;
         this.orderState = orderState;
         this.orderItemList = orderItems;
+        Double weight=0.0;
+        for (OrderItem item:this.orderItemList) {
+            weight += item.product().productWeight().getWeight()*item.amount();
+        }
+        this.orderWeight=new OrderWeight(weight);
     }
 
     protected OrderType() {

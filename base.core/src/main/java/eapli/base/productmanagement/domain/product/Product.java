@@ -90,6 +90,8 @@ public class Product implements AggregateRoot<ProductBarCode> {
     public Category productCategory(){return this.productCategory;}
     public ProductPrice productPrice(){return this.price;}
 
+    public ProductWeight productWeight(){return this.weight;}
+
     @Override
     public boolean equals(Object other) {
         return false;
