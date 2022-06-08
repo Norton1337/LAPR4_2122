@@ -1,16 +1,22 @@
 package eapli.base.warehouses.domain.rows;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Bin {
     @Id
     @GeneratedValue
+    @Column(name = "BINID")
     private int id;
 
+    @OneToOne(mappedBy = "bin")
+    private StorageArea storageArea;
+
     public Bin(){
+    }
+
+    public void setStorageArea(StorageArea storageArea){
+        this.storageArea=storageArea;
     }
 
 

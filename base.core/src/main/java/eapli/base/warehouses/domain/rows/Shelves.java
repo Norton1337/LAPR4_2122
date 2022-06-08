@@ -4,36 +4,44 @@ package eapli.base.warehouses.domain.rows;
 import eapli.framework.domain.model.ValueObject;
 import eapli.framework.validations.Preconditions;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Entity
 public class Shelves implements ValueObject {
     @Id
     @GeneratedValue
+    @Column(name = "SHELFID")
     private int id;
 
-    private final int shelfId;
+    private final int shelfIdentification;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_storagearea_id", referencedColumnName = "STORAGEAREAID")
     private StorageArea storageArea;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ROWID")
+    private Rows row;
+
     public Shelves(int shelfId){
-        Preconditions.ensure(shelfId>0);
+        /*Preconditions.ensure(shelfId>0);*/
         this.storageArea=new StorageArea();
-        this.shelfId=shelfId;
+        this.shelfIdentification =shelfId;
+        this.storageArea.setShelf(this);
     }
 
     public Shelves() {
-        shelfId=0;
+        shelfIdentification =0;
+    }
+
+    public void setRow(Rows row){
+        this.row=row;
     }
 
     @Override
     public String toString() {
         return "Shelves{" +
-                "shelfId=" + shelfId +
+                "shelfId=" + shelfIdentification +
                 '}';
     }
 

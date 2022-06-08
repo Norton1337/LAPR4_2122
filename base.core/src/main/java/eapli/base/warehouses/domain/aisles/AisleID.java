@@ -4,10 +4,10 @@ import org.jetbrains.annotations.NotNull;
 
 public class AisleID implements Comparable<AisleID> {
 
-    private int aisleID;
+    private int aisleIdentification;
 
     public AisleID(int aisleID){
-        this.aisleID=aisleID;
+        this.aisleIdentification =aisleID;
     }
     public AisleID(){
 

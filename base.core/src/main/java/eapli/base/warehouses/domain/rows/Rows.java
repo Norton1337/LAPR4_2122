@@ -13,12 +13,13 @@ import java.util.List;
 public class Rows implements DomainEntity<Rows> {
     @Id
     @GeneratedValue
+    @Column(name = "ROWID")
     private int id;
 
     @Version
     private Long version;
 
-    private int rowID;
+    private int rowIdentification;
 
     @Embedded
     private Square begin;
@@ -26,26 +27,34 @@ public class Rows implements DomainEntity<Rows> {
     @Embedded
     private Square end;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "row")
     private List<Shelves> shelves;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "AISLEID")
     private Aisles aisle;
 
     public Rows() {
     }
 
     public Rows(int rowID, Square begin, Square end, int shelvesAmount){
-        Preconditions.noneNull(begin,end);
-        Preconditions.ensure(shelvesAmount>0);
-        this.rowID=rowID;
+/*        Preconditions.noneNull(begin,end);
+        Preconditions.ensure(shelvesAmount>0);*/
+        this.rowIdentification =rowID;
         shelves = new ArrayList<>();
         for (int i = 1; i <= shelvesAmount; i++) {
             shelves.add(new Shelves(i));
         }
+        for (Shelves shelf:this.shelves) {
+            shelf.setRow(this);
+        }
         this.begin = begin;
         this.end = end;
 
+    }
+
+    public void setAisle(Aisles aisle){
+        this.aisle=aisle;
     }
 
     @Override

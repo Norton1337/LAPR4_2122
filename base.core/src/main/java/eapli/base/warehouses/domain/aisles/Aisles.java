@@ -5,9 +5,7 @@ import eapli.base.warehouses.domain.rows.Rows;
 import eapli.base.warehouses.domain.square.Accessibility;
 import eapli.base.warehouses.domain.square.Square;
 import eapli.base.warehouses.domain.warehouse.Warehouse;
-import eapli.base.warehouses.domain.warehouse.WarehouseIdentification;
 import eapli.framework.domain.model.AggregateRoot;
-import eapli.framework.domain.model.DomainEntity;
 import eapli.framework.validations.Preconditions;
 
 import javax.persistence.*;
@@ -17,13 +15,14 @@ import java.util.List;
 public class Aisles implements AggregateRoot<AisleID> {
     @Id
     @GeneratedValue
+    @Column(name = "AISLEID")
     private int id;
 
     @Version
     private Long version;
 
     @Embedded
-    private AisleID aisleID;
+    private AisleID aisleIdentification;
 
     @Embedded
     private Square begin;
@@ -37,10 +36,11 @@ public class Aisles implements AggregateRoot<AisleID> {
     @Embedded
     private Accessibility accessibility;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "aisle")
     private List<Rows> rows;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "WAREHOUSEID")
     private Warehouse warehouse;
 
     public Warehouse getWarehouse() {
@@ -54,14 +54,17 @@ public class Aisles implements AggregateRoot<AisleID> {
     protected Aisles() {}
 
     public Aisles (int aisleID,Square begin, Square end, Square depth, Accessibility accessibility, List<Rows> rows){
-        Preconditions.ensure(aisleID>=0);
-        Preconditions.noneNull(begin,end,depth,accessibility);
-        this.aisleID=new AisleID(aisleID);
+/*        Preconditions.ensure(aisleID>=0);
+        Preconditions.noneNull(begin,end,depth,accessibility);*/
+        this.aisleIdentification =new AisleID(aisleID);
         this.begin=begin;
         this.end=end;
         this.depth=depth;
         this.accessibility=accessibility;
         this.rows=rows;
+        for (Rows row:rows) {
+            row.setAisle(this);
+        }
     }
 
     @Override

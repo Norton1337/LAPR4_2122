@@ -1,23 +1,29 @@
 package eapli.base.warehouses.domain.rows;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Entity
 public class StorageArea {
     @Id
     @GeneratedValue
+    @Column(name = "STORAGEAREAID")
     private int id;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_bin_id", referencedColumnName = "BINID")
     private Bin bin;
+
+    @OneToOne(mappedBy = "storageArea")
+    private Shelves shelf;
 
     public StorageArea(){
         this.bin = new Bin();
+        this.bin.setStorageArea(this);
     }
 
+    public void setShelf(Shelves shelf){
+        this.shelf=shelf;
+    }
 
     @Override
     public String toString() {

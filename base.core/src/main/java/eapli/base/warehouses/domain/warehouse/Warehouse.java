@@ -20,6 +20,7 @@ import java.util.Set;
 public class Warehouse implements AggregateRoot<WarehouseIdentification> {
     @Id
     @GeneratedValue
+    @Column(name = "WAREHOUSEID")
     private Long id;
     @Version
     private long version;
@@ -35,10 +36,7 @@ public class Warehouse implements AggregateRoot<WarehouseIdentification> {
     private WarehouseUnit warehouseUnit;
 
 
-    @OneToMany(
-            mappedBy = "warehouse",
-            cascade = CascadeType.ALL
-    )
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "warehouse")
     private Set<Aisles> aisles;
     @OneToMany
     private Set<AgvDocks> agvDocks;
@@ -48,27 +46,30 @@ public class Warehouse implements AggregateRoot<WarehouseIdentification> {
 
     public Warehouse(WarehouseIdentification warehouse, WarehouseLength warehouseLength, WarehouseWidth warehouseWidth,
                      WarehouseSquare warehouseSquare, WarehouseUnit warehouseUnit, List<Aisles> aisles, List<AgvDocks> agvDocks) throws IOException {
-        Preconditions.nonEmpty(aisles);
-        Preconditions.nonEmpty(agvDocks);
+/*        Preconditions.nonEmpty(aisles);
+        Preconditions.nonEmpty(agvDocks);*/
         this.warehouse = warehouse;
         this.warehouseLength = warehouseLength;
         this.warehouseWidth = warehouseWidth;
         this.warehouseSquare = warehouseSquare;
         this.warehouseUnit = warehouseUnit;
 
-        this.aisles = new HashSet<Aisles>();
-        this.agvDocks = new HashSet<AgvDocks>();
+        this.aisles = new HashSet<>();
+        this.agvDocks = new HashSet<>();
 
-/*
+
         for (Aisles aisle: aisles) {
+            aisle.setWarehouse(this);
             addAisles(aisle);
-        }
 
+        }
+/*
         for (AgvDocks agvDock: agvDocks) {
             addAgvDock(agvDock);
 
         }
-*/
+ */
+
     }
 
     public Warehouse(WarehouseDTO dto) throws IOException {
@@ -247,19 +248,19 @@ public class Warehouse implements AggregateRoot<WarehouseIdentification> {
     }
 
     public void addAisles(Aisles newAisle) throws IOException {
-        if(Boolean.FALSE.equals(checkAccessibility(newAisle)))
+ /*       if(Boolean.FALSE.equals(checkAccessibility(newAisle)))
             throw new IOException("aisle is not accessible");
         if(Boolean.TRUE.equals(checkCollision(newAisle)))
-            throw new IOException("aisle is colliding");
+            throw new IOException("aisle is colliding");*/
         this.aisles.add(newAisle);
     }
 
     public void addAgvDock(AgvDocks newDock) throws IOException{
-        if(Boolean.FALSE.equals(checkAccessibility(newDock)))
+/*        if(Boolean.FALSE.equals(checkAccessibility(newDock)))
             throw new IOException("dock is not accessible");
         if(Boolean.TRUE.equals(checkCollision(newDock))) {
             throw new IOException("dock is colliding or out of bounds");
-        }
+        }*/
         this.agvDocks.add(newDock);
     }
 
