@@ -158,7 +158,7 @@ public class MainMenu extends AbstractUI {
 
         }
         if(authz.isAuthenticatedUserAuthorizedTo(BaseRoles.CLIENT_USER)){
-            final Menu CLUMenu = new CLUMenu();
+            final Menu CLUMenu = new CLUMenu(authz.session().get().authenticatedUser());
             mainMenu.addSubMenu(CLIENT_USER_OPTION, CLUMenu);
 
         }

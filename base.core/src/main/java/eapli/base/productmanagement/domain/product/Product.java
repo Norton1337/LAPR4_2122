@@ -10,7 +10,8 @@ public class Product implements AggregateRoot<ProductBarCode> {
 
     @Id
     @GeneratedValue
-    private int internalCode;
+    @Column(name = "PRODUCTID")
+    private Long internalCode;
 
     @Embedded
     private ProductCode productCode;

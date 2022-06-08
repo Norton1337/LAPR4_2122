@@ -3,9 +3,12 @@ package eapli.base.ordermanagement.domain;
 import eapli.base.ordermanagement.dto.OrderDTO;
 import eapli.base.taskmanagement.domain.Task;
 import eapli.framework.domain.model.AggregateRoot;
+import eapli.framework.infrastructure.authz.domain.model.SystemUser;
+import eapli.framework.infrastructure.authz.domain.model.Username;
 
 import javax.persistence.*;
 import java.io.IOException;
+import java.util.List;
 
 
 @Entity
@@ -32,6 +35,13 @@ public class OrderType implements AggregateRoot<OrderID> {
     @OneToOne(mappedBy = "order")
     private Task task;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "order")
+    private List<OrderItem> orderItemList;
+
+    @Embedded
+    private Username clientUsername;
+
+
     public OrderType(OrderID orderID, OrderBillingAddress orderBillingAddress, OrderLocation orderLocation, OrderTotalAmount orderTotalAmount,
                      OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime, OrderState orderState){
 
@@ -42,6 +52,18 @@ public class OrderType implements AggregateRoot<OrderID> {
         this.orderPostalAddress = orderPostalAddress;
         this.orderDateTime = orderDateTime;
         this.orderState = orderState;
+    }
+    public OrderType(OrderID orderID, OrderBillingAddress orderBillingAddress, OrderLocation orderLocation, OrderTotalAmount orderTotalAmount,
+                     OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime, OrderState orderState, List<OrderItem> orderItems){
+
+        this.orderID = orderID;
+        this.orderBillingAddress = orderBillingAddress;
+        this.orderLocation = orderLocation;
+        this.orderTotalAmount = orderTotalAmount;
+        this.orderPostalAddress = orderPostalAddress;
+        this.orderDateTime = orderDateTime;
+        this.orderState = orderState;
+        this.orderItemList = orderItems;
     }
 
     protected OrderType() {
@@ -89,6 +111,10 @@ public class OrderType implements AggregateRoot<OrderID> {
         this.task=task;
     }
 
+    public void setClient(SystemUser client) {
+        this.clientUsername = client.username();
+    }
+
     @Override
     public boolean sameAs(Object other) {
         return false;
@@ -100,4 +126,7 @@ public class OrderType implements AggregateRoot<OrderID> {
     }
 
     public OrderDateTime getOrderDateTime(){ return orderDateTime; }
+
+
+
 }
