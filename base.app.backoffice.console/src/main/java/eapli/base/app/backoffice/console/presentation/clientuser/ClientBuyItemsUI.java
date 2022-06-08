@@ -4,6 +4,7 @@ import eapli.base.ordermanagement.application.OrderController;
 import eapli.base.productmanagement.application.ProductController;
 import eapli.base.productmanagement.application.ShoppingCartController;
 import eapli.base.productmanagement.domain.product.Product;
+import eapli.base.productmanagement.domain.shoppingcart.CartItem;
 import eapli.framework.infrastructure.authz.domain.model.SystemUser;
 import eapli.framework.io.util.Console;
 
@@ -63,8 +64,9 @@ public class ClientBuyItemsUI {
                 shoppingCartController.addToCart(products.get(option), amount);
                 int option2 = Console.readInteger("Do you wish to add more items?\n[0] - No\n[1] - Yes");
                 if(option2==0){
-                    finalizeCart();
-                    break;
+                    int newOption = confirmOrder();
+                    if(newOption!=0)
+                        break;
                 }else if(option2!=1){
                     System.out.println("Invalid option, continuing anyway");
                 }
@@ -74,10 +76,27 @@ public class ClientBuyItemsUI {
         }
     }
 
+    public int confirmOrder(){
+
+        for (CartItem item: shoppingCartController.getShoppingCart()) {
+            System.out.println("["+item.amount()+"] "+item.product().productCode().getProductCode()+" at "+item.product().productPrice().getPrice()+" each.");
+        }
+        System.out.println("For a total of: "+shoppingCartController.getTotal());
+
+        int option = Console.readInteger("Is the order correct?\n[0] - No\n[1] - Yes");
+        if(option==1)
+            finalizeCart();
+        return option;
+    }
     public void finalizeCart(){
         String billingAddress = Console.readNonEmptyLine("Insert billing address: ", "Can't be empty");
         String postalAddress = Console.readNonEmptyLine("Insert postal address: ", "Can't be empty");
         orderController.createOrder(shoppingCartController.getShoppingCart(), billingAddress, postalAddress, systemUser);
+        System.out.println("Successfully Ordered:");
+        for (CartItem item: shoppingCartController.getShoppingCart()) {
+            System.out.println("["+item.amount()+"] "+item.product().productCode().getProductCode()+" at "+item.product().productPrice().getPrice()+" each.");
+        }
+        System.out.println("For a total of: "+shoppingCartController.getTotal());
     }
 
 }

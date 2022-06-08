@@ -10,7 +10,7 @@ import java.util.List;
 
 
 public class ShoppingCartController {
-    private ShoppingCart shoppingCart;
+    private final ShoppingCart shoppingCart;
     public ShoppingCartController(){
         shoppingCart = new ShoppingCart();
     }
@@ -24,6 +24,13 @@ public class ShoppingCartController {
 
     public List<CartItem> getShoppingCart(){
         return this.shoppingCart.getCartContent();
+    }
+    public Double getTotal(){
+        Double total=0.0;
+        for (CartItem item:this.shoppingCart.getCartContent()) {
+            total+=item.product().productPrice().getPrice()*item.amount();
+        }
+        return total;
     }
 
 }
