@@ -32,8 +32,11 @@ public class ClientCheckOrdersUI {
                 if(orders.isEmpty())
                     System.out.println("You have no open orders");
                 else{
+                    int i=1;
+                    System.out.println("["+orders.size()+"] total orders");
                     for (OrderType order:orders) {
-                        System.out.println(order.toString());
+                        System.out.println("Order["+i+"]:\n"+order.toString()+"\n");
+                        i++;
                     }
                 }
                 break;
