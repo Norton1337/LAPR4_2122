@@ -53,14 +53,7 @@ public class OrderController {
     }
 
     public List<OrderType> getClientOpenOrders(Username username) {
-        List<OrderType> orders = orderRepository.findOpenOrders(username);
-        List<OrderType> orders2 = new ArrayList<>();
-        for (OrderType order:orders) {
-            if(!order.getOrderState().equals(PossibleStates.COMPLETED))
-                orders2.add(order);
-        }
-        return orders2;
-
+        return orderRepository.findOpenOrders(username);
     }
 
     public List<OrderType> orderByTime(List<OrderType> list){
