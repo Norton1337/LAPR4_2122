@@ -1,6 +1,7 @@
 package eapli.base.persistence.impl.jpa;
 
 import eapli.base.Application;
+import eapli.base.ordermanagement.domain.OrderState;
 import eapli.base.ordermanagement.domain.OrderType;
 import eapli.base.ordermanagement.domain.OrderID;
 import eapli.base.ordermanagement.domain.PossibleStates;
@@ -38,9 +39,13 @@ public class JpaOrderRepository extends JpaAutoTxRepository<OrderType, OrderID, 
     @Override
     public List<OrderType> findOpenOrders(Username username) {
         final TypedQuery<OrderType> query = entityManager().createQuery(
-                "SELECT o FROM OrderType o WHERE o.clientUsername = :user",
+                "SELECT o FROM OrderType o WHERE o.clientUsername = :user AND (o.orderState=:waiting OR o.orderState=:inProgress)",
                 OrderType.class
-        ).setParameter("user",username);
+        )
+                .setParameter("user",username)
+                .setParameter("waiting",new OrderState(PossibleStates.WAITING))
+                .setParameter("inProgress",new OrderState(PossibleStates.IN_PROGRESS))
+                ;
         return query.getResultList();
     }
 }
