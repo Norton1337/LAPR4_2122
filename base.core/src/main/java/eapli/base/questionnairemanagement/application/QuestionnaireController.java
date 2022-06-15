@@ -34,7 +34,7 @@ public class QuestionnaireController {
             filew.createFile(fileName, title, wmsg);
         }
 
-    public void addQuestion(String text, Integer type, Integer atype, String fileName) {
+    public void addQuestion(String text, Integer type, Integer atype, String fileName) throws IOException {
         // enviar para makefile os dados da questao, utilizar ficheiro ja criado com nome fileName
         filew.addQuestion(text,type,atype,fileName);
     }

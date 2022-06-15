@@ -47,13 +47,16 @@ public class CreateQuestionnaireUI implements Action {
                             case 1:
                                 String text = Console.readNonEmptyLine("Question Text: ","Can't be empty");
 
-                                System.out.println("Insert Question Type ( 1 - Optional     2 - Obligatory ");
-                                Integer type = sc.nextInt();
+                                Integer type = Integer.valueOf(Console.readNonEmptyLine("Insert Question Type ( 1 - Optional     2 - Obligatory )","Can't be empty"));
 
-                                System.out.println("Insert Answer Type ( 1 - MultipleChoice     2 - Numeric     3 - FreeText ");
-                                Integer atype = sc.nextInt();
+                                Integer atype = Integer.valueOf(Console.readNonEmptyLine("Insert Answer Type ( 1 - MultipleChoice     2 - Numeric     3 - FreeText )","Can't be empty"));
 
-                                questionnaireController.addQuestion(text,type, atype, fileName);
+
+                                try {
+                                    questionnaireController.addQuestion(text,type, atype, fileName);
+                                } catch (IOException e) {
+                                    throw new RuntimeException(e);
+                                }
                                 if (atype == 1) {
                                     boolean flag3 = true;
                                     while (flag3) {
