@@ -8,6 +8,7 @@ import eapli.framework.infrastructure.authz.domain.model.Username;
 
 import javax.persistence.*;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.List;
 
 
@@ -93,15 +94,15 @@ public class OrderType implements AggregateRoot<OrderID> {
 
     @Override
     public String toString() {
-        return "Order{" +
-                "orderID=" + orderID +
-                ", orderBillingAddress=" + orderBillingAddress +
-                ", orderLocation=" + orderLocation +
-                ", orderTotalAmount=" + orderTotalAmount +
-                ", orderPostalAddress=" + orderPostalAddress +
-                ", orderDateTime=" + orderDateTime +
-                ", orderState=" + orderState +
-                '}';
+        DecimalFormat df = new DecimalFormat();
+        df.setMaximumFractionDigits(2);
+        return "\nOrderID = " + orderID.value() +
+                ",\n orderBillingAddress = " + orderBillingAddress.value() +
+                ",\n orderLocation = " + orderLocation.value() +
+                ",\n orderTotalAmount = " + df.format(orderTotalAmount.value()) +"€"+
+                ",\n orderPostalAddress = " + orderPostalAddress.value() +
+                ",\n orderDateTime = " + orderDateTime.value().toLocalDate().toString() +
+                ",\n orderState = " + orderState.value();
     }
 
     public static OrderType valueOf(OrderID orderID, OrderBillingAddress orderBillingAddress, OrderLocation orderLocation,
