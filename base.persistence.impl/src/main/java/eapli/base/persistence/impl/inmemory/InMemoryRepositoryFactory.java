@@ -27,6 +27,7 @@ import eapli.base.infrastructure.bootstrapers.BaseBootstrapper;
 import eapli.base.infrastructure.persistence.RepositoryFactory;
 import eapli.base.ordermanagement.repositories.OrderRepository;
 import eapli.base.productmanagement.repositories.ProductRepository;
+import eapli.base.questionnairemanagement.QuestionnaireRepository;
 import eapli.base.taskmanagement.repositories.TaskRepository;
 import eapli.base.warehouses.repositories.AgvDockRepository;
 import eapli.base.warehouses.repositories.AgvRepository;
@@ -142,6 +143,16 @@ public class InMemoryRepositoryFactory implements RepositoryFactory {
     @Override
     public CategoryRepository category() {
         return category(null);
+    }
+
+    @Override
+    public QuestionnaireRepository questionnaire(TransactionalContext autoTx) {
+        return null;
+    }
+
+    @Override
+    public QuestionnaireRepository questionnaire() {
+        return null;
     }
 
     @Override

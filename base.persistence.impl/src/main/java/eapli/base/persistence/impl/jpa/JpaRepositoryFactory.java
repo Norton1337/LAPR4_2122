@@ -26,6 +26,7 @@ import eapli.base.clientusermanagement.repositories.SignupRequestRepository;
 import eapli.base.infrastructure.persistence.RepositoryFactory;
 import eapli.base.ordermanagement.repositories.OrderRepository;
 import eapli.base.productmanagement.repositories.ProductRepository;
+import eapli.base.questionnairemanagement.QuestionnaireRepository;
 import eapli.base.taskmanagement.repositories.TaskRepository;
 import eapli.base.warehouses.repositories.AgvDockRepository;
 import eapli.base.warehouses.repositories.AgvRepository;
@@ -145,6 +146,16 @@ public class JpaRepositoryFactory implements RepositoryFactory {
     @Override
     public CategoryRepository category() {
         return new JpaCategoryRepository(Application.settings().getPersistenceUnitName());
+    }
+
+    @Override
+    public QuestionnaireRepository questionnaire(TransactionalContext autoTx) {
+        return new JpaQuestionnaireRepository(autoTx);
+    }
+
+    @Override
+    public QuestionnaireRepository questionnaire() {
+        return new JpaQuestionnaireRepository(Application.settings().getPersistenceUnitName());
     }
 
 
