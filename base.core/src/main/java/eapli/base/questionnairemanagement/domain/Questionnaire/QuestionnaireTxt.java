@@ -7,12 +7,18 @@ import javax.persistence.*;
 @Entity
 public class QuestionnaireTxt implements AggregateRoot<FileName> {
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @EmbeddedId
     private QuestionnaireID id;
 
     @Embedded
     private FileName fileName;
+
+    public QuestionnaireTxt(QuestionnaireID questionnaireID, FileName exemplo1) {
+    }
+
+    public QuestionnaireTxt() {
+
+    }
 
 
     @Override
@@ -33,5 +39,13 @@ public class QuestionnaireTxt implements AggregateRoot<FileName> {
     @Override
     public boolean hasIdentity(FileName id) {
         return AggregateRoot.super.hasIdentity(id);
+    }
+
+    @Override
+    public String toString() {
+        return "QuestionnaireTxt{" +
+                "id=" + id +
+                ", fileName=" + fileName +
+                '}';
     }
 }

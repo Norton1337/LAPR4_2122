@@ -1,9 +1,11 @@
 package eapli.base.app.backoffice.console.questionnaire;
 import eapli.base.questionnairemanagement.application.QuestionnaireController;
+import eapli.base.questionnairemanagement.domain.Questionnaire.QuestionnaireTxt;
 import eapli.framework.actions.Action;
 import eapli.framework.io.util.Console;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Scanner;
 
 public class CreateQuestionnaireUI implements Action {
@@ -128,7 +130,10 @@ public class CreateQuestionnaireUI implements Action {
                 //======================================================================================================
                 case 2:
                     System.out.println("List with all Questionnaires:");
-
+                    List<QuestionnaireTxt> lista = questionnaireController.getAllQuestionnaires();
+                    for (QuestionnaireTxt questionnaireTxt:lista) {
+                       questionnaireTxt.toString();
+                    }
                     break;
                 //======================================================================================================
                 case 3:

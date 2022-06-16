@@ -2,6 +2,7 @@ package eapli.base.questionnairemanagement.application;
 
 
 import eapli.base.ordermanagement.domain.OrderType;
+import eapli.base.productmanagement.domain.product.Product;
 import eapli.base.productmanagement.repositories.ProductRepository;
 import eapli.base.questionnairemanagement.QuestionnaireRepository;
 import eapli.base.questionnairemanagement.domain.Questionnaire.FileName;
@@ -16,6 +17,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class QuestionnaireController {
 
@@ -51,6 +53,19 @@ public class QuestionnaireController {
         }
 
 
+    public void createFiles(List<QuestionnaireTxt> questionnaires) {
+        for (QuestionnaireTxt questionnaireTxt:questionnaires) {
+            createFile(questionnaireTxt);
+        }
+    }
+
+    public void createFile(QuestionnaireTxt questionnaireTxt){
+        questionnaireRepository.save(questionnaireTxt);
+    }
+
+    public List<QuestionnaireTxt> getAllQuestionnaires(){
+        return questionnaireRepository.findAll();
+    }
 
 }
 
