@@ -6,6 +6,7 @@ import eapli.base.productmanagement.domain.product.Product;
 import eapli.base.productmanagement.repositories.ProductRepository;
 import eapli.base.questionnairemanagement.QuestionnaireRepository;
 import eapli.base.questionnairemanagement.domain.Questionnaire.FileName;
+import eapli.base.questionnairemanagement.domain.Questionnaire.QuestionnaireID;
 import eapli.base.questionnairemanagement.domain.Questionnaire.QuestionnaireTxt;
 import eapli.base.taskmanagement.domain.Task;
 import eapli.base.taskmanagement.domain.TaskDateTime;
@@ -28,6 +29,12 @@ public class QuestionnaireController {
         public void createFile(String fileName, String title, String wmsg) throws IOException {
         // enviar para makefile estes dados,criar ficheiro e abrir
             filew.createFile(fileName, title, wmsg);
+            QuestionnaireTxt questionnaireTxt = new QuestionnaireTxt();
+            questionnaireTxt.setFileName(new FileName(fileName));
+            List<QuestionnaireTxt> lista = questionnaireRepository.findAll();
+            Integer numero = lista.size()+1;
+            questionnaireTxt.setId(new QuestionnaireID(numero.toString()));
+            questionnaireRepository.save(questionnaireTxt);
             //QuestionnaireTxt novo =
             //questionnaireRepository.save();
 
@@ -60,7 +67,8 @@ public class QuestionnaireController {
     }
 
     public void createFile(QuestionnaireTxt questionnaireTxt){
-        questionnaireRepository.save(questionnaireTxt);
+
+            questionnaireRepository.save(questionnaireTxt);
     }
 
     public List<QuestionnaireTxt> getAllQuestionnaires(){

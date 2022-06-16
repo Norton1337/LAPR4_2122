@@ -50,4 +50,20 @@ public class QuestionnaireTxt implements AggregateRoot<QuestionnaireID> {
     public boolean hasIdentity(QuestionnaireID id) {
         return AggregateRoot.super.hasIdentity(id);
     }
+
+    public QuestionnaireID getId() {
+        return id;
+    }
+
+    public void setId(QuestionnaireID id) {
+        this.id = id;
+    }
+
+    public FileName getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(FileName fileName) {
+        this.fileName = fileName;
+    }
 }

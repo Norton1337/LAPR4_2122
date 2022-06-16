@@ -132,7 +132,7 @@ public class CreateQuestionnaireUI implements Action {
                     System.out.println("List with all Questionnaires:");
                     List<QuestionnaireTxt> lista = questionnaireController.getAllQuestionnaires();
                     for (QuestionnaireTxt questionnaireTxt:lista) {
-                       questionnaireTxt.toString();
+                        System.out.println("{" + "id=" + questionnaireTxt.getId() + ", fileName=" + questionnaireTxt.getFileName() + '}');
                     }
                     break;
                 //======================================================================================================
