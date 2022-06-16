@@ -1,11 +1,12 @@
 package eapli.base.questionnairemanagement.domain.Questionnaire;
 
+
 import eapli.framework.domain.model.AggregateRoot;
 
 import javax.persistence.*;
 
 @Entity
-public class QuestionnaireTxt implements AggregateRoot<FileName> {
+public class QuestionnaireTxt implements AggregateRoot<QuestionnaireID> {
 
     @EmbeddedId
     private QuestionnaireID id;
@@ -13,13 +14,13 @@ public class QuestionnaireTxt implements AggregateRoot<FileName> {
     @Embedded
     private FileName fileName;
 
-    public QuestionnaireTxt(QuestionnaireID questionnaireID, FileName exemplo1) {
+    public QuestionnaireTxt(QuestionnaireID questionnaireID, FileName exemplo) {
+        this.id = questionnaireID;
+        this.fileName = exemplo;
     }
-
     public QuestionnaireTxt() {
 
     }
-
 
     @Override
     public boolean sameAs(Object other) {
@@ -27,19 +28,10 @@ public class QuestionnaireTxt implements AggregateRoot<FileName> {
     }
 
     @Override
-    public int compareTo(FileName other) {
+    public int compareTo(QuestionnaireID other) {
         return AggregateRoot.super.compareTo(other);
     }
 
-    @Override
-    public FileName identity() {
-        return null;
-    }
-
-    @Override
-    public boolean hasIdentity(FileName id) {
-        return AggregateRoot.super.hasIdentity(id);
-    }
 
     @Override
     public String toString() {
@@ -47,5 +39,15 @@ public class QuestionnaireTxt implements AggregateRoot<FileName> {
                 "id=" + id +
                 ", fileName=" + fileName +
                 '}';
+    }
+
+    @Override
+    public QuestionnaireID identity() {
+        return null;
+    }
+
+    @Override
+    public boolean hasIdentity(QuestionnaireID id) {
+        return AggregateRoot.super.hasIdentity(id);
     }
 }

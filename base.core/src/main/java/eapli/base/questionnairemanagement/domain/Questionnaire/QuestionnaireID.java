@@ -1,11 +1,12 @@
 package eapli.base.questionnairemanagement.domain.Questionnaire;
 
 import eapli.framework.domain.model.ValueObject;
+import org.jetbrains.annotations.NotNull;
 
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class QuestionnaireID implements ValueObject {
+public class QuestionnaireID implements ValueObject, Comparable<QuestionnaireID> {
 
     private String id;
 
@@ -27,5 +28,10 @@ public class QuestionnaireID implements ValueObject {
         return "QuestionnaireID{" +
                 "id='" + id + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(@NotNull QuestionnaireID o) {
+        return 0;
     }
 }
