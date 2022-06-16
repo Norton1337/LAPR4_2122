@@ -69,6 +69,7 @@ public class BaseBootstrapper implements Action {
                 //,new AgvDockBootstrapper()
                 ,new AgvBootstrapper()
                 ,new ProductBootstrapper()
+                ,new QuestionnaireBootstrapper()
                 };
 
         registerPowerUser();
