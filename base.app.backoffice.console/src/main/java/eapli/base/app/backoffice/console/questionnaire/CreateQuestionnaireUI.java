@@ -35,61 +35,93 @@ public class CreateQuestionnaireUI implements Action {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-                    boolean flag2 = true;
-                    while (flag2) {
+
+                    boolean flag1 = true;
+                    Integer numero1=0;
+                    while (flag1) {
+                        numero1++;
                         System.out.println(UI_DOUBLE_LINE);
-                        System.out.println("1 - Add Question ");
+                        System.out.println("1 - Add Section ");
                         System.out.println("2 - Finish Questionnaire ");
                         System.out.println(UI_DOUBLE_LINE);
-                        choice1 = sc.nextInt();
+                        choice2 = sc.nextInt();
 
-                        switch (choice1) {
+                        switch (choice2) {
                             case 1:
-                                String text = Console.readNonEmptyLine("Question Text: ","Can't be empty");
+                                String text1 = Console.readNonEmptyLine("Section Name: ", "Can't be empty");
 
-                                Integer type = Integer.valueOf(Console.readNonEmptyLine("Insert Question Type ( 1 - Optional     2 - Obligatory )","Can't be empty"));
-
-                                Integer atype = Integer.valueOf(Console.readNonEmptyLine("Insert Answer Type ( 1 - MultipleChoice     2 - Numeric     3 - FreeText )","Can't be empty"));
-
-
+                                String text2 = Console.readNonEmptyLine("Section Text: ", "Can't be empty");
                                 try {
-                                    questionnaireController.addQuestion(text,type, atype, fileName);
+                                    questionnaireController.addSection(text1, fileName, numero1, text2);
                                 } catch (IOException e) {
                                     throw new RuntimeException(e);
                                 }
-                                if (atype == 1) {
-                                    boolean flag3 = true;
-                                    while (flag3) {
 
-                                        System.out.println(UI_SINGLE_LINE);
-                                        System.out.println("1 - Add Answer  ");
-                                        System.out.println("2 - Finish Multiple Choice ");
-                                        System.out.println(UI_SINGLE_LINE);
-                                        choice2 = sc.nextInt();
 
-                                        switch (choice2) {
-                                            case 1:
-                                                System.out.println("Type Answer ");
-                                                String answer = sc.next();
-                                                questionnaireController.addPossibleAnswer(answer, fileName);
-                                                break;
-                                            case 2:
-                                                flag3 = false;
-                                                break;
-                                        }
+                                boolean flag2 = true;
+                                Integer numero = 0;
+                                while (flag2) {
+                                    numero++;
+                                    System.out.println(UI_DOUBLE_LINE);
+                                    System.out.println("1 - Add Question ");
+                                    System.out.println("2 - Finish Questionnaire ");
+                                    System.out.println(UI_DOUBLE_LINE);
+                                    choice1 = sc.nextInt();
+
+                                    switch (choice1) {
+                                        case 1:
+                                            String text = Console.readNonEmptyLine("Question Text: ", "Can't be empty");
+
+                                            Integer type = Integer.valueOf(Console.readNonEmptyLine("Insert Question Type ( 1 - Optional     2 - Obligatory )", "Can't be empty"));
+
+                                            Integer atype = Integer.valueOf(Console.readNonEmptyLine("Insert Answer Type ( 1 - MultipleChoice     2 - Numeric     3 - FreeText )", "Can't be empty"));
+
+
+                                            try {
+                                                questionnaireController.addQuestion(text, type, atype, fileName, numero);
+                                            } catch (IOException e) {
+                                                throw new RuntimeException(e);
+                                            }
+                                            if (atype == 1) {
+                                                boolean flag3 = true;
+                                                while (flag3) {
+
+                                                    System.out.println(UI_SINGLE_LINE);
+                                                    System.out.println("1 - Add Answer  ");
+                                                    System.out.println("2 - Finish Multiple Choice ");
+                                                    System.out.println(UI_SINGLE_LINE);
+                                                    choice2 = sc.nextInt();
+
+                                                    switch (choice2) {
+                                                        case 1:
+                                                            System.out.println("Type Answer ");
+                                                            String answer = sc.next();
+                                                            try {
+                                                                questionnaireController.addPossibleAnswer(answer, fileName);
+                                                            } catch (IOException e) {
+                                                                throw new RuntimeException(e);
+                                                            }
+                                                            break;
+                                                        case 2:
+                                                            flag3 = false;
+                                                            break;
+                                                    }
+                                                }
+                                            }
+                                            break;
+                                        case 2:
+                                            flag2 = false;
+                                            break;
                                     }
                                 }
+
+
                                 break;
                             case 2:
-                                flag2 = false;
+                                flag1 = false;
                                 break;
                         }
                     }
-
-
-
-
-
 
 
                     break;

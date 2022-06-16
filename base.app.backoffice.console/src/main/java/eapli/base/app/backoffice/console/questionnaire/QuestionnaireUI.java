@@ -36,7 +36,7 @@ public class QuestionnaireUI {
 
 
         file = Console.readNonEmptyLine("Escolha um questionário", "Obrigatória a escolha de uma opção");
-        questionnaireController.openFile(file);
+        //questionnaireController.openFile(file);
 
         return true;
     }
