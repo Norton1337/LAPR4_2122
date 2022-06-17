@@ -14,12 +14,17 @@ public class QuestionnaireTxt implements AggregateRoot<QuestionnaireID> {
     @Embedded
     private FileName fileName;
 
-    public QuestionnaireTxt(QuestionnaireID questionnaireID, FileName exemplo) {
-        this.id = questionnaireID;
-        this.fileName = exemplo;
-    }
+    @Embedded
+    private QuestionnaireState state;
+
     public QuestionnaireTxt() {
 
+    }
+
+    public QuestionnaireTxt(QuestionnaireID questionnaireID, FileName exemplo, QuestionnaireState questionnaireState) {
+        this.id = questionnaireID;
+        this.fileName = exemplo;
+        this.state = questionnaireState;
     }
 
     @Override
@@ -33,13 +38,6 @@ public class QuestionnaireTxt implements AggregateRoot<QuestionnaireID> {
     }
 
 
-    @Override
-    public String toString() {
-        return "QuestionnaireTxt{" +
-                "id=" + id +
-                ", fileName=" + fileName +
-                '}';
-    }
 
     @Override
     public QuestionnaireID identity() {
@@ -65,5 +63,22 @@ public class QuestionnaireTxt implements AggregateRoot<QuestionnaireID> {
 
     public void setFileName(FileName fileName) {
         this.fileName = fileName;
+    }
+
+    @Override
+    public String toString() {
+        return "QuestionnaireTxt{" +
+                "id=" + id +
+                ", fileName=" + fileName +
+                ", state=" + state +
+                '}';
+    }
+
+    public String getState() {
+        return state.getState();
+    }
+
+    public void setState(QuestionnaireState state) {
+        this.state = state;
     }
 }
