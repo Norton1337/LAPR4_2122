@@ -65,10 +65,10 @@ public class BaseBootstrapper implements Action {
         final Action[] actions = {
                 new MasterUsersBootstrapper()
                 ,new WarehouseSetupBootstrapper()
+                ,new ProductBootstrapper()
                 ,new OrderBootstrapper()
                 //,new AgvDockBootstrapper()
                 ,new AgvBootstrapper()
-                ,new ProductBootstrapper()
                 ,new QuestionnaireBootstrapper()
                 };
 
