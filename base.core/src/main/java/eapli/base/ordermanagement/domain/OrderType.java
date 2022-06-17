@@ -125,7 +125,10 @@ public class OrderType implements AggregateRoot<OrderID> {
     }
 
     public void setClient(SystemUser client) {
-        this.clientUsername = client.username();
+        if(client!=null)
+            this.clientUsername = client.username();
+        else
+            this.clientUsername=null;
     }
 
     @Override
