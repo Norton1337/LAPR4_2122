@@ -84,7 +84,7 @@ public class AgvDocks implements AggregateRoot<AgvDockIdentification> {
 
     @Override
     public AgvDockIdentification identity() {
-        return null;
+        return this.agvDockIdentification;
     }
 
     public void setWarehouse(Warehouse warehouse){

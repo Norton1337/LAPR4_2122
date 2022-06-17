@@ -28,6 +28,10 @@ public class AgvDockIdentification implements ValueObject, Comparable<AgvDockIde
 
     public static AgvDockIdentification valueOf(String id){
         return new AgvDockIdentification(id);
+
+    }
+    public String value(){
+        return this.id;
     }
 
     @Override
