@@ -48,15 +48,16 @@ public class AGVController {
     }
 
     public List<AGV> getAvailableAGVList(){
-        List<AGV> agvList = getAGVList();
-        List<AGV> availableAgvList = new ArrayList<>();
-
-        for (AGV agv: agvList) {
-            if(agv.getTask()==null)
-                availableAgvList.add(agv);
-        }
-
-        return availableAgvList;
+        return agvRepository.findAllAvailable();
+    }
+    public List<AGV> getAvailableAGVList(Double weight){
+        return agvRepository.findAllAvailableOfWeight(weight);
+    }
+    public AGV getBestAvailableAGV(Double weight){
+        List<AGV> agvList = agvRepository.findBestAvailableForWeight(weight);
+        if(agvList.isEmpty())
+            return null;
+        return agvList.get(0);
     }
 
     public AGV updateAGV(AGV agv, Task task){

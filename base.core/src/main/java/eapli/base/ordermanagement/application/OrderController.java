@@ -42,13 +42,7 @@ public class OrderController {
     }
 
     public List<OrderType> getWaitingOrders() {
-        List<OrderType> waitingOrderTypeList = new ArrayList<>();
-        List<OrderType> allOrderTypeList = orderRepository.findAll();
-        for (OrderType order : allOrderTypeList) {
-            if (order.getOrderState().value() == PossibleStates.WAITING)
-                waitingOrderTypeList.add(order);
-        }
-        return waitingOrderTypeList;
+        return orderRepository.findWaitingOrders();
 
     }
 
@@ -56,14 +50,9 @@ public class OrderController {
         return orderRepository.findOpenOrders(username);
     }
 
-    public List<OrderType> orderByTime(List<OrderType> list){
+    public List<OrderType> ordersByTime(){
 
-        list.sort(new Comparator<OrderType>() {
-            public int compare(OrderType o1, OrderType o2) {
-                return o1.getOrderDateTime().value().compareTo(o2.getOrderDateTime().value());
-            }
-        });
-        return list;
+       return orderRepository.findOrdersByTime();
     }
 
     public void createOrder(List<CartItem> cartItems, String billingAddress, String postalAddress, SystemUser systemUser){
