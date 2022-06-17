@@ -5,6 +5,7 @@ import eapli.base.taskmanagement.domain.Task;
 import eapli.framework.domain.model.AggregateRoot;
 import eapli.framework.infrastructure.authz.domain.model.SystemUser;
 import eapli.framework.infrastructure.authz.domain.model.Username;
+import org.hibernate.criterion.Order;
 
 import javax.persistence.*;
 import java.io.IOException;
@@ -46,7 +47,7 @@ public class OrderType implements AggregateRoot<OrderID> {
 
 
     public OrderType(OrderID orderID, OrderBillingAddress orderBillingAddress, OrderLocation orderLocation, OrderTotalAmount orderTotalAmount,
-                     OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime, OrderState orderState){
+                     OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime, OrderState orderState, OrderWeight orderWeight){
 
         this.orderID = orderID;
         this.orderBillingAddress = orderBillingAddress;
@@ -55,7 +56,7 @@ public class OrderType implements AggregateRoot<OrderID> {
         this.orderPostalAddress = orderPostalAddress;
         this.orderDateTime = orderDateTime;
         this.orderState = orderState;
-        this.orderWeight=new OrderWeight(30.0);
+        this.orderWeight=orderWeight;
 
     }
     public OrderType(OrderID orderID, OrderBillingAddress orderBillingAddress, OrderLocation orderLocation, OrderTotalAmount orderTotalAmount,
@@ -69,7 +70,7 @@ public class OrderType implements AggregateRoot<OrderID> {
         this.orderDateTime = orderDateTime;
         this.orderState = orderState;
         this.orderItemList = orderItems;
-        Double weight=0.0;
+        double weight=0.0;
         for (OrderItem item:this.orderItemList) {
             weight += item.product().productWeight().getWeight()*item.amount();
         }
@@ -88,7 +89,8 @@ public class OrderType implements AggregateRoot<OrderID> {
                 new OrderTotalAmount(dto.orderTotalAmount),
                 new OrderPostalAddress(dto.orderPostalAddress),
                 new OrderDateTime(dto.orderDateTime),
-                new OrderState(dto.orderState)
+                new OrderState(dto.orderState),
+                new OrderWeight(dto.orderWeight)
         );
     }
 
@@ -96,18 +98,19 @@ public class OrderType implements AggregateRoot<OrderID> {
     public String toString() {
         DecimalFormat df = new DecimalFormat();
         df.setMaximumFractionDigits(2);
-        return "\nOrderID = " + orderID.value() +
-                ",\n orderBillingAddress = " + orderBillingAddress.value() +
-                ",\n orderLocation = " + orderLocation.value() +
-                ",\n orderTotalAmount = " + df.format(orderTotalAmount.value()) +"€"+
-                ",\n orderPostalAddress = " + orderPostalAddress.value() +
-                ",\n orderDateTime = " + orderDateTime.value().toLocalDate().toString() +
-                ",\n orderState = " + orderState.value();
+        return "OrderID = " + orderID.value() +
+                ",\n BillingAddress = " + orderBillingAddress.value() +
+                ",\n Location = " + orderLocation.value() +
+                ",\n TotalAmount = " + df.format(orderTotalAmount.value()) +"€"+
+                ",\n PostalAddress = " + orderPostalAddress.value() +
+                ",\n DateTime = " + orderDateTime.value().toLocalDate().toString() +
+                ",\n Weight = " + orderWeight.value() +
+                ",\n State = " + orderState.value();
     }
 
     public static OrderType valueOf(OrderID orderID, OrderBillingAddress orderBillingAddress, OrderLocation orderLocation,
-                                    OrderTotalAmount orderTotalAmount, OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime, OrderState orderState){
-        return new OrderType(orderID, orderBillingAddress, orderLocation, orderTotalAmount, orderPostalAddress, orderDateTime, orderState);
+                                    OrderTotalAmount orderTotalAmount, OrderPostalAddress orderPostalAddress, OrderDateTime orderDateTime, OrderState orderState, OrderWeight orderWeight){
+        return new OrderType(orderID, orderBillingAddress, orderLocation, orderTotalAmount, orderPostalAddress, orderDateTime, orderState, orderWeight);
     }
 
     public OrderState getOrderState() {
@@ -136,6 +139,8 @@ public class OrderType implements AggregateRoot<OrderID> {
     }
 
     public OrderDateTime getOrderDateTime(){ return orderDateTime; }
+
+    public OrderWeight getOrderWeight(){ return this.orderWeight; }
 
 
 

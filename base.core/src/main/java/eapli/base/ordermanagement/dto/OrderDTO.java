@@ -19,6 +19,8 @@ public class OrderDTO {
 
     public PossibleStates orderState;
 
+    public Double orderWeight;
+
 
     public OrderDTO(Long orderID, String orderBillingAddress, String orderLocation, Double orderTotalAmount,
                          String orderPostalAddress, LocalDateTime orderDateTime, PossibleStates orderState){
@@ -28,7 +30,7 @@ public class OrderDTO {
         this.orderTotalAmount = orderTotalAmount;
         this.orderPostalAddress = orderPostalAddress;
         this.orderDateTime = orderDateTime;
-        this.orderState = orderState;
+        this.orderWeight = orderWeight;
     }
 
 

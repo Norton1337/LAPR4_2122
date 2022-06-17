@@ -23,6 +23,8 @@ public class OrderBuilder implements DomainFactory<OrderType> {
 
     private OrderState orderState;
 
+    private OrderWeight orderWeight;
+
 
     public OrderBuilder ofID(final OrderID orderID){
         this.orderID = orderID;
@@ -56,13 +58,17 @@ public class OrderBuilder implements DomainFactory<OrderType> {
         this.orderState=orderState;
         return this;
     }
+    public OrderBuilder ofWeight(final OrderWeight orderWeight){
+        this.orderWeight=orderWeight;
+        return this;
+    }
 
     private OrderType buildOrThrow() throws IOException {
         if (theOrder != null) {
             return theOrder;
         } else if (orderID != null && orderBillingAddress != null && orderLocation != null && orderTotalAmount != null
                 && orderPostalAddress != null && orderDateTime!=null && orderState!=null) {
-            theOrder = new OrderType(orderID, orderBillingAddress, orderLocation, orderTotalAmount, orderPostalAddress, orderDateTime, orderState);
+            theOrder = new OrderType(orderID, orderBillingAddress, orderLocation, orderTotalAmount, orderPostalAddress, orderDateTime, orderState, orderWeight);
             return theOrder;
         } else {
             throw new IllegalStateException();
