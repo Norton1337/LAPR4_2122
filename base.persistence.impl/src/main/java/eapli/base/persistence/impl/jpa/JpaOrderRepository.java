@@ -30,22 +30,44 @@ public class JpaOrderRepository extends JpaAutoTxRepository<OrderType, OrderID, 
     public List<OrderType> findAll(){
 
         final TypedQuery<OrderType> query = entityManager().createQuery(
-                "SELECT o FROM OrderType o",
+                "SELECT o FROM OrderType o " +
+                        "ORDER BY o.orderWeight.weight ASC",
                 OrderType.class
         );
         return query.getResultList();
     }
 
     @Override
+    public List<OrderType> findWaitingOrders() {
+        final TypedQuery<OrderType> query = entityManager().createQuery(
+                "SELECT o FROM OrderType o WHERE o.orderState=:waiting" +
+                        " ORDER BY o.orderWeight.weight ASC",
+                OrderType.class
+        ).setParameter("waiting",new OrderState(PossibleStates.WAITING));
+        return query.getResultList();
+    }
+
+    @Override
     public List<OrderType> findOpenOrders(Username username) {
         final TypedQuery<OrderType> query = entityManager().createQuery(
-                "SELECT o FROM OrderType o WHERE o.clientUsername = :user AND (o.orderState=:waiting OR o.orderState=:inProgress)",
+                "SELECT o FROM OrderType o WHERE o.clientUsername = :user" +
+                        " AND (o.orderState=:waiting OR o.orderState=:inProgress)" +
+                        " ORDER BY o.orderWeight.weight ASC",
                 OrderType.class
         )
                 .setParameter("user",username)
                 .setParameter("waiting",new OrderState(PossibleStates.WAITING))
                 .setParameter("inProgress",new OrderState(PossibleStates.IN_PROGRESS))
                 ;
+        return query.getResultList();
+    }
+    @Override
+    public List<OrderType> findOrdersByTime() {
+        final TypedQuery<OrderType> query = entityManager().createQuery(
+                "SELECT o FROM OrderType o WHERE o.orderState=:waiting" +
+                        " ORDER BY o.orderDateTime.dateTime ASC",
+                OrderType.class
+        ).setParameter("waiting",new OrderState(PossibleStates.WAITING));
         return query.getResultList();
     }
 }

@@ -22,4 +22,19 @@ public class InMemoryAgvRepository extends InMemoryDomainRepository<AGV, AGVIden
 
         return null;
     }
+
+    @Override
+    public List<AGV> findAllAvailable() {
+        return null;
+    }
+
+    @Override
+    public List<AGV> findAllAvailableOfWeight(Double weight) {
+        return null;
+    }
+
+    @Override
+    public List<AGV> findBestAvailableForWeight(Double weight) {
+        return null;
+    }
 }

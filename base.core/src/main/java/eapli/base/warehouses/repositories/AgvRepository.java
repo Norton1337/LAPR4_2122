@@ -9,4 +9,10 @@ import java.util.List;
 
 public interface AgvRepository extends DomainRepository<AGVIdentification, AGV> {
     public List<AGV> findAll();
+
+    public List<AGV> findAllAvailable();
+
+    public List<AGV> findAllAvailableOfWeight(Double weight);
+
+    public List<AGV> findBestAvailableForWeight(Double weight);
 }

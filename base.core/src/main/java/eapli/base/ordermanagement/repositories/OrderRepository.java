@@ -13,5 +13,9 @@ public interface OrderRepository extends DomainRepository<OrderID, OrderType> {
 
     public List<OrderType> findAll();
 
+    public List<OrderType> findWaitingOrders();
+
     public List<OrderType> findOpenOrders(Username username);
+
+    public List<OrderType> findOrdersByTime();
 }

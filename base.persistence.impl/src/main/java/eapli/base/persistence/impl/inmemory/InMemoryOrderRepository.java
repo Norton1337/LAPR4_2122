@@ -21,7 +21,17 @@ public class InMemoryOrderRepository extends InMemoryDomainRepository<OrderType,
     }
 
     @Override
+    public List<OrderType> findWaitingOrders() {
+        return null;
+    }
+
+    @Override
     public List<OrderType> findOpenOrders(Username username) {
+        return null;
+    }
+
+    @Override
+    public List<OrderType> findOrdersByTime() {
         return null;
     }
 
