@@ -17,9 +17,7 @@ public class ShortDescription implements ValueObject {
 
     @Override
     public String toString() {
-        return "ShortDescription{" +
-                "description='" + description + '\'' +
-                '}';
+        return description;
     }
 
     public static ShortDescription valueOf(String description){

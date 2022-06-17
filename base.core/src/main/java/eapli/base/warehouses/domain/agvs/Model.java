@@ -19,9 +19,7 @@ public class Model implements ValueObject {
 
     @Override
     public String toString() {
-        return "Model{" +
-                "model='" + model + '\'' +
-                '}';
+        return model;
     }
 
     public static Model valueOf(String model){

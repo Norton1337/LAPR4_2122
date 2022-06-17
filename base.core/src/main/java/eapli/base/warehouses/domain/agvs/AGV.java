@@ -79,16 +79,13 @@ public class AGV implements AggregateRoot<AGVIdentification> {
 
     @Override
     public String toString() {
-        return "AGV{" +
-                "id=" + identification +
-                ", version=" + version +
-                ", autonomy=" + autonomy +
-                ", maxWeight=" + maxWeight +
-                ", model=" + model +
-                ", shortDescription=" + shortDescription +
-                ", status=" + status +
-                ", agvDock=" + agvDock +
-                '}';
+        return "AGVid = " + identification +
+                ",\n Autonomy = " + autonomy +
+                ",\n MaxWeight = " + maxWeight +
+                ",\n Model = " + model +
+                ",\n ShortDescription = " + shortDescription +
+                ",\n Status = " + status +
+                ",\n AgvDock = " + agvDock.identity().value();
     }
 
     public static AGV valueOf(AGVIdentification identification, Autonomy autonomy, MaxWeight maxWeight, Model model, ShortDescription shortDescription, Status status, AgvDocks agvDock){

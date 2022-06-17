@@ -19,9 +19,7 @@ public class AGVIdentification implements ValueObject, Comparable<AGVIdentificat
 
     @Override
     public String toString() {
-        return "AGVIdentification{" +
-                "id='" + id + '\'' +
-                '}';
+        return id;
     }
 
     public static AGVIdentification valueOf(String id){

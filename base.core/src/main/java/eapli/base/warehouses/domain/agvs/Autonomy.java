@@ -20,9 +20,7 @@ public class Autonomy implements ValueObject {
 
     @Override
     public String toString() {
-        return "Autonomy{" +
-                "autonomy=" + autonomy +
-                '}';
+        return autonomy.toString();
     }
 
     public static Autonomy valueOf(Double autonomy){

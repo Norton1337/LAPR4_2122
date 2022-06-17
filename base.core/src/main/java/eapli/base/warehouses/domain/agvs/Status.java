@@ -16,9 +16,7 @@ public class Status implements ValueObject {
 
     @Override
     public String toString() {
-        return "Status{" +
-                "status='" + status + '\'' +
-                '}';
+        return status;
     }
 
     public static Status valueOf(String status){

@@ -19,9 +19,7 @@ public class MaxWeight implements ValueObject {
 
     @Override
     public String toString() {
-        return "MaxWeight{" +
-                "weight=" + weight +
-                '}';
+        return weight.toString();
     }
     public static MaxWeight valueOf(Double weight){
         return new MaxWeight(weight);
