@@ -19,9 +19,9 @@ import java.util.Set;
 
 public class OrdersUI {
 
-    private OrderController orderController = new OrderController();
-    private AGVController agvController = new AGVController();
-    private TaskController taskController = new TaskController();
+    private final OrderController orderController = new OrderController();
+    private final AGVController agvController = new AGVController();
+    private final TaskController taskController = new TaskController();
 
 
     public boolean show(){
@@ -35,7 +35,7 @@ public class OrdersUI {
         }
         int i = 0;
         for (OrderType order: ordersList) {
-            System.out.println("["+i+"] "+order.toString());
+            System.out.println("["+i+"] "+order.toString()+"\n");
             i++;
         }
 
@@ -48,13 +48,6 @@ public class OrdersUI {
         if(option3==0)
             return false;
 
-        List<AGV> agvList = agvController.getAvailableAGVList();
-
-        if(agvList.isEmpty()){
-            System.out.println("There are no available AGVs");
-            return false;
-        }
-
 
         int option = Console.readInteger("Choose Order");
         if(option<0 || option >= ordersList.size()){
@@ -64,16 +57,24 @@ public class OrdersUI {
 
         OrderType order = ordersList.get(option);
 
+
+        List<AGV> agvList = agvController.getAvailableAGVList(order.getOrderWeight().value());
+
+        if(agvList.isEmpty()){
+            System.out.println("There are no available AGVs for this order");
+            return false;
+        }
+
         i = 0;
         for (AGV agv: agvList) {
-            System.out.println("["+i+"] "+agv.toString());
+            System.out.println("["+i+"] "+agv.toString()+"\n");
             i++;
         }
 
 
         int option2 = Console.readInteger("Choose an AGV");
         if(option2<0 || option2 >= agvList.size()){
-            System.out.println("AGVDock não existe");
+            System.out.println("AGV não existe");
             return false;
         }
 

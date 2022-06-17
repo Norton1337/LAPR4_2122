@@ -10,22 +10,22 @@ import eapli.base.taskmanagement.domain.TaskID;
 import eapli.base.warehouses.application.AGVController;
 import eapli.base.warehouses.domain.agvs.AGV;
 import eapli.framework.io.util.Console;
+import org.hibernate.criterion.Order;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 public class AGVManagementUI {
 
-    private OrderController orderController = new OrderController();
-    private AGVController agvController = new AGVController();
+    private final OrderController orderController = new OrderController();
+    private final AGVController agvController = new AGVController();
     private TaskController taskController = new TaskController();
 
 
     public boolean show(){
         System.out.println("");
 
-        List<OrderType> ordersList = orderController.getWaitingOrders();
-        List<OrderType> ordersByTimeList = orderController.orderByTime(ordersList);
+        List<OrderType> ordersByTimeList = orderController.ordersByTime();
 
         if(ordersByTimeList.isEmpty()){
             System.out.println("There are no waiting orders");
@@ -39,28 +39,20 @@ public class AGVManagementUI {
 
         System.out.println("Would you like to assign tasks to available AGVs?");
         int option3 = Console.readInteger("0-No\n1-Yes\n>");
-        if(option3<0 || option3 >= ordersByTimeList.size()){
+        if(option3<0 || option3 > 1){
             System.out.println("Invalid option");
             return false;
         }
         if(option3==0)
             return false;
 
-        List<AGV> agvList = agvController.getAvailableAGVList();
+        int j=0;
+        for (OrderType order:ordersByTimeList){
+            AGV agv = agvController.getBestAvailableAGV(order.getOrderWeight().value());
 
-        if(agvList.isEmpty()){
-            System.out.println("There are no available AGVs");
-            return false;
-        }
+            if (agv!=null){
 
-
-        for (int j = 0; j < ordersByTimeList.size()-1; j++){
-            //System.out.println(ordersByTimeList.get(j));
-            if (!agvList.isEmpty()){
-
-                AGV agv = agvList.get(j);
-                OrderType order = ordersByTimeList.get(j);
-
+                OrderType orderType = ordersByTimeList.get(j);
                 Task task = taskController.createTask(order);
                 orderController.assignTask(order, task);
                 agvController.updateAGV(agv,task);
@@ -68,8 +60,10 @@ public class AGVManagementUI {
 
             }
             else {
-                System.out.println("No more AGVs available");
+                System.out.println("There is no available AGV for order ["+order.identity().value()+"].");
             }
+
+            j++;
         }
 
         return false;
