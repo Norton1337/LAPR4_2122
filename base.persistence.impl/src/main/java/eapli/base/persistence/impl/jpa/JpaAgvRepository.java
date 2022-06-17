@@ -4,6 +4,7 @@ import eapli.base.Application;
 import eapli.base.ordermanagement.domain.OrderID;
 import eapli.base.ordermanagement.domain.OrderType;
 import eapli.base.ordermanagement.repositories.OrderRepository;
+import eapli.base.taskmanagement.domain.Task;
 import eapli.base.warehouses.domain.agvs.AGV;
 import eapli.base.warehouses.domain.agvs.AGVIdentification;
 import eapli.base.warehouses.repositories.AgvRepository;
@@ -65,6 +66,15 @@ public class JpaAgvRepository extends JpaAutoTxRepository<AGV, AGVIdentification
                         " ORDER BY a.maxWeight.weight ASC",
                 AGV.class
         ).setParameter("weight",weight);
+        return query.getResultList();
+    }
+
+    @Override
+    public List<AGV> findOrderAGV(Task task) {
+        final TypedQuery<AGV> query = entityManager().createQuery(
+                "SELECT DISTINCT a FROM AGV a WHERE a.task=:task",
+                AGV.class
+        ).setParameter("task",task);
         return query.getResultList();
     }
 

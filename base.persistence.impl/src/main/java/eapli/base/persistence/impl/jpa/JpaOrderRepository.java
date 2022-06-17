@@ -51,13 +51,23 @@ public class JpaOrderRepository extends JpaAutoTxRepository<OrderType, OrderID, 
     public List<OrderType> findOpenOrders(Username username) {
         final TypedQuery<OrderType> query = entityManager().createQuery(
                 "SELECT o FROM OrderType o WHERE o.clientUsername = :user" +
-                        " AND (o.orderState=:waiting OR o.orderState=:inProgress)" +
+                        " AND o.orderState!=:closed" +
                         " ORDER BY o.orderWeight.weight ASC",
                 OrderType.class
         )
                 .setParameter("user",username)
-                .setParameter("waiting",new OrderState(PossibleStates.WAITING))
-                .setParameter("inProgress",new OrderState(PossibleStates.IN_PROGRESS))
+                .setParameter("closed",new OrderState(PossibleStates.CLOSED))
+                ;
+        return query.getResultList();
+    }
+    @Override
+    public List<OrderType> findPreparedOrders() {
+        final TypedQuery<OrderType> query = entityManager().createQuery(
+                "SELECT o FROM OrderType o WHERE o.orderState=:completed" +
+                        " ORDER BY o.orderDateTime.dateTime ASC",
+                OrderType.class
+        )
+                .setParameter("completed",new OrderState(PossibleStates.COMPLETED))
                 ;
         return query.getResultList();
     }

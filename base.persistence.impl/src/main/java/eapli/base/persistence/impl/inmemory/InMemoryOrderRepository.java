@@ -31,6 +31,11 @@ public class InMemoryOrderRepository extends InMemoryDomainRepository<OrderType,
     }
 
     @Override
+    public List<OrderType> findPreparedOrders() {
+        return null;
+    }
+
+    @Override
     public List<OrderType> findOrdersByTime() {
         return null;
     }

@@ -1,5 +1,6 @@
 package eapli.base.warehouses.repositories;
 
+import eapli.base.taskmanagement.domain.Task;
 import eapli.base.warehouses.domain.agvs.AGV;
 import eapli.base.warehouses.domain.agvs.AGVIdentification;
 import eapli.base.warehouses.domain.warehouse.Warehouse;
@@ -15,4 +16,6 @@ public interface AgvRepository extends DomainRepository<AGVIdentification, AGV> 
     public List<AGV> findAllAvailableOfWeight(Double weight);
 
     public List<AGV> findBestAvailableForWeight(Double weight);
+
+    public List<AGV> findOrderAGV(Task task);
 }

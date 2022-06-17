@@ -1,6 +1,7 @@
 package eapli.base.persistence.impl.jpa;
 
 import eapli.base.Application;
+import eapli.base.ordermanagement.domain.OrderType;
 import eapli.base.taskmanagement.domain.Task;
 import eapli.base.taskmanagement.domain.TaskID;
 import eapli.base.taskmanagement.repositories.TaskRepository;
@@ -30,6 +31,15 @@ public class JpaTaskRepository extends JpaAutoTxRepository<Task, TaskID, TaskID>
                 "SELECT t FROM Task t",
                 Task.class
         );
+        return query.getResultList();
+    }
+
+    @Override
+    public List<Task> findOrderAGV(OrderType order) {
+        final TypedQuery<Task> query = entityManager().createQuery(
+                "SELECT t FROM Task t WHERE t.order=:orderType",
+                Task.class
+        ).setParameter("orderType",order);
         return query.getResultList();
     }
 }

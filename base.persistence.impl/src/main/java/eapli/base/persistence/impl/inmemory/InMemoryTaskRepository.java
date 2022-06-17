@@ -1,5 +1,6 @@
 package eapli.base.persistence.impl.inmemory;
 
+import eapli.base.ordermanagement.domain.OrderType;
 import eapli.base.taskmanagement.domain.Task;
 import eapli.base.taskmanagement.domain.TaskID;
 import eapli.base.taskmanagement.repositories.TaskRepository;
@@ -16,6 +17,11 @@ public class InMemoryTaskRepository extends InMemoryDomainRepository<Task, TaskI
     @Override
     public List<Task> findAll(){
 
+        return null;
+    }
+
+    @Override
+    public List<Task> findOrderAGV(OrderType order) {
         return null;
     }
 
