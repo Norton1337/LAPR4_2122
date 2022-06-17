@@ -32,6 +32,7 @@ public class OrderBootstrapper implements Action{
                         .ofPostalAddress(new OrderPostalAddress("PostalAddress1"))
                         .ofDateTime(new OrderDateTime(LocalDateTime.now()))
                         .ofState(new OrderState(PossibleStates.WAITING))
+                        .ofWeight(new OrderWeight(100.0))
                         .build();
         OrderType order2 = new OrderBuilder()
                         .ofID(new OrderID(1001L))
@@ -41,6 +42,7 @@ public class OrderBootstrapper implements Action{
                         .ofPostalAddress(new OrderPostalAddress("PostalAddress2"))
                         .ofDateTime(new OrderDateTime(LocalDateTime.now()))
                         .ofState(new OrderState(PossibleStates.WAITING))
+                        .ofWeight(new OrderWeight(200.0))
                         .build();
         OrderType order3 = new OrderBuilder()
                         .ofID(new OrderID(1002L))
@@ -50,6 +52,7 @@ public class OrderBootstrapper implements Action{
                         .ofPostalAddress(new OrderPostalAddress("PostalAddress3"))
                         .ofDateTime(new OrderDateTime(LocalDateTime.now()))
                         .ofState(new OrderState(PossibleStates.WAITING))
+                        .ofWeight(new OrderWeight(300.0))
                         .build();
         OrderType order4 = new OrderBuilder()
                         .ofID(new OrderID(1003L))
@@ -59,6 +62,7 @@ public class OrderBootstrapper implements Action{
                         .ofPostalAddress(new OrderPostalAddress("PostalAddress4"))
                         .ofDateTime(new OrderDateTime(LocalDateTime.now()))
                         .ofState(new OrderState(PossibleStates.WAITING))
+                        .ofWeight(new OrderWeight(400.0))
                         .build();
 
         orderList.add(order1);
