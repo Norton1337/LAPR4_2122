@@ -2,6 +2,7 @@ package eapli.base.infrastructure.bootstrapers.demo;
 import eapli.base.questionnairemanagement.application.QuestionnaireController;
 import eapli.base.questionnairemanagement.domain.Questionnaire.FileName;
 import eapli.base.questionnairemanagement.domain.Questionnaire.QuestionnaireID;
+import eapli.base.questionnairemanagement.domain.Questionnaire.QuestionnaireState;
 import eapli.base.questionnairemanagement.domain.Questionnaire.QuestionnaireTxt;
 import eapli.framework.actions.Action;
 
@@ -25,9 +26,9 @@ public class QuestionnaireBootstrapper implements Action {
     private List<QuestionnaireTxt> createQuestionnaires() {
         List<QuestionnaireTxt> questionnaireList = new ArrayList<>();
 
-        QuestionnaireTxt q1 = new QuestionnaireTxt(new QuestionnaireID("1"), new FileName("exemplo1"));
-        QuestionnaireTxt q2 = new QuestionnaireTxt(new QuestionnaireID("2"), new FileName("exemplo2"));
-        QuestionnaireTxt q3 = new QuestionnaireTxt(new QuestionnaireID("3"), new FileName("exemplo3"));
+        QuestionnaireTxt q1 = new QuestionnaireTxt(new QuestionnaireID("1"), new FileName("exemplo1"),new QuestionnaireState("1"));
+        QuestionnaireTxt q2 = new QuestionnaireTxt(new QuestionnaireID("2"), new FileName("exemplo2"),new QuestionnaireState("1"));
+        QuestionnaireTxt q3 = new QuestionnaireTxt(new QuestionnaireID("3"), new FileName("exemplo3"), new QuestionnaireState("1"));
 
         questionnaireList.add(q1);
         questionnaireList.add(q2);
