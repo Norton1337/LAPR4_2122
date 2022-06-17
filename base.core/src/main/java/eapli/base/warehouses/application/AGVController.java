@@ -1,7 +1,10 @@
 package eapli.base.warehouses.application;
 
 import eapli.base.infrastructure.persistence.PersistenceContext;
+import eapli.base.ordermanagement.domain.OrderType;
+import eapli.base.ordermanagement.repositories.OrderRepository;
 import eapli.base.taskmanagement.domain.Task;
+import eapli.base.taskmanagement.repositories.TaskRepository;
 import eapli.base.warehouses.domain.agvDocks.AgvDocks;
 import eapli.base.warehouses.domain.agvs.AGV;
 import eapli.base.warehouses.domain.agvs.AGVIdentification;
@@ -21,6 +24,8 @@ public class AGVController {
     private AGV agv;
     private final AuthorizationService authz = AuthzRegistry.authorizationService();
     private final AgvRepository agvRepository = PersistenceContext.repositories().agv();
+    private final TaskRepository taskRepository = PersistenceContext.repositories().task();
+
     private final WarehouseService warehouseService = new WarehouseService();
     public AGVController(){}
 
@@ -49,6 +54,12 @@ public class AGVController {
 
     public List<AGV> getAvailableAGVList(){
         return agvRepository.findAllAvailable();
+    }
+    public List<AGV> getOrderAGV(OrderType orderType){
+        List<Task> tasks = taskRepository.findOrderAGV(orderType);
+        if(tasks.isEmpty())
+            return null;
+        return agvRepository.findOrderAGV(tasks.get(0));
     }
     public List<AGV> getAvailableAGVList(Double weight){
         return agvRepository.findAllAvailableOfWeight(weight);

@@ -8,11 +8,9 @@ import eapli.framework.infrastructure.authz.application.AuthorizationService;
 import eapli.framework.infrastructure.authz.application.AuthzRegistry;
 import eapli.framework.infrastructure.authz.domain.model.SystemUser;
 import eapli.framework.infrastructure.authz.domain.model.Username;
-import org.hibernate.criterion.Order;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class OrderController {
@@ -43,6 +41,10 @@ public class OrderController {
 
     public List<OrderType> getWaitingOrders() {
         return orderRepository.findWaitingOrders();
+
+    }
+    public List<OrderType> getPreparedOrders() {
+        return orderRepository.findPreparedOrders();
 
     }
 
@@ -77,5 +79,29 @@ public class OrderController {
         }
         newOrder.setClient(systemUser);
         saveOrder(newOrder);
+    }
+    public OrderType createOrderBootstrapp(List<OrderItem> orderItemList, String billingAddress, String postalAddress, SystemUser systemUser){
+        Double totalPrice = 0.0;
+        for (OrderItem orderItem:orderItemList) {
+            totalPrice+=orderItem.getTotalPrice();
+        }
+        OrderType newOrder = new OrderType(new OrderID(orderRepository.findAll().size()+1000L),
+                new OrderBillingAddress(billingAddress),
+                new OrderLocation("warehouse"),
+                new OrderTotalAmount(totalPrice),
+                new OrderPostalAddress(postalAddress),
+                new OrderDateTime(LocalDateTime.now()),
+                new OrderState(PossibleStates.WAITING),
+                orderItemList
+                );
+        for (OrderItem orderItem: orderItemList) {
+            orderItem.setOrder(newOrder);
+        }
+        newOrder.setClient(systemUser);
+        return newOrder;
+    }
+
+    public void markCompleted(OrderType order){
+        order.changeOrderState(PossibleStates.COMPLETED);
     }
 }
