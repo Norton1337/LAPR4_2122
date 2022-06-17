@@ -132,11 +132,56 @@ public class CreateQuestionnaireUI implements Action {
                     System.out.println("List with all Questionnaires:");
                     List<QuestionnaireTxt> lista = questionnaireController.getAllQuestionnaires();
                     for (QuestionnaireTxt questionnaireTxt:lista) {
-                        System.out.println("{" + "id=" + questionnaireTxt.getId() + ", fileName=" + questionnaireTxt.getFileName() + '}');
+                        String s = String.valueOf(questionnaireTxt.getState());
+                        System.out.println("{" + "id=" + questionnaireTxt.getId() + ", fileName=" + questionnaireTxt.getFileName() + ", state=" + s +  '}');
                     }
+
                     break;
                 //======================================================================================================
                 case 3:
+
+                    System.out.println("List Opened Questionnaires:");
+                    List<QuestionnaireTxt> lista1 = questionnaireController.findOpenQuestionnaires();
+                    for (QuestionnaireTxt questionnaireTxt:lista1) {
+                        System.out.println("{" + "id=" + questionnaireTxt.getId() + ", fileName=" + questionnaireTxt.getFileName() + ", state= " + questionnaireTxt.getState() +  '}');
+                    }
+
+                     /*  System.out.println("\n\n\n");
+                    System.out.println("List New Opened Questionnaires:");
+                    List<QuestionnaireTxt> lista2 = questionnaireController.getOpenQuestionnaires();
+                    for (QuestionnaireTxt questionnaireTxt:lista2) {
+                        System.out.println("{" + "id=" + questionnaireTxt.getId() + ", fileName=" + questionnaireTxt.getFileName() + ", state= " + questionnaireTxt.getState() +  '}');
+                    }*/
+
+                    System.out.println(UI_SINGLE_LINE);
+                    String textinho = Console.readNonEmptyLine("Write ID to Answer or 0 to Exit", "Can't be empty");
+
+                    if (textinho.equals("0"))
+                    {} else {
+                       // QuestionnaireTxt quest = questionnaireController.getQuestionnaireById(textinho);
+                      // System.out.println("{" + "id=" + quest.getId() + ", fileName=" + quest.getFileName() + ", state= " + quest.getState() +  '}');
+
+                       // QuestionnaireTxt quest1 = questionnaireController.findQuestionnaireById(textinho);
+                       // System.out.println("{" + "id=" + quest1.getId() + ", fileName=" + quest1.getFileName() + ", state= " + quest1.getState() +  '}');
+
+
+                        // LER FICHEIRO PARA RESPONDER AS PERGUNTAS.
+
+
+
+
+                    }
+
+
+                    break;
+                //======================================================================================================
+                case 4:
+
+                    //Report Questionnaires
+
+                    break;
+                //======================================================================================================
+                case 5:
                     flag = false;
                     break;
                 //======================================================================================================
@@ -156,7 +201,11 @@ public class CreateQuestionnaireUI implements Action {
         System.out.println(UI_SINGLE_LINE);
         System.out.println("|          2          | View Questionnaires    |");
         System.out.println(UI_SINGLE_LINE);
-        System.out.println("|          3          | Exit                   |");
+        System.out.println("|          3          | Open Questionnaires    |");
+        System.out.println(UI_SINGLE_LINE);
+        System.out.println("|          4          | Report Questionnaires    |");
+        System.out.println(UI_SINGLE_LINE);
+        System.out.println("|          5          | Exit                   |");
         System.out.println(UI_SINGLE_LINE);
     }
 

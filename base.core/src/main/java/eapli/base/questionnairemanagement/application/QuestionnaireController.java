@@ -2,11 +2,13 @@ package eapli.base.questionnairemanagement.application;
 
 
 import eapli.base.ordermanagement.domain.OrderType;
+import eapli.base.ordermanagement.domain.PossibleStates;
 import eapli.base.productmanagement.domain.product.Product;
 import eapli.base.productmanagement.repositories.ProductRepository;
 import eapli.base.questionnairemanagement.QuestionnaireRepository;
 import eapli.base.questionnairemanagement.domain.Questionnaire.FileName;
 import eapli.base.questionnairemanagement.domain.Questionnaire.QuestionnaireID;
+import eapli.base.questionnairemanagement.domain.Questionnaire.QuestionnaireState;
 import eapli.base.questionnairemanagement.domain.Questionnaire.QuestionnaireTxt;
 import eapli.base.taskmanagement.domain.Task;
 import eapli.base.taskmanagement.domain.TaskDateTime;
@@ -18,6 +20,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class QuestionnaireController {
@@ -30,10 +33,16 @@ public class QuestionnaireController {
         // enviar para makefile estes dados,criar ficheiro e abrir
             filew.createFile(fileName, title, wmsg);
             QuestionnaireTxt questionnaireTxt = new QuestionnaireTxt();
-            questionnaireTxt.setFileName(new FileName(fileName));
+
+
+
             List<QuestionnaireTxt> lista = questionnaireRepository.findAll();
             Integer numero = lista.size()+1;
+
+            questionnaireTxt.setFileName(new FileName(fileName));
             questionnaireTxt.setId(new QuestionnaireID(numero.toString()));
+            questionnaireTxt.setState(new QuestionnaireState("0"));
+
             questionnaireRepository.save(questionnaireTxt);
             //QuestionnaireTxt novo =
             //questionnaireRepository.save();
@@ -74,6 +83,39 @@ public class QuestionnaireController {
     public List<QuestionnaireTxt> getAllQuestionnaires(){
         return questionnaireRepository.findAll();
     }
+
+    public List<QuestionnaireTxt> findOpenQuestionnaires() { return questionnaireRepository.findOpenQuestionnaires();}
+
+    public QuestionnaireTxt getQuestionnaireById(String textinho) {
+            QuestionnaireID quest = new QuestionnaireID(textinho);
+        return questionnaireRepository.getQuestionnaireById(quest);
+    }
+
+    public QuestionnaireTxt findQuestionnaireById(String textinho) {
+        List<QuestionnaireTxt> list = questionnaireRepository.findAll();
+        for (QuestionnaireTxt questionnaireTxt : list) {
+            String oi = questionnaireTxt.getId().getId();
+                if (oi.equals(textinho)) {
+                System.out.println("\n\n Encontrado. \n\n");
+                return questionnaireTxt;
+            }
+        }
+        return null;
+    }
+
+  /*  public List<QuestionnaireTxt> getOpenQuestionnaires() {
+        List<QuestionnaireTxt> openL = new ArrayList<>();
+        List<QuestionnaireTxt> list = questionnaireRepository.findAll();
+        for (QuestionnaireTxt questionnaireTxt : list) {
+            if (questionnaireTxt.getState().toString().equals("0"))
+                openL.add(questionnaireTxt);
+        }
+        return openL;
+
+    }
+*/
+
+
 
 }
 
