@@ -78,6 +78,13 @@ public class Rows implements DomainEntity<Rows> {
         return this.shelves;
     }
 
+    public Square getBegin(){
+        return this.begin;
+    }
+    public Square getEnd(){
+        return this.end;
+    }
+
     @Override
     public boolean sameAs(Object other) {
         return false;

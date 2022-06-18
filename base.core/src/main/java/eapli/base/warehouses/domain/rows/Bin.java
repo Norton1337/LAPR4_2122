@@ -46,6 +46,7 @@ public class Bin implements AggregateRoot<BinID> {
         return new Bin();
     }
 
+
     @Override
     public boolean sameAs(Object other) {
         return false;
@@ -53,6 +54,6 @@ public class Bin implements AggregateRoot<BinID> {
 
     @Override
     public BinID identity() {
-        return null;
+        return this.binID;
     }
 }

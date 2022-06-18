@@ -78,6 +78,10 @@ public class Product implements AggregateRoot<ProductBarCode> {
         this.bin=bin;
     }
 
+    public Bin getBin(){
+        return this.bin;
+    }
+
     @Override
     public String toString() {
         return "Product{" +

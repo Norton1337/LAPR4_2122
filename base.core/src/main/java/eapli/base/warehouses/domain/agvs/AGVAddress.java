@@ -3,25 +3,32 @@ package eapli.base.warehouses.domain.agvs;
 import eapli.base.warehouses.domain.square.Square;
 import eapli.framework.domain.model.ValueObject;
 
-import javax.persistence.Embeddable;
-import javax.persistence.Embedded;
+import javax.persistence.*;
 
-@Embeddable
-public class AGVAddress implements ValueObject {
-    @Embedded
-    private Square being;
+@Entity
+public class AGVAddress {
+    @Id
+    @GeneratedValue
+    @Column(name = "AGVADDRESSID")
+    private int id;
 
-    @Embedded
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "addressSquareBegin", referencedColumnName = "SQUAREID")
+    private Square begin;
+
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "addressSquareEnd", referencedColumnName = "SQUAREID")
     private Square end;
 
-    @Embedded
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "addressSquareDepth", referencedColumnName = "SQUAREID")
     private Square depth;
 
     public AGVAddress() {
     }
 
     public AGVAddress(Square begin, Square end, Square depth) {
-        this.being = begin;
+        this.begin = begin;
         this.end = end;
         this.depth = depth;
     }
@@ -29,10 +36,34 @@ public class AGVAddress implements ValueObject {
     @Override
     public String toString() {
         return "AGVAddress{" +
-                "being=" + being +
+                "begin=" + begin +
                 ", end=" + end +
                 ", depth=" + depth +
                 '}';
+    }
+
+    public Square getBegin() {
+        return begin;
+    }
+
+    public void setBegin(Square begin) {
+        this.begin = begin;
+    }
+
+    public Square getEnd() {
+        return end;
+    }
+
+    public void setEnd(Square end) {
+        this.end = end;
+    }
+
+    public Square getDepth() {
+        return depth;
+    }
+
+    public void setDepth(Square depth) {
+        this.depth = depth;
     }
 
     public static AGVAddress valueOf(Square begin, Square end, Square depth){

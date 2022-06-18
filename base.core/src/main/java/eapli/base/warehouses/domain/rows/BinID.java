@@ -12,6 +12,10 @@ public class BinID implements Comparable<BinID> {
 
     }
 
+    public int getBinID(){
+        return binIdentificaiton;
+    }
+
     @Override
     public int compareTo(BinID o) {
         return 0;

@@ -36,6 +36,10 @@ public class AGV implements AggregateRoot<AGVIdentification> {
     @Embedded
     private Status status;
 
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_agvAddress_id", referencedColumnName = "AGVADDRESSID")
+    private AGVAddress agvAddress;
+
     //agvDock_agvDock_id
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_agvDock_id", referencedColumnName = "AGVDOCKID")
@@ -60,6 +64,8 @@ public class AGV implements AggregateRoot<AGVIdentification> {
         this.shortDescription = shortDescription;
         this.status = status;
         this.agvDock = agvDock;
+        this.agvAddress=new AGVAddress(this.agvDock.getBegin(),this.agvDock.getEnd(),this.agvDock.getDepth());
+
     }
 
 
@@ -109,5 +115,9 @@ public class AGV implements AggregateRoot<AGVIdentification> {
 
     public void setTask(Task task){
         this.task=task;
+    }
+
+    public AGVAddress getAgvAddress() {
+        return agvAddress;
     }
 }
