@@ -1,0 +1,65 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+autonumber
+
+
+participant "RouteService" as CTR
+participant "AGV_Controller" as ACTR
+participant "AGV_Service" as AGV_Service
+participant "Product_Service" as PS
+
+
+participant "AGV" as AGV
+participant "AGV_Dock" as AgvDocks
+participant "Product" as prod
+
+participant "OrderRepository" as OR
+participant "AGV_Repository" as AGVR
+participant "Task_Repository" as TR
+participant "Product_Repository" as PR
+
+participant "Utils" as Utils
+
+ -> CTR : running(task,List<OrderItem>, agv)
+
+
+activate CTR
+
+loop for each OrderItem
+
+CTR -> AGV_Service : square = getDock()
+activate AGV_Service
+
+AGV_Service -> AGV : agvDock = getAGVDock(agv)
+activate AGV
+deactivate AGV
+
+AGV_Service -> AgvDocks : getSquare(agvDock)
+activate AgvDocks
+deactivate AgvDocks
+
+deactivate AGV_Service
+
+CTR -> PS : getProduct(OrderItem)
+activate PS
+
+PS -> PR : prod = getProduct(OrderItem.productId)
+activate PR
+deactivate PR
+
+PS -> prod : b = getBin()
+activate prod
+deactivate prod
+
+deactivate PS
+
+CTR -> Utils : path = nearestPath(bin, square)
+
+
+
+end loop
+
+deactivate CTR
+
+
+@enduml
