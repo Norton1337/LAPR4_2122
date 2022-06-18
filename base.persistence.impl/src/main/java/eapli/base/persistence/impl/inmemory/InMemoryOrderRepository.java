@@ -40,4 +40,8 @@ public class InMemoryOrderRepository extends InMemoryDomainRepository<OrderType,
         return null;
     }
 
+    @Override
+    public List<OrderType> findDispatchedOrders() {
+        return null;
+    }
 }

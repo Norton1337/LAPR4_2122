@@ -10,6 +10,7 @@ import eapli.framework.domain.repositories.TransactionalContext;
 import eapli.framework.infrastructure.authz.domain.model.Username;
 import eapli.framework.infrastructure.repositories.impl.jpa.JpaAutoTxRepository;
 
+import javax.persistence.OrderBy;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
@@ -79,5 +80,17 @@ public class JpaOrderRepository extends JpaAutoTxRepository<OrderType, OrderID, 
                 OrderType.class
         ).setParameter("waiting",new OrderState(PossibleStates.WAITING));
         return query.getResultList();
+    }
+
+    @Override
+    public List<OrderType> findDispatchedOrders() {
+        final TypedQuery<OrderType> query = entityManager().createQuery(
+                "SELECT o FROM OrderType o WHERE o.orderState=:dispatched" +
+                        " ORDER BY o.orderDateTime.dateTime ASC",
+                OrderType.class
+        ).setParameter("dispatched", new OrderState(PossibleStates.DISPATCHED));
+        return query.getResultList();
+
+
     }
 }
