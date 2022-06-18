@@ -1,0 +1,64 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+autonumber
+
+actor "System" as SM
+
+participant "AGV_MovementController" as CTR
+participant "AGV_Controller" as ACTR
+participant "RouteService" as RS
+
+participant "AGV" as AGV
+
+participant "OrderRepository" as OR
+participant "AGV_Repository" as AGVR
+participant "Task_Repository" as TR
+
+activate SM
+SM -> CTR : run()
+deactivate SM
+
+activate CTR
+
+CTR -> AGVR : List<order> = orders.findAll()
+activate AGVR
+deactivate AGVR
+
+CTR -> TR : List<task> = task.findAll()
+activate TR
+deactivate TR
+
+CTR -> ACTR : List<AGV> = getAvailableAGVList()
+activate ACTR
+deactivate ACTR
+
+CTR -> ACTR : assignTask(agv, task)
+activate ACTR
+ACTR -> AGV : agv.setTask(task);
+activate AGV
+deactivate AGV
+
+deactivate ACTR
+
+CTR -> TR : orderID = findOrderIDByTask(task)
+activate TR
+deactivate TR
+
+CTR -> OR : order = getOrderByID(orderID)
+activate OR
+deactivate OR
+
+CTR -> OR : List<OrderItem> = getOrderItemList(order)
+activate OR
+deactivate OR
+
+CTR -> RS : running(task,List<OrderItem>, agv)
+activate RS
+
+deactivate RS
+
+
+deactivate CTR
+
+
+@enduml
