@@ -146,5 +146,11 @@ public class OrderType implements AggregateRoot<OrderID> {
     public OrderWeight getOrderWeight(){ return this.orderWeight; }
 
 
+    public List<OrderItem> getOrderItemList() {
+        return orderItemList;
+    }
 
+    public void setOrderItemList(List<OrderItem> orderItemList) {
+        this.orderItemList = orderItemList;
+    }
 }
