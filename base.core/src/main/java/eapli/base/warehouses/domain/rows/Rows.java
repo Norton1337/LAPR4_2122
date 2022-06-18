@@ -21,10 +21,12 @@ public class Rows implements DomainEntity<Rows> {
 
     private int rowIdentification;
 
-    @Embedded
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "rowSquareBegin", referencedColumnName = "SQUAREID")
     private Square begin;
 
-    @Embedded
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "rowSquareEnd", referencedColumnName = "SQUAREID")
     private Square end;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "row")
@@ -70,6 +72,10 @@ public class Rows implements DomainEntity<Rows> {
 
     public static Rows valueOf(int rowID ,Square begin, Square end, int shelvesAmount){
         return new Rows(rowID, begin,end,shelvesAmount);
+    }
+
+    public List<Shelves> getShelves(){
+        return this.shelves;
     }
 
     @Override

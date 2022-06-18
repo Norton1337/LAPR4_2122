@@ -113,6 +113,10 @@ public class Warehouse implements AggregateRoot<WarehouseIdentification> {
         return this.agvDocks;
     }
 
+    public Set<Aisles> allAisles(){
+        return this.aisles;
+    }
+
     private Boolean checkAccessibility(Aisles aisle){
         Square begin = aisle.getBegin();
         Square end = aisle.getEnd();

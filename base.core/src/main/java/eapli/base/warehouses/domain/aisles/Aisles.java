@@ -24,13 +24,16 @@ public class Aisles implements AggregateRoot<AisleID> {
     @Embedded
     private AisleID aisleIdentification;
 
-    @Embedded
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "aisleSquareBegin", referencedColumnName = "SQUAREID")
     private Square begin;
 
-    @Embedded
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "aisleSquareEnd", referencedColumnName = "SQUAREID")
     private Square end;
 
-    @Embedded
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "aisleSquareDepth", referencedColumnName = "SQUAREID")
     private Square depth;
 
     @Embedded
@@ -92,6 +95,10 @@ public class Aisles implements AggregateRoot<AisleID> {
     }
     public Square getDepth(){
         return this.depth;
+    }
+
+    public List<Rows> getRows(){
+        return this.rows;
     }
 
     public Accessibility getAccessibility(){

@@ -26,13 +26,16 @@ public class AgvDocks implements AggregateRoot<AgvDockIdentification> {
     @Version
     private Long version;
 
-    @Embedded
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "dockSquareBegin", referencedColumnName = "SQUAREID")
     private Square begin;
 
-    @Embedded
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "dockSquareEnd", referencedColumnName = "SQUAREID")
     private Square end;
 
-    @Embedded
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "dockSquareDepth", referencedColumnName = "SQUAREID")
     private Square depth;
 
     @Embedded

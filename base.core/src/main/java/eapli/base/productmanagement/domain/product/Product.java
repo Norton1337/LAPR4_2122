@@ -1,6 +1,7 @@
 package eapli.base.productmanagement.domain.product;
 
 import eapli.base.categorymanagment.domain.Category;
+import eapli.base.warehouses.domain.rows.Bin;
 import eapli.framework.domain.model.AggregateRoot;
 
 import javax.persistence.*;
@@ -47,6 +48,10 @@ public class Product implements AggregateRoot<ProductBarCode> {
     @JoinColumn(name = "fk_category_id", referencedColumnName = "CATEGORYID")
     private Category productCategory;
 
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_bin_id", referencedColumnName = "BINID")
+    private Bin bin;
+
 
     protected Product(){}
 
@@ -67,6 +72,10 @@ public class Product implements AggregateRoot<ProductBarCode> {
         this.price = price;
         this.extendedDescription = extendedDescription;
         this.productCategory = productCategory;
+    }
+
+    public void setBin(Bin bin){
+        this.bin=bin;
     }
 
     @Override

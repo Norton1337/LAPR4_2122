@@ -10,11 +10,11 @@ import javax.persistence.Id;
 
 @Embeddable
 public class Length implements Comparable<Length>, ValueObject {
-    @Column(name="length", insertable = false, updatable = false)
+
     private int lengthNum;
 
     public Length(int lengthNum){
-        Preconditions.ensure(lengthNum>0);
+        //Preconditions.ensure(lengthNum>0);
         this.lengthNum = lengthNum;
     }
 

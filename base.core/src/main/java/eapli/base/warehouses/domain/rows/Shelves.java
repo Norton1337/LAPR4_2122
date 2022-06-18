@@ -45,6 +45,10 @@ public class Shelves implements ValueObject {
                 '}';
     }
 
+    public StorageArea getStorageArea(){
+        return this.storageArea;
+    }
+
     public static Shelves valueOf(int shelfId){
         return new Shelves(shelfId);
     }

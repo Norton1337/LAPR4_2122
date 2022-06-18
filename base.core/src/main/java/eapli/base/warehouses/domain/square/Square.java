@@ -1,15 +1,25 @@
 package eapli.base.warehouses.domain.square;
+import eapli.base.warehouses.domain.aisles.AisleID;
+import eapli.framework.domain.model.AggregateRoot;
 import eapli.framework.domain.model.DomainEntity;
 import eapli.framework.domain.model.ValueObject;
 import eapli.framework.validations.Preconditions;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.persistence.Embedded;
-import javax.persistence.JoinColumn;
+import javax.persistence.*;
+import java.util.concurrent.ThreadLocalRandom;
 
-@Embeddable
-public class Square implements ValueObject, DomainEntity<Square>, Comparable<Square> {
+@Entity
+public class Square implements AggregateRoot<SquareID> {
+    @Id
+    @GeneratedValue
+    @Column(name = "SQUAREID")
+    private int squareId;
+
+    @Version
+    private Long version;
+
+    @Embedded
+    private SquareID squareIdentification;
     @Embedded
     private Length length;
 
@@ -19,6 +29,7 @@ public class Square implements ValueObject, DomainEntity<Square>, Comparable<Squ
     public Square(Length length, Width width){
        // Preconditions.noneNull(length,width);
 
+        this.squareIdentification=new SquareID(ThreadLocalRandom.current().nextInt(100000000,999999999+1));
         this.length=length;
         this.width=width;
     }
@@ -39,11 +50,6 @@ public class Square implements ValueObject, DomainEntity<Square>, Comparable<Squ
         return new Square(length,width);
     }
 
-    @Override
-    public boolean sameAs(Object other) {
-        return this.equals(other);
-    }
-
     public Length length(){
         return this.length;
     }
@@ -52,14 +58,14 @@ public class Square implements ValueObject, DomainEntity<Square>, Comparable<Squ
         return this.width;
     }
 
+
     @Override
-    public int compareTo(Square other) {
-        return toString().compareTo(other.toString());
+    public boolean sameAs(Object other) {
+        return false;
     }
 
     @Override
-    public Square identity() {
-        return this;
+    public SquareID identity() {
+        return null;
     }
-
 }

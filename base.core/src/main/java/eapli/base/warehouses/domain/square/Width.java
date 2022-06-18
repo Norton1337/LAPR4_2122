@@ -8,11 +8,11 @@ import javax.persistence.Embeddable;
 
 @Embeddable
 public class Width implements Comparable<Width>, ValueObject {
-    @Column(name="width", insertable = false, updatable = false)
+
     private int widthNum;
 
     public Width(int widthNum){
-        Preconditions.ensure(widthNum>0);
+        //Preconditions.ensure(widthNum>0);
         this.widthNum = widthNum;
     }
 

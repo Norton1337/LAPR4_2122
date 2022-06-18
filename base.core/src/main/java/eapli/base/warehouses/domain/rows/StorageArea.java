@@ -32,6 +32,10 @@ public class StorageArea {
                 '}';
     }
 
+    public Bin getBin(){
+        return this.bin;
+    }
+
     public static StorageArea valueOf(){
         return new StorageArea();
     }
