@@ -31,6 +31,7 @@ import eapli.base.questionnairemanagement.QuestionnaireRepository;
 import eapli.base.taskmanagement.repositories.TaskRepository;
 import eapli.base.warehouses.repositories.AgvDockRepository;
 import eapli.base.warehouses.repositories.AgvRepository;
+import eapli.base.warehouses.repositories.BinRepository;
 import eapli.base.warehouses.repositories.WarehouseRepository;
 import eapli.framework.domain.repositories.TransactionalContext;
 import eapli.framework.infrastructure.authz.domain.repositories.UserRepository;
@@ -152,6 +153,16 @@ public class InMemoryRepositoryFactory implements RepositoryFactory {
 
     @Override
     public QuestionnaireRepository questionnaire() {
+        return null;
+    }
+
+    @Override
+    public BinRepository bin(TransactionalContext autoTx) {
+        return null;
+    }
+
+    @Override
+    public BinRepository bin() {
         return null;
     }
 

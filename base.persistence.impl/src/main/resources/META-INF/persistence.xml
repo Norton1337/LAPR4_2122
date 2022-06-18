@@ -20,6 +20,7 @@
     <class>eapli.base.warehouses.domain.rows.Bin</class>
     <class>eapli.base.warehouses.domain.agvDocks.AgvDocks</class>
     <class>eapli.base.warehouses.domain.agvs.AGV</class>
+    <class>eapli.base.warehouses.domain.square.Square</class>
     <class>eapli.base.productmanagement.domain.product.Product</class>
     <class>eapli.base.ordermanagement.domain.OrderItem</class>
     <class>eapli.base.categorymanagment.domain.Category</class>

@@ -30,6 +30,7 @@ import eapli.base.taskmanagement.repositories.TaskRepository;
 import eapli.base.warehouses.domain.agvDocks.AgvDocks;
 import eapli.base.warehouses.repositories.AgvDockRepository;
 import eapli.base.warehouses.repositories.AgvRepository;
+import eapli.base.warehouses.repositories.BinRepository;
 import eapli.base.warehouses.repositories.WarehouseRepository;
 import eapli.framework.domain.repositories.TransactionalContext;
 import eapli.framework.infrastructure.authz.domain.repositories.UserRepository;
@@ -123,4 +124,8 @@ public interface RepositoryFactory {
     QuestionnaireRepository questionnaire(TransactionalContext autoTx);
 
     QuestionnaireRepository questionnaire();
+
+    BinRepository bin(TransactionalContext autoTx);
+
+    BinRepository bin();
 }
