@@ -70,4 +70,43 @@ public class Task implements AggregateRoot<TaskID> {
         return taskID;
     }
 
+    public Long getIdOfTask() {
+        return idOfTask;
+    }
+
+    public void setIdOfTask(Long idOfTask) {
+        this.idOfTask = idOfTask;
+    }
+
+    public TaskID getTaskID() {
+        return taskID;
+    }
+
+    public void setTaskID(TaskID taskID) {
+        this.taskID = taskID;
+    }
+
+    public TaskDateTime getTaskDateTime() {
+        return taskDateTime;
+    }
+
+    public void setTaskDateTime(TaskDateTime taskDateTime) {
+        this.taskDateTime = taskDateTime;
+    }
+
+    public OrderType getOrder() {
+        return order;
+    }
+
+    public void setOrder(OrderType order) {
+        this.order = order;
+    }
+
+    public AGV getAgv() {
+        return agv;
+    }
+
+    public void setAgv(AGV agv) {
+        this.agv = agv;
+    }
 }
