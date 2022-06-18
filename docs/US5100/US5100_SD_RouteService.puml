@@ -25,7 +25,6 @@ participant "Utils" as Utils
 
 activate CTR
 
-loop for each OrderItem
 
 CTR -> AGV_Service : square = getDock()
 activate AGV_Service
@@ -55,11 +54,16 @@ deactivate PS
 
 CTR -> Utils : path = nearestPath(bin, square)
 
+CTR -> CTR : ASSIGN ROUTE (path)
+CTR -> CTR : INICIAR ROUTE ()
+CTR -> CTR : Verificar disponibilidade rota ( ??? )
+CTR -> CTR : TERMINAR ROUTE (libertar agv)
 
 
-end loop
+CTR -> CTR : REPETIR PARA TODOS OS PRODUCTS
 
 deactivate CTR
+
 
 
 @enduml
