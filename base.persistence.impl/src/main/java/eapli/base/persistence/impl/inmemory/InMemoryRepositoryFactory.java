@@ -29,10 +29,7 @@ import eapli.base.ordermanagement.repositories.OrderRepository;
 import eapli.base.productmanagement.repositories.ProductRepository;
 import eapli.base.questionnairemanagement.QuestionnaireRepository;
 import eapli.base.taskmanagement.repositories.TaskRepository;
-import eapli.base.warehouses.repositories.AgvDockRepository;
-import eapli.base.warehouses.repositories.AgvRepository;
-import eapli.base.warehouses.repositories.BinRepository;
-import eapli.base.warehouses.repositories.WarehouseRepository;
+import eapli.base.warehouses.repositories.*;
 import eapli.framework.domain.repositories.TransactionalContext;
 import eapli.framework.infrastructure.authz.domain.repositories.UserRepository;
 import eapli.framework.infrastructure.authz.repositories.impl.InMemoryUserRepository;
@@ -163,6 +160,16 @@ public class InMemoryRepositoryFactory implements RepositoryFactory {
 
     @Override
     public BinRepository bin() {
+        return null;
+    }
+
+    @Override
+    public AisleRepository aisle(TransactionalContext autoTx) {
+        return null;
+    }
+
+    @Override
+    public AisleRepository aisle() {
         return null;
     }
 
