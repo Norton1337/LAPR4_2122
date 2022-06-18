@@ -2,12 +2,9 @@ package eapli.base.app.backoffice.console.presentation.warehouse;
 
 import eapli.base.ordermanagement.application.OrderController;
 import eapli.base.ordermanagement.domain.OrderType;
-import eapli.base.taskmanagement.domain.Task;
-import eapli.base.warehouses.domain.agvs.AGV;
 import eapli.framework.io.util.Console;
 
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,9 +14,8 @@ public class UpdateDispatchedOrdersUI {
 
 
     public boolean show(){
-        System.out.println("");
+        System.out.println("------");
 
-        int i =0;
 
         List<OrderType> dispatchedOrdersList = orderController.getDispatchedOrders();
         List<OrderType> updatedOrders = new ArrayList<>();
@@ -37,6 +33,7 @@ public class UpdateDispatchedOrdersUI {
             return false;
         }
 
+        int i =0;
         boolean flag = true;
         while (flag){
             for (OrderType order : dispatchedOrdersList){
@@ -49,8 +46,11 @@ public class UpdateDispatchedOrdersUI {
             OrderType orderToUpdate = dispatchedOrdersList.get(orderToUp); //starts at 0
             if (!updatedOrders.contains(orderToUpdate)){
 
-                //------- UPDATE ORDER TO BEING DELIVERED  ------
+                orderController.updateOrderToBeingDelivered(orderToUpdate);
                 updatedOrders.add(orderToUpdate);
+            }
+            else {
+                System.out.println("Order already updated");
             }
             System.out.println("Would you like to update more orders?");
             int upd = Console.readInteger("0-No\n1-Yes\n>");
@@ -59,9 +59,6 @@ public class UpdateDispatchedOrdersUI {
             }
 
         }
-
-
-
 
         return false;
     }

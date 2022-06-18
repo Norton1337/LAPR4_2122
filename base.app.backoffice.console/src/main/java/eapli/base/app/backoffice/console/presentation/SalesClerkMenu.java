@@ -1,6 +1,8 @@
 package eapli.base.app.backoffice.console.presentation;
 
+import eapli.base.app.backoffice.console.presentation.warehouse.AGVManagementUI;
 import eapli.base.app.backoffice.console.presentation.warehouse.UpdateDispatchedOrdersUI;
+import eapli.base.app.backoffice.console.presentation.warehouse.WarehouseMenu;
 import eapli.base.app.backoffice.console.questionnaire.CreateQuestionnaireUI;
 import eapli.framework.actions.Action;
 import eapli.framework.actions.Actions;
@@ -19,9 +21,9 @@ public class SalesClerkMenu extends Menu {
     }
 
     private void buildMenu(){
-        addItem(QUESTIONNAIRES, "1 - Questionnaires", new CreateQuestionnaireUI());
-        addItem(UPDATEDISPORDERS, "Update dispatched orders", (Action) new UpdateDispatchedOrdersUI());
-        addItem(EXIT_OPTION, "0 - Return", Actions.SUCCESS);
+        addItem(QUESTIONNAIRES, "Questionnaires", new CreateQuestionnaireUI());
+        addItem(UPDATEDISPORDERS, "Update dispatched orders",  new UpdateDispatchedOrdersUI()::show );
+        addItem(EXIT_OPTION, "Return", Actions.SUCCESS);
 
     }
 }

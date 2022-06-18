@@ -61,6 +61,9 @@ public class OrderController {
         return orderRepository.findDispatchedOrders();
     }
 
+    public void updateOrderToBeingDelivered(OrderType order){
+        order.changeOrderState(PossibleStates.BEING_DELIVERED);
+    }
 
     public void createOrder(List<CartItem> cartItems, String billingAddress, String postalAddress, SystemUser systemUser){
         List<OrderItem> orderItemList = new ArrayList<>();
