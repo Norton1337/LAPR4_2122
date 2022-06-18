@@ -9,6 +9,7 @@ import eapli.base.warehouses.domain.agvDocks.AgvDocks;
 import eapli.base.warehouses.domain.agvDocks.AgvDocksBuilder;
 import eapli.base.warehouses.domain.aisles.Aisles;
 import eapli.base.warehouses.domain.aisles.AislesBuilder;
+import eapli.base.warehouses.domain.rows.Bin;
 import eapli.base.warehouses.domain.rows.Rows;
 import eapli.base.warehouses.domain.rows.RowsBuilder;
 import eapli.base.warehouses.domain.square.Accessibility;
@@ -17,6 +18,7 @@ import eapli.base.warehouses.domain.square.SquareBuilder;
 import eapli.base.warehouses.domain.square.Width;
 import eapli.base.warehouses.domain.warehouse.*;
 import eapli.base.warehouses.dto.WarehouseDTO;
+import eapli.base.warehouses.repositories.BinRepository;
 import eapli.base.warehouses.repositories.WarehouseRepository;
 import eapli.framework.infrastructure.authz.application.AuthorizationService;
 import eapli.framework.infrastructure.authz.application.AuthzRegistry;
@@ -34,6 +36,7 @@ public class WarehouseSetupController {
     private final AuthorizationService authz = AuthzRegistry.authorizationService();
 
     private final WarehouseRepository warehouseRepository = eapli.base.infrastructure.persistence.PersistenceContext.repositories().warehouse();
+    private final BinRepository binRepository = eapli.base.infrastructure.persistence.PersistenceContext.repositories().bin();
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
@@ -149,6 +152,17 @@ public class WarehouseSetupController {
         }
 
 
+    }
+
+    public Warehouse getWarehouse(){
+        List<Warehouse> warehouseList = warehouseRepository.findAll();
+        if(warehouseList.isEmpty())
+            return null;
+        return warehouseList.get(0);
+    }
+
+    public List<Bin> getBins(){
+        return binRepository.findAll();
     }
 
 }
