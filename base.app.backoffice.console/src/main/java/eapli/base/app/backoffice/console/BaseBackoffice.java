@@ -23,6 +23,7 @@
  */
 package eapli.base.app.backoffice.console;
 
+import eapli.base.app.backoffice.console.presentation.warehouse.AGVManagementUI;
 import eapli.base.app.common.console.BaseApplication;
 import eapli.base.app.common.console.presentation.authz.LoginUI;
 import eapli.base.app.backoffice.console.presentation.MainMenu;
@@ -32,6 +33,7 @@ import eapli.base.clientusermanagement.domain.events.SignupAcceptedEvent;
 import eapli.base.infrastructure.persistence.PersistenceContext;
 import eapli.base.usermanagement.application.eventhandlers.SignupAcceptedWatchDog;
 import eapli.base.usermanagement.domain.BasePasswordPolicy;
+import eapli.base.warehouses.application.AGVMovementController;
 import eapli.framework.infrastructure.authz.application.AuthzRegistry;
 import eapli.framework.infrastructure.authz.domain.model.PlainTextEncoder;
 import eapli.framework.infrastructure.eventpubsub.EventDispatcher;
@@ -68,6 +70,8 @@ public final class BaseBackoffice extends BaseApplication {
             // go to main menu
             final MainMenu menu = new MainMenu();
             menu.mainLoop();
+            AGVMovementController agvMovementController=new AGVMovementController();
+            agvMovementController.run();
         }
     }
 
