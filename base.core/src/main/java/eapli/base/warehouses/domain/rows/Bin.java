@@ -56,4 +56,8 @@ public class Bin implements AggregateRoot<BinID> {
     public BinID identity() {
         return this.binID;
     }
+
+    public int binID(){
+        return this.id;
+    }
 }

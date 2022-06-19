@@ -2,7 +2,6 @@ package eapli.base.warehouses.domain.rows;
 
 
 import eapli.framework.domain.model.ValueObject;
-import eapli.framework.validations.Preconditions;
 
 import javax.persistence.*;
 
@@ -47,6 +46,10 @@ public class Shelves implements ValueObject {
 
     public StorageArea getStorageArea(){
         return this.storageArea;
+    }
+
+    public Bin getBin(){
+        return this.storageArea.getBin();
     }
 
     public static Shelves valueOf(int shelfId){

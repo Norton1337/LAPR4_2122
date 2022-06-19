@@ -10,24 +10,30 @@ import eapli.base.warehouses.domain.rows.Shelves;
 import eapli.base.warehouses.domain.warehouse.Warehouse;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
-public class RouteService {
-
+public class RouteService implements Runnable{
     private AGV agv;
-    public void running(AGV agv, Warehouse warehouse){
+    private final Warehouse warehouse;
+
+    public RouteService(AGV agv, Warehouse warehouse){
         this.agv=agv;
+        this.warehouse=warehouse;
+    }
+
+    @Override
+    public void run(){
         Task task = agv.getTask();
         List<OrderItem> orderItemList = task.getOrder().getOrderItemList();
         List<Bin> binList = new ArrayList<>();
         for (OrderItem item:orderItemList) {
             binList.add(item.product().getBin());
         }
-        List<Rows> itemLocations = findLocation(binList, warehouse);
+        List<Rows> itemLocations = findLocation(binList);
         List<Rows> bestPath = calculateOptimalPath(itemLocations);
-        System.out.println(bestPath);
+        System.out.println(agv.getAgvAddress());
+        System.out.println(bestPath.size());
+
     }
 
     private List<Rows> calculateOptimalPath(List<Rows> itemLocations){
@@ -72,23 +78,27 @@ public class RouteService {
     }
 
 
-    private List<Rows> findLocation(List<Bin> binList, Warehouse warehouse) {
+    private List<Rows> findLocation(List<Bin> binList) {
         List<Aisles> aislesList = new ArrayList<>(warehouse.allAisles());
         List<Rows> rowsList = new ArrayList<>();
         List<Integer> idList = new ArrayList<>();
         for (Bin bin:binList) {
-            idList.add(bin.identity().getBinID());
+            idList.add(bin.binID());
         }
         for (Aisles aisle:aislesList) {
             List<Rows> rows = aisle.getRows();
             for (Rows row:rows) {
+
                 List<Shelves> shelves = row.getShelves();
                 for (Shelves shelf:shelves) {
-                    if(idList.contains(shelf.getStorageArea().getBin().identity().getBinID())){
-                        rowsList.add(row);
-                        break;
-                    }
+                    try {
+                        if (idList.contains(shelf.getBin().binID())) {
+                            rowsList.add(row);
+                            break;
+                        }
+                    }catch (Exception e){}
                 }
+
             }
         }
 

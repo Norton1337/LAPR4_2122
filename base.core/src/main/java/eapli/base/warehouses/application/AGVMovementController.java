@@ -26,7 +26,7 @@ public class AGVMovementController {
     private final AGVController agvController = new AGVController();
     private final OrderController orderController = new OrderController();
     private final TaskController taskController = new TaskController();
-    private final RouteService routeService= new RouteService();
+
 
     public void run(){
         System.out.println("starting automations");
@@ -40,8 +40,11 @@ public class AGVMovementController {
                 agvList.add(newAGV.get(0));
         }
         for (AGV agv:agvList) {
-            routeService.running(agv,warehouse);
+            RouteService routeService= new RouteService(agv,warehouse);
+            Thread myThread = new Thread(routeService);
+            myThread.start();
         }
+        while(true){}
     }
 
     private void assignTasks(){
