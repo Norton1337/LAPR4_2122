@@ -4,11 +4,13 @@ import eapli.base.questionnaire.QuestionnaireMain2;
 import eapli.base.questionnairemanagement.application.QuestionnaireController;
 import eapli.framework.io.util.Console;
 
-
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Objects;
 
-public class QuestionnaireUI {
+public class QuestionnaireReportsUI {
 
     private QuestionnaireController questionnaireController = new QuestionnaireController();
 
@@ -42,15 +44,17 @@ public class QuestionnaireUI {
 
         file = Console.readNonEmptyLine("Escolha um questionário", "Obrigatória a escolha de uma opção");
         int i=0;
+        String content = "";
         for (File files : Objects.requireNonNull(folder.listFiles())){
             if(Integer.parseInt(file)==i){
-
-                QuestionnaireMain2.answerQuestionnaire(String.valueOf(files));
+                String answerFile=files.getName().substring(0, files.getName().length() - 4)+"Answers.txt";
+                questionnaireController.treatAnswerData(answerFile);
+                break;
             }
             i++;
 
         }
-        System.out.println(file);
+
 
         return true;
     }
