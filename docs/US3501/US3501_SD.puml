@@ -4,58 +4,36 @@ autonumber
 
 actor "Customer" as C
 
-participant "ListQuest_UI" as UI
-participant "ListQuest_Controller" as CTR
-participant "QuestionnairesRepository" as QR
-participant "Questionnaire" as Q
+participant "ClientCheckOrdersUI" as UI
+participant "Order_Controller" as CTR
+participant "Order_Repository" as OR
+participant "Order" as O
 
 activate C
 
-C -> UI : I want to list Questionnaires
+C -> UI : I want to Check Open Orders
 activate UI
+
+
+
+UI -> CTR : getClientOpenOrders();
 activate CTR
 
-UI -> CTR : findOpenQuestionnaires();
+CTR -> SystemUser : getSystemUser()
+activate SystemUser
+SystemUser --> CTR : user
+deactivate SystemUser
 
-CTR -> QR : List<Questionnaires> findOpenQuestionnaires();
-activate QR
-deactivate QR
 
-CTR --> UI : List<Questionnaires>
+CTR -> OR : findOpenOrders(user)
+activate OR
+OR -> CTR : List<OrderType>
+deactivate OR
+
+
+CTR --> UI : List<OrderType>
 deactivate CTR
-UI --> C : List Questionnaires
-
-C -> UI : Choose one
-UI -> CTR: getQuestionnaireById(text);
-activate CTR
-
-CTR -> QR : getQuestionnaireById(text)
-activate QR
-deactivate QR
-
-
-
-
-CTR --> UI : Questionnaire
-deactivate CTR
-
-UI --> C : Apresent Questionnaire
-
-C -> UI : Answer Questionnaire
-
-UI --> C : Confirm Answers
-
-C -> UI : Confirmation Sucess
-
-UI -> CTR : confirmQuestionnaire(quest)
-activate CTR
-
-CTR -> Q : setState()
-activate Q
-Q -> Q : setState(1)
-deactivate Q
-
-deactivate CTR
+UI --> C : List Open Orders
 
 UI --> C : Operation sucess
 deactivate UI

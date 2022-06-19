@@ -1,0 +1,76 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+autonumber
+
+actor "Customer" as C
+
+participant "ListQuest_UI" as UI
+participant "ListQuest_Controller" as CTR
+participant "QuestionnairesRepository" as QR
+participant "Questionnaire" as Q
+
+activate C
+
+C -> UI : I want to list Questionnaires
+activate UI
+activate CTR
+
+UI -> CTR : findOpenQuestionnaires();
+
+CTR -> QR : List<Questionnaires> findOpenQuestionnaires();
+activate QR
+deactivate QR
+
+CTR --> UI : List<Questionnaires>
+deactivate CTR
+UI --> C : List Questionnaires
+
+C -> UI : Choose one
+UI -> CTR: getQuestionnaireById(text);
+activate CTR
+
+CTR -> QR : getQuestionnaireById(text)
+activate QR
+deactivate QR
+
+CTR --> UI : Questionnaire
+deactivate CTR
+
+UI --> C : Apresent Questionnaire
+
+C -> UI : Answer Questionnaire
+
+
+
+
+
+
+
+
+
+
+
+UI --> C : Confirm Answers
+
+C -> UI : Confirmation Sucess
+
+UI -> CTR : confirmQuestionnaire(quest)
+activate CTR
+
+CTR -> Q : setState()
+activate Q
+Q -> Q : setState(1)
+deactivate Q
+
+deactivate CTR
+
+UI --> C : Operation sucess
+deactivate UI
+
+
+deactivate CTR
+
+
+
+
+@enduml
