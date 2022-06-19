@@ -43,7 +43,7 @@ public class UpdateDispatchedOrdersUI {
             }
             System.out.println("Choose order you would like to update");
             int orderToUp = Console.readInteger("-->");
-            OrderType orderToUpdate = dispatchedOrdersList.get(orderToUp); //starts at 0
+            OrderType orderToUpdate = dispatchedOrdersList.get(orderToUp);
             if (!updatedOrders.contains(orderToUpdate)){
 
                 orderController.updateOrderToBeingDelivered(orderToUpdate);

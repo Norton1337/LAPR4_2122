@@ -1,0 +1,50 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor "Sales Clerk" as SC
+
+ participant ":UpdateDispatchedOrdersUI" as UpdUI
+
+ participant ":OrderController" as OrderCont
+ participant ":OrderRepository" as OrderRepo
+ participant ":OrderType" as OrderTy
+ participant ":OrderState" as OrderSta
+
+
+
+ activate SC
+ activate UpdUI
+ activate OrderCont
+ activate OrderRepo
+ activate OrderTy
+ activate OrderSta
+
+
+ SC -> UpdUI : Ask to update some order (from dispatched) to being delivered
+
+ UpdUI -> OrderCont : getDispatchedOrders()
+
+ OrderCont -> OrderRepo: findDispatchedOrders()
+
+ OrderRepo --> OrderCont: List<OrderType>
+
+ OrderCont --> UpdUI: dispatchedOrdersList
+
+ loop flag == true
+     UpdUI -> OrderCont: updateOrderToBeingDelivered()
+     OrderCont -> OrderTy : changeOrderState(state: PossibleStates)
+
+     OrderTy -> OrderSta: new OrderState()
+     end
+
+ UpdUI --> SC: Operation (in) success
+
+ deactivate UpdUI
+ deactivate OrderCont
+ deactivate OrderRepo
+ deactivate OrderTy
+ deactivate OrderSta
+
+@enduml
