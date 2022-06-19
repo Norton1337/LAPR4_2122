@@ -30,10 +30,14 @@ public class OrderBootstrapper implements Action{
 
         List<OrderItem> orderItemList1 = new ArrayList<>();
         orderItemList1.add(new OrderItem(productList.get(0),1));
+        orderItemList1.add(new OrderItem(productList.get(1),1));
+        orderItemList1.add(new OrderItem(productList.get(2),1));
         orderList.add(orderController.createOrderBootstrapp(orderItemList1,"NullBillingAddress1","NullPostalAddress1",null));
 
         List<OrderItem> orderItemList2 = new ArrayList<>();
+        orderItemList2.add(new OrderItem(productList.get(0),2));
         orderItemList2.add(new OrderItem(productList.get(1),2));
+        orderItemList2.add(new OrderItem(productList.get(2),2));
         orderList.add(orderController.createOrderBootstrapp(orderItemList2,"NullBillingAddress2","NullPostalAddress2",null));
 
         List<OrderItem> orderItemList3 = new ArrayList<>();

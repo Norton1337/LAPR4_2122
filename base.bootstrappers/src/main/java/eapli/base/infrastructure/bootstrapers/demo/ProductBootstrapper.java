@@ -52,7 +52,6 @@ public class ProductBootstrapper implements Action {
 
         List<Bin> bins = warehouseSetupController.getBins();
 
-
         Product product1 = new Product(
                 new ProductCode("TV LG OLED48C16LA"),
                 new ProductBarCode("3498949197"),
@@ -67,8 +66,8 @@ public class ProductBootstrapper implements Action {
                 categories.get(0)
 
         );
-        product1.setBin(bins.get(0));
-        bins.get(0).setProduct(product1);
+        product1.setBin(bins.get(10));
+        bins.get(10).setProduct(product1);
         Product product2 = new Product(
                 new ProductCode("SAMSUNG WD90T734DBH/S3"),
                 new ProductBarCode("0603523154"),
@@ -83,8 +82,8 @@ public class ProductBootstrapper implements Action {
                 categories.get(1)
 
         );
-        product2.setBin(bins.get(1));
-        bins.get(1).setProduct(product2);
+        product2.setBin(bins.get(21));
+        bins.get(21).setProduct(product2);
         Product product3 = new Product(
                 new ProductCode("Consola PS5(825GB)"),
                 new ProductBarCode("8477934774"),
@@ -99,8 +98,8 @@ public class ProductBootstrapper implements Action {
                 categories.get(2)
 
         );
-        product3.setBin(bins.get(2));
-        bins.get(2).setProduct(product3);
+        product3.setBin(bins.get(32));
+        bins.get(32).setProduct(product3);
         productList.add(product1);
         productList.add(product2);
         productList.add(product3);

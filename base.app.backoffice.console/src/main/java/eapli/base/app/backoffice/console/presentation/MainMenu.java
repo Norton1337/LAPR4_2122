@@ -107,6 +107,7 @@ public class MainMenu extends AbstractUI {
     private static final int CLIENT_USER_OPTION = 7;
 
     private static final int SALES_CLERK_OPTION = 8;
+    private static final int SALES_MANAGER_OPTION = 9;
 
     private static final String SEPARATOR_LABEL = "--------------";
 
@@ -170,6 +171,11 @@ public class MainMenu extends AbstractUI {
         if(authz.isAuthenticatedUserAuthorizedTo(BaseRoles.SALES_CLERK)){
             final Menu SLMENU = new SalesClerkMenu();
             mainMenu.addSubMenu(SALES_CLERK_OPTION, SLMENU);
+
+        }
+        if(authz.isAuthenticatedUserAuthorizedTo(BaseRoles.SALES_MANAGER)){
+            final Menu SMMENU = new SalesManagerMenu();
+            mainMenu.addSubMenu(SALES_MANAGER_OPTION, SMMENU);
 
         }
 
