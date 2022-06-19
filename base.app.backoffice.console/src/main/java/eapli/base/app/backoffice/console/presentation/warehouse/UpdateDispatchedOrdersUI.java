@@ -48,6 +48,7 @@ public class UpdateDispatchedOrdersUI {
 
                 orderController.updateOrderToBeingDelivered(orderToUpdate);
                 updatedOrders.add(orderToUpdate);
+                System.out.println("Order state updated");
             }
             else {
                 System.out.println("Order already updated");
