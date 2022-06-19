@@ -1,5 +1,5 @@
 
-
+/*
 public class Constants{
 
     public static final int COMMTEST=0;
@@ -10,3 +10,4 @@ public class Constants{
 
 
 }
+ */
