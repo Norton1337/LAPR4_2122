@@ -19,8 +19,11 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class QuestionnaireController {
@@ -120,6 +123,56 @@ public class QuestionnaireController {
     }
 */
 
+    public void treatAnswerData(String answerFile){
+        String content = "";
+        try {
+            content= Files.readString(Path.of("Questionarios/Answers/" + answerFile));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        String numbersAnswers = content.substring(content.indexOf("\n")+1).trim();
+        String[] arrOfNumbersAnswers = numbersAnswers.split("\n");
+        List<String> questionNumbers = new ArrayList<>();
+        List<String> questionAnswers = new ArrayList<>();
+
+        for (String a : arrOfNumbersAnswers) {
+            String[] questionAndAnswers = a.split(",");
+            List<String> qAndAList = new ArrayList<>();
+            Collections.addAll(qAndAList, questionAndAnswers);
+            if(questionNumbers.contains(qAndAList.get(0))){/*
+                String oldAnswer = questionAnswers.get(questionNumbers.indexOf(qAndAList.get(0)));
+                String newAnswer = qAndAList.get(1);
+                System.out.println("old answer="+oldAnswer);
+                System.out.println("new answer="+newAnswer);
+                String result = " - "+"oldAnswer"+", "+"newAnswer"+" - ";
+                System.out.println(result.length());
+                System.out.println(result);
+
+                */
+                questionAnswers.add(qAndAList.get(1));
+            }else {
+                questionNumbers.add(qAndAList.get(0));
+                questionAnswers.add(qAndAList.get(1));
+
+            }
+        }
+        int test=0;
+        for (int i = 0; i < questionNumbers.size(); i++) {
+            System.out.println("\nQuestion["+questionNumbers.get(i)+"]:");
+            int pos=0;
+            for (String a:questionAnswers) {
+                if(i+test*questionNumbers.size()==pos) {
+                    System.out.println(a);
+                    test++;
+                }
+                pos++;
+            }
+            test=0;
+
+        }
+
+
+    }
 
 
 }
