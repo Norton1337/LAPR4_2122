@@ -52,16 +52,17 @@ deactivate prod
 
 deactivate PS
 
-CTR -> Utils : path = nearestPath(bin, square)
+CTR -> Utils : List<square>  path = nearestPath(bin, square)
+activate Utils
+deactivate Utils
 
-CTR -> CTR : ASSIGN ROUTE (path)
-CTR -> CTR : INICIAR ROUTE ()
-CTR -> CTR : Verificar disponibilidade rota ( ??? )
-CTR -> CTR : TERMINAR ROUTE (libertar agv)
+CTR -> AGV_Service : assignRoute(agv,path)
+activate AGV_Service
+AGV_Service -> AGV : assignRoute(path)
+activate AGV
+deactivate AGV
 
-
-CTR -> CTR : REPETIR PARA TODOS OS PRODUCTS
-
+deactivate AGV_Service
 deactivate CTR
 
 
