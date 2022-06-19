@@ -1,3 +1,263 @@
+commit c1e345746737e44bba80ab9f1264589d5bdc03a2
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Sun Jun 19 18:55:06 2022 +0100
+
+    EAPLI UserStorys, SD update
+
+A	docs/US1502/US1502_SD.puml
+M	docs/US3501/US3501_SD.puml
+
+commit 7b4906dc69393d7337b000ea6e557fae6902cdd6
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Sun Jun 19 17:58:57 2022 +0100
+
+    US3501 - UI / Controller new functionality
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/questionnaire/CreateQuestionnaireUI.java
+M	base.core/src/main/java/eapli/base/questionnairemanagement/application/QuestionnaireController.java
+
+commit 8b2b492ad604915a865f1fc2421651aa24edf857
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Sun Jun 19 17:58:20 2022 +0100
+
+    US3501 SD almost finished.
+
+M	agvManager/server/Constants.java
+A	docs/US3501/US3501_SD.puml
+
+commit ac6df13b0d8994344400f32e0d52eb8bd24d541e
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Sun Jun 19 16:29:43 2022 +0100
+
+    US5100 finished.
+
+M	docs/US5100/US5100_SD_RouteService.puml
+
+commit adacf64d820567d1e53f27ec3b37fd2710eaaf1b
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Sun Jun 19 16:29:01 2022 +0100
+
+    simular respostas para LPROG
+
+A	lprog/userstory/src/respostaTeste1.txt
+A	lprog/userstory/src/respostaTeste2.txt
+A	lprog/userstory/src/respostaTeste21.txt
+A	lprog/userstory/src/respostaTeste22.txt
+
+commit 4c49e7bb7b753602c105b3c6bcc65391c9a89eed
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Sat Jun 18 18:11:22 2022 +0100
+
+    SD Pseudocodigo - falta terminar
+
+M	docs/US5100/US5100_SD_RouteService.puml
+
+commit e4c11d11319fb40ddfd401e3976c1159e758c8ee
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Sat Jun 18 17:57:11 2022 +0100
+
+    Order Item list
+
+M	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderType.java
+
+commit fc25fc605492bfb17b98729476ae8fc5313d9e26
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Sat Jun 18 17:56:11 2022 +0100
+
+    US5100 - Route Service Discuss and preparation
+
+M	docs/US5100/US5100.md
+A	docs/US5100/US5100_SD_RouteService.puml
+
+commit 4cb4483422c0b67bdaf36d5d44787eae0e4d3f7e
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Sat Jun 18 17:53:49 2022 +0100
+
+    US5100 - SD part 1
+
+A	docs/US5100/US5100_SD.puml
+
+commit f5386ba587b719e0de97c67752a1e8166494abe0
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Sat Jun 18 17:15:54 2022 +0100
+
+    Task setter and getter
+
+M	base.core/src/main/java/eapli/base/taskmanagement/domain/Task.java
+
+commit 0c37306b81f7bca70128eaf778c0dfb9035cc8c2
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Fri Jun 17 23:53:57 2022 +0100
+
+    US5100 - Initiation Documentation
+
+M	docs/US3501/US3501.md
+A	docs/US5100/US5100.md
+
+commit 308b507d7871959a658ce1d91024bc064489499b
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Fri Jun 17 23:46:03 2022 +0100
+
+    US3501 - Initiation Documentation
+
+A	docs/US3501/US3501.md
+
+commit 466968d0d298adb3d4cdc3cae9b1b3fa35383dff
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Fri Jun 17 23:25:14 2022 +0100
+
+    US1502 - Initiation
+
+A	docs/US1502/US1502.md
+
+commit 96a4c2c923a40ddddb79bf32f1a06f810167c8e4
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Fri Jun 17 01:16:40 2022 +0100
+
+    New funcs to US3002 and 3501
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/questionnaire/CreateQuestionnaireUI.java
+M	base.core/src/main/java/eapli/base/questionnairemanagement/application/QuestionnaireController.java
+
+commit 19efc72c81a9764059f11d35bb05337ad99c1e07
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Fri Jun 17 01:15:48 2022 +0100
+
+    Bootstrap and Repository update due to questionnaire state add
+
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/QuestionnaireBootstrapper.java
+M	base.core/src/main/java/eapli/base/questionnairemanagement/QuestionnaireRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaQuestionnaireRepository.java
+
+commit ca93a9a3934e5180d02d4aa84a1581007e2b5525
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Fri Jun 17 01:14:51 2022 +0100
+
+    Add State to Questionnaire
+
+A	base.core/src/main/java/eapli/base/questionnairemanagement/domain/Questionnaire/QuestionnaireState.java
+D	base.core/src/main/java/eapli/base/questionnairemanagement/domain/Questionnaire/QuestionnaireTitle.java
+M	base.core/src/main/java/eapli/base/questionnairemanagement/domain/Questionnaire/QuestionnaireTxt.java
+D	base.core/src/main/java/eapli/base/questionnairemanagement/domain/Questionnaire/QuestionnaireWelcomeMessage.java
+
+commit 1955beadf8abc5ac85e760e14b523ed1f2dbdc1d
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Thu Jun 16 22:42:13 2022 +0100
+
+    QUESTIONNAIRES FINISHED.
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/questionnaire/CreateQuestionnaireUI.java
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/QuestionnaireBootstrapper.java
+M	base.core/src/main/java/eapli/base/questionnairemanagement/application/QuestionnaireController.java
+M	base.core/src/main/java/eapli/base/questionnairemanagement/domain/Questionnaire/QuestionnaireTxt.java
+
+commit 2fc9e9192d41467265e3293797d615cdfee4ebfa
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Thu Jun 16 22:08:26 2022 +0100
+
+    boostrap fix.
+
+M	base.core/src/main/java/eapli/base/questionnairemanagement/QuestionnaireRepository.java
+D	base.core/src/main/java/eapli/base/questionnairemanagement/domain/Questionnaire/Questionnaire.java
+M	base.core/src/main/java/eapli/base/questionnairemanagement/domain/Questionnaire/QuestionnaireID.java
+M	base.core/src/main/java/eapli/base/questionnairemanagement/domain/Questionnaire/QuestionnaireTxt.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaQuestionnaireRepository.java
+
+commit 0e7267de124ba3916c2e8df3d747fdcdfd214928
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Thu Jun 16 21:57:47 2022 +0100
+
+    Small features due to new user story
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/questionnaire/CreateQuestionnaireUI.java
+M	base.core/src/main/java/eapli/base/questionnairemanagement/application/QuestionnaireController.java
+M	base.core/src/main/java/eapli/base/questionnairemanagement/domain/Questionnaire/QuestionnaireTxt.java
+
+commit f2ab514b84e420d0ff539a6ef0198d3fab46a312
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Thu Jun 16 21:56:27 2022 +0100
+
+    Questionnaires bootstrapp
+
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/BaseBootstrapper.java
+A	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/QuestionnaireBootstrapper.java
+
+commit 054152ea2348da46e20e1c791be492da624a16f1
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Thu Jun 16 21:36:26 2022 +0100
+
+    persistence.xml small update
+
+M	base.persistence.impl/src/main/resources/META-INF/persistence.xml
+
+commit 6cdae7a28718b0c0d1b2a95e2dc017bbd99429c5
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Thu Jun 16 21:36:02 2022 +0100
+
+    Model Classes implemented
+
+A	base.core/src/main/java/eapli/base/questionnairemanagement/domain/Questionnaire/FileName.java
+A	base.core/src/main/java/eapli/base/questionnairemanagement/domain/Questionnaire/QuestionnaireTxt.java
+
+commit bfbed65ee425de66b8f0e14adb3350777fa6f307
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Thu Jun 16 21:35:24 2022 +0100
+
+    Factorys and Repositorie duo to US development
+
+M	base.core/src/main/java/eapli/base/infrastructure/persistence/RepositoryFactory.java
+A	base.core/src/main/java/eapli/base/questionnairemanagement/QuestionnaireRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryRepositoryFactory.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaQuestionnaireRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaRepositoryFactory.java
+
+commit 23385f320c20ab7cafed43cbdc86db8084883f9c
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Thu Jun 16 21:34:44 2022 +0100
+
+    Controller and FileWriter update
+
+M	base.core/src/main/java/eapli/base/questionnairemanagement/application/FileWrite.java
+M	base.core/src/main/java/eapli/base/questionnairemanagement/application/QuestionnaireController.java
+
+commit bc84de3db2a29e7a10b74461e8b9f89ccc371e7a
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Thu Jun 16 21:34:12 2022 +0100
+
+    Create Questionnaire UI - Modifications
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/questionnaire/CreateQuestionnaireUI.java
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/questionnaire/QuestionnaireUI.java
+
+commit 217eb120c4b5ea0d50a4f83d531e988e5b0bd2fa
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Wed Jun 15 13:32:34 2022 +0100
+
+    SalesClerk Menu Implementation - apresentation
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/questionnaire/CreateQuestionnaireUI.java
+M	base.core/src/main/java/eapli/base/questionnairemanagement/application/FileWrite.java
+M	base.core/src/main/java/eapli/base/questionnairemanagement/application/QuestionnaireController.java
+
+commit 50c31fd0eb68647b799bcfb0f352fbf647eab409
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Wed Jun 8 15:34:45 2022 +0100
+
+    SalesClerk Menu Implementation part2
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/MainMenu.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/SLMENU.java
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/questionnaire/CreateQuestionnaireUI.java
+
+commit 50814c90479572b7ee737056d475379a0ae70d5b
+Author: André Maia <1191259@isep.ipp.pt>
+Date:   Wed Jun 8 15:33:55 2022 +0100
+
+    SalesClerk Menu Implementation
+
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/MasterUsersBootstrapper.java
+M	base.core/src/main/java/eapli/base/usermanagement/domain/BaseRoles.java
+
 commit 9cf545e9761089de2c7e81347cd77ddb4e4c505c
 Author: André Maia <1191259@isep.ipp.pt>
 Date:   Mon Jun 6 22:17:37 2022 +0100

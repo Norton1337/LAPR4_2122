@@ -1,0 +1,67 @@
+commit a3cbc31c4fc9997d036a214f1fb86fc07c78f190
+Author: Ana  Soares <1210802@isep.ipp.pt>
+Date:   Sun Jun 19 15:47:38 2022 +0100
+
+    US1006 md
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/UpdateDispatchedOrdersUI.java
+A	docs/US1006/US1006.md
+A	docs/US1006/US1006_DM.JPG
+A	docs/US1006/US1006_SD.svg
+
+commit da68e3a1388fc514480b62e8404719598fa7b598
+Author: Ana  Soares <1210802@isep.ipp.pt>
+Date:   Sun Jun 19 14:51:40 2022 +0100
+
+    US1006 SD
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/UpdateDispatchedOrdersUI.java
+A	docs/US1006/US1006.puml
+
+commit 53835147ab1d906816ff80719859e1df4a28b5f6
+Author: Ana  Soares <1210802@isep.ipp.pt>
+Date:   Sat Jun 18 19:05:13 2022 +0100
+
+    US1006 Adding US details
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/SalesClerkMenu.java
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/UpdateDispatchedOrdersUI.java
+M	base.core/src/main/java/eapli/base/ordermanagement/application/OrderController.java
+M	base.core/src/test/java/eapli/base/clientusermanagement/domain/square/SquareTest.java
+
+commit 33f54155474727649eff32f561c16cdaadced379
+Author: Ana  Soares <1210802@isep.ipp.pt>
+Date:   Sat Jun 18 18:15:06 2022 +0100
+
+    US1006 DispatchedOrdersUI development
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/UpdateDispatchedOrdersUI.java
+M	base.core/src/main/java/eapli/base/ordermanagement/application/OrderController.java
+
+commit f505782c1d025d62c8b11f8abcc0a5cefcfff816
+Author: Ana  Soares <1210802@isep.ipp.pt>
+Date:   Sat Jun 18 17:21:51 2022 +0100
+
+    US1006 Renamed SalesClerkMenu and updated for US; Initialization of DispatchedOrdersUI
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/MainMenu.java
+R063	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/SLMENU.java	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/SalesClerkMenu.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/UpdateDispatchedOrdersUI.java
+
+commit e80886b6a12bf4a4cefbff066b7742bf3fa7a780
+Author: Ana  Soares <1210802@isep.ipp.pt>
+Date:   Sat Jun 18 16:38:56 2022 +0100
+
+    US1006 Repository method to return dispatched orders
+
+M	base.core/src/main/java/eapli/base/ordermanagement/repositories/OrderRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryOrderRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaOrderRepository.java
+
+commit fe4daccca470f4ccd27496455c774a54f9d2c5b0
+Author: Ana  Soares <1210802@isep.ipp.pt>
+Date:   Sat Jun 18 16:09:14 2022 +0100
+
+    US1006 Adding new state "being delivered" to orders
+
+M	base.core/src/main/java/eapli/base/ordermanagement/domain/PossibleStates.java

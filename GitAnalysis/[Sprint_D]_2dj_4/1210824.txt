@@ -1,3 +1,445 @@
+commit d8c8529b9cc09b872cead50c2d043baaedebc6ba
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun Jun 19 22:36:24 2022 +0100
+
+    US1006 - Created route service
+
+M	base.core/src/main/java/eapli/base/warehouses/application/AGVMovementController.java
+M	base.core/src/main/java/eapli/base/warehouses/application/RouteService.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/Bin.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/Shelves.java
+D	lprog/userstory/src/Main.java
+
+commit 94033ad50f6f5c1b4967897fec4294b2f05befab
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun Jun 19 22:35:58 2022 +0100
+
+    US3501 - Added necessary method to questionnaire controller
+
+M	base.core/src/main/java/eapli/base/questionnairemanagement/application/QuestionnaireController.java
+
+commit 741be4e08939d059fdf6e3de23eebdfdc14ea0d3
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun Jun 19 22:35:38 2022 +0100
+
+    US3501 - Created necessary methods for UI
+
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/questionnaire/QuestionnaireReportsUI.java
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/questionnaire/QuestionnaireUI.java
+
+commit 8394f437e66b431fddfa0ab67f15d3186ab4a5c5
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun Jun 19 22:35:14 2022 +0100
+
+    US3501 - Created sales manager
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/MainMenu.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/SalesManagerMenu.java
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/clientuser/CLUMenu.java
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/MasterUsersBootstrapper.java
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/OrderBootstrapper.java
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/ProductBootstrapper.java
+M	base.core/src/main/java/eapli/base/usermanagement/domain/BaseRoles.java
+
+commit 1253475206586fd33085a6d6c0f769a86f9bcd8a
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sun Jun 19 22:34:31 2022 +0100
+
+    US3501 - Moved ANTLR files
+
+A	Questionarios/Answers/questionarioTesteAnswers.txt
+A	Questionarios/QuestionariosUS3501/questionarioTeste.txt
+A	Questionarios/questionarioTeste.txt
+A	Questionarios/questionarioTeste2.txt
+A	base.core/src/main/java/eapli/base/questionnaire/EvalVisitorOurGrammar2.java
+A	base.core/src/main/java/eapli/base/questionnaire/OurGrammar.g4
+A	base.core/src/main/java/eapli/base/questionnaire/OurGrammar.interp
+A	base.core/src/main/java/eapli/base/questionnaire/OurGrammar.tokens
+A	base.core/src/main/java/eapli/base/questionnaire/OurGrammarBaseListener.java
+A	base.core/src/main/java/eapli/base/questionnaire/OurGrammarBaseVisitor.java
+A	base.core/src/main/java/eapli/base/questionnaire/OurGrammarLexer.interp
+A	base.core/src/main/java/eapli/base/questionnaire/OurGrammarLexer.java
+A	base.core/src/main/java/eapli/base/questionnaire/OurGrammarLexer.tokens
+A	base.core/src/main/java/eapli/base/questionnaire/OurGrammarListener.java
+A	base.core/src/main/java/eapli/base/questionnaire/OurGrammarParser.java
+A	base.core/src/main/java/eapli/base/questionnaire/OurGrammarVisitor.java
+A	base.core/src/main/java/eapli/base/questionnaire/QuestionnaireMain2.java
+A	lprog/userstory/src/EvalVisitorOurGrammar2.java
+A	lprog/userstory/src/QuestionnaireMain.java
+
+commit b3b954ca36f88824805f15ed9daacbcbc09908b2
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat Jun 18 20:59:22 2022 +0100
+
+    US5100 - Added necessary files for US to run
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/BaseBackoffice.java
+A	base.core/src/main/java/eapli/base/warehouses/application/AGVMovementController.java
+A	base.core/src/main/java/eapli/base/warehouses/application/RouteService.java
+
+commit 23d18e94f227db3ff0169942ecb679a0f7793a2f
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat Jun 18 20:58:07 2022 +0100
+
+    US5100 - Added AisleRepository
+
+M	base.core/src/main/java/eapli/base/infrastructure/persistence/RepositoryFactory.java
+M	base.core/src/main/java/eapli/base/warehouses/repositories/AisleRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryRepositoryFactory.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaAisleRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaRepositoryFactory.java
+M	base.persistence.impl/src/main/resources/META-INF/persistence.xml
+
+commit 3df1bbd039d2f1bb45b2fa2be8a2eeeaad634141
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat Jun 18 20:55:34 2022 +0100
+
+    US5100 - Added necessary methods to domain
+
+M	base.core/src/main/java/eapli/base/productmanagement/domain/product/Product.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/AGV.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/AGVAddress.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/Bin.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/BinID.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/Rows.java
+
+commit 2eb936bb624c2a70c9623a5fcc0d0ee21c13d928
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat Jun 18 18:01:19 2022 +0100
+
+    US5100 - Warehouse controller now returns necessary information
+
+M	base.core/src/main/java/eapli/base/warehouses/application/WarehouseSetupController.java
+
+commit 63eadc04fa65c2d1be25bb81a858cc4ae26c3029
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat Jun 18 18:00:52 2022 +0100
+
+    US5100 - Product Bootstrapper now creates products in Bins
+
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/ProductBootstrapper.java
+
+commit c1d7ef41d186348e60385b9f5055a72790bee434
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat Jun 18 18:00:12 2022 +0100
+
+    US5100 - Added Bins to Repository
+
+M	base.core/src/main/java/eapli/base/infrastructure/persistence/RepositoryFactory.java
+A	base.core/src/main/java/eapli/base/warehouses/repositories/BinRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryRepositoryFactory.java
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaBinRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaRepositoryFactory.java
+M	base.persistence.impl/src/main/resources/META-INF/persistence.xml
+
+commit 7427f9866d9803d646dbe3ae021d3319e913e23a
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Sat Jun 18 17:59:45 2022 +0100
+
+    US5100 - Product is now in Bin and can be found
+
+M	base.core/src/main/java/eapli/base/productmanagement/domain/product/Product.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvDocks/AgvDocks.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/aisles/Aisles.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/Bin.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/rows/BinID.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/Rows.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/Shelves.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/StorageArea.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/square/Length.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/square/Square.java
+A	base.core/src/main/java/eapli/base/warehouses/domain/square/SquareID.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/square/Width.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/Warehouse.java
+
+commit 4088b9a8fab907d5c8987fd25f16bf6f30ae66a9
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Jun 17 13:26:00 2022 +0100
+
+    US2004 - Added necessary UI for this user story
+
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/PreparedOrdersUI.java
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/WarehouseMenu.java
+
+commit 6e6f9d65b1b9d98b1fea98369968d43b68f83ad8
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Jun 17 13:25:41 2022 +0100
+
+    US2004 - Improved repository to return prepared orders
+
+M	base.core/src/main/java/eapli/base/ordermanagement/repositories/OrderRepository.java
+M	base.core/src/main/java/eapli/base/taskmanagement/repositories/TaskRepository.java
+M	base.core/src/main/java/eapli/base/warehouses/repositories/AgvRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryAgvRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryOrderRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryTaskRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaAgvRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaOrderRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaTaskRepository.java
+
+commit ad0f3371ce59b09d8d80923536b0bd21ed57ada1
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Jun 17 13:24:53 2022 +0100
+
+    US2004 - Bootstrap now creates completed orders
+
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/BaseBootstrapper.java
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/OrderBootstrapper.java
+
+commit 04dd9728094c77cd59c31e48cf360b72ed2f02a8
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Jun 17 13:24:14 2022 +0100
+
+    US2004 - Controllers can now create completed orders for bootstrapp
+
+M	base.core/src/main/java/eapli/base/ordermanagement/application/OrderController.java
+M	base.core/src/main/java/eapli/base/warehouses/application/AGVController.java
+
+commit 6370b42059f1d3446e3239b9d570fdf32e445124
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Jun 17 13:23:37 2022 +0100
+
+    US2004 - Added possibility to have completed orders
+
+M	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderType.java
+M	base.core/src/main/java/eapli/base/ordermanagement/domain/PossibleStates.java
+
+commit 873554ca617c2c5bf02a1c26474584e904f71be3
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Jun 17 11:54:49 2022 +0100
+
+    US2003 - Improved AGV and Order Repositories
+
+M	base.core/src/main/java/eapli/base/ordermanagement/repositories/OrderRepository.java
+M	base.core/src/main/java/eapli/base/warehouses/repositories/AgvRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryAgvRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryOrderRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaAgvRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaOrderRepository.java
+
+commit 3c91bb525d5236bb4256335f3b6d4ae9646da100
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Jun 17 11:53:44 2022 +0100
+
+    US2003 - Improved AGV and Order Bootstrappers
+
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/AgvBootstrapper.java
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/OrderBootstrapper.java
+
+commit 658952de4fea3e2089761c53b561a471e160f523
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Jun 17 11:53:24 2022 +0100
+
+    US2003 - Improved AGV and Order Controllers
+
+M	base.core/src/main/java/eapli/base/ordermanagement/application/OrderController.java
+M	base.core/src/main/java/eapli/base/warehouses/application/AGVController.java
+
+commit 14de4caaf80f634b8b63aedf8d62fcb383069952
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Jun 17 11:53:10 2022 +0100
+
+    US2003 - Improved AGV and Order UIs
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/AGVManagementUI.java
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/warehouse/OrdersUI.java
+
+commit b6358f20d1eb4f667ded888b3e10a884f16c7192
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Jun 17 11:52:37 2022 +0100
+
+    US2003 - Improved AGVDocks domain
+
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvDocks/AgvDockIdentification.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvDocks/AgvDocks.java
+
+commit 7e71846513a577175518c58d0d84674eb108f079
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Jun 17 11:52:07 2022 +0100
+
+    US2003 - Improved Order domain
+
+M	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderBuilder.java
+M	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderType.java
+M	base.core/src/main/java/eapli/base/ordermanagement/dto/OrderDTO.java
+
+commit 9bc8b358e51ea5aabae13a3781f2de8bf32d6aef
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Fri Jun 17 11:51:24 2022 +0100
+
+    US2003 - Improved AGV domain
+
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/AGV.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/AGVIdentification.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/Autonomy.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/MaxWeight.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/Model.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/ShortDescription.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvs/Status.java
+
+commit 4d6846a899f99965d3810fb773bfd5443b5e39d7
+Author: Paulo Norton <1210824@isep.ipp.pt>
+Date:   Wed Jun 15 15:17:14 2022 +0100
+
+    US1502 - Updated order domain
+
+M	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderType.java
+
+commit 99b19b31c2772544456a7cceb4bee64651175d30
+Author: Paulo Norton <1210824@isep.ipp.pt>
+Date:   Wed Jun 15 15:16:54 2022 +0100
+
+    US1502 - Updated order controller
+
+M	base.core/src/main/java/eapli/base/ordermanagement/application/OrderController.java
+
+commit fde611d477a1d3e5f7be5ba4c19bef3f2c917a77
+Author: Paulo Norton <1210824@isep.ipp.pt>
+Date:   Wed Jun 15 15:16:36 2022 +0100
+
+    US1502 - Updated order repository
+
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaOrderRepository.java
+
+commit 9c0d84a70ca847de3c32da496d5d6b82dee7d344
+Author: Paulo Norton <1210824@isep.ipp.pt>
+Date:   Wed Jun 15 15:16:20 2022 +0100
+
+    US1502 - Updated order ui
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/clientuser/ClientCheckOrdersUI.java
+
+commit f51fd2808b939eb3b5ead898a4fdd5e01c2867c6
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed Jun 8 21:24:09 2022 +0100
+
+    US1501 - Improved ClientUI, added receipt
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/clientuser/ClientBuyItemsUI.java
+M	base.core/src/main/java/eapli/base/productmanagement/application/ShoppingCartController.java
+
+commit 808a837be0508c3864fd462906efdced182a808d
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed Jun 8 21:11:57 2022 +0100
+
+    US1502 - Added Client UI to check open orders
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/clientuser/CLUMenu.java
+R095	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/clientuser/ClientUI.java	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/clientuser/ClientBuyItemsUI.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/clientuser/ClientCheckOrdersUI.java
+
+commit aa9e3d602ef34d5d96d5814cab200f843ba05a9a
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed Jun 8 21:11:21 2022 +0100
+
+    US1502 - Client can now search their open orders
+
+M	base.core/src/main/java/eapli/base/ordermanagement/application/OrderController.java
+M	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderType.java
+A	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderWeight.java
+M	base.core/src/main/java/eapli/base/ordermanagement/repositories/OrderRepository.java
+M	base.core/src/main/java/eapli/base/productmanagement/domain/product/Product.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryOrderRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaOrderRepository.java
+
+commit aeaf6921fefc49f6ff5f89cbaf6f6bbe84219b86
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed Jun 8 20:23:01 2022 +0100
+
+    US1501 - AGVs are now created with dock in warehouse json file
+
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/AgvBootstrapper.java
+M	base.core/src/main/java/eapli/base/warehouses/application/WarehouseSetupController.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/agvDocks/AgvDocks.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/Warehouse.java
+
+commit 79168f93fa118d9013934283a9682b4034dc4a32
+Author: Paulo Norton <1210824@isep.ipp.pt>
+Date:   Wed Jun 8 19:55:24 2022 +0100
+
+    US2001 - Fixed warehouse not saving its aisles in the database
+
+M	base.core/src/main/java/eapli/base/warehouses/domain/aisles/AisleID.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/aisles/Aisles.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/Bin.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/Rows.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/Shelves.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/rows/StorageArea.java
+M	base.core/src/main/java/eapli/base/warehouses/domain/warehouse/Warehouse.java
+
+commit 46f544ef5b9e7f696afae5bd556cfa5e9d54cd57
+Author: Paulo Norton <1210824@isep.ipp.pt>
+Date:   Wed Jun 8 15:46:53 2022 +0100
+
+    US1501 - User can now create an order
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/MainMenu.java
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/clientuser/CLUMenu.java
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/clientuser/ClientUI.java
+M	base.core/src/main/java/eapli/base/ordermanagement/application/OrderController.java
+M	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderItem.java
+M	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderType.java
+A	base.core/src/main/java/eapli/base/productmanagement/application/ShoppingCartController.java
+M	base.core/src/main/java/eapli/base/productmanagement/domain/product/Product.java
+M	base.persistence.impl/src/main/resources/META-INF/persistence.xml
+
+commit 5f15f131f5bf0dc78d73b440e28c57ff4b4d61f4
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed Jun 8 11:33:45 2022 +0100
+
+    US1501 - Added ShoppingCart
+
+A	base.core/src/main/java/eapli/base/ordermanagement/domain/OrderItem.java
+A	base.core/src/main/java/eapli/base/productmanagement/domain/shoppingcart/CartItem.java
+A	base.core/src/main/java/eapli/base/productmanagement/domain/shoppingcart/ShoppingCart.java
+
+commit 32627f8fe509d9f49e4662e85ef89a0c6df86b6e
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed Jun 8 11:33:23 2022 +0100
+
+    US1501 - Added Customer to system
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/MainMenu.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/clientuser/CLUMenu.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/clientuser/ClientUI.java
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/MasterUsersBootstrapper.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryCategoryRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryProductRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaCategoryRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaProductRepository.java
+M	base.persistence.impl/src/main/resources/META-INF/persistence.xml
+
+commit e28842de382ecdf2c02156b911eacfe70849b54f
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed Jun 8 11:32:25 2022 +0100
+
+    US1501 - Organized Category files
+
+M	base.core/src/main/java/eapli/base/categorymanagment/domain/Category.java
+M	base.core/src/main/java/eapli/base/categorymanagment/domain/CategoryDescription.java
+M	base.core/src/main/java/eapli/base/categorymanagment/repositories/CategoryRepository.java
+
+commit 937f750630ec3ebe81a32b25542fec4d8733d37a
+Author: N0R70N <1210824@isep.ipp.pt>
+Date:   Wed Jun 8 11:31:39 2022 +0100
+
+    US1501 - Organized Product files
+
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/demo/ProductBootstrapper.java
+M	base.core/src/main/java/eapli/base/productmanagement/application/ProductController.java
+R094	base.core/src/main/java/eapli/base/productmanagement/domain/Product.java	base.core/src/main/java/eapli/base/productmanagement/domain/product/Product.java
+R089	base.core/src/main/java/eapli/base/productmanagement/domain/ProductBarCode.java	base.core/src/main/java/eapli/base/productmanagement/domain/product/ProductBarCode.java
+R092	base.core/src/main/java/eapli/base/productmanagement/domain/ProductBrandName.java	base.core/src/main/java/eapli/base/productmanagement/domain/product/ProductBrandName.java
+R092	base.core/src/main/java/eapli/base/productmanagement/domain/ProductCode.java	base.core/src/main/java/eapli/base/productmanagement/domain/product/ProductCode.java
+R093	base.core/src/main/java/eapli/base/productmanagement/domain/ProductExtendedDescription.java	base.core/src/main/java/eapli/base/productmanagement/domain/product/ProductExtendedDescription.java
+R077	base.core/src/main/java/eapli/base/productmanagement/domain/ProductPhotos.java	base.core/src/main/java/eapli/base/productmanagement/domain/product/ProductPhotos.java
+R090	base.core/src/main/java/eapli/base/productmanagement/domain/ProductPrice.java	base.core/src/main/java/eapli/base/productmanagement/domain/product/ProductPrice.java
+R090	base.core/src/main/java/eapli/base/productmanagement/domain/ProductReference.java	base.core/src/main/java/eapli/base/productmanagement/domain/product/ProductReference.java
+R093	base.core/src/main/java/eapli/base/productmanagement/domain/ProductShortDescription.java	base.core/src/main/java/eapli/base/productmanagement/domain/product/ProductShortDescription.java
+R093	base.core/src/main/java/eapli/base/productmanagement/domain/ProductTechnicalDescription.java	base.core/src/main/java/eapli/base/productmanagement/domain/product/ProductTechnicalDescription.java
+R091	base.core/src/main/java/eapli/base/productmanagement/domain/ProductWeight.java	base.core/src/main/java/eapli/base/productmanagement/domain/product/ProductWeight.java
+M	base.core/src/main/java/eapli/base/productmanagement/repositories/ProductRepository.java
+
 commit 5fe5f95769cf4092b9dc9e96894bfa14e9b64958
 Author: N0R70N <1210824@isep.ipp.pt>
 Date:   Tue Jun 7 15:52:02 2022 +0100

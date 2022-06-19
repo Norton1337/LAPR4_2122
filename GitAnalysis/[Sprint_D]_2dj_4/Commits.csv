@@ -1,6 +1,81 @@
+d8c8529,2022-06-19 22:36:24 +0100,N0R70N,1210824@isep.ipp.pt,US1006 - Created route service
+94033ad,2022-06-19 22:35:58 +0100,N0R70N,1210824@isep.ipp.pt,US3501 - Added necessary method to questionnaire controller
+741be4e,2022-06-19 22:35:38 +0100,N0R70N,1210824@isep.ipp.pt,US3501 - Created necessary methods for UI
+8394f43,2022-06-19 22:35:14 +0100,N0R70N,1210824@isep.ipp.pt,US3501 - Created sales manager
+1253475,2022-06-19 22:34:31 +0100,N0R70N,1210824@isep.ipp.pt,US3501 - Moved ANTLR files
+c1e3457,2022-06-19 18:55:06 +0100,André Maia,1191259@isep.ipp.pt,EAPLI UserStorys, SD update
+7b4906d,2022-06-19 17:58:57 +0100,André Maia,1191259@isep.ipp.pt,US3501 - UI / Controller new functionality
+8b2b492,2022-06-19 17:58:20 +0100,André Maia,1191259@isep.ipp.pt,US3501 SD almost finished.
+ac6df13,2022-06-19 16:29:43 +0100,André Maia,1191259@isep.ipp.pt,US5100 finished.
+adacf64,2022-06-19 16:29:01 +0100,André Maia,1191259@isep.ipp.pt,simular respostas para LPROG
+a3cbc31,2022-06-19 15:47:38 +0100,Ana  Soares,1210802@isep.ipp.pt,US1006 md
+da68e3a,2022-06-19 14:51:40 +0100,Ana  Soares,1210802@isep.ipp.pt,US1006 SD
+b3b954c,2022-06-18 20:59:22 +0100,N0R70N,1210824@isep.ipp.pt,US5100 - Added necessary files for US to run
+23d18e9,2022-06-18 20:58:07 +0100,N0R70N,1210824@isep.ipp.pt,US5100 - Added AisleRepository
+3df1bbd,2022-06-18 20:55:34 +0100,N0R70N,1210824@isep.ipp.pt,US5100 - Added necessary methods to domain
+5383514,2022-06-18 19:05:13 +0100,Ana  Soares,1210802@isep.ipp.pt,US1006 Adding US details
+33f5415,2022-06-18 18:15:06 +0100,Ana  Soares,1210802@isep.ipp.pt,US1006 DispatchedOrdersUI development
+4c49e7b,2022-06-18 18:11:22 +0100,André Maia,1191259@isep.ipp.pt,SD Pseudocodigo - falta terminar
+2eb936b,2022-06-18 18:01:19 +0100,N0R70N,1210824@isep.ipp.pt,US5100 - Warehouse controller now returns necessary information
+63eadc0,2022-06-18 18:00:52 +0100,N0R70N,1210824@isep.ipp.pt,US5100 - Product Bootstrapper now creates products in Bins
+c1d7ef4,2022-06-18 18:00:12 +0100,N0R70N,1210824@isep.ipp.pt,US5100 - Added Bins to Repository
+7427f98,2022-06-18 17:59:45 +0100,N0R70N,1210824@isep.ipp.pt,US5100 - Product is now in Bin and can be found
+e4c11d1,2022-06-18 17:57:11 +0100,André Maia,1191259@isep.ipp.pt,Order Item list
+fc25fc6,2022-06-18 17:56:11 +0100,André Maia,1191259@isep.ipp.pt,US5100 - Route Service Discuss and preparation
+4cb4483,2022-06-18 17:53:49 +0100,André Maia,1191259@isep.ipp.pt,US5100 - SD part 1
+f505782,2022-06-18 17:21:51 +0100,Ana  Soares,1210802@isep.ipp.pt,US1006 Renamed SalesClerkMenu and updated for US; Initialization of DispatchedOrdersUI
+f5386ba,2022-06-18 17:15:54 +0100,André Maia,1191259@isep.ipp.pt,Task setter and getter
+e80886b,2022-06-18 16:38:56 +0100,Ana  Soares,1210802@isep.ipp.pt,US1006 Repository method to return dispatched orders
+fe4dacc,2022-06-18 16:09:14 +0100,Ana  Soares,1210802@isep.ipp.pt,US1006 Adding new state "being delivered" to orders
+0c37306,2022-06-17 23:53:57 +0100,André Maia,1191259@isep.ipp.pt,US5100 - Initiation Documentation
+308b507,2022-06-17 23:46:03 +0100,André Maia,1191259@isep.ipp.pt,US3501 - Initiation Documentation
+466968d,2022-06-17 23:25:14 +0100,André Maia,1191259@isep.ipp.pt,US1502 - Initiation
+4088b9a,2022-06-17 13:26:00 +0100,N0R70N,1210824@isep.ipp.pt,US2004 - Added necessary UI for this user story
+6e6f9d6,2022-06-17 13:25:41 +0100,N0R70N,1210824@isep.ipp.pt,US2004 - Improved repository to return prepared orders
+ad0f337,2022-06-17 13:24:53 +0100,N0R70N,1210824@isep.ipp.pt,US2004 - Bootstrap now creates completed orders
+04dd972,2022-06-17 13:24:14 +0100,N0R70N,1210824@isep.ipp.pt,US2004 - Controllers can now create completed orders for bootstrapp
+6370b42,2022-06-17 13:23:37 +0100,N0R70N,1210824@isep.ipp.pt,US2004 - Added possibility to have completed orders
+873554c,2022-06-17 11:54:49 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Improved AGV and Order Repositories
+3c91bb5,2022-06-17 11:53:44 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Improved AGV and Order Bootstrappers
+658952d,2022-06-17 11:53:24 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Improved AGV and Order Controllers
+14de4ca,2022-06-17 11:53:10 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Improved AGV and Order UIs
+b6358f2,2022-06-17 11:52:37 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Improved AGVDocks domain
+7e71846,2022-06-17 11:52:07 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Improved Order domain
+9bc8b35,2022-06-17 11:51:24 +0100,N0R70N,1210824@isep.ipp.pt,US2003 - Improved AGV domain
+96a4c2c,2022-06-17 01:16:40 +0100,André Maia,1191259@isep.ipp.pt,New funcs to US3002 and 3501
+19efc72,2022-06-17 01:15:48 +0100,André Maia,1191259@isep.ipp.pt,Bootstrap and Repository update due to questionnaire state add
+ca93a9a,2022-06-17 01:14:51 +0100,André Maia,1191259@isep.ipp.pt,Add State to Questionnaire
+1955bea,2022-06-16 22:42:13 +0100,André Maia,1191259@isep.ipp.pt,QUESTIONNAIRES FINISHED.
+2fc9e91,2022-06-16 22:08:26 +0100,André Maia,1191259@isep.ipp.pt,boostrap fix.
+0e7267d,2022-06-16 21:57:47 +0100,André Maia,1191259@isep.ipp.pt,Small features due to new user story
+f2ab514,2022-06-16 21:56:27 +0100,André Maia,1191259@isep.ipp.pt,Questionnaires bootstrapp
+054152e,2022-06-16 21:36:26 +0100,André Maia,1191259@isep.ipp.pt,persistence.xml small update
+6cdae7a,2022-06-16 21:36:02 +0100,André Maia,1191259@isep.ipp.pt,Model Classes implemented
+bfbed65,2022-06-16 21:35:24 +0100,André Maia,1191259@isep.ipp.pt,Factorys and Repositorie duo to US development
+23385f3,2022-06-16 21:34:44 +0100,André Maia,1191259@isep.ipp.pt,Controller and FileWriter update
+bc84de3,2022-06-16 21:34:12 +0100,André Maia,1191259@isep.ipp.pt,Create Questionnaire UI - Modifications
+4d6846a,2022-06-15 15:17:14 +0100,Paulo Norton,1210824@isep.ipp.pt,US1502 - Updated order domain
+99b19b3,2022-06-15 15:16:54 +0100,Paulo Norton,1210824@isep.ipp.pt,US1502 - Updated order controller
+fde611d,2022-06-15 15:16:36 +0100,Paulo Norton,1210824@isep.ipp.pt,US1502 - Updated order repository
+9c0d84a,2022-06-15 15:16:20 +0100,Paulo Norton,1210824@isep.ipp.pt,US1502 - Updated order ui
+217eb12,2022-06-15 13:32:34 +0100,André Maia,1191259@isep.ipp.pt,SalesClerk Menu Implementation - apresentation
+f51fd28,2022-06-08 21:24:09 +0100,N0R70N,1210824@isep.ipp.pt,US1501 - Improved ClientUI, added receipt
+808a837,2022-06-08 21:11:57 +0100,N0R70N,1210824@isep.ipp.pt,US1502 - Added Client UI to check open orders
+aa9e3d6,2022-06-08 21:11:21 +0100,N0R70N,1210824@isep.ipp.pt,US1502 - Client can now search their open orders
+aeaf692,2022-06-08 20:23:01 +0100,N0R70N,1210824@isep.ipp.pt,US1501 - AGVs are now created with dock in warehouse json file
+79168f9,2022-06-08 19:55:24 +0100,Paulo Norton,1210824@isep.ipp.pt,US2001 - Fixed warehouse not saving its aisles in the database
+46f544e,2022-06-08 15:46:53 +0100,Paulo Norton,1210824@isep.ipp.pt,US1501 - User can now create an order
+50c31fd,2022-06-08 15:34:45 +0100,André Maia,1191259@isep.ipp.pt,SalesClerk Menu Implementation part2
+50814c9,2022-06-08 15:33:55 +0100,André Maia,1191259@isep.ipp.pt,SalesClerk Menu Implementation
+5f15f13,2022-06-08 11:33:45 +0100,N0R70N,1210824@isep.ipp.pt,US1501 - Added ShoppingCart
+32627f8,2022-06-08 11:33:23 +0100,N0R70N,1210824@isep.ipp.pt,US1501 - Added Customer to system
+e28842d,2022-06-08 11:32:25 +0100,N0R70N,1210824@isep.ipp.pt,US1501 - Organized Category files
+937f750,2022-06-08 11:31:39 +0100,N0R70N,1210824@isep.ipp.pt,US1501 - Organized Product files
+b7d56c8,2022-06-07 23:31:03 +0100,Paulo Proença,prp@isep.ipp.pt,Repository Analysis
 5fe5f95,2022-06-07 15:52:02 +0100,N0R70N,1210824@isep.ipp.pt,Fixed .bat files
 04fbf19,2022-06-07 15:51:43 +0100,N0R70N,1210824@isep.ipp.pt,US1900 - Bootstrap now creates products and categories
 8251237,2022-06-07 15:50:24 +0100,N0R70N,1210824@isep.ipp.pt,US1004 - Implemented Improved Products
 1ec3684,2022-06-07 15:49:36 +0100,N0R70N,1210824@isep.ipp.pt,US1005 - Implemented Improved Categories
 9cf545e,2022-06-06 22:17:37 +0100,André Maia,1191259@isep.ipp.pt,US3001 - FULL UPDATE to improve functionality
 09f72f4,2022-05-31 10:40:20 +0100,N0R70N,1210824@isep.ipp.pt,US3000 - Deleted unnecessary file
+9c54b24,2022-05-30 00:40:26 +0100,Paulo Proença,prp@isep.ipp.pt,Repository Analysis
