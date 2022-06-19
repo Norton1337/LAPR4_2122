@@ -158,15 +158,22 @@ public class CreateQuestionnaireUI implements Action {
 
                     if (textinho.equals("0"))
                     {} else {
-                       // QuestionnaireTxt quest = questionnaireController.getQuestionnaireById(textinho);
-                      // System.out.println("{" + "id=" + quest.getId() + ", fileName=" + quest.getFileName() + ", state= " + quest.getState() +  '}');
+                        //QuestionnaireTxt quest = questionnaireController.getQuestionnaireById(textinho);
+                       //System.out.println("{" + "id=" + quest.getId() + ", fileName=" + quest.getFileName() + ", state= " + quest.getState() +  '}');
 
-                       // QuestionnaireTxt quest1 = questionnaireController.findQuestionnaireById(textinho);
-                       // System.out.println("{" + "id=" + quest1.getId() + ", fileName=" + quest1.getFileName() + ", state= " + quest1.getState() +  '}');
+                        QuestionnaireTxt quest1 = questionnaireController.findQuestionnaireById(textinho);
+                       System.out.println("{" + "id=" + quest1.getId() + ", fileName=" + quest1.getFileName() + ", state= " + quest1.getState() +  '}');
 
 
+                        // Correr ANTLR
                         // LER FICHEIRO PARA RESPONDER AS PERGUNTAS.
 
+
+
+
+                        System.out.println(" Questionnaire Answered");
+                        questionnaireController.confirmQuestionnaire(quest1);
+                        System.out.println("{" + "id=" + quest1.getId() + ", fileName=" + quest1.getFileName() + ", state= " + quest1.getState() +  '}');
 
 
 

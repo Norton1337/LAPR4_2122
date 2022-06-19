@@ -103,6 +103,11 @@ public class QuestionnaireController {
         return null;
     }
 
+    public void confirmQuestionnaire(QuestionnaireTxt quest) {
+        QuestionnaireState questS = new QuestionnaireState("1");
+            quest.setState(questS);
+    }
+
   /*  public List<QuestionnaireTxt> getOpenQuestionnaires() {
         List<QuestionnaireTxt> openL = new ArrayList<>();
         List<QuestionnaireTxt> list = questionnaireRepository.findAll();
