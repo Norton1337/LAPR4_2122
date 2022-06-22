@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="457px" preserveAspectRatio="none" style="width:812px;height:457px;background:#FFFFFF;" version="1.1" viewBox="0 0 812 457" width="812px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="274.1641" style="stroke:#181818;stroke-width:1.0;" width="10" x="33.5" y="92.6094"/><rect fill="#FFFFFF" height="242.8125" style="stroke:#181818;stroke-width:1.0;" width="10" x="241.5" y="114.9609"/><rect fill="#FFFFFF" height="151.7578" style="stroke:#181818;stroke-width:1.0;" width="10" x="414.5" y="145.3125"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="577.5" y="236.3672"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="756.5" y="175.6641"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="38" x2="38" y1="82.6094" y2="375.7734"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="246.5" x2="246.5" y1="82.6094" y2="375.7734"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="419" x2="419" y1="82.6094" y2="375.7734"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="582" x2="582" y1="82.6094" y2="375.7734"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="681" x2="681" y1="82.6094" y2="375.7734"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="761" x2="761" y1="82.6094" y2="375.7734"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="5" y="79.5332">Customer</text><ellipse cx="38.5" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M38.5,21.5 L38.5,48.5 M25.5,29.5 L51.5,29.5 M38.5,48.5 L25.5,63.5 M38.5,48.5 L51.5,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="5" y="389.3066">Customer</text><ellipse cx="38.5" cy="400.8828" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M38.5,408.8828 L38.5,435.8828 M25.5,416.8828 L51.5,416.8828 M38.5,435.8828 L25.5,450.8828 M38.5,435.8828 L51.5,450.8828 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="146" x="173.5" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="180.5" y="71.5332">ClientCheckOrdersUI</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="146" x="173.5" y="374.7734"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="180.5" y="396.3066">ClientCheckOrdersUI</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="121" x="359" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="366" y="71.5332">Order_Controller</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="121" x="359" y="374.7734"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="366" y="396.3066">Order_Controller</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="127" x="519" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="526" y="71.5332">Order_Repository</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="127" x="519" y="374.7734"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="526" y="396.3066">Order_Repository</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="51" x="656" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="663" y="71.5332">Order</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="51" x="656" y="374.7734"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="663" y="396.3066">Order</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="89" x="717" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="724" y="71.5332">SystemUser</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="89" x="717" y="374.7734"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="724" y="396.3066">SystemUser</text><rect fill="#FFFFFF" height="274.1641" style="stroke:#181818;stroke-width:1.0;" width="10" x="33.5" y="92.6094"/><rect fill="#FFFFFF" height="242.8125" style="stroke:#181818;stroke-width:1.0;" width="10" x="241.5" y="114.9609"/><rect fill="#FFFFFF" height="151.7578" style="stroke:#181818;stroke-width:1.0;" width="10" x="414.5" y="145.3125"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="577.5" y="236.3672"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="756.5" y="175.6641"/><polygon fill="#181818" points="229.5,110.9609,239.5,114.9609,229.5,118.9609,233.5,114.9609" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="43.5" x2="235.5" y1="114.9609" y2="114.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="50.5" y="110.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="168" x="61.5" y="110.1045">I want to Check Open Orders</text><polygon fill="#181818" points="402.5,141.3125,412.5,145.3125,402.5,149.3125,406.5,145.3125" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="251.5" x2="408.5" y1="145.3125" y2="145.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="258.5" y="140.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="133" x="269.5" y="140.4561">getClientOpenOrders();</text><polygon fill="#181818" points="744.5,171.6641,754.5,175.6641,744.5,179.6641,748.5,175.6641" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="424.5" x2="750.5" y1="175.6641" y2="175.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="431.5" y="170.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98" x="442.5" y="170.8076">getSystemUser()</text><polygon fill="#181818" points="435.5,202.0156,425.5,206.0156,435.5,210.0156,431.5,206.0156" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="429.5" x2="760.5" y1="206.0156" y2="206.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="441.5" y="201.1592">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="25" x="452.5" y="201.1592">user</text><polygon fill="#181818" points="565.5,232.3672,575.5,236.3672,565.5,240.3672,569.5,236.3672" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="424.5" x2="571.5" y1="236.3672" y2="236.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="431.5" y="231.5107">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="123" x="442.5" y="231.5107">findOpenOrders(user)</text><polygon fill="#181818" points="435.5,262.7188,425.5,266.7188,435.5,270.7188,431.5,266.7188" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="429.5" x2="581.5" y1="266.7188" y2="266.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="441.5" y="261.8623">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="97" x="452.5" y="261.8623">List&lt;OrderType&gt;</text><polygon fill="#181818" points="262.5,293.0703,252.5,297.0703,262.5,301.0703,258.5,297.0703" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="256.5" x2="418.5" y1="297.0703" y2="297.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="268.5" y="292.2139">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="97" x="279.5" y="292.2139">List&lt;OrderType&gt;</text><polygon fill="#181818" points="54.5,323.4219,44.5,327.4219,54.5,331.4219,50.5,327.4219" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="48.5" x2="240.5" y1="327.4219" y2="327.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="60.5" y="322.5654">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="99" x="71.5" y="322.5654">List Open Orders</text><polygon fill="#181818" points="54.5,353.7734,44.5,357.7734,54.5,361.7734,50.5,357.7734" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="48.5" x2="245.5" y1="357.7734" y2="357.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="60.5" y="352.917">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="102" x="71.5" y="352.917">Operation sucess</text><!--MD5=[528408c367b25997a3e17f463d801be7]
+@startuml
+'https://plantuml.com/sequence-diagram
+autonumber
+
+actor "Customer" as C
+
+participant "ClientCheckOrdersUI" as UI
+participant "Order_Controller" as CTR
+participant "Order_Repository" as OR
+participant "Order" as O
+
+activate C
+
+C -> UI : I want to Check Open Orders
+activate UI
+
+
+
+UI -> CTR : getClientOpenOrders();
+activate CTR
+
+CTR -> SystemUser : getSystemUser()
+activate SystemUser
+SystemUser - -> CTR : user
+deactivate SystemUser
+
+
+CTR -> OR : findOpenOrders(user)
+activate OR
+OR -> CTR : List<OrderType>
+deactivate OR
+
+
+CTR - -> UI : List<OrderType>
+deactivate CTR
+UI - -> C : List Open Orders
+
+UI - -> C : Operation sucess
+deactivate UI
+
+
+deactivate CTR
+
+
+
+
+@enduml
+
+@startuml
+autonumber
+
+actor "Customer" as C
+
+participant "ClientCheckOrdersUI" as UI
+participant "Order_Controller" as CTR
+participant "Order_Repository" as OR
+participant "Order" as O
+
+activate C
+
+C -> UI : I want to Check Open Orders
+activate UI
+
+
+
+UI -> CTR : getClientOpenOrders();
+activate CTR
+
+CTR -> SystemUser : getSystemUser()
+activate SystemUser
+SystemUser - -> CTR : user
+deactivate SystemUser
+
+
+CTR -> OR : findOpenOrders(user)
+activate OR
+OR -> CTR : List<OrderType>
+deactivate OR
+
+
+CTR - -> UI : List<OrderType>
+deactivate CTR
+UI - -> C : List Open Orders
+
+UI - -> C : Operation sucess
+deactivate UI
+
+
+deactivate CTR
+
+
+
+
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 11:55:52 BST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

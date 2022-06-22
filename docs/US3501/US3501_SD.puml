@@ -4,36 +4,76 @@ autonumber
 
 actor "Customer" as C
 
-participant "ClientCheckOrdersUI" as UI
-participant "Order_Controller" as CTR
-participant "Order_Repository" as OR
-participant "Order" as O
+participant "ListQuest_UI" as UI
+participant "ListQuest_Controller" as CTR
+participant "QuestionnairesRepository" as QR
+participant "Questionnaire" as Q
+participant "EvalVisitorOurGrammar" as Eval
 
 activate C
 
-C -> UI : I want to Check Open Orders
+C -> UI : I want to list Questionnaires
 activate UI
-
-
-
-UI -> CTR : getClientOpenOrders();
 activate CTR
 
-CTR -> SystemUser : getSystemUser()
-activate SystemUser
-SystemUser --> CTR : user
-deactivate SystemUser
+UI -> CTR : findOpenQuestionnaires();
 
+CTR -> QR : List<Questionnaires> findOpenQuestionnaires();
+activate QR
+deactivate QR
 
-CTR -> OR : findOpenOrders(user)
-activate OR
-OR -> CTR : List<OrderType>
-deactivate OR
-
-
-CTR --> UI : List<OrderType>
+CTR --> UI : List<Questionnaires>
 deactivate CTR
-UI --> C : List Open Orders
+UI --> C : List Questionnaires
+
+C -> UI : Choose one
+UI -> CTR: getQuestionnaireById(text);
+activate CTR
+
+CTR -> QR : getQuestionnaireById(text)
+activate QR
+deactivate QR
+
+CTR -> Eval : quest
+activate Eval
+deactivate Eval
+note right: Realiza interação para responder\n e validar respostas
+
+CTR --> UI : quest
+
+deactivate CTR
+
+UI --> C : Apresent Questionnaire
+
+
+
+
+
+C -> UI : Answer Questionnaire
+
+
+
+
+
+
+
+
+
+
+
+UI --> C : Confirm Answers
+
+C -> UI : Confirmation Sucess
+
+UI -> CTR : confirmQuestionnaire(quest)
+activate CTR
+
+CTR -> Q : setState()
+activate Q
+Q -> Q : setState(1)
+deactivate Q
+
+deactivate CTR
 
 UI --> C : Operation sucess
 deactivate UI

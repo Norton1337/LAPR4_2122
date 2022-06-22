@@ -162,6 +162,9 @@ public class CreateQuestionnaireUI implements Action {
                        //System.out.println("{" + "id=" + quest.getId() + ", fileName=" + quest.getFileName() + ", state= " + quest.getState() +  '}');
 
                         QuestionnaireTxt quest1 = questionnaireController.findQuestionnaireById(textinho);
+                        if (quest1 == null){
+
+                        }
                        System.out.println("{" + "id=" + quest1.getId() + ", fileName=" + quest1.getFileName() + ", state= " + quest1.getState() +  '}');
 
 

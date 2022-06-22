@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="577px" preserveAspectRatio="none" style="width:1456px;height:577px;background:#FFFFFF;" version="1.1" viewBox="0 0 1456 577" width="1456px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="453.1641" style="stroke:#181818;stroke-width:1.0;" width="10" x="230" y="69.9609"/><rect fill="#FFFFFF" height="120.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="461.5" y="100.3125"/><rect fill="#FFFFFF" height="60.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="461.5" y="462.7734"/><rect fill="#FFFFFF" height="120.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="579.5" y="251.3672"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="670" y="130.6641"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="670" y="493.125"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="743" y="191.0156"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="826" y="342.0703"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="1326" y="281.7188"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="1425.5" y="402.4219"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="234.5" x2="234.5" y1="37.6094" y2="541.125"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="350.5" x2="350.5" y1="37.6094" y2="541.125"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="466.5" x2="466.5" y1="37.6094" y2="541.125"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="584.5" x2="584.5" y1="37.6094" y2="541.125"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="674.5" x2="674.5" y1="37.6094" y2="541.125"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="747.5" x2="747.5" y1="37.6094" y2="541.125"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="830.5" x2="830.5" y1="37.6094" y2="541.125"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="931.5" x2="931.5" y1="37.6094" y2="541.125"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1060.5" x2="1060.5" y1="37.6094" y2="541.125"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1190.5" x2="1190.5" y1="37.6094" y2="541.125"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1330.5" x2="1330.5" y1="37.6094" y2="541.125"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1430.5" x2="1430.5" y1="37.6094" y2="541.125"/><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="99" x="185.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="192.5" y="26.5332">RouteService</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="99" x="185.5" y="540.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="192.5" y="561.6582">RouteService</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="113" x="294.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99" x="301.5" y="26.5332">AGV_Controller</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="113" x="294.5" y="540.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99" x="301.5" y="561.6582">AGV_Controller</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="417.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="424.5" y="26.5332">AGV_Service</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="417.5" y="540.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="424.5" y="561.6582">AGV_Service</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="118" x="525.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="532.5" y="26.5332">Product_Service</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="118" x="525.5" y="540.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="532.5" y="561.6582">Product_Service</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="653.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="660.5" y="26.5332">AGV</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="43" x="653.5" y="540.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="660.5" y="561.6582">AGV</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="83" x="706.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="713.5" y="26.5332">AGV_Dock</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="83" x="706.5" y="540.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="713.5" y="561.6582">AGV_Dock</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="63" x="799.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="806.5" y="26.5332">Product</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="63" x="799.5" y="540.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="806.5" y="561.6582">Product</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="119" x="872.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="879.5" y="26.5332">OrderRepository</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="119" x="872.5" y="540.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="879.5" y="561.6582">OrderRepository</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="119" x="1001.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="1008.5" y="26.5332">AGV_Repository</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="119" x="1001.5" y="540.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="1008.5" y="561.6582">AGV_Repository</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="121" x="1130.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="1137.5" y="26.5332">Task_Repository</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="121" x="1130.5" y="540.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="1137.5" y="561.6582">Task_Repository</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="139" x="1261.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="1268.5" y="26.5332">Product_Repository</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="139" x="1261.5" y="540.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="1268.5" y="561.6582">Product_Repository</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="40" x="1410.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="1417.5" y="26.5332">Utils</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="40" x="1410.5" y="540.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="1417.5" y="561.6582">Utils</text><rect fill="#FFFFFF" height="453.1641" style="stroke:#181818;stroke-width:1.0;" width="10" x="230" y="69.9609"/><rect fill="#FFFFFF" height="120.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="461.5" y="100.3125"/><rect fill="#FFFFFF" height="60.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="461.5" y="462.7734"/><rect fill="#FFFFFF" height="120.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="579.5" y="251.3672"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="670" y="130.6641"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="670" y="493.125"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="743" y="191.0156"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="826" y="342.0703"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="1326" y="281.7188"/><rect fill="#FFFFFF" height="30" style="stroke:#181818;stroke-width:1.0;" width="10" x="1425.5" y="402.4219"/><polygon fill="#181818" points="218,65.9609,228,69.9609,218,73.9609,222,69.9609" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="0" x2="224" y1="69.9609" y2="69.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="7" y="65.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="200" x="18" y="65.1045">running(task,List&lt;OrderItem&gt;, agv)</text><polygon fill="#181818" points="449.5,96.3125,459.5,100.3125,449.5,104.3125,453.5,100.3125" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="240" x2="455.5" y1="100.3125" y2="100.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="247" y="95.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="111" x="258" y="95.4561">square = getDock()</text><polygon fill="#181818" points="658,126.6641,668,130.6641,658,134.6641,662,130.6641" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="471.5" x2="664" y1="130.6641" y2="130.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="478.5" y="125.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="168" x="489.5" y="125.8076">agvDock = getAGVDock(agv)</text><polygon fill="#181818" points="731,187.0156,741,191.0156,731,195.0156,735,191.0156" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="471.5" x2="737" y1="191.0156" y2="191.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="478.5" y="186.1592">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="489.5" y="186.1592">getSquare(agvDock)</text><polygon fill="#181818" points="567.5,247.3672,577.5,251.3672,567.5,255.3672,571.5,251.3672" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="240" x2="573.5" y1="251.3672" y2="251.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="247" y="246.5107">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="128" x="258" y="246.5107">getProduct(OrderItem)</text><polygon fill="#181818" points="1314,277.7188,1324,281.7188,1314,285.7188,1318,281.7188" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="589.5" x2="1320" y1="281.7188" y2="281.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="596.5" y="276.8623">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="226" x="607.5" y="276.8623">prod = getProduct(OrderItem.productId)</text><polygon fill="#181818" points="814,338.0703,824,342.0703,814,346.0703,818,342.0703" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="589.5" x2="820" y1="342.0703" y2="342.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="596.5" y="337.2139">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68" x="607.5" y="337.2139">b = getBin()</text><polygon fill="#181818" points="1413.5,398.4219,1423.5,402.4219,1413.5,406.4219,1417.5,402.4219" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="240" x2="1419.5" y1="402.4219" y2="402.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="247" y="397.5654">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="267" x="258" y="397.5654">List&lt;square&gt;  path = nearestPath(bin, square)</text><polygon fill="#181818" points="449.5,458.7734,459.5,462.7734,449.5,466.7734,453.5,462.7734" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="240" x2="455.5" y1="462.7734" y2="462.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="247" y="457.917">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="128" x="258" y="457.917">assignRoute(agv,path)</text><polygon fill="#181818" points="658,489.125,668,493.125,658,497.125,662,493.125" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="471.5" x2="664" y1="493.125" y2="493.125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="478.5" y="488.2686">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="105" x="496.5" y="488.2686">assignRoute(path)</text><!--MD5=[f87f017ca8a31f499c6e865cd1ec20ec]
+@startuml
+'https://plantuml.com/sequence-diagram
+autonumber
+
+
+participant "RouteService" as CTR
+participant "AGV_Controller" as ACTR
+participant "AGV_Service" as AGV_Service
+participant "Product_Service" as PS
+
+
+participant "AGV" as AGV
+participant "AGV_Dock" as AgvDocks
+participant "Product" as prod
+
+participant "OrderRepository" as OR
+participant "AGV_Repository" as AGVR
+participant "Task_Repository" as TR
+participant "Product_Repository" as PR
+
+participant "Utils" as Utils
+
+ -> CTR : running(task,List<OrderItem>, agv)
+
+
+activate CTR
+
+
+CTR -> AGV_Service : square = getDock()
+activate AGV_Service
+
+AGV_Service -> AGV : agvDock = getAGVDock(agv)
+activate AGV
+deactivate AGV
+
+AGV_Service -> AgvDocks : getSquare(agvDock)
+activate AgvDocks
+deactivate AgvDocks
+
+deactivate AGV_Service
+
+CTR -> PS : getProduct(OrderItem)
+activate PS
+
+PS -> PR : prod = getProduct(OrderItem.productId)
+activate PR
+deactivate PR
+
+PS -> prod : b = getBin()
+activate prod
+deactivate prod
+
+deactivate PS
+
+CTR -> Utils : List<square>  path = nearestPath(bin, square)
+activate Utils
+deactivate Utils
+
+CTR -> AGV_Service : assignRoute(agv,path)
+activate AGV_Service
+AGV_Service -> AGV : assignRoute(path)
+activate AGV
+deactivate AGV
+
+deactivate AGV_Service
+deactivate CTR
+
+
+
+@enduml
+
+@startuml
+autonumber
+
+
+participant "RouteService" as CTR
+participant "AGV_Controller" as ACTR
+participant "AGV_Service" as AGV_Service
+participant "Product_Service" as PS
+
+
+participant "AGV" as AGV
+participant "AGV_Dock" as AgvDocks
+participant "Product" as prod
+
+participant "OrderRepository" as OR
+participant "AGV_Repository" as AGVR
+participant "Task_Repository" as TR
+participant "Product_Repository" as PR
+
+participant "Utils" as Utils
+
+ -> CTR : running(task,List<OrderItem>, agv)
+
+
+activate CTR
+
+
+CTR -> AGV_Service : square = getDock()
+activate AGV_Service
+
+AGV_Service -> AGV : agvDock = getAGVDock(agv)
+activate AGV
+deactivate AGV
+
+AGV_Service -> AgvDocks : getSquare(agvDock)
+activate AgvDocks
+deactivate AgvDocks
+
+deactivate AGV_Service
+
+CTR -> PS : getProduct(OrderItem)
+activate PS
+
+PS -> PR : prod = getProduct(OrderItem.productId)
+activate PR
+deactivate PR
+
+PS -> prod : b = getBin()
+activate prod
+deactivate prod
+
+deactivate PS
+
+CTR -> Utils : List<square>  path = nearestPath(bin, square)
+activate Utils
+deactivate Utils
+
+CTR -> AGV_Service : assignRoute(agv,path)
+activate AGV_Service
+AGV_Service -> AGV : assignRoute(path)
+activate AGV
+deactivate AGV
+
+deactivate AGV_Service
+deactivate CTR
+
+
+
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 11:55:52 BST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>
